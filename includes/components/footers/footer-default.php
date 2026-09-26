@@ -1,76 +1,71 @@
 <?php
 // includes/components/footers/footer-default.php
-// UPDATED: Web Awesome Edition
 ?>
-<div class="wa-padding-block-xl wa-padding-inline-m" style="background-color: var(--wa-color-surface-default);">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
-        
-        <!-- Branding & Info -->
-        <div>
-            <a href="/" class="wa-flex wa-align-center wa-text-decoration-none wa-text-default wa-margin-bottom-m">
-                <img src="https://assets.raggiesoft.com/raggiesoft-corporate/images/logo/raggiesoft-logo.png" 
-                     alt="RaggieSoft Logo" width="40" height="40" class="wa-margin-right-s navbar-brand-corporate-img">
-                <span class="wa-font-size-l wa-font-bold wa-text-uppercase brand-font">RaggieSoft<sup>&trade;</sup></span>
-            </a>
-            <p class="wa-font-size-s" style="color: var(--wa-color-neutral-text-quiet); line-height: 1.5;">
-                Digital craftsmanship since 1997.<br> Specializing in narrative-driven experiences and database-free systems architecture.
-            </p>
-            <div class="wa-font-size-s wa-margin-top-m" style="color: var(--wa-color-neutral-text-quiet);">
-                <i class="fa-solid fa-location-dot wa-margin-right-2xs"></i> Ocean View &bull; Norfolk, VA &bull; Est. 2008
+<footer class="mt-auto bg-body-tertiary border-top py-5">
+    <div class="container">
+        <div class="row gy-4">
+            
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <img src="<?php echo $cdnBaseUrl; ?>/raggiesoft-corporate/images/logo/raggiesoft-logo.png" 
+                         alt="RaggieSoft Logo" width="40" height="40" class="me-2 navbar-brand-raggiesoft">
+                    <span class="fs-5 fw-bold text-uppercase brand-font">RaggieSoft<sup>&trade;</sup></span>
+                </a>
+                <p class="text-body-secondary small">
+                    Digital craftsmanship since 1997.<br> Specializing in narrative-driven experiences and systems architecture.
+                </p>
+                <div class="small  mt-3">
+                    <i class="ph ph-location-dot me-1"></i> Norfolk, VA &bull; Est. 2008
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Projects</h6>
+                <ul class="nav flex-column small">
+                    <li class="nav-item mb-2"><a href="/engine-room/stardust-engine" class="nav-link p-0 text-body-secondary">The Stardust Engine</a></li>
+                    <li class="nav-item mb-2"><a href="/family" class="nav-link p-0 text-body-secondary">Family</a></li>
+                    <li class="nav-item mb-2"><a href="/raggiesoft-media" class="nav-link p-0 text-body-secondary">RaggieSoft Media</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Built With</h6>
+                <ul class="nav flex-column small">
+                    <li class="nav-item mb-2"><span class="nav-link p-0 text-body-secondary">PHP 8.5</span></li>
+                    <li class="nav-item mb-2"><span class="nav-link p-0 text-body-secondary">Bootstrap 5.3</span></li>
+                    <li class="nav-item mb-2"><span class="nav-link p-0 text-body-secondary">FontAwesome Pro</span></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 text-md-end">
+                <h6 class="fw-bold mb-3">Connect</h6>
+                <div class="d-flex justify-content-md-end gap-3">
+                    <a href="https://github.com/raggiesoft" class="link-secondary fs-5" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/michael-ragsdale-raggiesoft" class="link-secondary fs-5" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:hireme@michaelpragsdale.com" class="link-secondary fs-5" aria-label="Email"><i class="ph ph-envelope"></i></a>
+                </div>
             </div>
         </div>
-
-        <!-- Projects -->
-        <div>
-            <h6 class="wa-font-bold wa-margin-bottom-m">Projects</h6>
-            <div class="wa-flex wa-flex-col wa-gap-s wa-font-size-s">
-                <a href="/engine-room" class="wa-text-decoration-none wa-text-default" style="opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Engine Room Records</a>
-                <a href="/family" class="wa-text-decoration-none wa-text-default" style="opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Family</a>
-                <a href="/raggiesoft-books/aethel" class="wa-text-decoration-none wa-text-default" style="opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Silver Gauntlet of Aethel</a>
-            </div>
-        </div>
-
-        <!-- Built With -->
-        <div>
-            <h6 class="wa-font-bold wa-margin-bottom-m">Built With</h6>
-            <div class="wa-flex wa-flex-col wa-gap-s wa-font-size-s" style="color: var(--wa-color-neutral-text-quiet);">
-                <span>Native PHP 8.5</span>
-                <span>Web Awesome Pro 3.10</span>
-                <span>Vanilla JavaScript</span>
-                <span>FontAwesome Pro</span>
-            </div>
-        </div>
-
-        <!-- Connect -->
-        <div>
-            <h6 class="wa-font-bold wa-margin-bottom-m">Connect</h6>
-            <div class="wa-flex wa-gap-m">
-                <a href="https://github.com/raggiesoft" class="wa-text-default wa-font-size-xl" style="opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/michael-ragsdale-raggiesoft" class="wa-text-default wa-font-size-xl" style="opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:hireme@michaelpragsdale.com" class="wa-text-default wa-font-size-xl" style="opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-
     </div>
-</div>
+</footer>
 
 <?php
-// Web Awesome Konami Configuration
+// Different reward for the main site!
 $konami_config = [
     'title'      => 'System Admin Access',
     'icon'       => 'fa-solid fa-terminal',
-    'theme'      => 'var(--wa-color-brand-fill-loud)', 
-    'text_color' => 'var(--wa-color-text-default)',
-    'image'      => '',        
+    'theme'      => '#0d6efd', // Bootstrap Blue
+    'text_color' => '#ffffff',
+    'image'      => '',        // No image for this one, just text
     'body'       => '
-        <h4 class="wa-font-mono">> ACCESS GRANTED</h4>
-        <p class="wa-font-mono wa-margin-top-s" style="color: var(--wa-color-success-text);">
+        <h4 class="font-monospace text-white">> ACCESS GRANTED</h4>
+        <p class="font-monospace text-success mt-2">
             Debug privileges have been elevated.<br>
             Welcome back, Administrator.
         </p>',
     'btn_text'   => 'Enter Dashboard',
     'btn_link'   => '/admin/dashboard',
-    'btn_style'  => 'brand' 
+    'btn_style'  => 'btn-outline-light'
 ];
 
 include ROOT_PATH . '/includes/components/easter-eggs/konami.php';

@@ -1,0 +1,44 @@
+{
+  "siteName": "RaggieSoft",
+  "projectSlug": "raggiesoft-corporate",
+  "cdnBaseUrl": "https://assets.raggiesoft.com",
+  "defaultTheme": "light",
+  "brandFont": [
+    "Roboto",
+    "Helvetica Neue",
+    "sans-serif"
+  ],
+  "analytics": {
+    "provider": "google",
+    "trackingId": "G-P9RG9JVYB6",
+    "enabled": true
+  },
+  "defaults": {
+    "view": "errors/404",
+    "showSidebar": false,
+    "sidebar": "sidebar-default",
+    "ogTitle": "Michael Ragsdale | Technologist & Creator",
+    "ogDescription": "The personal portfolio of Michael Ragsdale and the home of The Stardust Engine.",
+    "ogImage": "/raggiesoft/images/social-preview.jpg",
+    "navbarBrandLogo": "/raggiesoft-corporate/images/logo/raggiesoft-logo.png",
+    "navbarBrandText": "RaggieSoft",
+    "navbarBrandLink": "/",
+    "navbarBrandAlt": "RaggieSoft Logo",
+    "navbarBrandClass": "rounded-circle"
+  },
+  "sidebarMap": {
+    "/engine-room": "sidebar-engine-room",
+    "/library": "sidebar-library",
+    "/docs": "sidebar-docs"
+  },
+  "headerMap": {
+    "/engine-room": "header-engine-room",
+    "/oconnell-trust": "header-oconnell",
+    "/admin": "header-admin"
+  },
+  "footerMap": {
+    "/": "footer-default",
+    "/oconnell-trust": "footer-trust",
+    "/engine-room": "engine-room/footer-engine-room"
+  }
+}

@@ -1,6 +1,6 @@
 <?php
 // includes/components/headers/header-default.php
-// UPDATED: Web Awesome Edition
+// UPDATED: Main RaggieSoft Network Header (Web Awesome Edition)
 // Serves as the global navigation for the root domain
 
 // 1. Determine Active States
@@ -13,100 +13,86 @@ $isAbout = ($request_uri === '/about');
 $isContact = ($request_uri === '/contact');
 ?>
 
-<div class="wa-flex wa-gap-2xs wa-align-center">
+<div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
+  
+  <button class="rs-btn" appearance="plain" href="/" class="<?php echo $isHome ? 'text-primary' : 'text-body-secondary'; ?>">
+    <i slot="start" class="ph ph-house"></i> Home
+  </button>
 
-  <!-- Home -->
-  <wa-button appearance="plain" href="/" variant="<?php echo $isHome ? 'brand' : 'neutral'; ?>">
-    <i slot="start" class="fa-duotone fa-house" aria-hidden="true"></i> Home
-  </wa-button>
+  <wa-dropdown placement="bottom-start">
+    <button class="rs-btn" slot="trigger" appearance="plain" with-caret class="<?php echo $isArchitect ? 'text-primary' : 'text-body-secondary'; ?>">
+      <i slot="start" class="ph ph-user-visor"></i> The Architect
+        <i slot="end" class="ph ph-circle-caret-down ms-2 opacity-50" aria-hidden="true"></i>
+    </button>
+    <wa-menu>
+    <wa-dropdown-item value="/about/michael-ragsdale">
+      <i slot="start" class="ph ph-user-gear"></i> Skills & Profile
+    </wa-dropdown-item>
+    <wa-divider></wa-divider>
+    <wa-dropdown-item value="/contact">
+      <i slot="start" class="ph ph-address-card"></i> Contact Card
+    </wa-dropdown-item>
+    </wa-menu>
+  </wa-dropdown>
 
-  <!-- The Architect -->
-  <wa-button appearance="plain" href="/about/michael-ragsdale" variant="<?php echo $isArchitect ? 'brand' : 'neutral'; ?>">
-    <i slot="start" class="fa-duotone fa-user-visor" aria-hidden="true"></i> The Architect
-  </wa-button>
-
-  <!-- Creative Works Dropdown -->
-  <wa-dropdown placement="bottom-end">
-    <wa-button slot="trigger" appearance="plain" with-caret variant="<?php echo $isCreative ? 'brand' : 'neutral'; ?>">
-        <i slot="start" class="fa-duotone fa-layer-group" aria-hidden="true"></i> Creative Works
-    </wa-button>
-    
-    <div class="wa-padding-inline-m wa-padding-block-s wa-text-uppercase wa-font-bold wa-font-size-xs" style="color: var(--wa-color-neutral-text-quiet);">Multimedia</div>
-    
+  <wa-dropdown placement="bottom-start">
+    <button class="rs-btn" slot="trigger" appearance="plain" with-caret class="<?php echo $isCreative ? 'text-primary' : 'text-body-secondary'; ?>">
+      <i slot="start" class="ph ph-layer-group"></i> Creative Works
+        <i slot="end" class="ph ph-circle-caret-down ms-2 opacity-50" aria-hidden="true"></i>
+    </button>
+    <wa-menu>
+      <div class="px-3 py-2 small text-uppercase fw-bold ">Multimedia</div>
     <wa-dropdown-item value="/engine-room/artists/stardust-engine">
-      <i slot="icon" class="fa-duotone fa-rocket-launch" style="color: var(--wa-color-brand-text);"></i> The Stardust Engine
+      <i slot="start" class="ph ph-rocket-launch text-primary"></i> The Stardust Engine
     </wa-dropdown-item>
-    
     <wa-dropdown-item value="/engine-room/radio">
-      <i slot="icon" class="fa-duotone fa-signal-stream" style="color: var(--wa-color-warning-text);"></i> Engine Room Radio
+      <i slot="start" class="ph ph-signal-stream text-warning"></i> Engine Room Radio
     </wa-dropdown-item>
-    
     <wa-divider></wa-divider>
-    
-    <div class="wa-padding-inline-m wa-padding-block-s wa-text-uppercase wa-font-bold wa-font-size-xs" style="color: var(--wa-color-neutral-text-quiet);">Literature</div>
-    
+    <div class="px-3 py-2 small text-uppercase fw-bold ">Literature</div>
     <wa-dropdown-item value="/raggiesoft-books/aethel-saga">
-      <i slot="icon" class="fa-duotone fa-sword" style="color: var(--wa-color-warning-text);"></i> The Silver Gauntlet of Aethel
+      <i slot="start" class="ph ph-sword text-warning"></i> The Silver Gauntlet of Aethel
     </wa-dropdown-item>
-    
     <wa-dropdown-item value="/raggiesoft-books/knox">
-      <i slot="icon" class="fa-duotone fa-leaf" style="color: var(--wa-color-success-text);"></i> Project: KNOX
+      <i slot="start" class="ph ph-leaf text-success"></i> Project: KNOX
     </wa-dropdown-item>
-    
     <wa-divider></wa-divider>
-    
     <wa-dropdown-item value="/engine-room">
-      <i slot="icon" class="fa-solid fa-industry" style="color: var(--wa-color-neutral-text);"></i> Engine Room Records
+      <i slot="start" class="ph ph-industry "></i> Engine Room Records
     </wa-dropdown-item>
+    </wa-menu>
   </wa-dropdown>
 
-  <!-- RaggieSoft Media Dropdown -->
-  <wa-dropdown placement="bottom-end">
-    <wa-button slot="trigger" appearance="plain" with-caret variant="<?php echo $isMedia ? 'brand' : 'neutral'; ?>">
-        <i slot="start" class="fa-duotone fa-building" aria-hidden="true"></i> RaggieSoft Media
-    </wa-button>
-    
-    <div class="wa-padding-inline-m wa-padding-block-s wa-text-uppercase wa-font-bold wa-font-size-xs" style="color: var(--wa-color-neutral-text-quiet);">B2B Operations</div>
-    
+  <wa-dropdown placement="bottom-start">
+    <button class="rs-btn" slot="trigger" appearance="plain" with-caret class="<?php echo $isMedia ? 'text-primary' : 'text-body-secondary'; ?>">
+      <i slot="start" class="ph ph-building"></i> RaggieSoft Media
+        <i slot="end" class="ph ph-circle-caret-down ms-2 opacity-50" aria-hidden="true"></i>
+    </button>
+    <wa-menu>
+      <div class="px-3 py-2 small text-uppercase fw-bold ">B2B Operations</div>
     <wa-dropdown-item value="/raggiesoft-media">
-      <i slot="icon" class="fa-duotone fa-network-wired" style="color: var(--wa-color-brand-text);"></i> Corporate Hub
+      <i slot="start" class="ph ph-network-wired text-primary"></i> Corporate Hub
     </wa-dropdown-item>
-    
     <wa-dropdown-item value="/raggiesoft-media/licensing">
-      <i slot="icon" class="fa-duotone fa-scale-balanced" style="color: var(--wa-color-warning-text);"></i> Master Licensing
+      <i slot="start" class="ph ph-scale-balanced text-warning"></i> Master Licensing
     </wa-dropdown-item>
-    
     <wa-dropdown-item value="/raggiesoft-media/licensing/commercial">
-      <i slot="icon" class="fa-solid fa-briefcase" style="color: var(--wa-color-neutral-text);"></i> Commercial Portal
+      <i slot="start" class="ph ph-briefcase "></i> Commercial Portal
     </wa-dropdown-item>
-    
     <wa-divider></wa-divider>
-    
-    <div class="wa-padding-inline-m wa-padding-block-s wa-text-uppercase wa-font-bold wa-font-size-xs" style="color: var(--wa-color-neutral-text-quiet);">Infrastructure</div>
-    
-    <wa-dropdown-item value="/raggiesoft-media/projects/stardust-engine-cms">
-      <i slot="icon" class="fa-brands fa-rocket-launch" style="color: var(--wa-color-brand-text);"></i> Stardust Engine CMS
+    <div class="px-3 py-2 small text-uppercase fw-bold ">Infrastructure</div>
+    <wa-dropdown-item value="/raggiesoft-media/projects/elara">
+      <i slot="start" class="fa-brands fa-osi text-info"></i> Open Source (Elara)
     </wa-dropdown-item>
+    </wa-menu>
   </wa-dropdown>
 
-  <!-- Mission Profile -->
-  <wa-button appearance="plain" href="/about" variant="<?php echo $isAbout ? 'brand' : 'neutral'; ?>">
-    <i slot="start" class="fa-duotone fa-circle-info" aria-hidden="true"></i> Mission Profile
-  </wa-button>
+  <button class="rs-btn" appearance="plain" href="/about" class="<?php echo $isAbout ? 'text-primary' : 'text-body-secondary'; ?>">
+    <i slot="start" class="ph ph-circle-info"></i> Mission Profile
+  </button>
 
-  <!-- Contact -->
-  <wa-button appearance="plain" href="/contact" variant="<?php echo $isContact ? 'brand' : 'neutral'; ?>">
-    <i slot="start" class="fa-duotone fa-envelope-open" aria-hidden="true"></i> Contact
-  </wa-button>
+  <button class="rs-btn" appearance="plain" href="/contact" class="<?php echo $isContact ? 'text-primary' : 'text-body-secondary'; ?>">
+    <i slot="start" class="ph ph-envelope-open"></i> Contact
+  </button>
 
 </div>
-
-<!-- Dropdown Navigation Routing Script -->
-<script>
-  document.addEventListener('wa-select', event => {
-      const item = event.detail.item;
-      if (item && item.value && item.value.startsWith('/')) {
-          window.location.href = item.value;
-      }
-  });
-</script>

@@ -1,0 +1,275 @@
+<?php
+// pages/contact.php
+// The Global Contact Hub
+// Updated to use the shared Immersive Hero template
+
+$pageTitle = "Contact Channels | Michael Ragsdale";
+
+require_once ROOT_PATH . '/includes/utils/json-reader.php';
+$heroImages = fetch_asset_json('common/json/hero-images.json');
+$startImage = !empty($heroImages) 
+    ? "<?php echo $cdnBaseUrl; ?>" . $heroImages[array_rand($heroImages)] 
+    : "<?php echo $cdnBaseUrl; ?>/common/patterns/stars-transparent.png";
+$imagesJson = htmlspecialchars(json_encode($heroImages), ENT_QUOTES, 'UTF-8');
+?>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": "Global Contact Hub | RaggieSoft",
+      "description": "Central directory for contacting Michael Ragsdale, RaggieSoft Media, and Engine Room Records. Note: RaggieSoft does not offer employment."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is RaggieSoft hiring employees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. RaggieSoft and RaggieSoft Media are single-person entities. Any job offer or interview request claiming to be from RaggieSoft is a fraudulent scam. We do not hire."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How do recruiters contact Michael Ragsdale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recruiters looking to hire Michael Ragsdale for a Full-Stack Developer or Systems Architect role must use the automated pre-screening Recruiter Gate on his personal portfolio."
+        }
+      }]
+    }
+  ]
+}
+</script>
+
+<style>
+    /* =====================================================================
+       BRUTE FORCE READABILITY ARMOR
+       These classes ensure the hero section text, backgrounds, and borders
+       remain highly visible over the rotating background images, completely 
+       ignoring any global dark/light mode CSS inversion rules.
+       ===================================================================== */
+    .force-text-light {
+        color: #ffffff !important;
+    }
+    .force-text-muted {
+        color: rgba(255, 255, 255, 0.75) !important;
+    }
+    
+    /* The Dark Glass Core */
+    .force-glass-bg {
+        background-color: rgba(0, 0, 0, 0.65) !important;
+        backdrop-filter: blur(8px) !important;
+    }
+
+    /* Brute-Forced Borders to preserve themes in any mode */
+    .force-border-default { border: 1px solid rgba(255, 255, 255, 0.1) !important; }
+    .force-border-info { border: 1px solid rgba(13, 202, 240, 0.4) !important; }
+    .force-border-success { border: 1px solid rgba(25, 135, 84, 0.4) !important; }
+    .force-border-danger { border: 1px solid rgba(220, 53, 69, 0.4) !important; }
+    .force-border-warning { border: 1px solid rgba(255, 193, 7, 0.4) !important; }
+    .force-border-secondary { border: 1px solid rgba(173, 181, 189, 0.4) !important; }
+    .force-border-primary { border: 1px solid rgba(13, 110, 253, 0.4) !important; }
+    .force-icon-primary { color: #0d6efd !important; }
+
+    /* Shadow Stacking */
+    .force-shadow-heavy {
+        text-shadow: 0px 4px 15px rgba(0,0,0,0.9), 0px 1px 3px rgba(0,0,0,1) !important;
+    }
+    .force-shadow-medium {
+        text-shadow: 0px 2px 8px rgba(0,0,0,0.9) !important;
+    }
+    
+    /* Icon Brute Forcing */
+    .force-icon-info { color: #0dcaf0 !important; }
+    .force-icon-success { color: #198754 !important; }
+    .force-icon-danger { color: #dc3545 !important; }
+    .force-icon-warning { color: #ffc107 !important; }
+    .force-icon-secondary { color: #adb5bd !important; }
+</style>
+
+<div class="immersive-container hero-rotator-container" data-images="<?php echo $imagesJson; ?>">
+    
+    <div class="hero-bg-layer hero-bg-layer-1" style="background-image: url('<?php echo $startImage; ?>');"></div>
+    <div class="hero-bg-layer hero-bg-layer-2" style="background-image: url(''); opacity: 0;"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="content-wrapper container">
+        
+        <div class="text-center mb-5 d-flex justify-content-center">
+            <div class="force-glass-bg force-border-default p-4 rounded-4 shadow-lg">
+                <h1 class="display-3 fw-bold text-uppercase force-text-light force-shadow-heavy mb-2" style="font-family: 'Audiowide', cursive;">
+                    Signal The Architect
+                </h1>
+                <p class="lead force-text-light fw-semibold force-shadow-medium mx-auto mb-0" style="max-width: 700px;">
+                    Choose your communication channel.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4">
+                <div class="card force-glass-bg force-border-info h-100 p-4 text-center rounded-4 shadow-lg">
+                    <div class="card-body">
+                        <div class="mb-4 force-icon-info">
+                            <i class="ph ph-microchip-ai fa-4x drop-shadow"></i>
+                        </div>
+                        <h2 class="h3 fw-bold mb-3 force-text-light">Project Inquiry</h2>
+                        <p class="force-text-muted mb-4">
+                            Questions about the <strong>Stardust Engine</strong> architecture, 
+                            the <strong>Elara</strong> router, or the <strong>Suno/Gemini</strong> workflow?
+                        </p>
+                        <div class="d-grid mt-auto">
+                            <a href="mailto:connect@michaelpragsdale.com?subject=RaggieSoft: Project Inquiry" class="btn btn-info btn-lg rounded-pill fw-bold text-dark">
+                                <i class="ph ph-paper-plane me-2"></i>Send Message
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card force-glass-bg force-border-primary h-100 p-4 text-center rounded-4 shadow-lg">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 force-icon-primary">
+                            <i class="ph ph-shop fa-4x drop-shadow"></i>
+                        </div>
+                        <h2 class="h3 fw-bold mb-3 force-text-light">Store Support</h2>
+                        <p class="force-text-muted mb-4">
+                            Questions about merchandise, order status, shipping details, or returns?
+                        </p>
+                        <div class="d-grid mt-auto">
+                            <a href="https://store.raggiesoft.com/contact" class="btn btn-primary btn-lg rounded-pill fw-bold shadow-glow force-text-light mb-3">
+                                <i class="ph ph-headset me-2"></i>Contact Fourthwall
+                            </a>
+                            <a href="https://store.raggiesoft.com/pages/returns-faq" class="btn btn-outline-primary btn-sm rounded-pill fw-bold force-text-light">
+                                <i class="ph ph-circle-question me-1"></i> View Returns & FAQ
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3 d-flex justify-content-center">
+                        <div class="force-border-primary px-3 py-2 rounded-pill shadow-sm" style="background-color: rgba(13, 110, 253, 0.1) !important;">
+                            <p class="small force-text-muted mb-0" style="font-size: 0.8rem;">
+                                <strong>Merchant of Record:</strong> All merchandise fulfillment and customer support is operated directly by Fourthwall.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card force-glass-bg force-border-success h-100 p-4 text-center rounded-4 shadow-lg">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 force-icon-success">
+                            <i class="ph ph-tower-broadcast fa-4x drop-shadow"></i>
+                        </div>
+                        <h2 class="h3 fw-bold mb-3 force-text-light">DSP & Industry</h2>
+                        <p class="force-text-muted mb-4">
+                            For <strong>Digital Service Providers</strong> (Spotify, Apple, Amazon) and artist profile verification support.
+                        </p>
+                        <div class="d-grid mt-auto">
+                            <a href="/engine-room/dsp-verification" class="btn btn-success btn-lg rounded-pill fw-bold shadow-glow force-text-light">
+                                <i class="ph ph-shield-check me-2"></i>Access DSP Portal
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3 d-flex justify-content-center">
+                        <div class="force-border-danger px-4 py-2 rounded-pill shadow-sm" style="background-color: rgba(220, 53, 69, 0.15) !important;">
+                            <p class="small force-text-light mb-0">
+                                <i class="ph ph-ban me-2 force-text-danger"></i>
+                                <strong>Submission Policy:</strong> Engine Room Records is a closed private label. We do not sign artists and do not accept unsolicited demos. Unsolicited audio will be deleted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-lg-4">
+                <div class="card force-glass-bg force-border-danger h-100 p-4 text-center rounded-4 shadow-lg">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 force-icon-danger">
+                            <i class="ph ph-briefcase fa-4x drop-shadow"></i>
+                        </div>
+                        <h2 class="h3 fw-bold mb-3 force-text-light">Hiring & Careers</h2>
+                        <p class="force-text-muted mb-4">
+                            Recruiters looking for a <strong>Systems Architect</strong> or <strong>Full-Stack Developer</strong>.
+                        </p>
+                        <div class="d-grid mt-auto">
+                            <a href="/about/michael-ragsdale/contact" class="btn btn-danger btn-lg rounded-pill fw-bold shadow-glow force-text-light mb-3">
+                                <i class="ph ph-id-card-clip me-2"></i>Access Hiring Hub
+                            </a>
+                            <a href="/raggiesoft-media/careers" class="btn btn-outline-danger btn-sm rounded-pill fw-bold force-text-light">
+                                <i class="ph ph-shield-exclamation me-1"></i> Job Scam Warning
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card force-glass-bg force-border-warning h-100 p-4 text-center rounded-4 shadow-lg">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 force-icon-warning">
+                            <i class="ph ph-file-signature fa-4x drop-shadow"></i>
+                        </div>
+                        <h2 class="h3 fw-bold mb-3 force-text-light">Sync & Licensing</h2>
+                        <p class="force-text-muted mb-4">
+                            Looking to clear a master recording for film, television, gaming, or commercial broadcast?
+                        </p>
+                        <div class="d-grid mt-auto">
+                            <a href="/raggiesoft-media/licensing/commercial" class="btn btn-warning btn-lg rounded-pill fw-bold shadow-glow text-dark mb-3">
+                                <i class="ph ph-file-contract me-2"></i>Commercial Portal
+                            </a>
+                            <a href="/raggiesoft-media/licensing" class="btn btn-outline-warning btn-sm rounded-pill fw-bold force-text-light">
+                                <i class="ph ph-scale-balanced me-1"></i> General Rights Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card force-glass-bg force-border-secondary h-100 p-4 text-center rounded-4 shadow-lg">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 force-icon-secondary">
+                            <i class="ph ph-masks-theater fa-4x drop-shadow"></i>
+                        </div>
+                        <h2 class="h3 fw-bold mb-3 force-text-light">Fan Mail & Lore</h2>
+                        <p class="force-text-muted mb-4">
+                            All musical artists signed to Engine Room Records and all characters within the Ocean View Archives are entirely fictional entities.
+                        </p>
+                        <div class="d-grid mt-auto">
+                            <a href="/about/ai-disclaimer" class="btn btn-secondary btn-lg rounded-pill fw-bold shadow-glow force-text-light mb-3">
+                                <i class="ph ph-robot-astromech me-2"></i>Read AI Disclaimer
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3 d-flex justify-content-center">
+                        <div class="force-border-secondary px-3 py-2 rounded-pill shadow-sm" style="background-color: rgba(255, 255, 255, 0.05) !important;">
+                            <p class="small force-text-muted mb-0" style="font-size: 0.8rem;">
+                                Photorealistic imagery across this network is AI-generated. Fictional entities cannot respond to messages, grant interviews, or sign autographs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5 d-flex justify-content-center">
+            <div class="force-glass-bg force-border-default px-4 py-2 rounded-pill shadow-sm">
+                <p class="small force-text-light force-shadow-medium mb-0">
+                    <i class="ph ph-server me-2 force-text-muted"></i>
+                    <strong>System Note:</strong> The Hiring Hub provides access to Resume, Salary, and Calendar.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="<?php echo $cdnBaseUrl; ?>/common/js/hero-image.js"></script>

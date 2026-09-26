@@ -1,0 +1,32 @@
+{
+  "common": {
+    "site": "fractured-prisms",
+    "brandFont": [
+      "Playfair Display",
+      "serif"
+    ],
+    "siteName": "Fractured Prisms",
+    "headerMenu": "engine-room/artists/fractured-prisms/header-prisms",
+    "footer": "engine-room/artists/fractured-prisms/footer-prisms",
+    "showSidebar": false,
+    "navbarBrandLogo": "/engine-room-records/artists/fractured-prisms/band-logo.jpg",
+    "navbarBrandText": "Fractured Prisms",
+    "navbarBrandLink": "/engine-room/artists/fractured-prisms",
+    "ogImage": "/engine-room-records/artists/fractured-prisms/1983-carnaby-street/album-art.jpg"
+  },
+  "/engine-room/artists/fractured-prisms/band": {
+    "view": "pages/engine-room/artists/fractured-prisms/band/overview",
+    "title": "The Residents | Fractured Prisms",
+    "ogTitle": "The Residents - The Surviving Architects"
+  },
+  "/engine-room/artists/fractured-prisms/story": {
+    "view": "pages/engine-room/artists/fractured-prisms/story/overview",
+    "title": "The Lore | Fractured Prisms",
+    "ogTitle": "The Hollow Square - 1883 / 1983"
+  },
+  "/engine-room/artists/fractured-prisms/band/the-missing-four": {
+    "view": "pages/engine-room/artists/fractured-prisms/band/the-missing-four",
+    "title": "The Missing Four | Fractured Prisms",
+    "ogTitle": "Gwen, Alistair, Julian, and Simon"
+  }
+}

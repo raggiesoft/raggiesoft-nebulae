@@ -1,74 +1,72 @@
 <?php
 // includes/components/easter-eggs/konami.php
-// A reusable "Loot Box" dialog triggered by the Konami Code.
-// UPDATED: Web Awesome Native Edition
+// Stardust Engine CMS
 
-// 1. Set Defaults (Safety Net)
-$k_title     = $konami_config['title']     ?? 'Secret Unlocked';
-$k_icon      = $konami_config['icon']      ?? 'fa-duotone fa-unlock';
-$k_theme     = $konami_config['theme']     ?? 'var(--wa-color-brand-fill-loud)'; 
-$k_text_clr  = $konami_config['text_color']?? 'var(--wa-color-warning-text)'; 
-$k_image     = $konami_config['image']     ?? '';
-$k_body      = $konami_config['body']      ?? 'You have found a secret area.';
-$k_btn_text  = $konami_config['btn_text']  ?? 'Proceed';
-$k_btn_link  = $konami_config['btn_link']  ?? '#';
-$k_btn_style = $konami_config['btn_style'] ?? 'brand'; // WA variant: brand, neutral, success, etc.
+// Use the current theme color, default to primary
+$k_theme = "var(--bs-primary, #42AADB)"; 
+if (isset($theme)) {
+    if ($theme === 'ad-astra') $k_theme = "var(--bs-warning, #ffc107)";
+    if ($theme === 'crucible') $k_theme = "var(--bs-danger, #dc3545)";
+}
 ?>
 
-<wa-dialog id="konamiDialog">
-    <!-- Header / Label -->
-    <span slot="label" style="color: <?php echo $k_text_clr; ?>;">
-        <i class="<?php echo $k_icon; ?> wa-margin-right-2xs"></i> <?php echo $k_title; ?>
-    </span>
+<style>
+    /* Completely eliminate padding in wa-dialog so our wrapper fills it */
+    #konamiModal {
+        --body-spacing: 0 !important;
+        --header-spacing: 0 !important;
+        --footer-spacing: 0 !important;
+        border: none !important;
+    }
+    #konamiModal::part(panel) {
+        border: 2px solid <?php echo $k_theme; ?> !important;
+    }
+</style>
 
-    <!-- Body Content -->
-    <div class="wa-text-center wa-padding-m">
+<dialog class="rs-modal" id="konamiModal" no-header style="--width: 600px;" data-turbo-permanent="true">
+    <div class="w-100 h-100 d-flex flex-column" style="background-color: var(--bs-body-bg, #121212) !important; color: var(--bs-body-color, #e0e0e0) !important; padding: 1.5rem;">
         
-        <?php if($k_image): ?>
-        <img src="<?php echo $k_image; ?>" 
-             alt="Secret Reward"
-             style="max-height: 300px; border-radius: var(--wa-border-radius-m); border: 2px solid var(--wa-color-neutral-border);" 
-             class="wa-margin-bottom-m shadow-glow">
-        <?php endif; ?>
+        <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary pb-3">
+            <div class="fw-bold" style="color: <?php echo $k_theme; ?>;">
+                <i class="ph ph-user-secret me-2"></i> System Override Authorized
+            </div>
+            <button class="rs-btn" appearance="plain" variant="neutral" onclick="document.getElementById('konamiModal').hide()" aria-label="Close">
+                <i class="ph ph-xmark fs-4"></i>
+            </button>
+        </div>
         
-        <div style="color: var(--wa-color-neutral-text-quiet);">
-            <?php echo $k_body; ?>
+        <div class="text-center p-3 flex-grow-1">
+            <i class="ph ph-gamepad-modern fa-4x mb-3" style="color: <?php echo $k_theme; ?>;"></i>
+            <h4 class="mb-3">Konami Code Accepted</h4>
+            <p class="lead mb-4">
+                You've unlocked the developer access terminal. 
+                <br>
+                <span class="small opacity-75">Just kidding. But you did find a secret!</span>
+            </p>
+            
+            <div class="alert alert-secondary small text-start font-monospace mb-0 border border-secondary-subtle">
+                > INITIALIZING STARDUST ENGINE...<br>
+                > BYPASSING MAINFRAME SECURITY...<br>
+                > ACCESS GRANTED.<br>
+                > WELCOME, ADMIN.
+            </div>
+        </div>
+        
+        <div class="mt-4 pt-3 border-top border-secondary text-end">
+            <button class="rs-btn" variant="primary" onclick="document.getElementById('konamiModal').hide()">
+                Close Terminal
+            </button>
         </div>
         
     </div>
+</dialog>
 
-    <!-- Footer Action -->
-    <div slot="footer">
-        <wa-button href="<?php echo $k_btn_link; ?>" variant="<?php echo $k_btn_style; ?>" style="width: 100%;">
-            <?php echo $k_btn_text; ?>
-        </wa-button>
-    </div>
-</wa-dialog>
-
-<!-- Native Vanilla JS Konami Listener -->
 <script>
-(function() {
-    // The Sequence: Up, Up, Down, Down, Left, Right, Left, Right, B, A
-    const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-    let konamiPosition = 0;
-    
-    document.addEventListener('keydown', function(event) {
-        // Check if the pressed key matches the required sequence position
-        if (event.key === konamiSequence[konamiPosition] || event.key === konamiSequence[konamiPosition].toUpperCase()) {
-            konamiPosition++;
-            
-            // Sequence completed
-            if (konamiPosition === konamiSequence.length) {
-                const dialog = document.getElementById('konamiDialog');
-                if (dialog) {
-                    dialog.show(); // Trigger native WA Dialog
-                }
-                konamiPosition = 0; // Reset for future inputs
-            }
-        } else {
-            // Sequence broken, reset position
-            konamiPosition = 0;
+    // Self-Inject Logic
+    (function() {
+        const modal = document.getElementById('konamiModal');
+        if (modal && modal.parentNode !== document.body) {
+            document.body.appendChild(modal);
         }
-    });
-})();
+    })();
 </script>

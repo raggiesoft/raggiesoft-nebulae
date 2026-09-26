@@ -1,0 +1,19 @@
+{
+  "common": {
+    "site": "stardust-engine",
+    "showSidebar": false,
+    "brandFont": ["Audiowide", "sans-serif"],
+    "siteName": "The Stardust Engine",
+    "headerMenu": "engine-room/artists/stardust-engine/header-stardust",
+    "footer": "engine-room/artists/stardust-engine/footer-stardust",
+    "navbarBrandLogo": "/engine-room-records/artists/the-stardust-engine/band-logo.png",
+    "navbarBrandText": "<span class=\"d-none d-md-inline\">The </span>Stardust Engine",
+    "navbarBrandLink": "/engine-room/artists/stardust-engine",
+    "ogImage": "/engine-room-records/artists/the-stardust-engine/social-preview.jpg"
+  },
+
+  "/engine-room/artists/stardust-engine/story": {
+    "title": "The Story of The Stardust Engine",
+    "ogDescription": "Explore the epic narrative behind The Stardust Engine, from their rise in the 80s synth-rock scene to the corporate intrigue that shaped their journey."
+  }
+}

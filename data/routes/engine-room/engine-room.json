@@ -1,0 +1,54 @@
+{
+  "common": {
+    "site": "engine-room-records",
+    "showSidebar": true,
+    "sidebar": "engine-room/sidebar-engine-room-history",
+    "siteName": "Engine Room Records",
+    "headerMenu": "engine-room/header-engine-room",
+    "footer": "engine-room/footer-engine-room",
+    
+    "navbarBrandLogo": "/engine-room-records/images/logos/engine-room-records-logo.png",
+    "navbarBrandText": "Engine Room<span class=\"d-none d-md-inline\"> Records</span>",
+    "navbarBrandLink": "/engine-room",
+    "navbarBrandAlt": "Engine Room Records Official Seal",
+    "navbarBrandClass": "rounded-0 navbar-brand-corporate-img"
+  },
+  "/engine-room": {
+    "view": "pages/engine-room/overview",
+    "title": "Engine Room Records | Independent Music Label",
+    "showSidebar": false
+  },
+  "/engine-room/artists": {
+    "sidebar": "engine-room/artists/sidebar-artists",
+    "view": "pages/engine-room/artists/overview",
+    "title": "Artists Archive | Engine Room Records",
+    "ogDescription": "A comprehensive archive of artists, albums, and historical records from Engine Room Records."
+  },
+  "/engine-room/history": {
+    "view": "pages/engine-room/history/overview",
+    "title": "Engine Room Records History | Company Timeline",
+    "ogDescription": "An in-depth look at the founding, growth, and milestones of Engine Room Records from inception to present day."
+  },
+  "/engine-room/commercial-licensing": {
+    "showSidebar": false,
+    "view": "pages/engine-room/commercial-licensing",
+    "title": "Corporate Licensing | Engine Room Records",
+    "ogDescription": "The official commercial licensing portal for Engine Room Records. Secure synchronization rights, master use clearances, and broadcast licenses for our active catalog."
+  },
+  "/engine-room/dsp-verification": {
+    "view": "pages/engine-room/dsp-verification",
+    "title": "DSP Verification Portal | Engine Room Records",
+    "siteName": "Engine Room Records DSP Verification",
+    "showSidebar": false,
+    "navbarBrandLink": "/engine-room",
+    "headerMenu": "engine-room/header-dsp",
+    "footer": "engine-room/footer-dsp",
+    "ogDescription": "Official administrative portal for DSP identity and copyright verification."
+  },
+  "/engine-room/radio": {
+    "view": "pages/engine-room/radio",
+    "title": "Engine Room Radio | Live Broadcast",
+    "ogDescription": "Live broadcast console playing the complete Engine Room Records catalog.",
+    "showSidebar": false
+  }
+}

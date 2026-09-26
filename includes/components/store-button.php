@@ -1,0 +1,165 @@
+<?php
+// --- Component: store-button.php ---
+// V2: DSP Streaming + Physical Merch Routing
+// Updated: Web Awesome Components
+
+$type = $storeProps['type'] ?? 'album'; 
+$size = $storeProps['size'] ?? 'medium';
+
+// 1. The IDs for each streaming platform
+$ids = [
+    'spotify' => $storeProps['spotify'] ?? '',
+    'apple'   => $storeProps['apple'] ?? '',
+    'amazon'  => $storeProps['amazon'] ?? '',
+    'youtube' => $storeProps['youtube'] ?? ''
+];
+
+// 2. The URLs for Physical Merchandise (Cloudflare Subdomains)
+$physical = [
+    'vinyl'   => $storeProps['vinyl'] ?? '',
+    'cd'      => $storeProps['cd'] ?? '',
+    'apparel' => $storeProps['apparel'] ?? ''
+];
+
+// Configuration array for streaming platforms
+$platforms = [
+    'spotify' => ['class' => 'dsp-spotify', 'icon' => 'fa-brands fa-spotify', 'text' => 'Spotify'],
+    'apple'   => ['class' => 'dsp-apple',   'icon' => 'fa-brands fa-apple',   'text' => 'Apple Music'],
+    'amazon'  => ['class' => 'dsp-amazon',  'icon' => 'fa-brands fa-amazon',  'text' => 'Amazon Music'],
+    'youtube' => ['class' => 'dsp-youtube', 'icon' => 'fa-brands fa-youtube', 'text' => 'YouTube']
+];
+
+// Configuration array for physical merchandise
+$merchConfig = [
+    'vinyl'   => ['color' => 'warning', 'icon' => 'fa-solid fa-record-vinyl', 'text' => '12" Vinyl LP'],
+    'cd'      => ['color' => 'neutral', 'icon' => 'fa-solid fa-compact-disc', 'text' => 'CD / Box Set'],
+    'apparel' => ['color' => 'brand', 'icon' => 'fa-solid fa-shirt', 'text' => 'Apparel & Gear']
+];
+
+// Build the specific URLs based on type
+$urls = [
+    'spotify' => $type === 'artist' ? "https://open.spotify.com/artist/{$ids['spotify']}" : "https://open.spotify.com/album/{$ids['spotify']}",
+    'apple'   => $type === 'artist' ? "https://music.apple.com/us/artist/{$ids['apple']}" : "https://music.apple.com/us/album/{$ids['apple']}",
+    'amazon'  => $type === 'artist' ? "https://music.amazon.com/artists/{$ids['amazon']}" : "https://music.amazon.com/albums/{$ids['amazon']}",
+    'youtube' => $type === 'artist' ? "https://music.youtube.com/channel/{$ids['youtube']}" : "https://music.youtube.com/playlist?list={$ids['youtube']}"
+];
+
+$default = 'spotify'; 
+$hasMerch = !empty($physical['vinyl']) || !empty($physical['cd']) || !empty($physical['apparel']);
+?>
+
+<style>
+/* Patch for Web Awesome Button Group not recognizing wa-dropdown in split buttons */
+wa-button-group.dynamic-store-group {
+    display: flex !important;
+    gap: 0 !important;
+}
+wa-button-group.dynamic-store-group wa-button.main-store-btn::part(base) {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-right: -1px !important;
+    z-index: 1 !important;
+}
+wa-button-group.dynamic-store-group wa-button.main-store-btn:hover::part(base) {
+    z-index: 3 !important;
+}
+wa-button-group.dynamic-store-group wa-dropdown {
+    display: flex !important;
+}
+wa-button-group.dynamic-store-group wa-dropdown wa-button::part(base) {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    z-index: 2 !important;
+}
+wa-button-group.dynamic-store-group wa-dropdown wa-button:hover::part(base) {
+    z-index: 3 !important;
+}
+
+/* DSP Custom Colors */
+wa-button.dsp-spotify::part(base) { background-color: #1DB954 !important; border-color: #1DB954 !important; color: white !important; }
+wa-button.dsp-spotify:hover::part(base) { background-color: #1ed760 !important; border-color: #1ed760 !important; }
+
+wa-button.dsp-apple::part(base) { background-color: #FA243C !important; border-color: #FA243C !important; color: white !important; }
+wa-button.dsp-apple:hover::part(base) { background-color: #ff4055 !important; border-color: #ff4055 !important; }
+
+wa-button.dsp-amazon::part(base) { background-color: #00A8E1 !important; border-color: #00A8E1 !important; color: white !important; }
+wa-button.dsp-amazon:hover::part(base) { background-color: #00c0ff !important; border-color: #00c0ff !important; }
+
+wa-button.dsp-youtube::part(base) { background-color: #FF0000 !important; border-color: #FF0000 !important; color: white !important; }
+wa-button.dsp-youtube:hover::part(base) { background-color: #ff3333 !important; border-color: #ff3333 !important; }
+
+/* DSP Custom Text Colors for Dropdown Icons */
+.text-dsp-spotify { color: #1DB954 !important; }
+.text-dsp-apple { color: #FA243C !important; }
+.text-dsp-amazon { color: #00A8E1 !important; }
+.text-dsp-youtube { color: #FF0000 !important; }
+</style>
+
+<div class="d-flex flex-wrap gap-2">
+    
+    <button class="rs-btn"-group class="dynamic-store-group">
+        <button class="rs-btn" href="<?php echo $urls[$default]; ?>" 
+           target="_blank"
+           size="<?php echo htmlspecialchars($size); ?>"
+           class="main-store-btn fw-bold <?php echo $platforms[$default]['class']; ?>"
+           
+           data-default-text="<?php echo $type === 'artist' ? 'Artist on' : 'Listen on'; ?>">
+            <i slot="start" class="main-store-icon <?php echo $platforms[$default]['icon']; ?>"></i>
+            <span class="main-store-text"><?php echo $type === 'artist' ? 'Artist on ' : 'Listen on '; echo $platforms[$default]['text']; ?></span>
+        </button>
+        
+        <wa-dropdown placement="bottom-end">
+            <button class="rs-btn" slot="trigger" size="<?php echo htmlspecialchars($size); ?>" class="toggle-store-btn px-2 <?php echo $platforms[$default]['class']; ?>">
+                <i class="ph ph-chevron-down"></i>
+            </button>
+            <wa-menu class="bg-body rounded-3 shadow-lg border border-secondary border-opacity-25" style="--wa-panel-background-color: inherit; padding: 0; overflow: hidden;">
+                <div class="px-3 py-2 bg-body-tertiary border-bottom border-secondary-subtle mb-2">
+                    <span class="d-block fw-bold text-primary mb-1"><i class="ph ph-memory me-1"></i> Set Global Default</span>
+                    <span class="d-block small text-body-secondary lh-sm" style="font-size: 0.8em;">Select your preferred app. We will remember it for all future albums.</span>
+                </div>
+                <?php foreach ($platforms as $key => $data): ?>
+                    <?php if (!empty($ids[$key])): ?>
+                        <wa-menu-item class="store-selector-link"
+                           value="<?php echo $key; ?>"
+                           data-platform="<?php echo $key; ?>"
+                           data-class="<?php echo $data['class']; ?>"
+                           data-icon="<?php echo $data['icon']; ?>"
+                           data-name="<?php echo $data['text']; ?>"
+                           data-url="<?php echo $urls[$key]; ?>">
+                            <i slot="prefix" class="<?php echo $data['icon']; ?> text-<?php echo $data['class']; ?>"></i> 
+                            <a href="<?php echo $urls[$key]; ?>" target="_blank" class="text-decoration-none text-body fw-bold stretched-link">
+                                <?php echo $data['text']; ?>
+                            </a>
+                        </wa-menu-item>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </wa-menu>
+        </wa-dropdown>
+    </wa-button-group>
+
+    <?php if ($hasMerch): ?>
+    <wa-dropdown placement="bottom-end">
+        <button class="rs-btn" slot="trigger" size="<?php echo htmlspecialchars($size); ?>" variant="warning" appearance="outlined" class="fw-bold">
+            <i slot="start" class="ph ph-cart-shopping"></i> Buy Physical
+            <i slot="suffix" class="ph ph-chevron-down ms-2"></i>
+        </button>
+        <wa-menu class="bg-body rounded-3 shadow-lg border border-secondary border-opacity-25" style="--wa-panel-background-color: inherit; padding: 0; overflow: hidden;">
+            <div class="px-3 py-2 bg-body-tertiary border-bottom border-warning-subtle mb-2">
+                <span class="d-block fw-bold text-warning-emphasis mb-1"><i class="ph ph-box-open me-1"></i> Official Merchandise</span>
+                <span class="d-block small text-body-secondary lh-sm" style="font-size: 0.8em;">Orders fulfilled via our on-demand partners.</span>
+            </div>
+            <?php foreach ($physical as $key => $url): ?>
+                <?php if (!empty($url)): ?>
+                    <wa-menu-item>
+                        <i slot="prefix" class="<?php echo $merchConfig[$key]['icon']; ?> text-<?php echo $merchConfig[$key]['color']; ?>"></i> 
+                        <a href="<?php echo htmlspecialchars($url); ?>" target="_blank" class="text-decoration-none text-body fw-bold stretched-link">
+                            <?php echo $merchConfig[$key]['text']; ?>
+                        </a>
+                    </wa-menu-item>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </wa-menu>
+    </wa-dropdown>
+    <?php endif; ?>
+
+</div>

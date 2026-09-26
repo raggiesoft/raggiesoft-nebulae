@@ -1,0 +1,62 @@
+<?php
+// includes/components/headers/engine-room/artists/stardust-engine/story/header-ad-astra.php
+// Header: Ad Astra Mission Control
+// Theme: HUD / Sci-Fi / High Contrast
+// CONTEXT: The navigation HUD for the spaceship simulation.
+?>
+<div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
+  
+  
+    <button class="rs-btn" appearance="plain" href="/engine-room/artists/stardust-engine/story/ad-astra" class="text-uppercase">
+        <i slot="start" class="ph ph-radar me-2"></i>Mission Hub
+    </button>
+  
+
+  
+  <wa-dropdown placement="bottom-start">
+    <button class="rs-btn" class="nav-link  text-uppercase" href="#"    style="color: var(--astra-text) !important;" slot="trigger" appearance="plain">
+      <i class="ph ph-book-sparkles me-2"></i>Flight Logs
+        <i slot="end" class="ph ph-circle-caret-down ms-2 opacity-50" aria-hidden="true"></i>
+    </button>
+    <wa-menu>
+      <div class="px-3 py-2 small text-uppercase  fw-bold text-uppercase ">Phase I: Departure</div>
+      <wa-dropdown-item value="/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-01">
+            <i class="ph ph-shuttle-space me-2"></i>Day 01: Ignition
+          </wa-dropdown-item>
+      <wa-dropdown-item value="/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-02">
+            <i class="ph ph-earth-americas me-2"></i>Day 02: Stabilization
+          </wa-dropdown-item>
+      <wa-dropdown-item value="/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-03">
+            <i class="ph ph-clock me-2"></i>Day 03: Ship's Time
+          </wa-dropdown-item>
+      
+      <wa-divider></wa-divider>
+      
+      <div class="px-3 py-2 small text-uppercase  fw-bold text-uppercase ">Phase II: The Void</div>
+      <wa-dropdown-item value="/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-10">
+            <i class="ph ph-stars me-2"></i>Day 10: Harmonic Velocity
+          </wa-dropdown-item>
+      
+      <wa-divider></wa-divider>
+      
+      <div class="px-3 py-2 small text-uppercase  fw-bold text-uppercase ">Phase III: Return</div>
+      <wa-dropdown-item value="/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-21">
+            <i class="ph ph-meteor me-2"></i>Day 21: Hard Reset
+          </wa-dropdown-item>
+    </wa-menu>
+  </wa-dropdown>
+
+
+  
+    <button class="rs-btn" appearance="plain" href="/engine-room/artists/stardust-engine/discography/1995-the-warehouse-tapes/ad-astra" class="text-uppercase">
+        <i slot="start" class="ph ph-play me-2"></i>Transmission
+    </button>
+  
+
+  
+      <button class="rs-btn" appearance="plain" href="/engine-room/artists/stardust-engine" class="text-uppercase small">
+        <i slot="start" class="ph ph-arrow-right-from-bracket me-2"></i>Exit Sim
+      </button>
+  
+
+</div>

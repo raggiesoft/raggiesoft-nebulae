@@ -1,10 +1,10 @@
 <?php
 // includes/footer.php
-// v1.1 - Lyra Router (Web Awesome Edition)
-// Removed redundant HTML/Body closures (Handled by Lyra)
+// v8.5 - Integrated Global Trademark Claims
+// Updated: Dynamic Location Logic
 
 // --- 1. DYNAMIC LOCATION LOGIC ---
-$location_json_url = 'https://assets.raggiesoft.com/portfolio/json/locations.json';
+$location_json_url = $cdnBaseUrl . '/portfolio/json/locations.json';
 $hq_location = 'Location Classified'; // Fallback in case of failure
 
 $location_json = @file_get_contents($location_json_url);
@@ -33,85 +33,97 @@ $currentFooter = ROOT_PATH . '/includes/components/footers/' . $footerFile . '.p
 if (!file_exists($currentFooter)) {
     $currentFooter = ROOT_PATH . '/includes/components/footers/footer-default.php';
 }
+
+// Determine if the current theme demands a forced dark legal band
+$isDarkTheme = (isset($currentPageTheme) && in_array($currentPageTheme, ['dark', 'ad-astra']));
 ?>
 
-<footer id="lyra-master-footer">
+<footer id="elara-master-footer">
     <div id="visual-footer-container">
         <?php include $currentFooter; ?>
     </div>
 
-    <div id="global-legal-band" class="wa-padding-m" style="background-color: var(--wa-color-neutral-subtle); border-top: 1px solid var(--wa-color-neutral-border-quiet); z-index: 1;">
-        <div class="wa-flex wa-flex-wrap wa-justify-between wa-align-center wa-gap-m">
-            
-            <!-- Left Side: Copyright & Licenses -->
-            <div class="wa-font-size-s" style="color: var(--wa-color-neutral-text);">
-                <div class="wa-flex wa-align-center wa-gap-s wa-flex-wrap">
-                    <span class="wa-font-bold">&copy; 2008 &ndash; <?php echo date("Y"); ?> Michael Ragsdale.</span>
-                    <span style="opacity: 0.5;">|</span>
-                    <span style="opacity: 0.8;">
-                        Content: <a href="/raggiesoft-media/licensing" style="color: inherit; text-decoration: none; border-bottom: 1px solid currentColor;">CC BY-SA 4.0</a> &bull; 
-                        Code: <a href="/raggiesoft-media/licensing" style="color: inherit; text-decoration: none; border-bottom: 1px solid currentColor;">MIT</a>
-                    </span>
+    <div id="global-legal-band" class="bg-body-secondary border-top py-3 position-relative z-1" <?php echo $isDarkTheme ? 'data-bs-theme="dark"' : ''; ?>>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start small text-body mb-3 mb-lg-0">
+                    <div>
+                        <span class="fw-bold">&copy; 2008 &ndash; <?php echo date("Y"); ?> Michael Ragsdale.</span>
+                        <span class="mx-2 opacity-50 d-none d-lg-inline">|</span>
+                        <span class="opacity-75 d-block d-lg-inline mt-1 mt-lg-0" style="font-size: 0.9em;">
+                            Content: <a href="/raggiesoft-media/licensing" class="text-decoration-none link-body-emphasis border-bottom">CC BY-SA 4.0</a> &bull; 
+                            Code: <a href="/raggiesoft-media/licensing" class="text-decoration-none link-body-emphasis border-bottom">MIT</a>
+                        </span>
+                    </div>
+                    <div class="mt-2 text-body-secondary opacity-75" style="font-size: 0.85em;">
+                        RaggieSoft&trade;, The Stardust Engine&trade;, and Engine Room Records&trade; are trademarks of Michael P. Ragsdale.
+                    </div>
                 </div>
-                <div class="wa-margin-top-3xs" style="color: var(--wa-color-neutral-text-quiet); font-size: 0.85em;">
-                    RaggieSoft&trade;, The Stardust Engine&trade;, and Engine Room Records&trade; are trademarks of Michael P. Ragsdale.
+                <div class="col-lg-6 text-center text-lg-end small mt-2 mt-lg-0">
+                    <a href="https://store.raggiesoft.com/" target="_blank" rel="noopener" class="text-decoration-none link-body-emphasis fw-bold me-3 hover-opacity">
+                        <i class="ph ph-bag-shopping me-1" aria-hidden="true"></i>Official Store
+                    </a>
+                    
+                    <a href="/raggiesoft-media" class="text-decoration-none link-body-emphasis me-3 hover-opacity fw-bold">RaggieSoft Media</a>
+                    <a href="/raggiesoft-media/careers" class="text-decoration-none text-danger fw-bold me-3 hover-opacity">
+                        <i class="ph ph-shield-exclamation me-1" aria-hidden="true"></i>Careers (Fraud Alert)
+                    </a>
+                    <a href="/about/privacy" class="text-decoration-none link-body-emphasis me-3 hover-opacity">Privacy</a>
+                    <a href="/about/terms" class="text-decoration-none link-body-emphasis me-3 hover-opacity">Terms</a>
+                    <a href="/raggiesoft-media/licensing" class="text-decoration-none link-body-emphasis me-3 hover-opacity">Licenses</a>
+                    <a href="/contact" class="text-decoration-none link-body-emphasis me-3 hover-opacity">Contact</a>
+                    <a href="/about/ai-disclaimer" class="text-decoration-none text-primary fw-bold text-uppercase letter-spacing-1 d-inline-block mt-2 mt-md-0" style="font-size: 0.9em;">
+                        <i class="ph ph-robot-astromech me-1"></i>AI Disclaimer
+                    </a>
                 </div>
             </div>
-
-            <!-- Right Side: Navigation Links -->
-            <div class="wa-flex wa-flex-wrap wa-align-center wa-gap-m wa-font-size-s">
-                <a href="https://store.raggiesoft.com/" target="_blank" rel="noopener" class="wa-text-decoration-none wa-text-default wa-font-bold">
-                    <i class="fa-solid fa-bag-shopping wa-margin-right-2xs" aria-hidden="true"></i>Official Store
-                </a>
-                
-                <a href="/raggiesoft-media" class="wa-text-decoration-none wa-text-default wa-font-bold">RaggieSoft Media</a>
-                
-                <a href="/raggiesoft-media/careers" class="wa-text-decoration-none wa-font-bold" style="color: var(--wa-color-danger-text);">
-                    <i class="fa-solid fa-shield-exclamation wa-margin-right-2xs" aria-hidden="true"></i>Careers (Fraud Alert)
-                </a>
-                
-                <a href="/about/privacy" class="wa-text-decoration-none wa-text-default">Privacy</a>
-                <a href="/about/terms" class="wa-text-decoration-none wa-text-default">Terms</a>
-                <a href="/raggiesoft-media/licensing" class="wa-text-decoration-none wa-text-default">Licenses</a>
-                <a href="/contact" class="wa-text-decoration-none wa-text-default">Contact</a>
-                
-                <a href="/about/ai-disclaimer" class="wa-text-decoration-none wa-font-bold wa-text-uppercase" style="color: var(--wa-color-brand-text); letter-spacing: 1px; font-size: 0.9em;">
-                    <i class="fa-duotone fa-robot-astromech wa-margin-right-2xs"></i>AI Disclaimer
-                </a>
-            </div>
-            
         </div>
     </div>
 </footer>
 
-<div id="global-player-zone" style="position: fixed; bottom: 0; width: 100%; z-index: 1050;">
+
+<div id="global-player-zone" class="fixed-bottom" style="z-index: 1050;">
+    
     <?php include ROOT_PATH . '/includes/components/audio-player/sticky-player.php'; ?>
-    <script src="https://assets.raggiesoft.com/engine-room-records/js/stardust-player.js?v=<?php echo time(); ?>"></script>
+    <?php include ROOT_PATH . '/includes/components/modals/encyclopedia-modal.php'; ?>
+
+    <script src="<?php echo $cdnBaseUrl; ?>/engine-room-records/js/stardust-player.js?v=<?php echo time(); ?>"></script>
+    
     <script>
         // Initialize global registry if not exists
         window.STARDUST_PLAYLIST = window.STARDUST_PLAYLIST || [];
     </script>
 </div>
 
+
+<script src="<?php echo $cdnBaseUrl; ?>/common/js/piper-sullivan.js?v=<?php echo time(); ?>"></script>
+<script src="<?php echo $cdnBaseUrl; ?>/common/js/encyclopedia.js?v=1789647924"></script>
+<script src="<?php echo $cdnBaseUrl; ?>/common/js/cinema-carousel.js"></script>
 <script>
-// 1. Wrap the Store UI logic into a reusable function (Refactored for Web Awesome)
+// 1. Wrap the Store UI logic into a reusable function
 function initializeStorePreferences() {
     const savedPlatform = localStorage.getItem('preferredMusicStore');
     
     function updateButtonGroup(group, platformData) {
-        const mainBtn = group.querySelector('.main-store-btn'); 
+        const mainBtn = group.querySelector('.main-store-btn');
         const toggleBtn = group.querySelector('.toggle-store-btn');
         const icon = group.querySelector('.main-store-icon');
         const textSpan = group.querySelector('.main-store-text');
         
-        if (!mainBtn || !toggleBtn) return; 
+        if (!mainBtn || !toggleBtn) return; // Safety check
         
-        // Update Web Awesome variant instead of Bootstrap class
-        mainBtn.setAttribute('variant', platformData.color);
-        toggleBtn.setAttribute('variant', platformData.color);
-        mainBtn.setAttribute('href', platformData.url);
+        // Safely remove old DSP classes
+        Array.from(mainBtn.classList).forEach(c => { if (c.startsWith('dsp-')) mainBtn.classList.remove(c); });
+        Array.from(toggleBtn.classList).forEach(c => { if (c.startsWith('dsp-')) toggleBtn.classList.remove(c); });
         
-        if(icon) icon.className = `main-store-icon ${platformData.icon} wa-margin-right-2xs`;
+        // Add new DSP class
+        if (platformData.class) {
+            mainBtn.classList.add(platformData.class);
+            toggleBtn.classList.add(platformData.class);
+        }
+        
+        mainBtn.href = platformData.url;
+        if(icon) icon.className = `main-store-icon ${platformData.icon}`;
         if(textSpan) textSpan.textContent = `${mainBtn.dataset.defaultText} ${platformData.name}`;
     }
 
@@ -123,12 +135,18 @@ function initializeStorePreferences() {
     }
 
     document.querySelectorAll('.store-selector-link').forEach(link => {
-        // Remove old listeners to prevent duplicates on SPA load
-        const newLink = link.cloneNode(true);
-        link.parentNode.replaceChild(newLink, link);
+        if (link.dataset.listenerAttached) return;
+        link.dataset.listenerAttached = 'true';
         
-        newLink.addEventListener('click', function(e) {
-            localStorage.setItem('preferredMusicStore', this.dataset.platform);
+        link.addEventListener('click', function(e) {
+            const platform = this.dataset.platform;
+            localStorage.setItem('preferredMusicStore', platform);
+            
+            // Instantly visually swap all buttons on the page without needing a refresh
+            document.querySelectorAll('.dynamic-store-group').forEach(group => {
+                const targetLink = group.querySelector(`.store-selector-link[data-platform="${platform}"]`);
+                if (targetLink) updateButtonGroup(group, targetLink.dataset);
+            });
         });
     });
 }
@@ -136,8 +154,8 @@ function initializeStorePreferences() {
 // 2. Run on initial hard load
 document.addEventListener('DOMContentLoaded', initializeStorePreferences);
 
-// 3. The Lyra SPA Lifecycle Hook
-document.addEventListener('lyra:loaded', function() {
+// 3. The Elara SPA Lifecycle Hook
+document.addEventListener('elara:loaded', function() {
     // Re-bind the store selector buttons in the new DOM
     initializeStorePreferences();
 
@@ -146,17 +164,37 @@ document.addEventListener('lyra:loaded', function() {
         bindTracklistButtons(); 
     }
 
-    // Ping Google Analytics to log the virtual pageview (Tag ID supplied by Orion Vault)
-    if (typeof gtag === 'function' && '<?php echo $googleTag ?? ''; ?>' !== '') {
-        gtag('config', '<?php echo htmlspecialchars($googleTag ?? ''); ?>', {
+    // Ping Google Analytics to log the virtual pageview
+    if (typeof gtag === 'function') {
+        gtag('config', '<?php echo htmlspecialchars($settings['analytics']['trackingId'] ?? ''); ?>', {
             'page_path': window.location.pathname
         });
     }
 });
-</script>
 
+</script>
 <?php if (isset($pageConfig['scripts']) && is_array($pageConfig['scripts'])): ?>
     <?php foreach ($pageConfig['scripts'] as $script): ?>
-        <script src="<?php echo htmlspecialchars($script); ?>"></script>
+        <script src="<?php echo $script; ?>"></script>
     <?php endforeach; ?>
 <?php endif; ?>
+
+
+<dialog id="readerSettingsModal" class="rs-modal">
+    <h3 style="margin-top:0;">Reading Theme</h3>
+    <p>Select a theme to apply across the entire interface.</p>
+    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <button class="rs-btn" onclick="setReaderTheme('default')">Default</button>
+        <button class="rs-btn" onclick="setReaderTheme('light')" style="background: #ffffff; color: #000; border: 1px solid #ccc;">Light</button>
+        <button class="rs-btn" onclick="setReaderTheme('dark')" style="background: #121212; color: #fff;">Dark</button>
+        <button class="rs-btn" onclick="setReaderTheme('sepia')" style="background: #f4ecd8; color: #5b4636;">Sepia</button>
+    </div>
+    <div style="text-align: right;">
+        <button class="rs-btn" onclick="this.closest('dialog').close()">Close</button>
+    </div>
+</dialog>
+
+<!-- Stardust UI Scripts -->
+<script src="<?php echo htmlspecialchars($cdnBaseUrl); ?>/stardust-engine/js/raggiesoft-ui.js"></script>
+</body>
+</html>

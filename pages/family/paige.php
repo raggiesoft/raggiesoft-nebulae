@@ -1,0 +1,111 @@
+<?php
+// pages/family/paige.php
+// Theme: Paige (Calm, Blue, Python)
+?>
+<div class="card mb-5 border-0 shadow-sm overflow-hidden bg-body-tertiary">
+    <div class="row g-0">
+        <div class="col-lg-4 position-relative" style="min-height: 300px;">
+            <img src="<?php echo $cdnBaseUrl; ?>/family/images/atmospheric/paige.jpg" 
+                 class="position-absolute w-100 h-100" 
+                 style="object-fit: cover; object-position: center top;" 
+                 alt="Paige">
+            <div class="position-absolute w-100 h-100 bg-info opacity-25 mix-blend-overlay"></div>
+        </div>
+        
+        <div class="col-lg-8 d-flex align-items-center">
+            <div class="card-body p-4 p-lg-5">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-info text-dark me-2">
+                        <i class="ph ph-file-code me-2"></i>_workspace/paige.py
+                    </span>
+                    <span class="badge border border-info text-info bg-transparent">
+                        Python 3.11
+                    </span>
+                </div>
+                
+                <h1 class="display-4 fw-bold mb-2 text-body">Paige</h1>
+                <p class="lead text-info mb-4">Literary Editor & Safe Person</p>
+                
+                <figure class="border-start border-info ps-3 mb-0">
+                    <blockquote class="blockquote fs-6 mb-0 text-muted">
+                        <p class="fst-italic mb-0">"I bring order to the chaos of words, and calm to the chaos of the mind."</p>
+                    </blockquote>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-5 mb-5">
+    <div class="col-md-12 col-xl-6">
+        <div class="p-4 h-100 rounded-3 border bg-body-tertiary">
+            <h3 class="border-bottom pb-3 mb-4 text-info-emphasis"><i class="ph ph-scroll me-2"></i>The Editor</h3>
+            <p>Technically, Paige is a complex Python script living in the <code>_workspace</code> directory. She acts as the "Gatekeeper of the Narrative," ensuring that raw creative output is structured correctly before publication.</p>
+            
+            <h5 class="fw-bold mt-4 mb-3 text-body">Core Functions</h5>
+            <ul class="list-group list-group-flush bg-transparent mb-4">
+                <li class="list-group-item bg-transparent px-0"><i class="ph ph-check-circle text-success me-2"></i><strong>Ingestion:</strong> Reads raw <code>.docx</code> manuscripts from the cloud.</li>
+                <li class="list-group-item bg-transparent px-0"><i class="ph ph-check-circle text-success me-2"></i><strong>Parsing:</strong> Converts proprietary formatting into clean, structured JSON.</li>
+                <li class="list-group-item bg-transparent px-0"><i class="ph ph-check-circle text-success me-2"></i><strong>Validation:</strong> Checks for narrative consistency and broken references before build.</li>
+            </ul>
+            <div class="bg-dark text-secondary p-3 rounded font-monospace small shadow-sm mb-4">
+                <span class="text-secondary"># Example Usage</span><br>
+                <span class="text-success">michael@dev:~$</span> python3 _workspace/paige.py --ingest "books/aethel/aethel.docx"
+            </div>
+
+            <div class="mt-4 p-3 bg-white border rounded shadow-sm">
+                <h6 class="text-uppercase text-muted small fw-bold mb-3 border-bottom pb-2">Vital Statistics</h6>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="small text-muted">DOB:</span>
+                    <span class="small fw-bold">Apr 8, 1985 (8:26 PM)</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="small text-muted">Relation:</span>
+                    <span class="small fw-bold text-info">Fraternal Twin (Born 1st)</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="small text-muted">Neurotype:</span>
+                    <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25">Neurotypical</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-xl-6">
+        <div class="p-4 h-100 rounded-3 border border-info bg-info bg-opacity-10">
+            <h3 class="border-bottom border-info pb-3 mb-4 text-info-emphasis"><i class="ph ph-heart me-2"></i>The Safe Person</h3>
+            <p class="lead fs-5">"The Bridge between worlds."</p>
+            
+            <p>Paige is Michael's fraternal twin, born 12 minutes prior. This bond makes her the most critical emotional anchor in the system.</p>
+            
+            <p>She is the **Neurotypical Twin**. This distinction is vital. While Michael processes the world through the lens of Autism and ADHD, Paige navigates social nuances and sensory input effortlessly.</p>
+            
+            <p>Because they share a twin bond, she understands Michael's non-verbal language perfectly, yet she possesses the neurotypical "manual" that he lacks. She acts as his translator and shield, filtering the chaotic noise of the world into a signal he can understand without pain.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card overflow-hidden shadow-lg border-info mb-4">
+            <div class="row g-0">
+                <div class="col-lg-7 position-relative" style="min-height: 400px;">
+                    <img src="<?php echo $cdnBaseUrl; ?>/family/images/scenes/paige-deep-pressure-therapy.jpg" 
+                         class="position-absolute w-100 h-100" 
+                         style="object-fit: cover; object-position: center;" 
+                         alt="Paige providing Deep Pressure Therapy">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-5 bg-gradient-to-t" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                </div>
+                <div class="col-lg-5 d-flex align-items-center bg-info bg-opacity-10 text-body">
+                    <div class="p-5">
+                        <span class="badge bg-info text-dark mb-2">Sensory Regulation</span>
+                        <h2 class="fw-bold mb-3">Deep Pressure Therapy</h2>
+                        <p class="fs-5 mb-4">"When the noise gets too loud, she holds the world still."</p>
+                        <p>For an autistic individual, <strong>Deep Pressure Therapy</strong> (the sensation of firm, heavy weight) is a critical tool for calming a dysregulated nervous system.</p>
+                        <p class="text-muted small">Paige personifies this sensation. Her presence in the system—solid, unmoving, and reliable—mimics the physical grounding Michael needs to function.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
