@@ -29,22 +29,8 @@ $css_font_parts = array_map(function($font) {
 
 $brand_font_css = implode(', ', $css_font_parts);
 
-// 3. Path Definitions
-
-
-/css/webawesome/{$theme}";
-}
-
 // 4. Build CSS Queue
-$css_load_queue = [
-    $path_bootstrap,
-    $cdn_root . "/common/css/raggiesoft-logo.css",                    
-    $path_theme_base . '/root.css',     
-    $path_theme_base . '/extras.css',   
-    $path_theme_base . '/header.css',   
-    $path_theme_base . '/footer.css',   
-    $path_theme_base . '/safety-net.css'
-];
+$css_load_queue = [];
 
 // 5. Critical Images
 $critical_images = [];
