@@ -40,7 +40,7 @@ class StardustParsedown extends Parsedown {
             }
         }
 
-        // 4. Add your Bootstrap 5.3 classes
+        // 4. Add your Web Awesome Pro classes
         $Block['element']['attributes']['class'] = 'table table-striped table-hover align-middle';
 
         // 5. Wrap the entire table in the responsive div
@@ -230,23 +230,24 @@ class StardustParsedown extends Parsedown {
             
             $id = 'cred-' . uniqid();
             
-            return '<button class="rs-btn" variant="' . $color . '" size="small" class="me-2 mb-2" outline onclick="document.getElementById(\'' . $id . '\').show()">
+            return '<wa-button variant="' . $color . '" size="small" class="me-2 mb-2" outline onclick="document.getElementById(\'' . $id . '\').show()">
 <i class="fa-duotone ' . $icon . ' me-2"></i> ' . htmlspecialchars($title) . '
-</button>
-<dialog class="rs-modal" id="' . $id . '" label="' . htmlspecialchars($title) . '">
+</wa-button>
+<wa-dialog id="' . $id . '" label="' . htmlspecialchars($title) . '">
 <i slot="label-icon" class="fa-duotone ' . $icon . '"></i>
 <div class="mb-4">
 <h6 class="text-uppercase small opacity-75 mb-2">Technical Definition</h6>
 <p class="mb-0 text-body-secondary">' . htmlspecialchars($desc) . '</p>
 </div>
 <wa-alert variant="' . $color . '" open class="shadow-sm">
-<i slot="icon" class="ph ph-shield-check"></i>
+<i slot="icon" class="fa-duotone fa-shield-check"></i>
 <strong class="d-block mb-1">Application to the Universe</strong>
 <div class="small">' . htmlspecialchars($lore) . '</div>
 </wa-alert>
-<button class="rs-btn" slot="footer" variant="neutral" onclick="document.getElementById(\'' . $id . '\').hide()">Close</button>
-</dialog>';
+<wa-button slot="footer" variant="neutral" onclick="document.getElementById(\'' . $id . '\').hide()">Close</wa-button>
+</wa-dialog>';
         }, $text);
+        $text = preg_replace('/<aac>(.*?)<\/aac>/is', '<span class="visually-hidden">AAC Device: </span><em class="aac-device">$1</em>', $text);
         
         $text = preg_replace('/<asl>(.*?)<\/asl>/is', '<span class="visually-hidden">American Sign Language: <\/span><em class="asl-sign">$1<\/em>', $text);
         $text = preg_replace('/<sgn>(.*?)<\/sgn>/is', '<span class="visually-hidden">Signed: <\/span><em class="generic-sign">$1<\/em>', $text);
