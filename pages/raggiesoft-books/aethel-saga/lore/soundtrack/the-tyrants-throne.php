@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: The Tyrant's Throne OST Page
+ * PATH: pages/raggiesoft-books/aethel-saga/lore/soundtrack/the-tyrants-throne.php
+ * PURPOSE: Immersive soundtrack display page for Aethel Saga. Compares
+ *          the original soundtrack lyrics alongside the screenplay script.
+ * ARCHITECTURE NOTES:
+ * - Uses inline styles for specific theatrical elements (`.record-scratch`).
+ * - Employs a split-pane layout to simultaneously show lyrics and dialogue.
+ * - Heavily customized "Cinzel" typography for fantasy aesthetic.
+ * ============================================================================
+ */
 // pages/raggiesoft-books/aethel-saga/soundtrack/the-tyrants-throne.php
 // THE OST PAGE: "The Tyrant's Throne (Shadow's Heart)"
 // Design: 1980s Deluxe Edition / Director's Cut Script Comparison
@@ -71,6 +83,7 @@ $poster_bg = $cdnBaseUrl . '/aethel/images/aethel-hero.jpg';
 
     <div class="container py-5">
         
+        <!-- SECTION: Audio Player UI -->
         <!-- AUDIO PLAYER PLACEHOLDER -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8">
@@ -108,6 +121,7 @@ $poster_bg = $cdnBaseUrl . '/aethel/images/aethel-hero.jpg';
             </div>
         </div>
 
+        <!-- SECTION: Split Content (Lyrics vs Script) -->
         <!-- THE SPLIT SCRIPT / LYRICS -->
         <div class="row g-5">
             

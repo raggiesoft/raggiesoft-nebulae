@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file serves as the main discography overview page. It dynamically pulls album
+ * data from a central JSON file (albums.json) via a CDN URL. This architecture decouples
+ * content from presentation, allowing the JSON library to be updated without modifying PHP.
+ * It also dynamically generates Schema.org JSON-LD for SEO.
+ * 
+ * Future Maintenance Notes:
+ * - Ensure albums.json maintains its schema, as this file strictly expects certain keys.
+ * - CDN failures are currently suppressed with @file_get_contents. Consider adding a fallback
+ *   or proper error logging mechanism in the future to handle network issues gracefully.
+ * - 'DSP Exemption' logic is central to the display of external store links.
+ */
 // pages/discography/overview.php
 // v4.1 - Added Fourthwall Store Routing, DSP Exemption Logic & Schema.org Updates
 
@@ -6,6 +19,8 @@ $pageTitle = "Discography Overview - The Stardust Engine";
 $bandName = "The Stardust Engine";
 $baseUrl = "https://raggiesoft.com"; // Adjust to your actual production domain
 
+// Inline Logic: Fetch the centralized albums metadata. Using error suppression (@)
+// prevents warnings if the CDN is unreachable, though it may leave $jsonData empty.
 // Fetch the albums.json file directly from the CDN
 $jsonUrl = $cdnBaseUrl . '/engine-room-records/artists/the-stardust-engine/albums.json';
 $jsonData = @file_get_contents($jsonUrl);

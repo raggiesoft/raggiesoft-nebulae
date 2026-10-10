@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Official Timeline History
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the chronological lore timeline for "The Stardust Engine".
+ *    - Generates Schema.org `AboutPage` JSON-LD connected to the `MusicGroup`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Leverages `starfield-container` and `glass-container` for the global space/synth theme.
+ *    - Distinct timeline eras are marked with specific Bootstrap contextual colors (Primary, Warning, Success, Info) to differentiate thematic periods (e.g., Success green for the Lottery win).
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Simple, static semantic HTML sections with `id` attributes to allow direct anchor linking to specific eras.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - When appending new eras to the timeline, continue alternating contextual colors to maintain visual separation.
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/band/history.php
 // The Official Timeline
 // UPDATED: Corrected 1992 Independence & 1996 Lottery Logic
@@ -25,8 +45,10 @@ $historySchema = [
 <?php echo json_encode($historySchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>
 
+<!-- Starfield Background Overlay -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- Main Content Container with Glassmorphism -->
 <div class="container py-5 glass-container position-relative z-1">
     
     <div class="text-center mb-5">

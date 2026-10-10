@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: EXOPLANET ARCHIVE BRIDGE
+ * ============================================================================
+ * 
+ * This utility acts as a bridge to the NASA Exoplanet Archive API (TAP Sync). 
+ * It handles the execution of remote SQL queries against planetary data tables, 
+ * processes distance metrics, and converts Parsecs into Light Years.
+ * 
+ * MAINTENANCE NOTES:
+ * - Relies on the public Caltech/NASA TAP API endpoint. Ensure it is accessible
+ *   and keep the timeout short to prevent the host site from stalling if the 
+ *   endpoint goes down.
+ * ============================================================================
+ */
 // includes/utils/nasa-bridge.php
 
 function fetch_nasa_distance() {

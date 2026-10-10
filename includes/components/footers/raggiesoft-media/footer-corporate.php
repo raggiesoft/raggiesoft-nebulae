@@ -1,5 +1,17 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: The authoritative B2B corporate footer for the holding entity.
+ * Architecture: Employs a Dark Aero Master Glass aesthetic to establish corporate
+ * authority. Contains standard directories (operations, legal, open-source) and a 
+ * prominent anti-fraud alert component.
+ * Future Maintainers: Maintain the precise URL structures for commercial sync and
+ * licensing portals. If updating the fraud alert, ensure the red (danger) visual
+ * cue remains dominant.
+ */
 // includes/components/footers/raggiesoft-media/footer-corporate.php
+// Centralizes B2B routing, legal compliance links, and corporate fraud warnings.
 // The authoritative B2B footer for the holding entity.
 // Updated: Frutiger Aero / Dark Aero Master Glass
 ?>
@@ -8,6 +20,7 @@
     <div class="container relative-z1">
         <div class="row gy-4">
             
+            <!-- Left Column: Primary Brand Identity and HQ Location -->
             <div class="col-lg-4 col-md-6 text-center text-md-start">
                 <div class="text-uppercase fw-bold fs-4 mb-2 brand-font text-glow-primary" style="letter-spacing: 1px;">
                     RaggieSoft Media
@@ -20,6 +33,7 @@
                 </p>
             </div>
 
+            <!-- Middle Column: Critical B2B Operations and Licensing Directories -->
             <div class="col-lg-4 col-md-6">
                 <h6 class="text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-3 ">Operations Directory</h6>
                 <ul class="list-unstyled small mb-0">
@@ -46,6 +60,7 @@
                 </ul>
             </div>
 
+            <!-- Right Column: Legal Policies and Anti-Fraud Verification Alert -->
             <div class="col-lg-4 col-md-12 text-center text-lg-start">
                 <h6 class="text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-3 ">Security & Legal</h6>
                 <ul class="list-unstyled small mb-3">
@@ -73,6 +88,7 @@
 </footer>
 
 <style>
+    /* Style the anti-fraud alert to stand out from the standard dark footer background */
     /* Inner Glass Alert Box for Footer */
     .aero-footer-alert {
         background: rgba(0, 0, 0, 0.02);

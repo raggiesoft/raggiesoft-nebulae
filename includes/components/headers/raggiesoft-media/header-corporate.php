@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: CORPORATE MEDIA B2B HEADER
+ * ============================================================================
+ * 
+ * This header component provides the global B2B (Business-to-Business) 
+ * navigation for the "RaggieSoft Media" holding entity. It emphasizes 
+ * licensing, open-source projects, and corporate commercial access.
+ * 
+ * MAINTENANCE NOTES:
+ * - Employs Web Awesome (`wa-dropdown`, `wa-menu`) and custom `rs-btn` 
+ *   elements for interactive dropdowns and styled routing.
+ * - Dynamic active state calculation leverages `$_SERVER['REQUEST_URI']`.
+ * ============================================================================
+ */
 // includes/components/headers/raggiesoft-media/header-corporate.php
 // The global B2B navigation for the RaggieSoft Media holding entity.
 // Updated: Web Awesome Components

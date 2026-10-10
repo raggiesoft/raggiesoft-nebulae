@@ -1,6 +1,26 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node Character Profile - Bernard Morgan
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the character biography and stat card for Bernard Morgan within the Northwood High staff lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Two-column Bootstrap responsive layout matching the staff profile template.
+ *    - Employs info (`text-info`, `border-info`) classes to denote his approachable, safe, and protective role as the school principal.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Relies on `$cdnBaseUrl` for the character portrait.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Maintain the blue/info theme for his profile components to visually represent his "safe harbor" status among the staff.
+ * ============================================================================
+ */
 // pages/engine-room/artists/crimson-node/characters/northwood/staff/bernard-morgan.php
 ?>
+<!-- Main Staff Profile Container -->
 <div class="container py-5">
     <div class="row mb-5">
         <div class="col-12 text-center">

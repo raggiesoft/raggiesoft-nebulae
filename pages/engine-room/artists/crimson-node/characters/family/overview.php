@@ -1,7 +1,26 @@
 <?php
-// pages/engine-room/artists/crimson-node/characters/family/overview.php
-// The Phalanx Directory
-
+/**
+ * ============================================================================
+ * Crimson Node: The Phalanx Directory
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/characters/family/overview.php
+ *
+ * Description:
+ * The primary roster/directory view for the "family" ecosystem of Crimson Node.
+ * Displays interactive cards for each band member/character, linking to their 
+ * respective full profiles.
+ *
+ * Architecture & Maintenance Notes:
+ * - Uses Bootstrap 5 grid system (g-4) to create a responsive card layout.
+ * - Each card uses a distinct color border (e.g., border-top: 5px solid #dc3545) 
+ *   to visually organize the roster.
+ * - The Pelletier Twins card spans two columns (col-lg-8) to accommodate their 
+ *   unified profile structure.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode\Characters
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "The Phalanx - Crimson Node";
 ?>
 
@@ -17,7 +36,14 @@ $pageTitle = "The Phalanx - Crimson Node";
         </div>
     </div>
 
-    <div class="row g-4">
+    <!--
+    ========================================================================
+    Character Roster Grid
+    A responsive layout of individual character cards. Each card points to 
+    the specific detailed biography page.
+    ========================================================================
+-->
+<div class="row g-4">
         <!-- Matt Miller -->
         <div class="col-md-6 col-lg-4">
             <div class="card h-100 border-0 shadow-sm" style="border-top: 5px solid #dc3545;">

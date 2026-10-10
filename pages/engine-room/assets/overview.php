@@ -1,4 +1,18 @@
 <?php
+/**
+ * ARCHITECTURE & MAINTENANCE (LEGACY)
+ *
+ * This file renders the "Strategic Assets" overview page for Engine Room Records.
+ * 
+ * DESIGN INTENT:
+ * - Displays tangible assets (The Fortress, The Fleet, The Armory) in a structured, grid-based layout.
+ * - Incorporates custom CSS (`<style>` block) for specific component styling (e.g., `.asset-card`, `.spec-table`), which overrides default Bootstrap styling to fit the "industrial/tactical" aesthetic.
+ * 
+ * MAINTENANCE NOTES:
+ * - The custom CSS in this file should ideally be moved to a centralized stylesheet in the future to improve maintainability and cacheability.
+ * - Asset details are hardcoded. If the portfolio expands significantly, consider abstracting asset data into a database or configuration file.
+ * - Be careful with the inline background gradient in the header; changing colors might clash with the global theme.
+ */
 // pages/engine-room/assets/overview.php
 // The Hard Assets.
 // "We own the bus. We own the studio. We own the masters."
@@ -43,6 +57,7 @@ $pageTitle = "Strategic Assets - Engine Room Records";
     }
 </style>
 
+<!-- LEGACY STRUCTURAL NOTE: Full-width container with explicit black background and white text to enforce the dark tactical theme across all viewports. -->
 <div class="container-fluid p-0 bg-black text-white">
     
     <div class="py-5 text-center border-bottom border-secondary" 
@@ -57,6 +72,7 @@ $pageTitle = "Strategic Assets - Engine Room Records";
         
         <div class="row align-items-center mb-5 pb-5 border-bottom border-secondary">
             <div class="col-lg-5 mb-4 mb-lg-0">
+                <!-- LEGACY UI COMPONENT: Custom asset card for 'The Fortress'. Note the `h-100` class which ensures equal height in row layouts. -->
                 <div class="asset-card p-4 h-100">
                     <div class="d-flex align-items-center mb-3">
                         <div class="asset-icon me-3">

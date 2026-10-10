@@ -1,4 +1,34 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - AETHEL SAGA TABLE OF CONTENTS
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page acts as the dynamic Table of Contents (TOC) for the "Aethel Saga". 
+ * It reads from the structured book data (loaded via `nav-logic.php`) and renders 
+ * the Book -> Part -> Chapter hierarchy. 
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs nested `foreach` loops to parse the multi-level JSON array 
+ *   (`$bookData['structure']`).
+ * - Uses Bootstrap cards to visually separate "Parts" (e.g., Acts) and lists 
+ *   chapters cleanly within `list-group`.
+ * - Relies on CSS variables (e.g., `--aethel-rust`, `--aethel-ink`) defined globally 
+ *   or within the `.aethel-theme` wrapper to enforce the parchment/fantasy aesthetic.
+ * 
+ * MAINTENANCE NOTES:
+ * - The `$url` for chapters is constructed dynamically. Ensure Elara's routing 
+ *   rules in `index.php` properly map `/library/aethel/aethel-book/{bookId}/{partId}/{chapterId}` 
+ *   to the `viewer.php` script.
+ * - If the JSON structure in `nav-logic.php` changes, these nested loops MUST be 
+ *   updated to prevent fatal errors.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Aethel_Saga
+ * ============================================================================
+ */
+
 // Context: Book Index / Table of Contents
 $currentSite = 'aethel';
 $pageTitle = "Table of Contents - The Silver Gauntlet";
@@ -10,6 +40,11 @@ require_once ROOT_PATH . '/includes/utils/nav-logic.php';
 <div class="aethel-theme min-vh-100 py-5">
     <div class="container tome-container">
         
+        <!-- 
+          STRUCTURAL BLOCK: Header & Cover Art
+          Displays the primary book cover and title. The slight rotation (-2deg) 
+          on the image gives it a physical, tangible book feel.
+        -->
         <div class="text-center mb-5">
             <img src="<?php echo $cdnBaseUrl; ?>/engine-room-records/artists/silver-gauntlet-of-aethel/2017-the-aethel-saga/album-art.jpg" 
                  alt="Cover Art" 
@@ -31,6 +66,11 @@ require_once ROOT_PATH . '/includes/utils/nav-logic.php';
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     
+                    <!-- 
+                      STRUCTURAL BLOCK: Dynamic Hierarchy Loop
+                      Iterates through Books, then Parts, then Chapters.
+                      Uses Bootstrap cards to compartmentalize Parts.
+                    -->
                     <?php foreach ($bookData['structure'] as $book): ?>
                         <div class="mb-5">
                             
@@ -80,6 +120,10 @@ require_once ROOT_PATH . '/includes/utils/nav-logic.php';
 
         <?php endif; ?>
 
+        <!-- 
+          STRUCTURAL BLOCK: Footer Navigation
+          Provides escape hatches back to the main landing page and lore wikis.
+        -->
         <div class="text-center mt-5 pt-4 border-top border-secondary border-opacity-25">
             <a href="/raggiesoft-books/aethel-saga" class="btn btn-outline-secondary">
                 <i class="ph ph-arrow-left me-2"></i>Return to Aethel Home

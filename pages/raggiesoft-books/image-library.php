@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Universal Image Library
+ * PATH: pages/raggiesoft-books/image-library.php
+ * PURPOSE: A standalone, grid-based visual gallery showcasing lore imagery
+ *          across the RaggieSoft universes.
+ * ARCHITECTURE NOTES:
+ * - Uses a hardcoded PHP array for rapid asset configuration.
+ * - Implements a vanilla Javascript lightbox (`<dialog>` element) for full-screen
+ *   image viewing with Next/Prev controls.
+ * ============================================================================
+ */
 // pages/raggiesoft-books/image-library.php
 
 $images = [
@@ -54,6 +66,7 @@ $images = [
     ]
 ];
 ?>
+<!-- SECTION: Visual Gallery Grid -->
 <div class="container-fluid py-5 mt-5" style="min-height: 100vh;">
     <div class="container">
         <div class="text-center mb-5">
@@ -75,6 +88,7 @@ $images = [
     </div>
 </div>
 
+<!-- SECTION: Dynamic JavaScript Lightbox Modal -->
 <dialog class="rs-modal" id="image-modal" label="Image View" light-dismiss style="--width: 90vw; max-width: 1600px;">
     <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
         <img id="image-modal-img" src="" alt="" style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 8px;">

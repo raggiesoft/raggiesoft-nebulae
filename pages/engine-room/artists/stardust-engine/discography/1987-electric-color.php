@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file represents the presentation layer for the 1987 "Electric Color" album page.
+ * It integrates UI components (_album-art-header.php, _tracklist-downloader.php) and
+ * renders the historical narrative of the album. The architecture relies on simple
+ * PHP includes to maintain modularity and ease of maintenance.
+ * 
+ * Future Maintenance Notes:
+ * - When modifying the narrative, ensure alignment with the overarching lore.
+ * - Components like the tracklist downloader are globally shared; updates to them
+ *   will affect all album pages.
+ */
 // pages/engine-room/artists/stardust-engine/1987-electric-color.php
 // Page data
 $pageTitle = "Electric Color (1987) - The Stardust Engine";
@@ -10,7 +22,10 @@ $album_path_web = '/engine-room-records/artists/the-stardust-engine/1987-electri
     
     <div class="row align-items-center mb-5">
         
-        <?php $props = [
+        <?php 
+        // Inline Logic: Define properties for the album art header component.
+        // The 'variant' key controls stylistic variations (e.g., 'pact' for the Apex era pink border).
+        $props = [
             'path' => $album_path_web, 
             'alt' => 'Electric Color Album Art',
             'variant' => 'pact' // Pink border for Apex era

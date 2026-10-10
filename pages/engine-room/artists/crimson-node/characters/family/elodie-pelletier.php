@@ -1,3 +1,25 @@
+<?php
+/**
+ * ============================================================================
+ * Elodie Pelletier - Individual Character Fragment
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/characters/family/elodie-pelletier.php
+ *
+ * Description:
+ * A partial, isolated profile view specifically focused on 'Elodie Pelletier'.
+ * Intended to be included or displayed in contexts where the unified twin 
+ * profile is not required.
+ *
+ * Architecture & Maintenance Notes:
+ * - This file does NOT contain a full HTML document structure or $pageTitle 
+ *   header, as it is designed to be injected into a larger container/layout.
+ * - Relies on the parent container to provide the Bootstrap .container class.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode\Characters
+ * @since 1.0.0
+ * ============================================================================
+ */
+?>
 <div class="row">
     <div class="col-12 mb-4">
         <h1 class="display-4 fw-bold" style="font-family: 'Impact', sans-serif; letter-spacing: 2px;">
@@ -7,6 +29,12 @@
         <hr class="mt-4 mb-0">
     </div>
 
+    <!--
+        ========================================================================
+        Sidebar Profile Area
+        Displays the isolated portrait and role statistics for Elodie.
+        ========================================================================
+    -->
     <!-- Quick Stats Sidebar Area -->
     <div class="col-lg-4 mb-4 mb-lg-0">
         <!-- Portrait Image -->
@@ -26,6 +54,13 @@
         </div>
     </div>
 
+    <!--
+        ========================================================================
+        Main Biography Text
+        Isolated narrative focus on Elodie's specific interactions and 
+        musical contributions.
+        ========================================================================
+    -->
     <!-- Main Biography Content -->
     <div class="col-lg-8">
         <div class="mb-5">

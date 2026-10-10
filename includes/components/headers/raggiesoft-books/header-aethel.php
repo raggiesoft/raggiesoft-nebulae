@@ -1,4 +1,18 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: AETHEL SAGA NARRATIVE HEADER
+ * ============================================================================
+ * 
+ * This header is specialized for "The Silver Gauntlet of Aethel" lore sub-site. 
+ * It introduces high-fantasy theming (Gold accents, text shadows) and routes 
+ * directly to saga-specific endpoints like Characters, Locations, and Soundtrack.
+ * 
+ * MAINTENANCE NOTES:
+ * - Employs `str_contains` for active state routing across deeply nested pages.
+ * - Contains a static "Locked" Map link as a narrative teaser.
+ * ============================================================================
+ */
 // includes/components/headers/raggiesoft-books/header-aethel.php
 // THE SAGA NAVIGATION: "The Tome's Index"
 // Theme: Cinzel, Gold Accents, High Fantasy

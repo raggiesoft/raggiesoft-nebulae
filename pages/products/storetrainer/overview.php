@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as a historical time capsule and legacy web endpoint for the
+ * RaggieSoft StoreTrainer installation process. The NSIS installer for this legacy
+ * software explicitly links to this URL upon completion (`MUI_FINISHPAGE_LINK_LOCATION`).
+ *
+ * MAINTENANCE NOTES:
+ * - Visually engineered to emulate the Windows 95/98 Classic Theme using hardcoded inline CSS.
+ * - Do NOT update this page to use modern Bootstrap or Web Awesome UI paradigms; its aesthetic is intentional.
+ * - The download link connects to `$cdnBaseUrl`. If the CDN folder structure changes, ensure the `tssetup100.exe` path remains accurate.
+ */
 // pages/products/storetrainer/overview.php
 // Legacy Endpoint for TSSetup.nsi (MUI_FINISHPAGE_LINK_LOCATION)
 // Theme: Windows Classic / Y2K Time Capsule

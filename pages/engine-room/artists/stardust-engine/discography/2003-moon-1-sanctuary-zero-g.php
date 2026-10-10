@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - 2003 MOON 1: SANCTUARY (ZERO-G) VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view partial renders the narrative and tracklist for the 2003 ambient
+ * album "Moon 1: Sanctuary (Zero-G)". It's part of a dual-album release cycle
+ * and relies on the parent router for layout integration.
+ *
+ * MAINTENANCE NOTES:
+ * - $pageTitle and $album_path_web are used for page metadata and asset paths.
+ * - The component configuration uses $props['variant'] = 'info' to define the
+ *   thematic styling (blue borders) for "Moon 1". Keep this consistent with
+ *   brand guidelines.
+ * - Included components `_album-art-header.php` and `_tracklist-downloader.php`
+ *   must remain accessible at `ROOT_PATH`.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/discography/2003-moon-1-sanctuary-zero-g.php
 $pageTitle = "Sanctuary (Zero-G) [Moon 1] - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/2003-sanctuary-zero-g';

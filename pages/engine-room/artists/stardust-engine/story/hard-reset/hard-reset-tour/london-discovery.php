@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This lore page documents "The London Discovery" of the band 'Origin'. It uses a standard
+ * Bootstrap card-based layout to segment the narrative elements (The Wake, The Call, The Approach).
+ * 
+ * Future Maintenance Notes:
+ * - Ensure this page remains linked to the overarching timeline. It bridges the Hard Reset 
+ *   era with the later inclusion of 'Origin' to the label.
+ * - The 'transform-rotate-1' custom class and 'Caveat' handwriting font are used 
+ *   to style "The Napkin Deal" visually as a handwritten document.
+ */
 // pages/engine-room/artists/stardust-engine/story/hard-reset-tour/london-discovery.php
 // Lore Entry: The Signing of Origin.
 // Context: Camden Town, 1998. The "Safe Harbor" recognition.
@@ -45,6 +56,7 @@ $pageTitle = "The London Discovery - The Stardust Engine Lore";
                 </div>
             </div>
 
+            <!-- Inline Logic: Highlight the "Phone Call" narrative beat using an info-themed card. -->
             <div class="card bg-body-tertiary border-info p-4 mb-5 shadow-lg">
                 <div class="row align-items-center">
                     <div class="col-md-8">

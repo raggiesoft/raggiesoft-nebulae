@@ -1,3 +1,19 @@
+<!--
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: STICKY AUDIO PLAYER & LYRICS MODAL
+ * ============================================================================
+ * 
+ * This file provides the global persistent audio player interface and its 
+ * associated lyrics modal. Designed to span across page navigations utilizing 
+ * Turbo Drive (`data-turbo-permanent="true"`).
+ * 
+ * MAINTENANCE NOTES:
+ * - This component does NOT contain the actual audio control logic (JS); it 
+ *   only provides the semantic HTML structure, styling, and DOM injection.
+ * - It self-injects to the `<body>` to avoid layout thrashing and stacking 
+ *   context bugs within nested container hierarchies.
+ * ============================================================================
+-->
 <div id="sticky-audio-player" 
      class="fixed-bottom border-top border-secondary-subtle p-3 shadow-lg d-none" 
      style="z-index: 1050; background-color: #050508 !important; color: #E0E0FF !important;" 

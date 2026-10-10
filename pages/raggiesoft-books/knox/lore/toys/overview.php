@@ -1,4 +1,26 @@
 <?php
+/**
+ * KNOX LORE: THE TOY BOX (OVERVIEW)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file acts as the landing page for "The Toy Box," a catalog of improvised
+ * ordnance and gadgets for the "Knox" story universe. It establishes the "rebel/native"
+ * aesthetic contrasting against "military-grade" elements.
+ *
+ * KEY FEATURES:
+ * - Thematic Hero Section: Uses inline CSS with a background image (`$heroImage`)
+ *   and an opacity overlay to set a gritty, technical tone.
+ * - Typography: Employs `font-monospace` extensively to simulate a terminal or
+ *   database readout.
+ * - Narrative Flavor: Embeds lore directly into the UI (e.g., "Active Arsenal", 
+ *   quotes about the Axiom).
+ *
+ * MAINTENANCE NOTES:
+ * - `$heroImage` currently has a hardcoded placeholder path. It should eventually
+ *   be updated to use `$cdnBaseUrl` for consistency with other assets.
+ * - Maintain the monospace typography classes for any new structural additions.
+ */
+
 // pages/raggiesoft-books/knox/lore/toys/overview.php
 // The Toy Box: A catalog of improvised ordnance.
 // Context: "Crude, primitive, and totally effective."

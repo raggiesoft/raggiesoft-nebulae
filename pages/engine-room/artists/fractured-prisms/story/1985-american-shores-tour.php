@@ -1,4 +1,25 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Fractured Prisms - 1985 American Shores Tour Archive
+ * Theme: "Prism Dark" / Archival Document
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders a highly specific narrative document detailing the band's live performance protocols.
+ *    - Styled as a confidential, watermarked manifesto.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Uses `artifact-paper` and `artifact-watermark` classes to simulate a leaked internal document.
+ *    - Dark mode support relies on CSS variable overrides and specific `data-bs-theme="dark"` styling for the watermark.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Purely structural HTML/CSS presentation; no dynamic data loading required.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Ensure any structural changes to the text maintain the `position: relative; z-index: 1;` properties to ensure text appears above the watermark.
+ * ============================================================================
+ */
 // pages/engine-room/artists/fractured-prisms/story/1985-american-shores-tour.php
 // The 1985 Stadium Tour Manifesto
 // Archival Standard: Queen's English (Artist Artifacts)
@@ -7,7 +28,7 @@ $pageTitle = "1985 American Shores Tour Archive - Fractured Prisms Lore";
 ?>
 
 <style>
-    /* Fractured Prisms Theme Overrides */
+    /* Fractured Prisms Theme Overrides - Custom CSS for the manifesto aesthetic */
     .gothic-font {
         font-family: 'Playfair Display', serif;
     }
@@ -55,6 +76,7 @@ $pageTitle = "1985 American Shores Tour Archive - Fractured Prisms Lore";
 </style>
 
 <div class="bg-prism-dark min-vh-100 py-5">
+    <!-- Main Archive Container: Enforces maximum width for readable typography -->
     <div class="container">
         
         <div class="row justify-content-center mb-5">

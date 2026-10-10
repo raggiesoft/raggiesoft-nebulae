@@ -1,4 +1,15 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Case Studies Dashboard
+ * PATH: pages/case-studies/overview.php
+ * PURPOSE: "Operational Archives" directory. Links to narrative-driven technical
+ *          breakdowns (Personified DevOps).
+ * ARCHITECTURE NOTES:
+ * - Standard grid layout displaying incident reports and analyses.
+ * - Employs Bootstrap badge components to categorize content (Critical, Analysis).
+ * ============================================================================
+ */
 // pages/case-studies/index.php
 // The Case Study Dashboard
 
@@ -15,8 +26,10 @@ $pageTitle = "Case Studies: Operational Overview";
         </p>
     </div>
 
+    <!-- STRUCTURAL ROW: Case Study Cards -->
     <div class="row g-4">
         
+        <!-- CARD: The Cascade Protocol -->
         <div class="col-lg-6">
             <div class="card h-100 border-danger shadow-sm">
                 <div class="card-header bg-danger bg-opacity-10 text-danger fw-bold text-uppercase d-flex justify-content-between align-items-center">
@@ -40,6 +53,7 @@ $pageTitle = "Case Studies: Operational Overview";
             </div>
         </div>
 
+        <!-- CARD: The Shenandoah Gauntlet -->
         <div class="col-lg-6">
             <div class="card h-100 border-primary shadow-sm">
                 <div class="card-header bg-primary bg-opacity-10 text-primary fw-bold text-uppercase d-flex justify-content-between align-items-center">

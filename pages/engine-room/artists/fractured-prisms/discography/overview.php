@@ -1,6 +1,25 @@
 <?php
-// pages/engine-room/artists/fractured-prisms/discography/overview.php
-// v1.0 - Fractured Prisms Discography Archive
+/**
+ * ============================================================================
+ * Fractured Prisms - Discography Overview
+ * ============================================================================
+ * Path: pages/engine-room/artists/fractured-prisms/discography/overview.php
+ *
+ * Description:
+ * Dynamic discography archive view for Fractured Prisms. It fetches catalog 
+ * data from albums.json and renders it into categorized era grids. It also 
+ * dynamically builds a Schema.org MusicGroup JSON-LD block for SEO.
+ *
+ * Architecture & Maintenance Notes:
+ * - Fetches JSON data securely using file_get_contents and JSON decodes.
+ * - Generates structured data (MusicGroup -> MusicAlbum) on the fly.
+ * - Iterates through eras and albums, rendering cards with DSP store buttons 
+ *   included via the `store-button.php` component.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\FracturedPrisms
+ * @since 1.0.0
+ * ============================================================================
+ */
 
 $pageTitle = "Discography Overview - Fractured Prisms";
 $bandName = "Fractured Prisms";
@@ -43,6 +62,12 @@ $musicGroupSchema = [
 ];
 ?>
 
+<!--
+    ========================================================================
+    Schema.org Structured Data
+    Dynamically generated JSON-LD for search engine indexing of the discography.
+    ========================================================================
+-->
 <script type="application/ld+json">
 <?php echo json_encode($musicGroupSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>

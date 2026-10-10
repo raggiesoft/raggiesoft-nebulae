@@ -1,5 +1,27 @@
 <?php
-// pages/engine-room/artists/mirage.php
+/**
+ * ENGINE ROOM RECORDS: MIRAGE - STATIC AND SILENCE (2001)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file is the specific album page for Mirage's "Static and Silence." It acts
+ * as a data provider for the shared tracklist component.
+ *
+ * KEY FEATURES:
+ * - Dynamic Data Binding: Declares the `$album_path_web` variable, which acts as
+ *   a configuration hook for the `_tracklist-downloader.php` partial to locate
+ *   the correct JSON data (tracks/album info).
+ * - Thematic Continuity: Reuses the `.industrial-header` CSS to ensure the album
+ *   page matches the band's main profile aesthetic.
+ *
+ * MAINTENANCE NOTES:
+ * - CRITICAL: Do NOT alter the `$album_path_web` structure unless the CDN folder
+ *   path actually changes. The tracklist partial will fail to render if this path
+ *   is incorrect.
+ * - The internal file path comment says `mirage.php`, likely a copy-paste error
+ *   from the overview page.
+ */
+
+// pages/engine-room/artists/mirage/2001-static-and-silence.php
 // Artist Profile: Mirage (The First Signing)
 // "We're going to build an engine, too."
 

@@ -1,4 +1,27 @@
 <?php
+/**
+ * AETHEL SAGA OVERVIEW (LANDING PAGE)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This is the primary landing page (aethelsaga.com equivalent) for the "Silver Gauntlet
+ * of Aethel" project. It integrates lore with multimedia assets from "Engine Room Records"
+ * (specifically the 'Firelight' artist).
+ *
+ * KEY FEATURES:
+ * - Cinematic Hero Section: Features an immersive 1980s fantasy cinema aesthetic
+ *   using linear gradients overlaid on a high-res poster background.
+ * - Dynamic Paths: Defines base paths for web albums and CDN assets to ensure
+ *   resources load correctly across environments.
+ * - Cross-promotion: Links the book narrative directly to its corresponding
+ *   soundtrack/album art.
+ *
+ * MAINTENANCE NOTES:
+ * - The hero background (`$poster_bg`) relies on `$cdnBaseUrl`. Ensure the global
+ *   CDN variable is initialized before this file is included.
+ * - Do not change `$album_path_web` unless the directory structure in 
+ *   `engine-room-records` changes.
+ */
+
 // pages/raggiesoft-books/aethel-saga/overview.php
 // LANDING PAGE: aethelsaga.com
 // Design: 1980s Fantasy Cinema / Immersive

@@ -1,3 +1,41 @@
+<?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - AI & CREATIVE PROCESS DISCLAIMER
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This file serves as the transparency statement regarding the use of Generative 
+ * AI (Gemini, Suno, etc.) within the RaggieSoft creative ecosystem. It breaks 
+ * down the workflow between Human direction, AI co-writing/coding, and AI 
+ * audio/visual generation.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs a 3-column layout (`col-md-4`) to visually separate the three 
+ *   core pillars of creation: The Writer (Human), The Co-Writer (Gemini), and 
+ *   The Studio (Suno).
+ * - Utilizes Web Components (`<wa-card>`) with slotted image headers for 
+ *   consistent UI branding.
+ * - Concludes with a 2-column "Prompt Engineering Philosophy" section detailing 
+ *   technical constraints and ethical guidelines.
+ * 
+ * MAINTENANCE NOTES:
+ * - This file is purely structural HTML/PHP and relies on the global Elara/Bootstrap 
+ *   environment for styling (`var(--wa-color-success)`, `var(--bs-tertiary-bg)`).
+ * - If new AI tools are integrated (e.g., specific video or image generators), 
+ *   consider changing the 3-column layout to a 2x2 grid (`col-md-6`) to accommodate 
+ *   a fourth pillar without breaking the responsive design.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage About
+ * ============================================================================
+ */
+?>
+
+<!-- 
+  STRUCTURAL BLOCK: Main Container
+  Wraps the entire disclaimer page in a standard responsive container.
+-->
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-12">
@@ -9,6 +47,11 @@
                 </p>
             </div>
 
+            <!-- 
+              STRUCTURAL BLOCK: The Three Pillars of Creation
+              A 3-column grid breaking down the collaborative workflow. 
+              Uses custom Web Components (<wa-card>) to create distinct vertical cards.
+            -->
             <div class="row g-4 mb-5">
                 
                 <div class="col-md-4">
@@ -88,6 +131,11 @@
 
             </div>
 
+            <!-- 
+              STRUCTURAL BLOCK: Prompt Engineering Philosophy
+              A full-width technical breakdown of how AI is directed, emphasizing 
+              ethics, phonetic control, and copyright safety.
+            -->
             <!-- Prompt Engineering Section -->
             <wa-card class="w-100 shadow-sm mt-5 border-0" style="background-color: var(--bs-tertiary-bg);">
                 <div class="p-4 p-lg-5">

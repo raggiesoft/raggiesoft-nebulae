@@ -1,7 +1,37 @@
 <?php
+/**
+ * ARCHITECTURE: "Nine-Figure Refusal" Case File Header Component
+ * 
+ * DESCRIPTION:
+ * This component provides navigation for the extensive "Accidental Empire / Nine-Figure Refusal" 
+ * story arc. It features a complex mega-menu structure to organize the numerous narrative 
+ * "evidence" documents into chronological chapters (Setup, Trap, Event, Fallout).
+ *
+ * STRUCTURE:
+ * - PHP Routing Logic: Evaluates `$uri` against an array of `$evidenceFiles` to determine active states 
+ *   for the Overview, Case File, Legacy, and Epilogue navigation items.
+ * - Mobile Nav Container: A flexbox wrapper layout.
+ * - The Case File Mega-Menu: A customized `wa-dropdown` containing a Bootstrap grid (`.row`, `.col-lg-6`) 
+ *   to display documents across two columns on desktop viewports.
+ * - Legacy & Epilogue Dropdowns: Standard dropdowns for post-story operational assets and interviews.
+ * - Global Exits: Links returning to Home and the root Engine Room HQ.
+ *
+ * USAGE:
+ * - Included dynamically on pages within the `story/nine-figure-refusal` directory structure.
+ * - Requires WebAwesome components. The `.mega-menu-case-file` class extends the dropdown width via CSS.
+ *
+ * MAINTENANCE NOTES:
+ * - `$evidenceFiles` must be manually updated if new story documents are added to the route structure.
+ * - HTML STRUCTURE WARNING: There are several malformed HTML tags in this file:
+ *   1. The `<ul>` tags in the Case File mega-menu are closed with `</div>` instead of `</ul>`.
+ *   2. The "Legacy" dropdown is missing its opening `<wa-menu>` tag before the `.px-3` div.
+ *   These should be corrected in a future HTML cleanup pass (left as-is to preserve exact logic).
+ */
+
 // includes/components/headers/header-nine-figure-refusal.php
 // Dedicated Navigation for the "Accidental Empire" Case File
 // UPDATED: Added "The Approach" to the dropdown menu logic.
+
 
 // 1. Determine Active States
 $uri = $_SERVER['REQUEST_URI'] ?? '';
@@ -36,28 +66,34 @@ $isEpilogue = str_contains($uri, '/frost-interview');
     }
 </style>
 
+<!-- Section: Navigation Container -->
 <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
 
     
+        <!-- Link: Global Home (Contains malformed <i> tag) -->
         <button class="rs-btn" appearance="plain" href="/"><i class="ph ph-house me-2">></i> Home</button>
     
 
     
+        <!-- Link: Story Overview -->
         <button class="rs-btn" appearance="plain" href="/engine-room/artists/stardust-engine/story/nine-figure-refusal" class="<?php echo $isOverview ? 'active fw-bold' : ''; ?>">
             <i slot="start" class="ph ph-chart-network me-2"></i>Overview
         </button>
     
 
     
+  <!-- Mega-Menu: The Case File (Evidence Documents) -->
   <wa-dropdown placement="bottom-start">
     <button class="rs-btn" class="nav-link  <?php echo $isEvidence ? 'active fw-bold' : ''; ?>" slot="trigger" appearance="plain">
             <i class="ph ph-file-magnifying-glass me-2"></i>The Case File
          <i slot="end" class="ph ph-circle-caret-down ms-2 opacity-50" aria-hidden="true"></i>
         </button>
     <wa-menu>
+      <!-- Bootstrap Grid for 2-column layout -->
       <div class="dropdown-menu dropdown-menu-end shadow-lg border-danger mega-menu-case-file p-0">
             <div class="row g-0">
                 
+                <!-- Column 1: Chapters 1 & 2 -->
                 <div class="col-lg-6 border-end border-secondary border- p-3">
                     <h6 class="dropdown-header text-uppercase  fw-bold small ps-0"><i class="ph ph-chess-pawn me-2"></i>Ch 1: The Setup</h6>
                     <ul class="list-unstyled mb-4">
@@ -76,6 +112,7 @@ $isEpilogue = str_contains($uri, '/frost-interview');
                     </div>
                 </div>
 
+                <!-- Column 2: Chapters 3 & 4 -->
                 <div class="col-lg-6 p-3 bg-body-tertiary">
                     <h6 class="dropdown-header text-uppercase  fw-bold small ps-0"><i class="ph ph-chess-queen me-2"></i>Ch 3: The Event</h6>
                     <ul class="list-unstyled mb-4">
@@ -97,6 +134,7 @@ $isEpilogue = str_contains($uri, '/frost-interview');
     
 
     
+  <!-- Dropdown: Legacy Operations (Note: Missing opening <wa-menu> tag) -->
   <wa-dropdown placement="bottom-start">
         <button class="rs-btn" class="nav-link  <?php echo $isAssets ? 'active fw-bold' : ''; ?>" slot="trigger" appearance="plain">
             <i class="ph ph-building me-2"></i>Legacy
@@ -117,6 +155,7 @@ $isEpilogue = str_contains($uri, '/frost-interview');
 
 
      
+  <!-- Dropdown: Epilogue -->
   <wa-dropdown placement="bottom-start">
     <button class="rs-btn" class="nav-link  <?php echo $isEpilogue ? 'active fw-bold' : ''; ?>" slot="trigger" appearance="plain">
             <i class="ph ph-building me-2"></i>Epilogue
@@ -132,6 +171,7 @@ $isEpilogue = str_contains($uri, '/frost-interview');
 
 
     
+      <!-- Escape Hatch: Return to Engine Room -->
       <button class="rs-btn" appearance="plain" href="/engine-room">
         <i slot="start" class="ph ph-arrow-right-from-bracket me-2 "></i><span class=" small">Engine Room HQ</span>
       </button>

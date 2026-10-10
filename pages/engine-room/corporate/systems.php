@@ -1,4 +1,23 @@
 <?php
+/**
+ * ENGINE ROOM CORPORATE: SYSTEMS ARCHITECTURE
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the "Digital Brain" of Aethelgard Holdings. It acts as an
+ * in-universe intranet portal managed by the character "Justin Miller."
+ *
+ * KEY FEATURES:
+ * - "mPad" Interface Theme: Uses embedded CSS (`.system-console`, `.data-card`)
+ *   to override global themes and enforce a clean, dark, monospace UI.
+ * - Narrative Integration: Blends system metrics with story context (Aethelgard).
+ *
+ * MAINTENANCE NOTES:
+ * - The `JetBrains Mono` and `Fira Code` fonts are required for the intended 
+ *   terminal/code aesthetic. Ensure these fonts are loaded globally or imported.
+ * - Embedded CSS should remain in this file to isolate the "mPad" look from 
+ *   the rest of the site architecture, preserving the narrative contextual shift.
+ */
+
 // pages/engine-room/corporate/systems.php
 // The Digital Brain of Aethelgard Holdings.
 // Managed by: Justin Miller, Chief Systems Architect.

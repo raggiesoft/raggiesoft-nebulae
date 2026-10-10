@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: STARDUST ENGINE - FRICTION LORE SIDEBAR
+ * ============================================================================
+ * 
+ * This sidebar is dedicated to a specific sub-narrative arc: "The Friction 
+ * Scandal." It acts as a table of contents for case files and dynamically 
+ * highlights the active page based on the current URI context.
+ * 
+ * MAINTENANCE NOTES:
+ * - Uses PHP `$_SERVER['REQUEST_URI']` and `str_contains()` to detect the 
+ *   active route and apply the `active` Bootstrap class.
+ * - Includes static "Legal Outcome" lore box at the bottom.
+ * ============================================================================
+ */
 // includes/components/sidebars/engine-room/artists/stardust-engine/story/sidebar-friction.php
 // Sidebar for the Friction Lore Arc
 

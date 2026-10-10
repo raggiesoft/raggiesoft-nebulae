@@ -1,8 +1,23 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file represents the 2017 Knox Original Soundtrack album page.
+ * It outlines the thematic duality of the OST (The Axiom vs. The Weave).
+ * Currently, the tracklist component is commented out because the audio archive
+ * is thematically 'decrypting'—which acts as a "coming soon" placeholder.
+ * 
+ * Future Maintenance Notes:
+ * - Once the tracklist is ready (e.g., cleared by DistroKid), uncomment the 
+ *   _tracklist-downloader.php include and populate the DSP IDs.
+ * - The 'axiom' variant prop requires custom CSS to be defined globally 
+ *   (usually an orange/industrial theme).
+ */
 // Page data
 $pageTitle = "Knox (Original Soundtrack) (2017) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/2017-knox-ost';
 
+// Inline Logic: These IDs will be consumed by the _tracklist-downloader.php 
+// or store-button.php components once the album is officially published on DSPs.
 // Streaming Services IDs
 // (Populate these with the unique platform IDs when DistroKid clears the release)
 $id_spotify = "";

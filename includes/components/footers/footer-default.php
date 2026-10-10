@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: DEFAULT FOOTER COMPONENT
+ * ============================================================================
+ * 
+ * This file serves as the primary footer for the RaggieSoft application. 
+ * It contains standard site-wide navigation links, branding, and contact 
+ * endpoints. It also seamlessly injects the Konami Code easter egg logic at 
+ * the bottom of the DOM.
+ * 
+ * MAINTENANCE NOTES:
+ * - This is a generic layout relying on Bootstrap Grid classes.
+ * - The easter egg (`konami.php`) configuration array overrides default 
+ *   values to provide a unique response for the main site context.
+ * ============================================================================
+ */
 // includes/components/footers/footer-default.php
 ?>
 <footer class="mt-auto bg-body-tertiary border-top py-5">

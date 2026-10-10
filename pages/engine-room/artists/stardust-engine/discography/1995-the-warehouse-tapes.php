@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - The Warehouse Tapes (1995) Discography Page
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the detail page for the definitive "rebirth" EP, "The Warehouse Tapes".
+ *    - Separates track notes explicitly into Side A and Side B to emphasize the vinyl/cassette lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Standard Bootstrap grid mixed with specific inline styles for Side B to denote its special "epic" status.
+ *    - Side B ("Escape Velocity") uses a custom purple (`#7000FF`) background highlight and large watermark icon to visually represent the 15-minute prog rock suite.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - The `_button.php` component is dynamically invoked to route users into a deeper "Deep Dive" sub-page for the Side B epic.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Do not break the visual separation between Side A and Side B. The massive, highlighted block for Track 6 is an essential thematic design choice.
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "The Warehouse Tapes (1995) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1995-the-warehouse-tapes';
@@ -6,6 +26,7 @@ $album_path_web = '/engine-room-records/artists/the-stardust-engine/1995-the-war
 
 ?>
 
+<!-- Main Discography Container -->
 <div class="container py-5">
     
     <div class="row align-items-center mb-5">

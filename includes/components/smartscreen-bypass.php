@@ -1,5 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: A reusable informational card explaining the "Microsoft Tax" and SmartScreen bypass instructions.
+ * Architecture: Accepts dynamic variables (`$appName` and `$hashLink`) via a `$props` array to contextually 
+ * blend into different software download pages. Uses an alert-styled Bootstrap card layout.
+ * Future Maintainers: If Microsoft changes their SmartScreen bypass UI flow (e.g., changing the text of "More info"),
+ * update the ordered list instructions here so they propagate across all software pages.
+ */
 // includes/components/alerts/smartscreen-bypass.php
+// Centralized component to educate users on false-positive malware warnings for unsigned executables.
 // A reusable card explaining the "Microsoft Tax" and how to bypass SmartScreen.
 // Usage: Set $props['appName'] (optional) before including.
 
@@ -7,6 +17,7 @@ $appName = $props['appName'] ?? 'this software';
 $hashLink = $props['hashLink'] ?? null; 
 ?>
 
+<!-- Main Card Container: Styled as a warning to match the severity of the SmartScreen prompt -->
 <div class="card border-warning shadow-sm mb-4">
     <div class="card-header bg-warning bg-opacity-10 text-warning-emphasis fw-bold text-uppercase d-flex align-items-center">
         <i class="ph ph-shield-xmark me-2 fs-4"></i>
@@ -19,6 +30,7 @@ $hashLink = $props['hashLink'] ?? null;
             Microsoft's SmartScreen filter automatically flags executables that lack an Extended Validation (EV) Authenticode Certificate. Obtaining this certificate requires paying hundreds of dollars in recurring annual fees and passing a corporate business identity verification.
         </p>
         
+        <!-- Transparency Note: Explains the open-source ethos and lack of EV certificates -->
         <div class="alert alert-dark bg-body-tertiary border-start border-4 border-warning shadow-sm my-3 p-3">
             <p class="small text-body-emphasis mb-0">
                 <strong>Transparency Note:</strong> As an independent, open-source developer releasing free software under the MIT License, I am not a registered corporation. I do not monetize this project, and I refuse to pay the "Microsoft Tax" just to make a blue warning box disappear.
@@ -34,6 +46,7 @@ $hashLink = $props['hashLink'] ?? null;
 
     </div>
     
+    <!-- Conditional Footer: If a checksum URL is provided, display the verification link -->
     <?php if ($hashLink): ?>
     <div class="card-footer bg-body-tertiary border-top border-warning border-opacity-25 p-3 text-center small font-monospace">
         <i class="ph ph-lock me-2 text-success"></i>Trust Math, Not Corporations: 

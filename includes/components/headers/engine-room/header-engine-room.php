@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This component renders the primary navigation header for the Engine Room imprint.
+ * It routes users to key areas like Engine Room Radio, the active artist roster, 
+ * company archives, and B2B industry contacts (licensing/sync).
+ *
+ * MAINTENANCE NOTES:
+ * - Active state detection is dynamically handled by parsing `$_SERVER['REQUEST_URI']`.
+ * - Uses Web Awesome (wa-dropdown, wa-menu) components for responsive sub-menus.
+ * - Email addresses are obfuscated using `data-u`, `data-d`, and `data-t` attributes to deter scraping.
+ */
 // includes/components/headers/engine-room/header-engine-room.php
 // The Official Imprint Navigation. 
 // Fan-Centric Focus with Corporate Routing to RaggieSoft Media.

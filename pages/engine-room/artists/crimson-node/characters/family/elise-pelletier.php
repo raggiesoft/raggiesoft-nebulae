@@ -1,3 +1,25 @@
+<?php
+/**
+ * CRIMSON NODE LORE: ELISE PELLETIER
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the character dossier for "Elise Pelletier" (Guest Vocals / 
+ * The Safe Variable) within the Crimson Node / Family faction. It acts as a 
+ * structural partial, meant to be injected into a parent routing wrapper.
+ *
+ * KEY FEATURES:
+ * - Thematic Typography: Uses the `Impact` font family and `display-4` classes for a
+ *   bold, industrial character header.
+ * - Sidebar Layout: Employs a Bootstrap `col-lg-4` sidebar for quick stats, accented
+ *   with a custom top border color (`#212529` - dark/slate).
+ * - CDN Integration: Pulls both a thumbnail and full-res portrait from `$cdnBaseUrl`.
+ *
+ * MAINTENANCE NOTES:
+ * - This file lacks a `$pageTitle` declaration at the top; it relies on a parent 
+ *   controller/wrapper to set meta data. Ensure the parent view injects necessary globals.
+ * - Maintain the specific top border color (`#212529`) to preserve character color coding.
+ */
+?>
 <div class="row">
     <div class="col-12 mb-4">
         <h1 class="display-4 fw-bold" style="font-family: 'Impact', sans-serif; letter-spacing: 2px;">

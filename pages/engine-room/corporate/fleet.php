@@ -1,4 +1,27 @@
 <?php
+/**
+ * ENGINE ROOM CORPORATE: FLEET COMMAND (T-LOGISTICS)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file renders the "Logistics Monitor" dashboard for managing "Ironhead" assets.
+ * It is a specialized, narrative-driven UI component heavily styled to resemble
+ * a retro BIOS or Text User Interface (TUI).
+ *
+ * KEY FEATURES:
+ * - TUI Design System: Employs embedded CSS (`.fleet-terminal`, `.tui-window`) to 
+ *   override global themes and force a dark, monospace, high-contrast terminal aesthetic.
+ * - Narrative Logic Rules: Encodes strict universe protocols (e.g., "Ryan O'Connell
+ *   travels ONLY via heavy fleet") into the context of the dashboard.
+ * - Character Integration: Explicitly assigned to the "Justin Miller" character context.
+ *
+ * MAINTENANCE NOTES:
+ * - The embedded `<style>` block is intentional to isolate the TUI look from the
+ *   rest of the site. Do not abstract this into the global CSS unless creating a 
+ *   reusable TUI component library.
+ * - Ensure monospace font stacks (`Consolas`, `Monaco`, `Courier New`) remain
+ *   prioritized for the `.fleet-terminal` class.
+ */
+
 // pages/engine-room/corporate/fleet.php
 // The Logistics Monitor.
 // Managed by: Justin Miller.

@@ -1,4 +1,30 @@
 <?php 
+/**
+ * ARCHITECTURE: Zenith Report Theme Styles
+ * 
+ * DESCRIPTION:
+ * This component defines the global CSS overrides for the "Zenith Report" pages.
+ * It establishes a newspaper-style aesthetic that adapts cleanly to both light and dark modes 
+ * while maintaining accessibility standards (e.g., respecting `prefers-reduced-motion`).
+ *
+ * STRUCTURE:
+ * - Base Styles (.zenith-paper, .zenith-header, .zenith-body): Establishes the core newspaper look, 
+ *   including serif typography, distinct borders, and a stylistic slight tilt.
+ * - Dark Mode Overrides (`[data-bs-theme="dark"]`): Inverts colors and borders for low-light reading, 
+ *   using dark slate tones instead of pure black/white.
+ * - Accessibility (@media prefers-reduced-motion): Disables the decorative tilt and CSS transitions
+ *   if the user has OS-level reduced motion settings enabled.
+ *
+ * USAGE:
+ * - Included dynamically in the `<head>` or at the top of Zenith Report layouts.
+ * - Relies on Bootstrap 5's `data-bs-theme` attribute on the `<html>` or `<body>` tag for theme switching.
+ *
+ * MAINTENANCE NOTES:
+ * - When adjusting the color palette, ensure contrast ratios meet WCAG AA or AAA standards.
+ * - The `.text-dark` and `.border-dark` overrides are necessary because Bootstrap's native utilities 
+ *   might clash with the custom paper backgrounds in dark mode. Test thoroughly when upgrading Bootstrap.
+ */
+
 // includes/components/styles/zenith-theme.php 
 // Shared CSS for all Zenith Report pages
 ?>

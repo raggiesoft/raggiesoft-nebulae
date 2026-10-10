@@ -1,4 +1,41 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/10-the-trigger.php
+ * Path: /engine-room/artists/stardust-engine/story/nine-figure-refusal/the-trigger
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the climactic "Slide 14" narrative partial detailing the specific inciting
+ * incident that terminated the acquisition deal. Features a heavily styled pseudo-slide
+ * and dramatic visual breakdown of the ensuing conflict.
+ * 
+ * LORE CONTEXT (Nine-Figure Refusal Arc):
+ * - The Event That Started The War: Slide 14 & The Fallout.
+ * - Context: The specific moment the deal died due to the corporate dissection of 'Ad Astra'.
+ * - Visualizes "Slide 14" and the profound violation of Cassidy O'Connell's core identity.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Employs custom CSS (`.slide-container`, `.slide-header`, `.slide-watermark`) to
+ *   skeuomorphically render a corporate PowerPoint slide within the webpage.
+ * - Includes dark mode adaptations (`[data-bs-theme="dark"] .slide-container`) to ensure
+ *   the slide deliberately remains jarringly bright against dark interfaces.
+ * - Relies on Bootstrap 5 utility classes for grid layouts, typography, and spacing.
+ * - Utilizes Phosphor Icons (`ph ph-bolt`, `ph ph-heart-crack`, `ph ph-shield-halved`) for
+ *   visual emphasis.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Depends on a parent layout or router for the HTML document shell and `$cdnBaseUrl`.
+ * - Includes the Narrative Stepper component (`/includes/components/navigation/narrative-stepper.php`)
+ *   for inter-story navigation.
+ * 
+ * MAINTENANCE NOTES:
+ * - Do not alter the custom inline styles or hardcoded lore text without consulting the
+ *   broader "Nine-Figure Refusal" narrative outline.
+ * - Ensure the `$nav` array URLs correctly align with the router's expectations for
+ *   this lore sequence.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-trigger.php
 // The Event That Started The War: Slide 14 & The Fallout
 // Context: The specific moment the deal died.

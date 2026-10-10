@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: AD ASTRA - VOYAGE LOG (DAY 10)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page represents the tenth day of the voyage: "Harmonic Velocity".
+ * It marks the transition into the main instrumental suite of the album.
+ * 
+ * LORE:
+ * Describes the arrival at the Veil Nebula and the transition to zero-gravity (0.8G).
+ * The blast shields open, representing the climax of the progressive rock suite.
+ * 
+ * DESIGN:
+ * - Features a prominent, full-width "Live Feed" image card at the top.
+ * - Adopts a blue/info color scheme to match the "Harmonic/Nebula" theme.
+ * - Includes a simulated "Audio Log" player <wa-card> for the musical accompaniment.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-10.php
 // Log Entry: Day 10
 // Context: FTL Cruise / Zero-G / The Veil Nebula.
@@ -10,6 +27,13 @@ $pageTitle = "Day 10: Harmonic Velocity - Ad Astra Log";
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
 <div class="container py-5 glass-container">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      1. Header with day, status, and telemetry (using 'info' color semantics).
+      2. A full-width image card simulating a live camera feed (CAM_1B).
+      3. A 2-column layout (8/4 split) containing narrative text, a simulated 
+         audio player, and environmental sidebar statistics.
+    -->
     
     <div class="d-flex justify-content-between align-items-center mb-5 border-bottom border-info pb-3">
         <div>

@@ -1,14 +1,27 @@
 <?php
 /**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Renders a hierarchical organizational chart (The Iceberg Model) from nested arrays.
+ * Architecture: Defines a recursive `renderOrgNode` function that traverses a multidimensional
+ * array. It outputs nested `<ul>` and `<li>` elements, applying CSS classes for connection lines.
+ * Future Maintainers: If adding new node properties (e.g., secondary roles, location), inject
+ * them into the card template below the description field. Avoid modifying the CSS pseudo-elements
+ * unless structurally changing the chart layout.
+ */
+/**
  * REUSABLE COMPONENT: Org Chart (The Iceberg Model)
  * -------------------------------------------------
  * Renders a hierarchical tree structure for corporate lore.
  * Updated: Now supports 'description' field.
  */
 
+// Recursively generate unordered lists to represent the org tree structure
 // Recursive function to render the tree
+// Wrap in function_exists to prevent redeclaration errors if included multiple times in a layout
 if (!function_exists('renderOrgNode')) {
     function renderOrgNode($node, $level = 1) {
+        // Determine accent color for the node based on hierarchy depth (1=Top, 3=Bottom)
         // Map levels to specific border colors if not explicitly set
         $defaultColor = match($level) {
             1 => 'primary',
@@ -49,6 +62,7 @@ if (!function_exists('renderOrgNode')) {
             
         echo "</$tag>";
 
+        // If node has descendants, recursively nest a new unordered list
         // Recursive Children
         if ($hasChildren) {
             echo "<ul>";

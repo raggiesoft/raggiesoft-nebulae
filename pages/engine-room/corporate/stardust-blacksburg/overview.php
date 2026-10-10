@@ -1,4 +1,35 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - CORPORATE: STARDUST BLACKSBURG
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page functions as the public-facing overview for "Stardust Blacksburg," 
+ * the real estate/property management subsidiary operating under the O'Connell 
+ * Family Trust. It leans into a collegiate/varsity narrative aesthetic.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs a custom `.hero-section` with a heavy maroon/orange gradient overlay 
+ *   to establish the "Crucible" university branding.
+ * - Uses a 3-column feature grid (`stat-card`) with custom CSS hover effects 
+ *   (translate and border-color transitions) to highlight property amenities.
+ * - Contains a formalized "Corporate Transparency" alert box at the bottom to 
+ *   tie the narrative back to the broader Delaware LLC structure.
+ * 
+ * MAINTENANCE NOTES:
+ * - Ensure CSS overrides within `<style>` do not clash with the global Elara 
+ *   theme. The variables `var(--bs-warning)` and `var(--bs-primary)` rely on 
+ *   the active Bootstrap theme (which should map to Maroon and Orange here).
+ * - Waitlist dates/classes ("CLASS OF '26") are hardcoded text and will need 
+ *   to be updated manually as the narrative timeline progresses.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Corporate
+ * @theme Crucible (Maroon & Orange)
+ * ============================================================================
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/overview.php
 // Context: The "Ironhead" Residential Project & Property Management.
 // Theme: "Crucible" (Maroon & Orange).
@@ -7,6 +38,11 @@
 $pageTitle = "Stardust Blacksburg - The Ironwood Collective";
 ?>
 
+<!-- 
+  ARCHITECTURE NOTE: Custom CSS Block
+  Scopes "Varsity" styling specific to the Stardust Blacksburg subsidiary. 
+  Implements `prefers-reduced-motion` for accessibility on interactive hover states.
+-->
 <style>
     /* PAGE-SPECIFIC OVERRIDES */
     /* We use the theme variables, but enforce specific "Varsity" styling */
@@ -47,6 +83,11 @@ $pageTitle = "Stardust Blacksburg - The Ironwood Collective";
     }
 </style>
 
+<!-- 
+  STRUCTURAL BLOCK: Collegiate Hero Banner
+  Uses inline custom background properties combined with the scoped `.hero-section` 
+  class to create a university admissions-style landing aesthetic.
+-->
 <div class="hero-section text-center">
     <div class="container">
         <div class="mb-3">
@@ -82,6 +123,11 @@ $pageTitle = "Stardust Blacksburg - The Ironwood Collective";
         </div>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Amenities Grid
+      A 3-column layout showcasing tenant benefits. Uses custom `.stat-card` class 
+      for hover physics.
+    -->
     <div class="row g-4 mb-5">
         
         <div class="col-md-4">
@@ -122,6 +168,11 @@ $pageTitle = "Stardust Blacksburg - The Ironwood Collective";
 
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Legal/Corporate Footer
+      A visual anchor tying the subsidiary back to the main O'Connell Family Trust 
+      legal narrative using monospace typography.
+    -->
     <div class="alert bg-body-tertiary border border-primary border-opacity-25 p-4 rounded-0 shadow-sm">
         <div class="row align-items-center">
             <div class="col-md-1 text-center">

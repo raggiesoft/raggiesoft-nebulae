@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: AD ASTRA - VOYAGE LOG (DAY 21)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page acts as the finale of the voyage: "The Drop" / Atmospheric Re-entry.
+ * It brings the sci-fi narrative to a violent, high-energy conclusion.
+ * 
+ * LORE:
+ * The band performs the heavy industrial track "Hard Reset" as the ship 
+ * theoretically endures the heat and friction of re-entry.
+ * 
+ * DESIGN:
+ * - Color semantics shift entirely to 'danger' (red) to signify the emergency/re-entry phase.
+ * - Includes a CSS blink-animation alert on the camera feed image.
+ * - The narrative-stepper at the bottom terminates the sequence (next => null).
+ */
+
 // pages/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-21.php
 // Log Entry: Day 21
 // Context: Atmospheric Re-entry. The "Hard Reset."
@@ -11,6 +28,13 @@ $pageTitle = "Day 21: The Drop - Ad Astra Log";
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
 <div class="container py-5 glass-container">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      1. Header with critical telemetry using 'danger' color semantics.
+      2. A full-width image card simulating a critical camera feed with a blinking alert.
+      3. A 2-column layout (8/4 split) detailing the chaotic narrative, a simulated 
+         audio player for "Hard Reset", and critical hull telemetry in the sidebar.
+    -->
     
     <div class="d-flex justify-content-between align-items-center mb-5 border-bottom border-danger pb-3">
         <div>

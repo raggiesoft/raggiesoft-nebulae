@@ -1,3 +1,20 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: JESSICA MILLER CENTER HEADER
+ * ============================================================================
+ * 
+ * This header component provides navigation specifically for the "Jessica Miller 
+ * Center for the Neurodivergent Arts" narrative section. It focuses on 
+ * accessibility-themed lore and facility features.
+ * 
+ * MAINTENANCE NOTES:
+ * - Uses Web Awesome (`wa-dropdown`, `wa-menu`) for interactive elements.
+ * - Some links (like Tenant Portal) are intentional stubs (`#`) for narrative 
+ *   flavor and do not require active routing logic.
+ * ============================================================================
+ */
+?>
 <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
     
     

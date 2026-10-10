@@ -1,4 +1,33 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - CORPORATE ENGINE ROOM (OVERVIEW)
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This serves as the landing portal for the "Engine Room" (The O'Connell Family 
+ * Trust). It establishes a clean, corporate/administrative theme in stark contrast 
+ * to the creative/fantasy aesthetic of the front-end websites.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs a standard Bootstrap grid layout to present corporate divisions.
+ * - Uses 3-column "thick border-top" cards (`border-top-4`) to categorize 
+ *   Structure, Liquidation, and Leadership.
+ * - Features a simulated "Internal Operations" terminal block using dark mode 
+ *   and monospace fonts to reinforce the secure, backend narrative.
+ * 
+ * MAINTENANCE NOTES:
+ * - Links in the 3-column grid (`/engine-room/corporate/*`) must align with the 
+ *   Elara routing configuration in `index.php`.
+ * - The `$2.4B` figure and the `UPTIME: 412 DAYS` stats are currently hardcoded 
+ *   for narrative flavor. If a dynamic timeline is implemented, these should be 
+ *   replaced with PHP variables driven by `nav-logic.php` or a config file.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Corporate
+ * ============================================================================
+ */
+
 // pages/engine-room/corporate/overview.php
 // Context: The Landing Page for the Family Office.
 // Theme: Corporate / Clean.
@@ -8,6 +37,11 @@ $pageTitle = "Corporate Gateway - The O'Connell Family Trust";
 
 <div class="container py-5">
     
+    <!-- 
+      STRUCTURAL BLOCK: Corporate Header
+      Establishes the administrative tone. Hides the decorative shield icon 
+      on mobile devices to save vertical space (`d-none d-lg-block`).
+    -->
     <div class="row mb-5 align-items-center">
         <div class="col-lg-8">
             <h6 class="text-uppercase text-muted letter-spacing-2 mb-2">Internal Governance Portal</h6>
@@ -22,6 +56,11 @@ $pageTitle = "Corporate Gateway - The O'Connell Family Trust";
         </div>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Division Grid
+      A 3-column layout highlighting the primary structural arms of the trust. 
+      Uses `.stretched-link` on the buttons to make the entire card clickable.
+    -->
     <div class="row g-4 mb-5">
         
         <div class="col-md-4">
@@ -71,6 +110,11 @@ $pageTitle = "Corporate Gateway - The O'Connell Family Trust";
 
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Systems Terminal
+      A distinct dark-themed block representing secure internal systems. 
+      Includes a faux command-line interface output for narrative immersion.
+    -->
     <div class="card bg-dark text-white shadow-lg mb-5 overflow-hidden">
         <div class="row g-0">
             <div class="col-md-8 p-5">

@@ -1,3 +1,26 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node Character Profile - Matt Miller
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the character biography and stat card for Matt Miller within the Crimson Node lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Standard Bootstrap `.row` and `.col-*` layout for a responsive two-column profile (sidebar + main content).
+ *    - Leverages the "Impact" font for strong, collegiate/industrial styling.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Designed to be included dynamically via a character router.
+ *    - Images rely on `$cdnBaseUrl` being available in the parent scope.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Keep the "Quick Stats" list synced with any new lore developments.
+ * ============================================================================
+ */
+?>
+<!-- Character Profile Row -->
 <div class="row">
     <div class="col-12 mb-4">
         <h1 class="display-4 fw-bold" style="font-family: 'Impact', sans-serif; letter-spacing: 2px;">

@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: UNIVERSAL NARRATIVE ENGINE (SCENE-AWARE)
+ * ============================================================================
+ * 
+ * This file contains the core logic for parsing book navigation structures, 
+ * calculating linear paths through multi-level hierarchies (Book -> Chapter 
+ * -> Part -> Scene), and determining Next/Previous links dynamically based on 
+ * the current URL context.
+ * 
+ * MAINTENANCE NOTES:
+ * - Hierarchy depth is fixed to 4 levels: Book, Chapter, Part, Scene. 
+ * - Navigation generation relies on flattening the deeply nested structure 
+ *   into a 1D linear array for O(N) indexing.
+ * ============================================================================
+ */
 // includes/utils/nav-logic.php
 // v4.0 - Universal Narrative Engine (Scene-Aware)
 

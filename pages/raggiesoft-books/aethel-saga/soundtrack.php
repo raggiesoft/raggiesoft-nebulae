@@ -1,4 +1,35 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - AETHEL SAGA OST
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as the official soundtrack hub for "The Silver Gauntlet of Aethel".
+ * It structurally presents two distinct versions of the OST (the fictional 1987 
+ * "Studio Cut" and the 2017 "Leviathan Cut") using Bootstrap Tabs. It integrates 
+ * seamlessly with the `_tracklist-downloader.php` component for dynamic track 
+ * rendering and audio playback.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs a cinematic Hero section with gradient overlays for high-contrast typography.
+ * - Utilizes Bootstrap Tab components (`nav-tabs`, `tab-content`) to switch between 
+ *   album versions without page reloads.
+ * - Leverages the `store-button.php` component for standardized eCommerce links.
+ * - Features a custom "Polaroid" CSS module to display behind-the-scenes lore images 
+ *   with a vintage, tactile feel.
+ * 
+ * MAINTENANCE NOTES:
+ * - Update the Spotify/Apple Music IDs in `$storeProps` once the albums are officially distributed.
+ * - Ensure the `$path_1987` and `$path_2017` variables point correctly to the CDN or 
+ *   local filesystem where the tracklist JSON and audio files reside.
+ * - The Polaroid images are hardcoded; if new images are generated, add them to the grid.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Aethel_Saga
+ * ============================================================================
+ */
+
 // pages/raggiesoft-books/aethel-saga/soundtrack.php
 // THE OST PAGE: "The Silver Gauntlet of Aethel"
 // Design: 1980s Cinematic / A Tale of Two Cuts
@@ -18,6 +49,11 @@ $path_2017 = '/engine-room-records/artists/firelight/2017-aethel-leviathan-cut';
 $art_2017 = $cdnBaseUrl . '/engine-room-records/artists/firelight/2025-silver-gauntlet-of-aethel/album-art.jpg';
 ?>
 
+<!-- 
+  ARCHITECTURE NOTE: Custom CSS Block
+  Overrides Bootstrap tab styling to fit the dark fantasy theme (Cinzel font, gold highlights).
+  Contains the custom `.polaroid` interactive hover physics for the BTS gallery.
+-->
 <style>
     .nav-tabs-aethel .nav-link {
         color: rgba(255,255,255,0.5);
@@ -56,6 +92,11 @@ $art_2017 = $cdnBaseUrl . '/engine-room-records/artists/firelight/2025-silver-ga
     .polaroid-caption { font-family: 'Kalam', cursive; color: #333; font-size: 1.1rem; margin-top: 10px; line-height: 1.2; }
 </style>
 
+<!-- 
+  STRUCTURAL BLOCK: Cinematic Hero Banner
+  Uses inline styles for dynamic background rendering ($poster_bg). 
+  The linear-gradient ensures text legibility over complex artwork.
+-->
 <div class="aethel-hero py-5 text-center d-flex align-items-center" 
      style="min-height: 60vh; 
             background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8) 80%, #000000 100%), url('<?php echo $poster_bg; ?>'); 
@@ -110,6 +151,11 @@ $art_2017 = $cdnBaseUrl . '/engine-room-records/artists/firelight/2025-silver-ga
             </li>
         </ul>
 
+        <!-- 
+          STRUCTURAL BLOCK: Tabbed Tracklists
+          Contains two distinct panes (1987 vs 2017). Each pane utilizes the 
+          `_tracklist-downloader.php` component to parse JSON data and build the UI.
+        -->
         <div class="tab-content" id="soundtrackTabsContent">
             
             <div class="tab-pane fade show active" id="cut-1987" role="tabpanel" aria-labelledby="cut-1987-tab">
@@ -206,6 +252,11 @@ $art_2017 = $cdnBaseUrl . '/engine-room-records/artists/firelight/2025-silver-ga
     </div>
 </div>
 
+<!-- 
+  STRUCTURAL BLOCK: BTS / Lore Gallery
+  A grid of "Polaroid" images simulating a 1980s practical effects workshop. 
+  Provides narrative depth and links to physical merchandise.
+-->
 <div class="bg-body-tertiary py-5 border-top border-secondary border-opacity-50">
     <div class="container py-4">
         

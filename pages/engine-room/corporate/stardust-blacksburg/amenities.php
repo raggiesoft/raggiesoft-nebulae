@@ -1,4 +1,26 @@
 <?php
+/**
+ * STARDUST BLACKSBURG: COMMUNITY AMENITIES
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This page functions as the primary marketing vehicle for the property's shared
+ * amenities and "Academic Advantage" philosophy. It merges lifestyle marketing
+ * with strict lease term transparency.
+ *
+ * KEY FEATURES:
+ * - Embedded Varsity CSS: Contains theme overrides specifically for the amenity
+ *   presentation (`.amenity-hero`, `.feature-icon-box`) to ensure visual punch.
+ * - Hero Gradient: Uses a linear gradient overlay on a CDN image to guarantee text
+ *   contrast over the background.
+ *
+ * MAINTENANCE NOTES:
+ * - FIX REQUIRED: The `$cdnBaseUrl` interpolation inside the `.amenity-hero` CSS
+ *   block is currently raw PHP in a CSS context. It needs to be corrected to
+ *   use standard PHP tags: `url('<?php echo $cdnBaseUrl; ?>/stardust-engine/...');`.
+ * - If `.amenity-hero` is used across multiple Stardust pages, consider migrating 
+ *   it to a shared CSS file.
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/amenities.php
 // Context: Selling the "Academic Advantage" & Strict Lease Terms.
 // Theme: "Crucible" (Maroon & Orange) / Varsity.

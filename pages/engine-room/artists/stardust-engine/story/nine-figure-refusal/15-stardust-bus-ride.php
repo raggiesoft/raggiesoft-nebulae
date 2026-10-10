@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: THE NINE FIGURE REFUSAL (THE BUS RIDE & EXTRACT LEAK)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page presents simulated investigative reporting from "The Zenith Report".
+ * It includes news articles and official press releases detailing the Omni-Global scandal.
+ * 
+ * LORE:
+ * Reveals how a simple bus ride (Civic-Rapid 720) led to Omni-Global underestimating the band,
+ * and features the leaked security footage ("Code Carry") of Cassidy's medical evacuation.
+ * 
+ * DESIGN:
+ * - Relies heavily on the 'zenith-theme.php' shared styles for a newspaper aesthetic.
+ * - Uses .zenith-paper classes to simulate broadsheet layouts with sidebars (Market Watch).
+ * - Implements a specialized letterhead component for the Pacific Rim Properties statement.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/zenith-report/stardust-bus-ride.php
 // The Zenith Report Archives.
 // Contains: "The $350 Million Bus Ride", "The Image That Broke Wall Street", AND "The Landlord's Statement"
@@ -13,6 +30,14 @@ include ROOT_PATH . '/includes/components/styles/zenith-theme.php';
 
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Stacked news articles and press releases.
+      1. #bus-ride article with a side column for "Market Watch".
+      2. #extraction-leak article featuring the security footage image.
+      3. #press-release block utilizing the corporate letterhead component.
+      All wrapped in newspaper-styled .zenith-paper cards.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

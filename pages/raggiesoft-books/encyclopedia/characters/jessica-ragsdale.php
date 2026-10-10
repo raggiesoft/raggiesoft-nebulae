@@ -1,4 +1,25 @@
 <?php
+/**
+ * CHARACTER ENCYCLOPEDIA: JESSICA RAGSDALE
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the canonical lore database entry for "Jessica Ragsdale"
+ * within the RaggieSoft Books universe. It is a dual-purpose document meant to
+ * render visually on the web and serve as strict meta-context for LLM/AI behavior.
+ *
+ * KEY FEATURES:
+ * - AI Directives: Contains explicit HTML comments instructing the AI to adhere
+ *   strictly to her lore (disabilities, operational mindset).
+ * - UI Components: Leverages custom Web Components (`<wa-card>`) and CSS utilities
+ *   (`rs-badge`) to create a structured, "dossier" aesthetic.
+ * - Responsive Layout: Uses a standard Bootstrap `row`/`col-md-7`/`col-md-5` split
+ *   for text and imagery.
+ *
+ * MAINTENANCE NOTES:
+ * - The "ABSOLUTE DIRECTIVE" blocks must not be removed or altered, as they prevent
+ *   character inconsistencies in generated content.
+ * - Image paths use `<?= $cdnBaseUrl ?>`; ensure this variable is globally available.
+ */
 $pageTitle = "Jessica Ragsdale - Character Encyclopedia";
 ?>
 

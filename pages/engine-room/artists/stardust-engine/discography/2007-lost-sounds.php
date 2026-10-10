@@ -1,4 +1,19 @@
 <?php
+/**
+ * STARDUST ENGINE: LOST SOUNDS (2007)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page represents a lore-heavy archival release from the "Burnout Hiatus".
+ * It utilizes the '_album-art-header.php' and '_tracklist-downloader.php' components.
+ * 
+ * LORE:
+ * This album contains "Lost Gems" of the Apex era, previously only available as bootlegs.
+ * 
+ * DESIGN:
+ * - Uses standard Stardust Engine industrial/archival styling.
+ * - 'neutral' variant for the album art header to denote its status as an archival release.
+ */
+
 // Page data
 $pageTitle = "Lost Sounds (2007) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/2007-lost-sounds';
@@ -6,6 +21,11 @@ $album_path_web = '/engine-room-records/artists/the-stardust-engine/2007-lost-so
 ?>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Standard Stardust container. The top section utilizes the album art component, 
+      while the bottom lists the track-by-track lore using a custom list group.
+    -->
     
     <div class="row align-items-center mb-5">
         <?php $props = [

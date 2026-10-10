@@ -1,4 +1,24 @@
 <?php
+/**
+ * STARDUST BLACKSBURG: FURNITURE PHILOSOPHY
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This document explains the economic and hygienic rationale behind Stardust 
+ * Blacksburg's "unfurnished" business model. It is designed to act as a marketing
+ * and policy brief within the corporate documentation structure.
+ *
+ * KEY FEATURES:
+ * - Crucible Theme (Maroon & Orange): Enforced via Bootstrap utility classes like
+ *   `border-danger`, `bg-danger`, and `text-uppercase` for a bold, authoritative tone.
+ * - Grid Layout: Uses semantic Bootstrap `row` and `col-lg-6` structures to contrast
+ *   competitor models ("The Industry Scam") with Stardust's approach.
+ *
+ * MAINTENANCE NOTES:
+ * - Changes to the core argument (economic/hygiene) should maintain the aggressive,
+ *   transparent tone established here.
+ * - Iconography utilizes Phosphor icons (`ph-*`). Keep them consistent.
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/documents/furniture-philosophy.php
 // Context: Explaining the economic and hygienic benefits of unfurnished units.
 // Theme: "Crucible" (Maroon & Orange).

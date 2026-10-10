@@ -1,4 +1,18 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: CASE STUDIES FOOTER COMPONENT
+ * ============================================================================
+ * 
+ * This footer variant is dedicated specifically to the "Case Studies" sections 
+ * of the application. It shifts the visual focus towards "Archives" branding 
+ * and provides targeted quick links to specific technical protocols.
+ * 
+ * MAINTENANCE NOTES:
+ * - Contains a context-specific configuration for the Konami Code easter egg 
+ *   to match the "Archive Level Access" narrative.
+ * ============================================================================
+ */
 // includes/components/footers/case-studies/footer-case-studies.php
 ?>
 <footer class="mt-auto bg-body-tertiary border-top py-5">

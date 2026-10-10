@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE OFFER LETTER
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view renders an in-universe corporate document ("The $150M Term Sheet").
+ * It uses layout tricks to display a formal corporate letter inside a stylized
+ * container, complete with hand-written "notes" from the characters.
+ *
+ * MAINTENANCE NOTES:
+ * - The document utilizes inline styles and absolute positioning to place the
+ *   warning note (`Wait. Clause 9.C is an LBO.`) over the text. Ensure changes
+ *   to the container don't break this positioning.
+ * - Image paths rely on `$cdnBaseUrl`. 
+ * - Includes the standard `narrative-stepper.php` for story flow.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-offer-letter.php
 // EVIDENCE ITEM #01-A: The "Lowball" Term Sheet
 // UPDATED: Added Narrative Stepper & Character Manifest.

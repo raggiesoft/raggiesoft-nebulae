@@ -1,4 +1,25 @@
 <?php
+/**
+ * STARDUST BLACKSBURG: HOUSEHOLD PROTOCOLS (POLICIES)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file outlines the operational standards, guest rules, and roommate authority
+ * protocols for Stardust Blacksburg. It enforces the "Crucible" (Maroon & Orange)
+ * theme through semantic UI design.
+ *
+ * KEY FEATURES:
+ * - Structured Content: Uses Bootstrap rows and columns (`col-lg-9`, `col-lg-6`)
+ *   to cleanly divide policy sections (e.g., Roommate Autonomy).
+ * - Iconography: Integrates Phosphor icons (`ph-users`) aligned with thematic colors
+ *   (`text-primary`) to anchor the text visually.
+ *
+ * MAINTENANCE NOTES:
+ * - The `$pageTitle` implies this file might have been moved or renamed from 
+ *   `policies.php` based on the internal comment header.
+ * - Ensure that any additions to the policies maintain the icon-header + paragraph
+ *   structure for visual consistency across the document.
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/policies.php
 // Context: Guest Rules, Roommate Authority, and Occupancy Standards.
 // Theme: "Crucible" (Maroon & Orange).

@@ -1,4 +1,26 @@
 <?php
+/**
+ * CVTA ROUTE DATA: ROUTE 85 (TOWN POINT ROAD)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file acts as a data repository and view structure for a specific transit route
+ * within the Coastal Virginia Transit Authority (CVTA) fictional/legacy bus system.
+ *
+ * KEY FEATURES:
+ * - Structured Metadata: Defines route configuration (`$routeMeta`) using associative
+ *   arrays to drive the UI.
+ * - Alert System: Supports polymorphic alert definitions (strings for 'info', 
+ *   arrays for 'warning'/'stop') to handle detours and holiday schedules.
+ * - View Integration: The data array is intended to be consumed by a shared route 
+ *   template or rendering function.
+ *
+ * MAINTENANCE NOTES:
+ * - Keep the `$routeMeta` array structure consistent across all route files to ensure
+ *   the rendering template doesn't break.
+ * - When adding new alerts, follow the established format for arrays: 
+ *   `['type' => '...', 'text' => '...']`.
+ */
+
 // pages/raggiesoft-books/encyclopedia/bus-systems/cvta/routes/southside/route-85.php
 
 $routeMeta = [

@@ -1,4 +1,27 @@
 <?php
+/**
+ * FRACTURED PRISMS LORE: THE COLONIAL THEATRE
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as an environmental lore archive for the band "Fractured Prisms."
+ * It details "The Colonial Theatre," utilizing a distinct, gothic aesthetic aligned
+ * with the band's identity.
+ *
+ * KEY FEATURES:
+ * - 2.5D Parallax Hero: Implements a CSS-driven native parallax effect using 
+ *   `background-attachment: fixed` on the hero container.
+ * - Thematic Styling: Uses custom classes like `bg-prism-dark`, `border-prism`,
+ *   and `text-glow-prism` to enforce the band's visual identity.
+ * - Layered UI: Employs `z-index` layering to place the text block above the
+ *   semi-transparent background overlay.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure `$cdnBaseUrl` is properly initialized before this file is included.
+ * - The parallax effect (`background-attachment: fixed`) can occasionally have
+ *   performance issues on older mobile browsers; test thoroughly if structural
+ *   changes are made to the hero block.
+ */
+
 // pages/engine-room/artists/fractured-prisms/lore/colonial-theatre.php
 // Lore Archive: The Colonial Theatre (Hagerstown, MD)
 

@@ -1,5 +1,25 @@
 <?php
-// pages/engine-room/artists/crimson-node/characters/northwood/mrs-periwinkle.php
+/**
+ * ============================================================================
+ * Mrs. Periwinkle - Character Fragment
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/characters/northwood/staff/mrs-periwinkle.php
+ *
+ * Description:
+ * An isolated character profile for 'Mrs. Periwinkle' (The Head Librarian).
+ * Details her role in the psychological warfare of the Northwood High 
+ * environment and the dreaded "Dewey Decimal Terror" punishment.
+ *
+ * Architecture & Maintenance Notes:
+ * - Like other fragment files, this does not set a `$pageTitle` or use 
+ *   full HTML document wrapping. It is designed to be injected into the DOM 
+ *   by a parent controller.
+ * - Uses Bootstrap 5 grid to separate portrait/stats from narrative text.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode\Characters
+ * @since 1.0.0
+ * ============================================================================
+ */
 ?>
 <div class="container py-5">
     <div class="row mb-5">
@@ -11,6 +31,13 @@
         </div>
     </div>
 
+    <!--
+        ========================================================================
+        Profile Layout Grid
+        Separates the portrait and metadata card (left) from the detailed
+        narrative text (right).
+        ========================================================================
+    -->
     <div class="row align-items-start">
         <div class="col-lg-5 mb-4 mb-lg-0">
             <div class="card bg-body-tertiary border-secondary border-opacity-25 shadow-sm">

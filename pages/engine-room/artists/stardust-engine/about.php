@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - STARDUST ENGINE ABOUT/MISSION PROFILE
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This is the central "Mission Profile" view explaining the meta-narrative of
+ * the project (the "Dual-Layer" reality of the in-universe lore and the actual
+ * AI collaboration). It overrides default layout assets.
+ *
+ * MAINTENANCE NOTES:
+ * - $pageTheme = "ad-astra" alters the global layout context for this page.
+ * - $customPageAssets injects a starfield texture directly into the view using
+ *   the global $cdnBaseUrl variable.
+ * - Heavy use of Phospor Icons (`ph`) and FontAwesome (`fa`).
+ * - Crew Manifest sections summarize the AI tools (Gemini, Suno, DALL-E) and
+ *   human director roles.
+ *
+ * ============================================================================
+ */
 // pages/about.php
 // "Mission Profile" - Explaining the Meta & The Lore
 

@@ -1,6 +1,26 @@
 <?php
-// pages/engine-room/history/overview.php
-// Dual-purpose page: Real-world portfolio disclosure + Fictional Universe Timeline.
+/**
+ * ============================================================================
+ * Company History & Narrative Timeline
+ * ============================================================================
+ * Path: pages/engine-room/history/overview.php
+ *
+ * Description:
+ * A dual-purpose overview page presenting the real-world creation context 
+ * (portfolio disclosure, AI generation info) alongside the extensive fictional 
+ * universe timeline for Engine Room Records and its artists.
+ *
+ * Architecture & Maintenance Notes:
+ * - Employs a custom Web Component (<wa-card>) for the real-world disclosure block.
+ * - Dynamically renders the narrative timeline by iterating through predefined 
+ *   $props arrays and including the _timeline-node.php component for each era.
+ * - Future additions to the timeline should follow the same $props array structure 
+ *   (color, year, title, subtitle, content, etc.) and include the node component.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom
+ * @since 1.0.0
+ * ============================================================================
+ */
 
 $pageTitle = "Company History - Engine Room Records";
 
@@ -17,7 +37,13 @@ $base_path = $cdnBaseUrl . "/engine-room-records/artists";
         </p>
     </div>
 
-    <!-- 1. REAL WORLD INFRASTRUCTURE -->
+    <!--
+    ========================================================================
+    Real-World Infrastructure Panel
+    Discloses the portfolio nature of the project and the use of Generative AI
+    (Suno/Gemini) in the production of the audio and lore.
+    ========================================================================
+-->
     <div class="mb-5 w-100">
         <wa-card class="border-secondary shadow-lg w-100" style="--body-padding: 0; --header-padding: 0;">
             <div slot="header" class="bg-black text-white border-secondary d-flex justify-content-between align-items-center py-3 px-4">
@@ -53,7 +79,13 @@ $base_path = $cdnBaseUrl . "/engine-room-records/artists";
         </wa-card>
     </div>
 
-    <!-- THE NARRATIVE LORE -->
+    <!--
+    ========================================================================
+    The Narrative Lore Timeline
+    Chronological layout of fictional events. Each node is built using a
+    configuration array ($props) passed into the shared _timeline-node template.
+    ========================================================================
+-->
     <div class="position-relative mt-5 pt-5">
         
         <div class="text-center mb-5">

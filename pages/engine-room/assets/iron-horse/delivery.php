@@ -1,4 +1,41 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/engine-room/assets/iron-horse/delivery.php
+ * Path: /engine-room/assets/iron-horse/delivery
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders a lore vignette detailing the delivery of the custom-built "Iron Horse" 
+ * tour bus (Unit 02). It contrasts the successful, functional engineering of the band's 
+ * vehicle with the catastrophic failure of a competitor's luxury coach.
+ * 
+ * LORE CONTEXT:
+ * - The Aftermath of the Negotiation.
+ * - Location: Sainte-Claire Coachworks // Québec, Canada
+ * - Date: June 2, 2002
+ * - Highlights Ryan O'Connell's accessibility requirements (hydraulic lift) and 
+ *   Holly O'Connell's over-engineered structural demands.
+ * - Includes a "Competitor Intelligence Report" serving as narrative foil.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Relies entirely on standard Bootstrap 5 components and utility classes (cards, 
+ *   badges, typography utilities, borders).
+ * - Utilizes a distinct dark-mode styling for the "Competitor Intelligence Report" card 
+ *   (`.bg-black`, `.border-danger`, `.font-monospace`) to visually separate it as an 
+ *   internal dossier.
+ * - Uses Phosphor Icons (`ph ph-file-contract`) for iconography.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Depends on the parent layout/router to provide the base page structure and CSS.
+ * 
+ * MAINTENANCE NOTES:
+ * - This file represents a standalone narrative vignette. Any structural changes should 
+ *   ensure the dramatic pacing of the text blocks remains intact.
+ * - No custom CSS is defined here; maintain reliance on Bootstrap 5 utilities to preserve
+ *   the global design system.
+ */
+
 // pages/engine-room/assets/iron-horse/delivery.php
 // The Aftermath of the Negotiation.
 // Location: Sainte-Claire Coachworks // Québec, Canada

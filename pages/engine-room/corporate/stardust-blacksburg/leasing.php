@@ -1,4 +1,26 @@
 <?php
+/**
+ * STARDUST BLACKSBURG: LEASING PHILOSOPHY
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file presents the "Unit vs. Bed" pricing model for the "Stardust Blacksburg"
+ * corporate property (Engine Room). It emphasizes a specific business logic philosophy
+ * wrapped in a custom "Varsity/Crucible" design theme.
+ *
+ * KEY FEATURES:
+ * - Thematic Styling: Uses embedded CSS (`.comparison-table`, `.price-tag`) to 
+ *   create a distinctive look (e.g., Courier New for pricing, cursive for signatures)
+ *   that aligns with the Maroon & Orange (Crucible) theme.
+ * - Semantic Structure: Likely relies on Bootstrap tables and grid layouts to contrast
+ *   traditional student housing with the Stardust model.
+ *
+ * MAINTENANCE NOTES:
+ * - The `Herr Von Muellerhoff` font for `.signature-text` must be loaded globally
+ *   or explicitly imported in this context for the signature to render correctly.
+ * - Maintain the inline styles here unless a broader "Crucible" theme CSS file is
+ *   created, in which case these should be migrated.
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/leasing.php
 // Context: Explaining the "Unit vs. Bed" pricing model.
 // Theme: "Crucible" (Maroon & Orange) / Varsity.

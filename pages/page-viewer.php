@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Dynamic Markdown Page Viewer
+ * PATH: pages/page-viewer.php
+ * PURPOSE: Renders raw Markdown files using Parsedown. Resolves internal 
+ *          Obsidian-style links (`[[Link]]`) by scanning the routing manifest
+ *          (`katie.json`) to build correct canonical URLs.
+ * ARCHITECTURE NOTES:
+ * - Expects `ACTIVE_MD_FILE` constant to be set by the Elara router.
+ * - Parses `katie.json` on the fly to find correct book/chapter/part slugs.
+ * ============================================================================
+ */
 // Prevent direct access if Elara didn't route this
 if (!defined('ACTIVE_MD_FILE')) {
     die("No narrative file specified.");
@@ -11,6 +23,7 @@ if (!file_exists($markdownPath)) {
     echo "<h1>Error: Narrative segment not found.</h1>";
     echo "<p>System attempted to load: <code>" . htmlspecialchars(ACTIVE_MD_FILE) . "</code></p>";
 } else {
+    // SECTION: File Ingestion
     // 1. Ingest the raw Markdown from the file system
     $rawMarkdown = file_get_contents($markdownPath);
     
@@ -20,6 +33,7 @@ if (!file_exists($markdownPath)) {
         $katie = json_decode(file_get_contents($katiePath), true);
     }
     
+    // SECTION: Obsidian Link Interception & Resolution
     // 3. The Obsidian Link Intercept
     // Searches for [[Target]] or [[Target|Display Text]]
     $processedMarkdown = preg_replace_callback(

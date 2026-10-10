@@ -1,4 +1,22 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: BOOK TABLE OF CONTENTS SIDEBAR
+ * ============================================================================
+ * 
+ * This component fetches a specific book's structural JSON manifest (`katie.json`) 
+ * from the CDN and generates a dynamic, collapsible "Web Awesome Tree" for the 
+ * Table of Contents (ToC). 
+ * 
+ * MAINTENANCE NOTES:
+ * - Employs a URL-matching algorithm to automatically expand the `details` tree 
+ *   down to the currently active Book, Chapter, and Part.
+ * - Requires `rs_slugify` utility to construct deterministic routing paths that 
+ *   match the Stardust Engine's expected URL structure.
+ * ============================================================================
+ */
+
+// If rs_slugify doesn't exist yet, define it for URL generation
 if (!function_exists('rs_slugify')) {
     function rs_slugify($string) {
         $slug = mb_strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/u', '-', strip_tags($string)), '-'));
@@ -6,11 +24,7 @@ if (!function_exists('rs_slugify')) {
     }
 }
 
-
-/**
- * RaggieSoft Books - Sidebar Table of Contents
- * Fetches the specific book's katie.json from the CDN and builds a Web Awesome Tree
- */
+// Extract the series slug from the current URL to fetch the correct manifest
 
 $prefix = '/raggiesoft-books/books/';
 $seriesSlug = '';

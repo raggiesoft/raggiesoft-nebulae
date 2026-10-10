@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: PROJECT KNOX NARRATIVE HEADER
+ * ============================================================================
+ * 
+ * This header is tailored for the "Project: KNOX" sci-fi narrative section. 
+ * It splits navigation between reading the core story chapters and exploring 
+ * the world-building (The Reality vs. The Threat).
+ * 
+ * MAINTENANCE NOTES:
+ * - Uses Web Awesome `<wa-dropdown>` and `<wa-menu>` components.
+ * - Visually categorizes the dropdown items with specific colors (`text-success` 
+ *   vs `text-danger`) to reflect the narrative conflict.
+ * ============================================================================
+ */
 // includes/components/headers/raggiesoft-books/header-knox.php
 // Adapted from Engine Room Records template.
 // Context: Navigation for the specific book "Knox".

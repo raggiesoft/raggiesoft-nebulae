@@ -1,5 +1,25 @@
 <?php
-// pages/engine-room/artists/fractured-prisms/discography/1984-1883.php
+/**
+ * ============================================================================
+ * Album Profile: 1883 (The Rock Opera)
+ * ============================================================================
+ * Path: pages/engine-room/artists/fractured-prisms/discography/1984-1883.php
+ *
+ * Description:
+ * Specific album profile page for the 1984 concept album "1883" by 
+ * Fractured Prisms. Displays album artwork, narrative lore, tracklists 
+ * (via component), and studio archive context blocks.
+ *
+ * Architecture & Maintenance Notes:
+ * - Employs `_album-art-header.php` for standardized hero imagery.
+ * - Employs `_tracklist-downloader.php` to dynamically render the tracklist 
+ *   from central JSON, automatically handling the 2-disc layout based on data.
+ * - Studio archives section uses .lore-card and .artifact-paper styling.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\FracturedPrisms
+ * @since 1.0.0
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "1883 (The Rock Opera) - Fractured Prisms";
 $album_path_web = '/engine-room-records/artists/fractured-prisms/1984-1883';
@@ -10,6 +30,12 @@ $album_path_web = '/engine-room-records/artists/fractured-prisms/1984-1883';
     
     <div class="row align-items-center mb-5">
         
+        <!--
+            ========================================================================
+            Album Art & Identity Block
+            Uses the standardized component for rendering album covers.
+            ========================================================================
+        -->
         <?php $props = [
             'path' => $album_path_web, 
             'alt' => '1883 Album Art - Victorian London',

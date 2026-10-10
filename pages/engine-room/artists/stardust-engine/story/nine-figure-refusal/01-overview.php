@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: THE NINE FIGURE REFUSAL (OVERVIEW / INDEX)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This is the primary index/landing page for the entire "Nine Figure Refusal" arc.
+ * It acts as a table of contents, directing users to the various chapters of the story.
+ * 
+ * LORE:
+ * Organizes the complex corporate warfare narrative into 5 distinct chapters 
+ * plus an epilogue, outlining the journey from the initial approach to the legacy.
+ * 
+ * DESIGN:
+ * - A straightforward vertical list of chapters using Bootstrap cards and list-groups.
+ * - Employs iconography and bold typography to differentiate story sections.
+ * - Provides bottom navigation to begin the case file or return to the main History Hub.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/overview.php
 // The Index Page for the "Nine Figure Refusal" Arc.
 // Acts as the landing page/table of contents for this specific story.
@@ -8,6 +25,12 @@ $pageTitle = "Case File: OGM-2018 (The $150M Refusal)";
 ?>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      A vertical list of Bootstrap cards, each representing a "Chapter". 
+      Inside each card is a list-group with custom-styled list-group-item-actions 
+      that act as clickable navigational links to specific story pages.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

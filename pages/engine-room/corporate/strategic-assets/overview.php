@@ -1,4 +1,29 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Entity: Stardust Strategic Assets, LLC
+ * Theme: "Stealth" (Grey/Black/Industrial)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the overview landing page for the "Stardust Strategic Assets" division.
+ *    - Acts as the primary navigational hub for private corporate holdings (e.g., The Fortress, Stardust Studios).
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Utilizes a "Stealth" aesthetic with dark gradients and Bootstrap secondary/tertiary colors to emphasize privacy and security.
+ *    - Enforces physical boundary representation between public and private operations.
+ *    - Interactive elements (cards) include hover animations respecting `prefers-reduced-motion` settings for accessibility.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Relies on global asset inclusion (e.g., `$cdnBaseUrl`) for external imagery (hero section).
+ *    - Icons utilize Phosphor Icons (`ph-*`).
+ *    - Font stack relies heavily on Bootstrap's utility classes (e.g., `font-monospace` for data/telemetry aesthetic).
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Any new strategic/private assets added to the portfolio should be appended as new `.col-md-6` or `.col-md-4` blocks within the `.row.g-4` container.
+ *    - To maintain thematic consistency, avoid using bright primary/accent colors outside of specific highlight needs (e.g., warning border for Stardust Studios).
+ * ============================================================================
+ */
 // pages/engine-room/corporate/strategic-assets/overview.php
 // Entity: Stardust Strategic Assets, LLC
 // Context: The holding company for the "Private" assets.
@@ -9,6 +34,7 @@ $pageTitle = "Stardust Strategic Assets - Corporate Infrastructure";
 
 <style>
     /* STEALTH THEME */
+    /* Hero section utilizes dark overlays over secure imagery to reinforce the private/internal nature of the entity */
     .hero-section {
         background: linear-gradient(rgba(33, 37, 41, 0.95), rgba(33, 37, 41, 0.98)), 
                     url($cdnBaseUrl . '/stardust-engine/images/corporate/secure-server-room.jpg');
@@ -47,6 +73,7 @@ $pageTitle = "Stardust Strategic Assets - Corporate Infrastructure";
 
 <div class="container py-5">
     
+    <!-- Profile Section: Contextual explanation of the holding company -->
     <div class="row justify-content-center mb-5">
         <div class="col-lg-9 text-center">
             <h2 class="h5 text-uppercase text-body-secondary fw-bold mb-3">Entity Profile</h2>
@@ -60,8 +87,10 @@ $pageTitle = "Stardust Strategic Assets - Corporate Infrastructure";
         </div>
     </div>
 
+    <!-- Asset Cards Container -->
     <div class="row g-4 mb-5">
         
+        <!-- Asset: The Fortress (Residential) -->
         <div class="col-md-6">
             <a href="/engine-room/corporate/strategic-assets/the-fortress" class="text-decoration-none">
                 <div class="card h-100 asset-card shadow-sm border-start-0 border-end-0 border-top-0 border-bottom-4 border-secondary">

@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page contains the narrative prose and strategic guide notes for Chapter 2 of the 
+ * "Pasco Hail Mary" strategy guide for Pathfinder West. It covers the audio cipher mechanics,
+ * map routing (Exit 190), and fuel/budget management systems.
+ *
+ * MAINTENANCE NOTES:
+ * - The prose is wrapped in standard HTML5 `<article>` tags for semantic structure.
+ * - The `Guide Notes` section uses Bootstrap cards and explains the underlying game mechanics associated with the chapter's narrative events.
+ * - Ensure `$cdnBaseUrl` is in scope if images are added later, though this specific chapter currently only uses typography.
+ * - Uses `narrative-stepper.php` for sequential chapter navigation.
+ */
 // /pages/raggiesoft-games/pathfinder-west/strategy-guide/golden-ending/hail-mary-pasco/chapter-02.php
 
 $pageTitle = "Chapter 2: The Cipher | Pathfinder West";

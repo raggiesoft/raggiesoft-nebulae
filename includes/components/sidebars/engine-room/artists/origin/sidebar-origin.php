@@ -1,3 +1,19 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: ARTIST ORIGIN SIDEBAR
+ * ============================================================================
+ * 
+ * This component provides the side navigation structure specific to the 
+ * "Origin" artist entity within the Engine Room's narrative database.
+ * 
+ * MAINTENANCE NOTES:
+ * - Pure HTML/PHP component leveraging Bootstrap classes.
+ * - Manually links to specific lore archives that tie "Origin" to the broader 
+ *   RaggieSoft / Stardust Engine universe (e.g., The 1998 Signing).
+ * ============================================================================
+ */
+?>
 <div class="p-3">
     <div class="d-flex align-items-center mb-4 pb-3 border-bottom border-secondary">
         <i slot="start" class="ph ph-user-group fa-2x text-primary"></i> <div>

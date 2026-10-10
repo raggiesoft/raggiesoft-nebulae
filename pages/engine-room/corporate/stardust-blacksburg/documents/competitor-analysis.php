@@ -1,4 +1,17 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Competitor Analysis (Apex Student Living)
+ * PATH: pages/engine-room/corporate/stardust-blacksburg/documents/competitor-analysis.php
+ * PURPOSE: A lore document framed as a leaked internal memo from a rival 
+ *          corporate housing firm. Highlights Stardust Blacksburg's strict 
+ *          policies as a competitive disadvantage for "party" demographics, 
+ *          ironically showcasing Stardust's appeal to serious students.
+ * ARCHITECTURE NOTES:
+ * - Employs Bootstrap alert components to simulate an "Internal Memo" header.
+ * - Uses color-coding (success, warning, danger) to delineate competitor strategies.
+ * ============================================================================
+ */
 // pages/engine-room/corporate/stardust-blacksburg/competitor-analysis.php
 // Source: Apex Student Living (The "Mega-Complex" Competitor)
 // Subject: Market Threat Analysis - The "Ironwood" Anomaly
@@ -23,6 +36,7 @@ $pageTitle = "Competitor Intel: The Anti-Stardust Strategy";
         </div>
     </div>
 
+    <!-- SECTION: Strategy Breakdown Cards -->
     <div class="row g-5">
         
         <div class="col-lg-6">

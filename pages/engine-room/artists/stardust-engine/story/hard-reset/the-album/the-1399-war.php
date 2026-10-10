@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page presents "The $13.99 War" narrative. It is structured linearly through
+ * "Phases", recounting the legal and logistical battle over the album's pricing. 
+ * The page utilizes distinct card styles to differentiate narrative modes (e.g., legal 
+ * briefs vs. narrative text).
+ * 
+ * Future Maintenance Notes:
+ * - The "Pro Se Defense" excerpt visually mimics a legal document using monospace fonts 
+ *   and bordered containers. Preserve this styling for thematic consistency.
+ * - This story introduces the catalyst for "Stardust Logistics", bridging early lore 
+ *   to later corporate infrastructure lore.
+ */
 // pages/engine-room/artists/stardust-engine/story/1997-the-1399-war.php
 // The Antitrust Narrative (1997)
 // Context: The industry cartel attempts to block the release of Hard Reset.
@@ -66,6 +79,7 @@ $pageTitle = "The $13.99 War - The Stardust Engine";
                 </p>
             </div>
 
+            <!-- Inline Logic: High-contrast black/red card used to signify the dramatic legal threat (Phase 2). -->
             <div class="card bg-black text-white border-danger border-2 shadow-lg mb-5">
                 <div class="card-body p-5">
                     <div class="d-flex align-items-center mb-4 border-bottom border-danger pb-3">

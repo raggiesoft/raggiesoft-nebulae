@@ -1,4 +1,22 @@
 <?php
+/**
+ * STARDUST ENGINE: LORE ARCHIVE - THE DELAWARE MIGRATION (2015)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This narrative page recounts a pivotal corporate restructuring event where
+ * the band shifted their assets into Delaware LLCs for anonymity and protection.
+ * 
+ * LORE:
+ * It emphasizes Holly's role as the legal architect ("The Shark") and 
+ * highlights the family's extreme measures to protect their privacy and assets.
+ * 
+ * DESIGN:
+ * - Employs 'narrative-card' and 'document-box' custom styles to present the 
+ *   story in an official, archival format.
+ * - Uses timestamps and 'timestamp' utility classes for narrative pacing.
+ * - Concludes with the standard narrative-stepper component for story continuity.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/2015-delaware-migration.php
 // LORE ARCHIVE: The Delaware Migration
 // Context: The day the family became legally invisible.
@@ -44,6 +62,12 @@ $pageTitle = "The Delaware Migration (2015) - Engine Room History";
 </style>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      A centered narrative layout. Uses custom .narrative-card styles for the main 
+      story blocks and .document-box styles for the legal/technical explanations.
+      The page concludes with the narrative-stepper for pagination through the lore.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

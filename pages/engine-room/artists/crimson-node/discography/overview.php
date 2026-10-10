@@ -1,4 +1,29 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node - Discography Router & Schema Generator
+ * Version: v4.1 (Dynamic Schema.org & Vault Integrations)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the complete discography overview for "Crimson Node".
+ *    - Dynamically builds a Schema.org `MusicGroup` JSON-LD payload from CDN-hosted `albums.json`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Grid-based card layout separated by "Era" headings.
+ *    - Dynamic UI flags (e.g., "Vault Exclusive", "Evidence" for seized albums) with specific visual treatments (`filter: blur`, badge overlays).
+ *    - Uses `hover-lift` class defined at the bottom of the file for interaction.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Silently fetches `albums.json` via `@file_get_contents` from the CDN.
+ *    - The schema builder purposefully excludes "CANCELED" or seized lore albums to keep search engine indexing accurate.
+ *    - Uses `store-button.php` component for dynamic DSP (Digital Service Provider) button generation.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Ensure `albums.json` on the CDN is properly formatted.
+ *    - Any new custom album statuses (like 'CANCELED') must be added to the schema exclusion filter and visual flag logic.
+ * ============================================================================
+ */
 // pages/engine-room/artists/crimson-node/discography/overview.php
 // v4.1 - Crimson Node Discography Router (Dynamic Schema.org & Vault Integrations)
 
@@ -52,7 +77,7 @@ $musicGroupSchema = [
 </script>
 
 <div class="container py-5">
-    
+    <!-- Page Header -->
     <div class="text-center mb-5">
         <h1 class="display-3 fw-bold text-uppercase text-glow-primary brand-font" style="letter-spacing: 2px;">
             <i class="ph ph-waveform-lines me-2"></i>Discography

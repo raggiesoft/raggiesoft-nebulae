@@ -1,8 +1,25 @@
 <?php
-// pages/engine-room/artists/stardust-engine/band/cassidy-oconnell.php
-// The "Anchor" and the "Angel Investor".
-// Context: The silent power behind the throne.
-
+/**
+ * ============================================================================
+ * Cassidy O'Connell - Band Member Profile
+ * ============================================================================
+ * Path: pages/engine-room/artists/stardust-engine/band/cassidy-oconnell.php
+ *
+ * Description:
+ * Detailed lore and biographical profile for the fictional character 
+ * 'Cassidy O'Connell'. Documents her role as the 'Anchor', her classical 
+ * training, and her pivotal role in the "Daleville Event" (Lottery Win).
+ *
+ * Architecture & Maintenance Notes:
+ * - Dynamically generates a Schema.org 'Person' object linked to 'MusicGroup'.
+ * - Uses the `ad-astra` visual identity (starfield-container, glass-container).
+ * - Employs a sticky sidebar utilizing the shared `card.php` component for 
+ *   quick character facts and navigation.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\TheStardustEngine\Band
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "Cassidy O'Connell - The Stardust Engine";
 
 // Define Schema variables for the specific band member
@@ -23,6 +40,12 @@ $personSchema = [
 ];
 ?>
 
+<!--
+    ========================================================================
+    Schema.org Structured Data
+    Injects Person metadata mapped to the parent MusicGroup for SEO indexing.
+    ========================================================================
+-->
 <script type="application/ld+json">
 <?php echo json_encode($personSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>
@@ -31,6 +54,12 @@ $personSchema = [
 
 <div class="container py-5 glass-container position-relative z-1">
 
+    <!--
+        ========================================================================
+        Profile Layout Grid
+        Main narrative content on the left, sticky quick-stats card on the right.
+        ========================================================================
+    -->
     <div class="row g-5">
         
         <div class="col-lg-8">

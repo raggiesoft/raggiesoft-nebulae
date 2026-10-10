@@ -1,4 +1,24 @@
 <?php
+/**
+ * STARDUST BLACKSBURG: UNIT SPECIFICATIONS
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file provides the detailed, individual unit spec sheet (The Standard Spec)
+ * for the Ironwood Collective property. It serves as a functional features list.
+ *
+ * KEY FEATURES:
+ * - Varsity / Functional Luxury Theme: Uses Bootstrap border and text utilities
+ *   (e.g., `border-warning`, `text-warning`) to create a collegiate, premium feel.
+ * - Modular Sections: The UI is broken into thematic blocks (e.g., Domestic 
+ *   Infrastructure) using full-width (`col-12`) headers and underlying grids.
+ *
+ * MAINTENANCE NOTES:
+ * - This file represents the "baseline" standard; if the property ever adopts 
+ *   tiered pricing (despite the current copy forbidding it), significant copy 
+ *   rewrites will be required here.
+ * - Maintain the `h3` with bottom-border styling for new infrastructure categories.
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/documents/apartment-amenities.php
 // Context: The detailed spec sheet for INDIVIDUAL units.
 // Theme: Varsity / Functional Luxury.

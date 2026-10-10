@@ -1,3 +1,25 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node Character Profile - Rachel Miller
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the character biography and stat card for Rachel Miller within the Crimson Node lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Two-column Bootstrap layout (stats sidebar + main biography).
+ *    - The stat card uses `#198754` (success green) as the primary border color to denote identity.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Loaded as an include; requires `$cdnBaseUrl` to resolve thumbnail and full-size image paths.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Do not alter the base structure without coordinating with the parent character router logic.
+ * ============================================================================
+ */
+?>
+<!-- Character Profile Row -->
 <div class="row">
     <div class="col-12 mb-4">
         <h1 class="display-4 fw-bold" style="font-family: 'Impact', sans-serif; letter-spacing: 2px;">

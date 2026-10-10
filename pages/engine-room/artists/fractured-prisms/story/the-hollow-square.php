@@ -1,4 +1,26 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Fractured Prisms - The Hollow Square Lore Page
+ * Theme: "Prism Dark" (Gothic/Victorian Hybrid)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the deep-lore explainer page for "The Hollow Square".
+ *    - Breaks down the three distinct realities of the band's core narrative.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Implements specific overrides for `gothic-font`, `text-glow-prism`, and `polaroid-prism`.
+ *    - Uses a dark UI with subtle purple/lavender accents (`border-prism`).
+ *    - "Artifact Paper" styling for archival documents to mimic physical paper.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - This page is heavily text-based and styled inline to ensure standalone integrity of the lore component.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - If new lore sections are added, wrap them in `.lore-card` or `.artifact-paper` components to maintain narrative immersion.
+ * ============================================================================
+ */
 // pages/engine-room/artists/fractured-prisms/story/the-hollow-square.php
 // The Lore Foundation: The 100-Year Echo and the Physical Reality.
 // Archival Standard: US English (Label) / Queen's English (Artist Artifacts)
@@ -7,7 +29,7 @@ $pageTitle = "The Hollow Square - Fractured Prisms Lore";
 ?>
 
 <style>
-    /* Fractured Prisms Theme Overrides */
+    /* Fractured Prisms Theme Overrides - Defines visual identity for this lore page */
     .gothic-font {
         font-family: 'Playfair Display', serif;
     }
@@ -59,6 +81,7 @@ $pageTitle = "The Hollow Square - Fractured Prisms Lore";
 </style>
 
 <div class="bg-prism-dark min-vh-100 py-5">
+    <!-- Main Lore Container: Houses the 3 realities and historical artifact sections -->
     <div class="container">
         
         <div class="row justify-content-center mb-5">

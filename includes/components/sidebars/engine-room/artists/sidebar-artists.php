@@ -1,10 +1,26 @@
 <?php
+/**
+ * ARCHITECTURE: Artists Directory Sidebar
+ * 
+ * This sidebar serves as the primary navigation hub for the Engine Room's
+ * Artists Directory, providing access to various sub-sections and overviews.
+ * 
+ * COMPONENTS:
+ * 1. Directory Navigation: Links to Overview, Stardust Engine, and placeholders
+ *    for future redacted sections. Driven by the $currentSection variable.
+ * 2. Active Slots Widget: An informational panel indicating resource allocation
+ *    or active slots within the directory.
+ * 3. Security Reminder: A thematic lore widget emphasizing operational security.
+ */
+
 // includes/components/sidebars/engine-room/artists/sidebar-artists.php
 // The Navigation Panel for the Artist Directory
 ?>
 
 <div class="sticky-top" style="top: 100px;">
     
+    <!-- DIRECTORY NAVIGATION MENU -->
+    <!-- Primary links for traversing the Artists section. -->
     <!-- DIRECTORY NAVIGATION -->
     <div class="card rounded-0 border-secondary mb-4 bg-body-tertiary shadow-sm">
         <div class="card-header bg-dark text-white fw-bold text-uppercase border-bottom border-primary font-monospace small">
@@ -23,6 +39,8 @@
         </div>
     </div>
 
+    <!-- ACTIVE SLOTS WIDGET -->
+    <!-- Displays thematic or functional slot usage metrics. -->
     <!-- ACTIVE SLOTS WIDGET -->
     <div class="card rounded-0 border-secondary mb-4 bg-transparent shadow-sm">
         <div class="card-header bg-transparent text-body-emphasis fw-bold text-uppercase border-bottom border-secondary font-monospace small">
@@ -52,6 +70,8 @@
         </div>
     </div>
 
+    <!-- SECURITY REMINDER WIDGET -->
+    <!-- Thematic flavor text enforcing Engine Room protocols. -->
     <!-- SECURITY REMINDER -->
     <div class="alert alert-dark border-secondary bg-black text-white-50 p-3 font-monospace" style="font-size: 0.75rem;">
         <i class="ph ph-lock text-primary mb-2 d-block fs-5"></i>

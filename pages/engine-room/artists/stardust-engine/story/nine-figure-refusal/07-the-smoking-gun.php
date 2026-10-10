@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE SMOKING GUN
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view renders the pivotal "Smoking Gun" letter. It relies on extensive
+ * custom CSS to simulate a physical piece of mail, complete with a "Postage Due"
+ * stamp and an attached skeuomorphic sticky note.
+ *
+ * MAINTENANCE NOTES:
+ * - `.prospectus-paper` forces a light mode aesthetic with `!important` tags.
+ *   Modifying global theme settings should not affect this element.
+ * - `.stamp-postage-due` uses CSS transform and mix-blend-mode to simulate ink.
+ * - `.holly-note` adapts its position via media queries for mobile devices.
+ * - The narrative details the invocation of 18 U.S.C. § 1341 (Mail Fraud).
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-smoking-gun.php
 // EVIDENCE ITEM #00-C: The Letter (The "Smoking Gun")
 // Context: The moment Jameson Frost tried to save $0.50 and lost $600 Million.

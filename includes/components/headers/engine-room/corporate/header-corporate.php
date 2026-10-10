@@ -1,7 +1,23 @@
 <?php
+/**
+ * ARCHITECTURE: Corporate Intranet Header Navigation
+ * 
+ * This component serves as the primary navigation bar for the Corporate Intranet
+ * section of the Engine Room. It provides access to various corporate entities,
+ * structures, and operational systems.
+ * 
+ * COMPONENTS:
+ * 1. Top-Level Navigation: Static links to the corporate Dashboard and Structure pages.
+ * 2. Entities Dropdown: A categorized menu linking to different operating companies 
+ *    and philanthropic arms.
+ * 3. Ops Dropdown: A section dedicated to internal operational systems like IT and Fleet Command.
+ * 4. Exit Link: A stylized button to return to the public-facing Engine Room site.
+ */
+
 // includes/components/headers/engine-room/corporate/header.php
 // Context: The Corporate Intranet Navigation.
 ?>
+<!-- RESPONSIVE INTRANET NAVIGATION CONTAINER -->
 <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
   
   
@@ -17,6 +33,8 @@
   
 
   
+  <!-- ENTITIES DROPDOWN -->
+  <!-- Categorized list of corporate holdings and initiatives -->
   <wa-dropdown placement="bottom-start">
     <button class="rs-btn"  href="#"    slot="trigger" appearance="plain">
         <i class="ph ph-briefcase me-2"></i>Entities
@@ -35,6 +53,8 @@
 
 
   
+  <!-- OPERATIONS DROPDOWN -->
+  <!-- Links to internal systems and command interfaces -->
   <wa-dropdown placement="bottom-start">
     <button class="rs-btn"  href="#"    slot="trigger" appearance="plain">
         <i class="ph ph-server me-2"></i>Ops
@@ -49,6 +69,8 @@
 
 
   
+    <!-- EXIT LINK -->
+    <!-- Provides a clear path back to the public-facing site -->
     <button class="rs-btn" appearance="plain" href="/engine-room" class="text-dark">
         Exit to Public Site <i slot="start" class="ph ph-arrow-right-from-bracket ms-2"></i>
     </button>

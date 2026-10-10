@@ -1,4 +1,24 @@
 <?php
+/**
+ * CRIMSON NODE LORE: HEATHER BOUCHARD
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file is the primary lore profile for "Heather Bouchard" within the CCC faction.
+ * It functions identically to the Hailey Bouchard profile, providing a structured
+ * dossier view.
+ *
+ * KEY FEATURES:
+ * - Consistent Theming: Uses the same layout (`col-lg-4` sidebar) and typography
+ *   (`.brand-font`, `text-uppercase`) as peer CCC profiles to maintain continuity.
+ * - Thematic Subtitles: Employs `text-muted` and `border-secondary` for the subtitle
+ *   and separator, keeping the UI clean and industrial.
+ *
+ * MAINTENANCE NOTES:
+ * - Like its sibling file, the internal path comment omits the `/characters/` directory.
+ * - Future additions to the profile data (e.g., inside the sidebar) should follow the
+ *   established `ul > li > strong` format to preserve vertical rhythm.
+ */
+
 // pages/engine-room/artists/crimson-node/ccc/heather-bouchard.php
 // The Profile for Heather Bouchard
 

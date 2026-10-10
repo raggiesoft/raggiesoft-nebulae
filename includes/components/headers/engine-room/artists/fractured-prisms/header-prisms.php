@@ -1,4 +1,14 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This component provides the dedicated navigation header for the "Fractured Prisms" 
+ * artist sub-site within the Engine Room imprint. It includes links to lore, discography, 
+ * band members, and a way back to the main Engine Room HQ.
+ *
+ * MAINTENANCE NOTES:
+ * - Uses Web Awesome (wa-dropdown, wa-menu) for drop-down sub-navigation.
+ * - Ensure href links match the route structure for the Fractured Prisms sub-site.
+ */
 // includes/components/headers/engine-room/artists/fractured-prisms/header-prisms.php
 // Dedicated navigation for the Fractured Prisms artist sub-site.
 ?>

@@ -1,4 +1,25 @@
 <?php
+/**
+ * AETHEL SAGA LORE: CHARACTERS (FIGURES OF LEGEND)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file presents the "Dramatis Personae" for the Aethel Saga universe.
+ * It operates within the `aethel` site context, applying the global
+ * fantasy theme configuration.
+ *
+ * KEY FEATURES:
+ * - Context Flagging: Sets `$currentSite = 'aethel'` to inform global wrappers
+ *   or navigation about the active domain context.
+ * - Thematic UI: Shares the `aethel-theme` and `tome-container` styles for 
+ *   visual consistency across lore pages.
+ * - Structured Content: Uses Bootstrap rows and columns to pair character 
+ *   names with descriptions.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure `$currentSite` matches the expected string in the header/footer includes.
+ * - Character additions should follow the `col-md-6` layout or similar grid rules
+ *   to avoid breaking responsive flows.
+ */
 $currentSite = 'aethel';
 $pageTitle = "Lore: The Figures of Legend";
 ?>

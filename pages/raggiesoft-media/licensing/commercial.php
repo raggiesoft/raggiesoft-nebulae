@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as the commercial licensing and IP clearance gateway for RaggieSoft Media.
+ * It strictly outlines the company's Non-Exclusive flat-fee licensing model due to the integration
+ * of commercial generative AI in the production workflow, explaining the legal framework clearly to clients.
+ *
+ * MAINTENANCE NOTES:
+ * - Employs a specific "Frutiger Aero / Dark Aero Glass" aesthetic via custom inline CSS overrides to match the brand sub-site identity.
+ * - Ensure standard `wa-card` and Web Awesome UI elements are functioning correctly within the glassmorphism parameters.
+ * - The `sync@raggiesoftmedia.com` email address is heavily referenced here; any changes to the sync desk alias must be updated across all textual instructions and `mailto:` links.
+ */
 // pages/raggiesoft-media/licensing/commercial.php
 // Commercial Sync & IP Clearances.
 // Updated: Frutiger Aero / Dark Aero Glass Architecture

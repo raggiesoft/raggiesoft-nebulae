@@ -1,10 +1,32 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node - The University of the Piedmont Directory
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the character index/directory for the "University of the Piedmont" faction in the Crimson Node lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Simple Bootstrap grid layout for character cards.
+ *    - Heavily leverages the institution's theme color (Orange: `#ff7900`) for headers, borders, and subtitle highlights.
+ *    - Custom font (`Impact`) for the main title to simulate collegiate branding.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Images are pulled dynamically using the `$cdnBaseUrl`.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Append new characters as standard Bootstrap column (`.col-md-6 .col-lg-4`) blocks within the `.row.g-4` container.
+ *    - Maintain the inline `#ff7900` styling for thematic consistency, unless a global CSS class is implemented later.
+ * ============================================================================
+ */
 // pages/engine-room/artists/crimson-node/characters/piedmont/overview.php
 // The University of the Piedmont Directory
 
 $pageTitle = "The University of the Piedmont - Crimson Node";
 ?>
 
+<!-- Main Directory Container -->
 <div class="container py-5">
     <div class="row mb-5">
         <div class="col-12 text-center">

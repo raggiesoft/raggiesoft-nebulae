@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - STARDUST ENGINE LICENSE VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view component outlines the dual-license model (CC BY-SA 4.0 for creative/lore,
+ * MIT for code) for The Stardust Engine project. It is included by the parent router
+ * which provides the overall layout (header, footer, navigation).
+ *
+ * MAINTENANCE NOTES:
+ * - $pageTitle is expected to be processed by the parent router to set the <title> tag.
+ * - This file contains references to external URLs (Creative Commons, MIT). Make sure
+ *   these links remain active in future revisions.
+ * - The AI Attribution alert block uses FontAwesome (`fa-brands`) and Phosphor (`ph`) icons.
+ *   Ensure the underlying parent layout continues to load these icon sets.
+ * 
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "License Information - The Stardust Engine";
 ?>

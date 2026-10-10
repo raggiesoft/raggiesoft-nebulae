@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page contains "The Bridge Letter", presenting a narrative beat using the standard 
+ * corporate letterhead component. It contrasts the hostile Omni-Global environment with 
+ * the Engine Room culture.
+ * 
+ * Future Maintenance Notes:
+ * - This page includes the `letterhead.php` component. Ensure variables like `$brand` and 
+ *   `$stamp_color` are properly set before inclusion.
+ * - Narrative steppers handle navigation to the next chapter ("The Liquidation").
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/staff-retention.php
 // EVIDENCE ITEM #101: The "Bridge" Letter
 // Context: Holly hires the staff that Frost abandoned.
@@ -58,6 +69,8 @@ $pageTitle = "The Retention Offer - Engine Room History";
 
             <?php 
                 /**
+                 * Inline Logic: Configure the letterhead component to display the "Engine Room" brand 
+                 * and apply a "SUCCESS" (hired) stamp.
                  * LETTERHEAD COMPONENT
                  * Context: The Offer Letter sent to all 150 non-executive employees.
                  */

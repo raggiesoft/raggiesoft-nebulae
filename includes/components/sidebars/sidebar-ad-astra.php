@@ -1,3 +1,20 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: AD ASTRA MISSION SIDEBAR
+ * ============================================================================
+ * 
+ * This sidebar is specific to the "Ad Astra" lore arc (The Maiden Voyage). 
+ * It structures the UI as a "Mission Control" panel, segregating story pages 
+ * from related media/audio archives.
+ * 
+ * MAINTENANCE NOTES:
+ * - Employs custom `rs-btn` components for routing.
+ * - Make sure that the "Related Archives" links are updated if the audio 
+ *   system architecture changes.
+ * ============================================================================
+ */
+?>
 <h5 class="pt-3 pb-2 mb-3 border-bottom text-info">
     <i slot="start" class="ph ph-rocket-launch"></i> Mission Control
 </h5>

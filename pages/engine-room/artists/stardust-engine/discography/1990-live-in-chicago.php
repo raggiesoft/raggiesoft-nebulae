@@ -1,16 +1,40 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Live in Chicago (1990) Discography Page
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the detail page for the live EP "Live in Chicago".
+ *    - Connects standard album headers and dynamically loads tracklist JSON data.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Uses a standard Bootstrap grid.
+ *    - Leverages the "pact" variant (Pink border) in `_album-art-header.php` to visually indicate the Apex era connection.
+ *    - Highlight cards use distinct contextual borders (`border-danger`, `border-warning`, `border-info`) to call out specific lore events.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Needs global paths/variables (`$album_path_web`, `ROOT_PATH`) to function correctly.
+ *    - Streaming IDs are placeholders awaiting DistroKid synchronization.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Maintain the contextual border colors on the "Exhibit A" and "Phantom Vocal" cards as they map to the emotional tone of the lore.
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "Live in Chicago (1990) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1990-live-in-chicago';
 
 // Streaming Services IDs
 // (Populate these with the unique platform IDs when DistroKid clears the release)
+
 $id_spotify = "";
 $id_apple   = "";
 $id_amazon  = "";
 $id_youtube = "";
 ?>
 
+<!-- Main Discography Container -->
 <div class="container py-5">
     <?php
         // Include the reusable live album disclaimer

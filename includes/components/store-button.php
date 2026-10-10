@@ -1,4 +1,21 @@
 <?php
+/**
+ * ARCHITECTURE: Store Button Component
+ * 
+ * A dynamic, multi-platform store routing component that handles both 
+ * digital streaming (DSPs) and physical merchandise sales via Cloudflare subsets.
+ * 
+ * COMPONENTS:
+ * 1. Data Mapping: Evaluates incoming properties to build platform-specific URLs
+ *    for Spotify, Apple Music, Amazon, and YouTube based on entity type (artist vs album).
+ * 2. Primary Button & Dropdown: A split-button UI using wa-button-group and wa-dropdown.
+ *    The primary action is set by $default, with secondary actions hidden in the dropdown.
+ * 3. Merchandise Dropdown: Conditionally renders a secondary wa-dropdown for physical goods
+ *    (Vinyl, CD, Apparel) if URLs are provided in the properties.
+ * 4. CSS Patching: Includes specific inline CSS overrides to force Web Awesome 
+ *    components to behave seamlessly within a split-button flex layout.
+ */
+
 // --- Component: store-button.php ---
 // V2: DSP Streaming + Physical Merch Routing
 // Updated: Web Awesome Components
@@ -6,7 +23,8 @@
 $type = $storeProps['type'] ?? 'album'; 
 $size = $storeProps['size'] ?? 'medium';
 
-// 1. The IDs for each streaming platform
+// DSP CONFIGURATION
+// 1. Extract streaming IDs from the parent scope properties.
 $ids = [
     'spotify' => $storeProps['spotify'] ?? '',
     'apple'   => $storeProps['apple'] ?? '',
@@ -14,7 +32,8 @@ $ids = [
     'youtube' => $storeProps['youtube'] ?? ''
 ];
 
-// 2. The URLs for Physical Merchandise (Cloudflare Subdomains)
+// MERCHANDISE CONFIGURATION
+// 2. Extract full URLs for physical goods routing.
 $physical = [
     'vinyl'   => $storeProps['vinyl'] ?? '',
     'cd'      => $storeProps['cd'] ?? '',
@@ -95,6 +114,8 @@ wa-button.dsp-youtube:hover::part(base) { background-color: #ff3333 !important; 
 .text-dsp-youtube { color: #FF0000 !important; }
 </style>
 
+<!-- COMPONENT RENDERER -->
+<!-- Flex container grouping the DSP split-button and the Merch dropdown. -->
 <div class="d-flex flex-wrap gap-2">
     
     <button class="rs-btn"-group class="dynamic-store-group">

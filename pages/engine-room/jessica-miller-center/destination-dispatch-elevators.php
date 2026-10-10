@@ -1,4 +1,26 @@
 <?php
+/**
+ * JESSICA MILLER CENTER: DESTINATION DISPATCH ELEVATORS
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as a public user guide detailing the accessibility features
+ * of the vertical transport system (Destination Dispatch) at the JMC. It enforces
+ * Universal Design principles both in narrative content and actual web structure.
+ *
+ * KEY FEATURES:
+ * - WCAG AAA Compliance: Relies heavily on Adaptive Bootstrap 5.3 styling to 
+ *   ensure all text and UI elements meet strict contrast ratios.
+ * - Thematic Typography: Uses the `Audiowide` font for step numbers (`.step-number`)
+ *   to provide a modern, technical aesthetic while preserving legibility via 
+ *   `opacity` and `var(--bs-tertiary-color)`.
+ *
+ * MAINTENANCE NOTES:
+ * - Maintain the adaptive color variables (`var(--bs-tertiary-color)`); do not 
+ *   hardcode gray hex values that might fail contrast checks in dark mode.
+ * - When adding new instructional steps, replicate the `.step-number` and 
+ *   `.guide-icon` structure to ensure consistent visual flow.
+ */
+
 // pages/engine-room/jessica-miller-center/destination-dispatch-elevators.php
 // Public Guide: Destination Dispatch & Accessibility Features
 // Context: Universal Design standard for JMC vertical transport.

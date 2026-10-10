@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as the lore and technical profile for "Jenna", the personified
+ * representation of the system's Git and Rclone synchronization scripts (`jenna-sync.sh`).
+ * She represents the "Development" side of the process, specifically focused on securing assets.
+ *
+ * MAINTENANCE NOTES:
+ * - Uses custom orange hex codes (`#fd7e14`) for a vibrant, energetic "ADHD" aesthetic, contrasting with Sarah's strict yellow.
+ * - The terminal block visually mocks the execution of the `jenna-sync.sh` script, showing Git and Rclone output.
+ * - Ensure any visual changes to the mock terminal output align with actual `rclone sync` standard outputs for authenticity.
+ */
 // pages/family/jenna.php
 // Theme: Jenna (Creative Chaos, Orange, Sync)
 ?>

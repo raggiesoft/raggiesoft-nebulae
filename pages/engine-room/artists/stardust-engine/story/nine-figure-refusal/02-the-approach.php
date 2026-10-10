@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: LORE ARCHIVE - THE NINE FIGURE REFUSAL (02 - THE APPROACH)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This is Evidence Item #00 in the "Nine Figure Refusal" story arc.
+ * It details the family's arrival in Los Angeles for the Omni-Global meeting.
+ * 
+ * LORE:
+ * Showcases the "Five Badge" protocol, Ryan's accessibility challenges and observations, 
+ * Cassidy's trauma triggers, and Holly's strategic control of their accommodations.
+ * 
+ * DESIGN:
+ * - Heavy use of dark-mode overrides and 'wall-card' styling for high-contrast narrative moments.
+ * - Uses structural alerts and 'ryan-observation' blocks to break up text and provide 
+ *   insight into character perspectives.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-approach.php
 // EVIDENCE ITEM #00: The Arrival
 // Context: The family arrives in LA. The "Vacation" becomes a "Deployment".
@@ -39,6 +56,12 @@ $pageTitle = "The Approach Vector - Evidence Item #00";
     }
 </style>
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Sequential narrative layout divided into "Arrival", "The High Ground", and "The Armory".
+      Uses .wall-card for intense character moments and standard .narrative-card for general progression.
+      Includes a specialized .ryan-observation block for internal monologue.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

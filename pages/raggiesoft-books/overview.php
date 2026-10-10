@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Ocean View Archives Main Hub
+ * PATH: pages/raggiesoft-books/overview.php
+ * PURPOSE: Global landing page for the literary imprint. Displays active
+ *          narrative universes (Contemporary, KNOX, Aethel).
+ * ARCHITECTURE NOTES:
+ * - Uses custom CSS overrides (`.ova-hero`, `.ova-text-bronze`) to detach
+ *   from standard Bootstrap global variables for this specific section.
+ * - Injects Publisher JSON-LD metadata for SEO structuring.
+ * ============================================================================
+ */
 // pages/raggiesoft-books/overview.php
 // The Main Landing Hub for Ocean View Archives
 
@@ -68,6 +80,7 @@ $pageTitle = "Ocean View Archives | RaggieSoft Media";
     }
 </style>
 
+<!-- SECTION: Ocean View Archives Hero -->
 <section class="ova-hero py-5 text-center shadow-lg" aria-label="Ocean View Archives Introduction">
     <div class="container position-relative z-2 py-4">
         
@@ -87,6 +100,7 @@ $pageTitle = "Ocean View Archives | RaggieSoft Media";
     </div>
 </section>
 
+<!-- SECTION: Active Collections Grid -->
 <section class="py-5 bg-body text-body" aria-labelledby="vault-directory-title">
     <div class="container-fluid px-4 px-xxl-5">
         

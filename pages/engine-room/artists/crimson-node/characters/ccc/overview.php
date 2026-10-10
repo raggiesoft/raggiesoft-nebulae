@@ -1,4 +1,27 @@
 <?php
+/**
+ * CRIMSON NODE LORE: CCC CAMPUS (OVERVIEW)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the directory overview for the "Charlottesville Community College"
+ * (CCC) faction within the Crimson Node lore. It aggregates the profiles of characters
+ * belonging to this specific ecosystem.
+ *
+ * KEY FEATURES:
+ * - Semantic Grid Layout: Utilizes a Bootstrap card grid (`row g-4`, `col-md-6 col-lg-4`)
+ *   to cleanly present character thumbnails and summary data.
+ * - Thematic Border Accents: Employs custom CSS variables (e.g., `var(--bs-purple)`) on
+ *   the card's `border-top` to visually differentiate the characters or their faction.
+ * - Centralized Headings: Uses `Impact` font with custom letter spacing to maintain the
+ *   industrial aesthetic consistent with other Crimson Node character pages.
+ *
+ * MAINTENANCE NOTES:
+ * - When adding new CCC characters, replicate the card structure precisely, ensuring
+ *   the top border color aligns with the established visual language.
+ * - The image aspect ratio is hardcoded to `1/1` on the thumbnail; ensure newly
+ *   uploaded assets conform to this to prevent UI layout shifts.
+ */
+
 // pages/engine-room/artists/crimson-node/characters/ccc/overview.php
 // CCC Campus Directory
 

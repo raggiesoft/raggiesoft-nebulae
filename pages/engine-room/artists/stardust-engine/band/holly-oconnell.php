@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Band Member Profile (Holly O'Connell)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the complex lore page for Holly O'Connell, focusing on her legal/financial credentials.
+ *    - Integrates a custom modal system for expanding credential details.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Heavy use of Bootstrap colored buttons/badges (`success`, `danger`, `primary`) mapped to Web Awesome (`rs-btn`) components for interactive lore display.
+ *    - Custom `<dialog>` styling to override Web Awesome's default light mode to fit the Stardust dark theme.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - The `<dialog>` element relies on inline JS (`credentialModal`) and data attributes (`data-title`, `data-desc`, `data-lore`) injected into the buttons.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - When adding new credentials, ensure all `data-*` attributes are properly formatted, as the vanilla JS script at the bottom maps these directly into the modal DOM.
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/band/holly-oconnell.php
 // The "Anchor" and the "Architect".
 // UPDATED: Added Legal Credentials (J.D. + 4 Bar Admissions) to the timeline.
@@ -27,8 +47,10 @@ $personSchema = [
 <?php echo json_encode($personSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>
 
+<!-- Starfield Background Overlay -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- Main Content Container with Glassmorphism -->
 <div class="container py-5 glass-container position-relative z-1">
 
     <div class="row g-5">

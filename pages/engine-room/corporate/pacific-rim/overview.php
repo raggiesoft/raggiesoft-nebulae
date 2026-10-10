@@ -1,4 +1,15 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Pacific Rim Properties Overview
+ * PATH: pages/engine-room/corporate/pacific-rim/overview.php
+ * PURPOSE: A boring, corporate microsite detailing the real estate holdings
+ *          that fund the Engine Room Records universe.
+ * ARCHITECTURE NOTES:
+ * - Implements a "Corporate Beige" custom stylesheet (`.pac-rim-body`).
+ * - Greyscale filter used on hero image to enforce the drab, corporate tone.
+ * ============================================================================
+ */
 // pages/engine-room/corporate/pacific-rim/overview.php
 // Context: The "Boring" Real Estate Holding Company.
 // Location: Avenue of the Stars, Los Angeles.
@@ -36,6 +47,7 @@ $pageTitle = "Pacific Rim Properties - Commercial Real Estate";
     .property-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 </style>
 
+<!-- SECTION: The "Corporate Beige" Content Container -->
 <div class="pac-rim-body">
 
     <div class="position-relative" style="height: 400px; overflow: hidden;">
@@ -69,6 +81,7 @@ $pageTitle = "Pacific Rim Properties - Commercial Real Estate";
 
         <h3 class="h5 text-uppercase border-bottom pb-2 mb-4" style="color: #003366; border-color: #003366 !important;">Featured Properties</h3>
         
+        <!-- SECTION: Property Portfolio Grid -->
         <div class="row g-4">
             
             <div class="col-md-4">

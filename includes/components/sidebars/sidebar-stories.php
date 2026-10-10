@@ -1,10 +1,21 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Generates the left-hand navigation sidebar for the Lore & History section.
+ * Architecture: Evaluates the current server `REQUEST_URI` against an array of narrative 
+ * routes (`$storyLinks`) to dynamically highlight the active chapter. Uses exact and sub-page 
+ * string matching logic to prevent false positives on the root directory.
+ * Future Maintainers: When adding new lore chapters, append them to the `$storyLinks` array. 
+ * Maintain the existing `fa-duotone` icon syntax.
+ */
 // includes/components/sidebars/sidebar-stories.php
 // Navigation for the Lore & History Section
 // Updated: v2.1 (Fixed Active State Visibility for Corporate Theme)
 
 $current_req = $_SERVER['REQUEST_URI'];
 
+// Define the menu structure: An array mapping route identifiers to UI metadata
 // Define the menu structure
 $storyLinks = [
     'history' => [
@@ -51,9 +62,11 @@ $storyLinks = [
     <div class="d-flex flex-column gap-1">
         <?php foreach ($storyLinks as $key => $link): 
             // 1. Exact Match (Account for optional trailing slash)
+            // Determine if the user is currently looking at this exact chapter's root page.
             $isExactMatch = ($current_req === $link['url'] || $current_req === $link['url'] . '/');
             
             // 2. Sub-page Match (Exclude the root 'history' link from this check)
+            // Keep the parent category highlighted if the user navigates into a deeper sub-page (e.g. /cpi/details).
             $isSubPage = false;
             if ($key !== 'history') {
                 $isSubPage = (str_starts_with($current_req, $link['url'] . '/'));

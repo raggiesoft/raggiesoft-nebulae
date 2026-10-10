@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: THE NINE FIGURE REFUSAL (EPILOGUE - FROST INTERVIEW)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page serves as the concluding epilogue to the "Nine Figure Refusal" arc.
+ * It details Jameson Frost's downfall and the rise of Jessica Miller.
+ * 
+ * LORE:
+ * Highlights the "Triple Tap" federal filings by Holly (SEC, IRS, USPIS)
+ * and Frost's subsequent humiliating interview with the intern he once bullied.
+ * 
+ * DESIGN:
+ * - Employs custom CSS for skeuomorphic "federal-form" designs (Form TCR, 3949-A, 8165).
+ * - Utilizes dark-mode overrides to maintain form contrast and red stamp visibility.
+ * - Narrative block utilizes a wide-angle image card to emphasize the power dynamic shift.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/frost-interview.php
 // EPILOGUE: The "Cultural Fit" Assessment
 // Context: February 14, 2019. The "Eye of the Storm."
@@ -68,6 +85,13 @@ $pageTitle = "The Interview - Epilogue";
 </style>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Structured in two main sections:
+      1. "The Triple Tap" grid: A 3-column layout displaying CSS-styled federal forms.
+      2. The Narrative Interview: A continuous story block detailing Frost's encounter with Jessica.
+      The page concludes with the standard narrative-stepper.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

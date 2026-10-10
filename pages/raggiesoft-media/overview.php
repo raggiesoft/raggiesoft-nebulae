@@ -1,4 +1,20 @@
 <?php
+/**
+ * ARCHITECTURE: RaggieSoft Media Overview
+ * 
+ * The primary B2B corporate hub for RaggieSoft Media. It outlines the 
+ * various divisions (IP, Infrastructure, Rights Management) and serves as 
+ * a directory for licensing and corporate contact.
+ * 
+ * COMPONENTS:
+ * 1. Schema.org Injection: Defines the corporate organization and portfolio collection.
+ * 2. Aero Hero Section: Thematic introduction utilizing Frutiger Aero design language.
+ * 3. IP Portfolio Grid: Cards linking to Engine Room Records, Stardust Engine CMS, 
+ *    and Ocean View Archives.
+ * 4. Architect CTA: A prominent call-to-action directing recruiters to the portfolio.
+ * 5. Corporate Directory: Uses Elara's secure-mail data attributes to prevent scraping.
+ */
+
 // pages/raggiesoft-media/overview.php
 // The B2B Corporate Hub for RaggieSoft IP and Master Licensing
 // Updated: Frutiger Aero / Dark Aero Image Backgrounds
@@ -6,6 +22,8 @@
 $pageTitle = "RaggieSoft Media | IP & Asset Management";
 ?>
 
+<!-- CORPORATE SCHEMA DEFINITION -->
+<!-- Explicitly establishes the parent/child organizational structure for search engines. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,6 +54,8 @@ $pageTitle = "RaggieSoft Media | IP & Asset Management";
 }
 </script>
 
+<!-- AERO HERO COMPONENT -->
+<!-- Thematic splash section applying Frutiger Aero visual styling. -->
 <div class="aero-hero py-5">
     <div class="container py-4 aero-content text-center">
         <i class="ph ph-globe-pointer fa-4x text-primary mb-4" aria-hidden="true" style="filter: drop-shadow(0 0 15px rgba(0,130,230,0.4));"></i>
@@ -64,6 +84,8 @@ $pageTitle = "RaggieSoft Media | IP & Asset Management";
 
 <div class="container py-5">
 
+    <!-- IP PORTFOLIO GRID -->
+    <!-- Cards detailing the primary operational divisions of RaggieSoft Media. -->
     <div class="row mb-5">
         <div class="col-12">
             <h2 class="h4 text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-4 text-secondary">IP Portfolio & Divisions</h2>
@@ -133,6 +155,8 @@ $pageTitle = "RaggieSoft Media | IP & Asset Management";
         </div>
     </div>
 
+    <!-- ARCHITECT RECRUITMENT CTA -->
+    <!-- Directed call-to-action for hiring managers and recruiters. -->
     <div class="row mb-5">
         <div class="col-12">
             <div class="card bg-hud-blue border-0 shadow-sm hover-lift">
@@ -152,6 +176,8 @@ $pageTitle = "RaggieSoft Media | IP & Asset Management";
         </div>
     </div>
 
+    <!-- CORPORATE DIRECTORY (ANTI-SCRAPER) -->
+    <!-- Utilizes Elara data-attributes to securely render email links. -->
     <div class="row">
         <div class="col-12">
             <div class="card bg-hud-base border-0 p-4 p-md-5 shadow-sm">

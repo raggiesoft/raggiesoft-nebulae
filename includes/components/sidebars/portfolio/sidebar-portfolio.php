@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: PROFESSIONAL PORTFOLIO SIDEBAR
+ * ============================================================================
+ * 
+ * This file renders the primary navigation sidebar for the professional portfolio 
+ * section of the site. It contains static routing links to resume, education, 
+ * and corporate contact pages.
+ * 
+ * MAINTENANCE NOTES:
+ * - Implements a split-navigation design: Personal branding on top, followed by 
+ *   "The Engine Room" administrative/system-level links at the bottom.
+ * - Relies on Bootstrap `nav-pills` for the menu layout.
+ * ============================================================================
+ */
 // includes/components/sidebars/portfolio/sidebar-portfolio.php
 // The main navigation sidebar for the professional portfolio.
 $root = '/about/michael-ragsdale';

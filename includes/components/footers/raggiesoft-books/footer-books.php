@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: RAGGIESOFT BOOKS FOOTER COMPONENT
+ * ============================================================================
+ * 
+ * This footer variant is designed for the "Ocean View Archives" literary 
+ * imprint section. It abandons the default corporate layout in favor of a 
+ * highly stylized, custom color palette (`#0F4C5C` and `#E3B27C`) to 
+ * reinforce the thematic branding of the books catalog.
+ * 
+ * MAINTENANCE NOTES:
+ * - Unlike the other footers, this uses inline styling to force strict color 
+ *   adherence outside the standard Bootstrap theme matrix.
+ * - Does not include the Konami easter egg by default.
+ * ============================================================================
+ */
 // includes/components/footers/raggiesoft-books/footer-books.php
 // The dedicated footer for Ocean View Archives.
 ?>

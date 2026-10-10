@@ -1,4 +1,26 @@
 <?php
+/**
+ * STARDUST BLACKSBURG: LOCATION & TRANSIT
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file maps the transit integrations (Blue Ridge Transit, RVT, Bluewater)
+ * for the Stardust Blacksburg corporate property. It merges logistical data with
+ * the Varsity/Crucible visual theme.
+ *
+ * KEY FEATURES:
+ * - Dynamic Map Placeholder: Uses a topographic pattern background (fetching from
+ *   `$cdnBaseUrl`) to simulate a map environment.
+ * - Dark Mode Support: Includes explicit CSS rules (`[data-bs-theme="dark"]`) to
+ *   ensure the map placeholder inverts/darkens appropriately for the user's OS theme.
+ * - Transit Data: Presents logistical routing and stop information.
+ *
+ * MAINTENANCE NOTES:
+ * - FIX REQUIRED: The `$cdnBaseUrl` interpolation inside the `<style>` block is 
+ *   currently written as raw PHP in CSS context. It needs to be wrapped in PHP tags:
+ *   `url('<?php echo $cdnBaseUrl; ?>/common/patterns/topography.png');`
+ * - Maintain the structural integrity of the dark mode attribute selector.
+ */
+
 // pages/engine-room/corporate/stardust-blacksburg/location.php
 // Context: Transit Integration (Blue Ridge Transit, RVT, Bluewater).
 // Theme: Varsity / Logistics.

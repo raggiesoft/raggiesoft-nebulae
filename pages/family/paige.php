@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page is the profile for "Paige," representing a Python backend script responsible
+ * for parsing `.docx` manuscripts into JSON. Narratively, she acts as the "Safe Person"
+ * and emotional anchor for the system's architect.
+ *
+ * MAINTENANCE NOTES:
+ * - Uses the `info` Bootstrap color utility classes for a calm, blue thematic aesthetic.
+ * - The terminal block visually mocks a Python execution command (`python3 _workspace/paige.py`).
+ * - Images are fetched from `$cdnBaseUrl`; ensure the directory structure exists.
+ */
 // pages/family/paige.php
 // Theme: Paige (Calm, Blue, Python)
 ?>

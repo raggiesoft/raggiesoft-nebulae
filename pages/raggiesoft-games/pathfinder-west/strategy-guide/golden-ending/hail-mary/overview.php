@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as the narrative overview and Table of Contents for "The Pasco Hail Mary"
+ * strategy guide within the Pathfinder West sub-site. It sets the baseline context, run parameters,
+ * and links sequentially to individual chapter guides.
+ *
+ * MAINTENANCE NOTES:
+ * - Uses standard Bootstrap grid and spacing classes for layout.
+ * - Ensure href links to chapters exactly match the folder and routing structure (e.g., `chapter-01.php`).
+ * - Employs the `narrative-stepper.php` component at the bottom for easy sequential navigation.
+ */
 // /pages/raggiesoft-games/pathfinder-west/strategy-guide/golden-ending/hail-mary-pasco/overview.php
 
 $pageTitle = "Strategy Guide: The Pasco Hail Mary | Pathfinder West";

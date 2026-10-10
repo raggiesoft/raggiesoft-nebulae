@@ -1,11 +1,23 @@
 <?php
+/**
+ * @fileoverview Sidebar navigation for the Careers section / Scam Warning page.
+ *
+ * This file displays a warning sidebar highlighting the steps of a typical employment scam 
+ * utilizing the company's identity. It uses a red "danger" HUD aesthetic to alert users.
+ * External links are provided for reporting fraud to authorities (FBI, FTC).
+ *
+ * Maintenance Note:
+ * - When adding or updating scam steps, follow the `aero-step-box` structure.
+ * - External reporting links must have `target="_blank" rel="noopener noreferrer"`.
+ * - Styling utilizes custom CSS variables and theme attributes to adapt to light/dark modes.
+ */
 // includes/components/sidebars/raggiesoft-media/sidebar-careers.php
 // The Anatomy of a Scam - Validates the victim's experience and provides exit links.
 // Updated: Frutiger Aero Danger HUD
 ?>
 
 <style>
-    /* Inner Glass Steps for the Scam Breakdown */
+    /* Inner Glass Steps styling for the Scam Breakdown list */
     .aero-step-box {
         background: rgba(220, 53, 69, 0.05);
         border: 1px solid rgba(220, 53, 69, 0.15);
@@ -13,17 +25,19 @@
         padding: 0.75rem;
         transition: all 0.2s ease;
     }
+    /* Dark mode override for visibility */
     [data-bs-theme="dark"] .aero-step-box {
         background: rgba(220, 53, 69, 0.1);
         border: 1px solid rgba(220, 53, 69, 0.3);
     }
+    /* Hover effect for interactive feedback */
     .aero-step-box:hover {
         background: rgba(220, 53, 69, 0.15);
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
         transform: translateX(4px); /* Slides right slightly on hover */
     }
 
-    /* Glossy Sidebar Buttons */
+    /* Glossy Sidebar Buttons for external reporting links */
     .btn-glass-danger-sidebar {
         background: rgba(220, 53, 69, 0.1);
         border: 1px solid rgba(220, 53, 69, 0.4);
@@ -40,6 +54,7 @@
     }
 </style>
 
+<!-- Scam Breakdown Section -->
 <div class="card bg-hud-red border-0 shadow-sm mb-4">
     <div class="card-body p-3 p-xl-4">
         <h5 class="pb-2 mb-3 border-bottom border-danger border- text-danger fw-bold text-uppercase h6" style="filter: drop-shadow(0 1px 2px rgba(220,53,69,0.3));">
@@ -48,24 +63,28 @@
         
         <div class="d-flex flex-column gap-1">
           
+            <!-- Step 1 -->
             <div class="aero-step-box text-body-secondary">
                 <strong class="d-block text-body-emphasis mb-1"><i slot="start" class="ph ph-1 fa-fw me-1 text-danger" aria-hidden="true"></i> Unsolicited Contact</strong>
                 They reach out via WhatsApp, Telegram, or spoofed email.
             </div>
           
           
+            <!-- Step 2 -->
             <div class="aero-step-box text-body-secondary">
                 <strong class="d-block text-body-emphasis mb-1"><i class="ph ph-2 fa-fw me-1 text-danger" aria-hidden="true"></i>The "Interview"</strong>
                 You are asked to fill out a text-based questionnaire instead of a video call.
             </div>
           
           
+            <!-- Step 3 -->
             <div class="aero-step-box text-body-secondary">
                 <strong class="d-block text-body-emphasis mb-1"><i class="ph ph-3 fa-fw me-1 text-danger" aria-hidden="true"></i>The Fake Check</strong>
                 They promise to send a check for "home office equipment" from a specific vendor.
             </div>
           
           
+            <!-- Step 4 -->
             <div class="aero-step-box text-body-secondary">
                 <strong class="d-block text-body-emphasis mb-1"><i class="ph ph-4 fa-fw me-1 text-danger" aria-hidden="true"></i>The Theft</strong>
                 Their check bounces, but the money you sent to their "vendor" is gone forever.
@@ -75,15 +94,18 @@
     </div>
 </div>
 
+<!-- External Reporting Links Section -->
 <div class="card bg-hud-base border-0 shadow-sm">
     <div class="card-body p-3 p-xl-4">
         <h5 class="pb-2 mb-3 border-bottom border-secondary-subtle text-uppercase h6 fw-bold text-body-emphasis">
             <i class="ph ph-building-shield me-2 " aria-hidden="true"></i>Report Fraud
         </h5>
         <div class="d-grid gap-2">
+            <!-- External link to IC3 -->
             <a class="btn btn-glass-danger-sidebar btn-sm rounded-pill text-start fw-bold" href="https://www.ic3.gov/" target="_blank" rel="noopener noreferrer">
               <i class="ph ph-building-columns me-2 fa-fw" aria-hidden="true"></i>FBI IC3 Portal <i class="ph ph-arrow-up-right-from-square float-end mt-1 small " aria-hidden="true"></i>
             </a>
+            <!-- External link to FTC -->
             <a class="btn btn-glass-danger-sidebar btn-sm rounded-pill text-start fw-bold" href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">
               <i slot="start" class="ph ph-scale-balanced"></i> FTC Fraud Report <i slot="start" class="ph ph-arrow-up-right-from-square float-end mt-1 small " aria-hidden="true"></i> </a>
         </div>

@@ -1,9 +1,29 @@
 <?php
+/**
+ * ARCHITECTURE: Global Header & Application Shell
+ * 
+ * The core entry point for the frontend application shell. This file initializes 
+ * the HTML document, resolves themes, sets up SEO/Schema.org metadata, configures 
+ * external assets (fonts, Web Awesome, CSS), and renders the top navigation bar.
+ * 
+ * COMPONENTS:
+ * 1. Context & Theme Resolution: Determines the active site and forces dark mode 
+ *    for specific sub-labels (e.g., ad-astra).
+ * 2. Brand Font Logic: Dynamically builds the CSS font stack based on page configurations.
+ * 3. Document Head: Outputs critical meta tags, OpenGraph data, and dynamic Schema.org 
+ *    JSON-LD blocks based on the page's schema type (MusicGroup, MusicAlbum, CreativeWork).
+ * 4. PWA & Assets: Links favicons, manifest files, and queues critical CSS/JS.
+ * 5. Page Loader: A Javascript-driven loading screen that integrates with the Elara SPA router.
+ * 6. Global Navigation (Navbar): Renders the sticky top navigation, dynamically loading 
+ *    sub-site specific menus (e.g., Crimson Node vs Stardust Engine).
+ */
+
 // includes/header.php
 // v7.2.0 - RaggieSoft Production (SEO Schema Engine Active)
 // Updated: Added Animated Hamburger Menu & JSON-LD Structured Data
 
-// 1. Resolve Context
+// 1. CONTEXT RESOLUTION
+// Determine which site and theme the user is currently navigating.
 $site  = $currentSite ?? 'raggiesoft';
 $theme = $currentPageTheme ?? $site;
 
@@ -76,6 +96,8 @@ if (isset($customPageAssets) && is_array($customPageAssets)) {
     <link rel="canonical" href="<?php echo htmlspecialchars($ogUrl ?? "https://" . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)); ?>">
 
     <?php
+    // SCHEMA.ORG GENERATION
+    // Dynamically build JSON-LD blocks to enhance search engine visibility.
     // Default Schema for standard pages
     $schema = [
         "@context" => "https://schema.org",
@@ -182,6 +204,8 @@ if (isset($customPageAssets) && is_array($customPageAssets)) {
     <link rel="next" href="https://<?php echo $_SERVER['HTTP_HOST'] . $pageConfig['nextUrl']; ?>">
     <?php endif; ?>
 
+    <!-- ASSET QUEUE -->
+    <!-- Load critical CSS files dynamically queued by the controller. -->
     <!-- Web Awesome Pro Kit (Load FIRST so custom CSS can override) -->
                     
     <?php foreach ($css_load_queue as $cssUrl): ?>
@@ -439,6 +463,8 @@ if (isset($customPageAssets) && is_array($customPageAssets)) {
         Skip to Main Content
     </a>
     
+    <!-- SPA PAGE LOADER -->
+    <!-- Overlays a loading screen while Elara fetches the next route. -->
     <div id="page-loader">
         <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
             <span class="visually-hidden">Loading...</span>
@@ -531,6 +557,8 @@ if (isset($customPageAssets) && is_array($customPageAssets)) {
     })();
     </script>
     
+    <!-- GLOBAL NAVIGATION HEADER -->
+    <!-- Sticky top navbar that loads context-aware sub-menus. -->
     <header>
       <nav class="navbar navbar-expand-md sticky-top border-bottom border-primary border-opacity-50 bg-body">
         <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">

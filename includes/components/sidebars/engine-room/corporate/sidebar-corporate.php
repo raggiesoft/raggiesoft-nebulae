@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: CORPORATE / ENGINE ROOM SIDEBAR
+ * ============================================================================
+ * 
+ * This sidebar component is utilized within the "Engine Room" (Corporate / Admin) 
+ * sections of the application. It provides quick access links for governance, 
+ * historical case files, and live system status tracking.
+ * 
+ * MAINTENANCE NOTES:
+ * - Features static "System Status" indicators (e.g., `TRUST_DB: ONLINE`) which 
+ *   are currently cosmetic but serve as placeholders for future dynamic hooks.
+ * - Uses Bootstrap card layouts with varying contextual colors (`bg-dark`, 
+ *   `bg-danger`, `border-info`).
+ * ============================================================================
+ */
 // includes/components/sidebars/engine-room/corporate/sidebar.php
 // Context: Quick links for the Family Office.
 ?>

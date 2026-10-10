@@ -1,4 +1,17 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Global Contact Hub
+ * PATH: pages/contact.php
+ * PURPOSE: Centralized routing for user inquiries (Hiring, DSP, Licensing, Store).
+ *          Utilizes the Immersive Hero template for visual impact.
+ * ARCHITECTURE NOTES:
+ * - Injects JSON-LD for ContactPage and FAQPage to assert zero-hiring policy.
+ * - Employs "Brute Force Readability Armor" CSS to override light/dark mode
+ *   clashes against dynamically rotating background images.
+ * - Loads hero imagery from `hero-images.json`.
+ * ============================================================================
+ */
 // pages/contact.php
 // The Global Contact Hub
 // Updated to use the shared Immersive Hero template
@@ -90,6 +103,7 @@ $imagesJson = htmlspecialchars(json_encode($heroImages), ENT_QUOTES, 'UTF-8');
     .force-icon-secondary { color: #adb5bd !important; }
 </style>
 
+<!-- SECTION: Immersive Background Rotator -->
 <div class="immersive-container hero-rotator-container" data-images="<?php echo $imagesJson; ?>">
     
     <div class="hero-bg-layer hero-bg-layer-1" style="background-image: url('<?php echo $startImage; ?>');"></div>
@@ -109,6 +123,7 @@ $imagesJson = htmlspecialchars(json_encode($heroImages), ENT_QUOTES, 'UTF-8');
             </div>
         </div>
 
+        <!-- STRUCTURAL ROW: Contact Channels Grid -->
         <div class="row g-4 justify-content-center">
             
             <div class="col-lg-4">

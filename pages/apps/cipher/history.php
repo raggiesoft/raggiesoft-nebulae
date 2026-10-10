@@ -1,3 +1,16 @@
+<!--
+ * ARCHITECTURE & MAINTENANCE (LEGACY)
+ *
+ * This file contains the historical lore and rules explanation for the "Stardust Cipher" (Bulls and Cows) mini-game.
+ * 
+ * DESIGN INTENT:
+ * - Uses standard Bootstrap 5 layouts (container, row, card) to present information chronologically.
+ * - Theme utilizes specific Bootstrap utility classes (`text-primary`, `bg-primary-subtle`) to visually categorize eras of the game's history.
+ * 
+ * MAINTENANCE NOTES:
+ * - Content is static. If the game logic in `/apps/cipher` changes, ensure this lore file is updated to reflect accurate rules.
+ * - The Phosphor icons (`ph-*`) are heavily relied upon for visual indicators. Ensure the icon library remains loaded in the main template.
+ -->
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -11,6 +24,7 @@
                 </p>
             </div>
 
+            <!-- LEGACY UI COMPONENT: Era definition card. Uses tertiary backgrounds for subtle contrast against the page body. -->
             <div class="card shadow-sm mb-4 border-0 bg-body-tertiary">
                 <div class="card-body p-4">
                     <div class="d-flex align-items-center mb-3">
@@ -58,6 +72,7 @@
                 </div>
             </div>
 
+            <!-- LEGACY UI COMPONENT: Highlighted card denoting the current engine implementation, distinct from historical contexts. -->
             <div class="card shadow-sm mb-4 border-primary">
                 <div class="card-header bg-primary text-white">
                     <i class="ph ph-laptop-code me-2"></i>Current Iteration

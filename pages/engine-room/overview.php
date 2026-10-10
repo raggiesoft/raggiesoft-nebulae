@@ -1,4 +1,28 @@
 <?php
+/**
+ * ENGINE ROOM RECORDS: OVERVIEW (HUB)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file functions as the fan-centric landing hub for the "Engine Room Records"
+ * universe. It dynamically aggregates and presents the latest releases across all
+ * artists within the catalog.
+ *
+ * KEY FEATURES:
+ * - Distributed Data Architecture: Iterates over the master catalog JSON to build
+ *   a roster (`$artistsMap`), then subsequently fetches individual `albums.json`
+ *   files for each artist to determine their latest releases.
+ * - Dynamic Merging: Reconstructs the state of the record label dynamically on
+ *   page load without relying on a centralized database.
+ *
+ * MAINTENANCE NOTES:
+ * - Performance Warning: Fetching multiple JSON files (`master-catalog.json` plus 
+ *   an `albums.json` for every artist) sequentially via `@file_get_contents` will 
+ *   cause significant blocking/latency as the roster grows. Consider caching the 
+ *   aggregated output locally or fetching data asynchronously via JS if performance degrades.
+ * - `$cdnBaseUrl` relies on the global configuration; ensure paths remain aligned 
+ *   with the CDN's directory structure.
+ */
+
 // pages/engine-room/overview.php
 // The Fan-Centric Hub of Engine Room Records.
 

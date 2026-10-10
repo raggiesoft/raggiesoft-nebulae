@@ -1,4 +1,32 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - CORPORATE ACQUISITION PLAN ("THE FULCRUM TRAP")
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page simulates a redacted legal document (Third Amended Joint Plan of 
+ * Reorganization) filed in bankruptcy court. It is a critical narrative asset 
+ * explaining how the O'Connell Family acquired Omni-Global Media.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Uses a single, centralized Bootstrap card to mimic a physical dossier or 
+ *   legal filing.
+ * - Heavily utilizes the `font-monospace` class globally within the card body 
+ *   to replicate the aesthetic of court documents and financial term sheets.
+ * - Employs nested rows, alert boxes, and list groups to structure complex 
+ *   legal logic (The Poison Pill, The White Knight) into digestible segments.
+ * 
+ * MAINTENANCE NOTES:
+ * - This page is primarily static narrative. 
+ * - Ensure the `font-monospace` class remains applied to the `.card-body` to 
+ *   preserve the intended brutalist/legal styling.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Corporate
+ * ============================================================================
+ */
+
 // pages/engine-room/corporate/acquisition-plan.php
 // The "Fulcrum Trap" document.
 // Proponent: Aethelgard Holdings (The Money) dba Engine Room Records (The Brand)
@@ -10,6 +38,11 @@ $pageTitle = "Plan of Reorganization: The Aethelgard Proposal";
     <div class="row justify-content-center">
         <div class="col-lg-10">
             
+            <!-- 
+              STRUCTURAL BLOCK: The Legal Dossier
+              Mimics a formal court filing. The header displays the simulated 
+              jurisdiction and case number.
+            -->
             <div class="card border-success border-3 shadow-lg">
                 <div class="card-header bg-success text-white fw-bold text-uppercase d-flex justify-content-between align-items-center">
                     <span><i class="ph ph-gavel me-2"></i>U.S. Bankruptcy Court // District of Delaware</span>
@@ -25,6 +58,10 @@ $pageTitle = "Plan of Reorganization: The Aethelgard Proposal";
                         </p>
                     </div>
 
+                    <!-- 
+                      STRUCTURAL BLOCK: Narrative Section I
+                      Explains the hostile strategy ("Toxic Asset Designation").
+                    -->
                     <div class="row mb-4">
                         <div class="col-md-12">
                             <h5 class="text-uppercase fw-bold text-success border-bottom border-success pb-2 mb-3">
@@ -39,6 +76,10 @@ $pageTitle = "Plan of Reorganization: The Aethelgard Proposal";
                         </div>
                     </div>
 
+                    <!-- 
+                      STRUCTURAL BLOCK: Narrative Section II
+                      Explains the settlement terms ("The White Knight Settlement").
+                    -->
                     <div class="row mb-4">
                         <div class="col-md-12">
                             <h5 class="text-uppercase fw-bold text-success border-bottom border-success pb-2 mb-3">
@@ -64,6 +105,11 @@ $pageTitle = "Plan of Reorganization: The Aethelgard Proposal";
                         </div>
                     </div>
 
+                    <!-- 
+                      STRUCTURAL BLOCK: Financial Escrow Verification
+                      A visual break displaying simulated proof of funds to establish 
+                      the scale of the family's wealth.
+                    -->
                     <div class="bg-light border border-secondary p-4 mt-4 text-center">
                         <h6 class="text-uppercase fw-bold text-muted mb-3">Proof of Funds (Escrow)</h6>
                         <div class="display-4 fw-bold text-dark mb-2">$150,000,000.00</div>

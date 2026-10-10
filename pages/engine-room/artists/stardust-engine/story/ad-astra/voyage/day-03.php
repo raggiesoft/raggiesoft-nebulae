@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page represents "Day 03" of the Ad Astra voyage, focusing on the crew's living 
+ * quarters and the ship's artificial circadian rhythms. It maintains the dark mode 
+ * starfield styling of the narrative arc.
+ * 
+ * Future Maintenance Notes:
+ * - This page includes specific CSS custom properties (`--astra-text`, `--astra-secondary`) 
+ *   in inline styles. Ensure these variables are defined in your global stylesheet.
+ * - The "BERTHING MANIFEST" block highlights the logistical reality of Ryan's disability 
+ *   in a sci-fi setting, a key thematic element to preserve.
+ */
 // pages/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-03.php
 // Log Entry: Day 03
 // Context: Living arrangements and the Day/Night cycle.
@@ -39,6 +51,7 @@ $pageTitle = "Day 03: Ship's Time - Ad Astra Log";
                     Our quarters are essentially a high-tech efficiency apartment bolted to a bulkhead. It's tight, utilitarian, and surprisingly comfortable. Everything is magnetic—coffee cups, data pads, even the pillows have weak mag-strips to keep them from drifting if the gravity fluctuating.
                 </p>
                 
+                <!-- Inline Logic: Displays the crew's sleeping arrangements using an icon-heavy list group. -->
                 <wa-card class="card terminal-card mt-4 border-light w-100" style="border-color: var(--astra-secondary) !important; --body-padding: 0; --header-padding: 0; --wa-panel-bg: transparent;">
                     <div slot="header" class=" border-bottom border-secondary text-secondary fw-bold font-monospace p-3">
                         <i class="ph ph-bed-bunk me-2"></i>BERTHING MANIFEST

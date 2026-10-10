@@ -1,3 +1,41 @@
+<?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/apps/cipher/overview.php
+ * Path: /apps/cipher
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the primary user interface for the "Signal Decryptor" (Cipher) mini-game.
+ * Provides the configuration forms, game board, and results display for the Mastermind-style
+ * logical deduction application.
+ * 
+ * LORE CONTEXT:
+ * - Themed as a "Signal Decryptor" used to intercept and analyze rogue frequencies.
+ * - Ties into the broader Stardust Engine "communications" aesthetic.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Uses Bootstrap 5 cards, forms, and grid layout.
+ * - Implements custom CSS for `.card-radio` to create large, clickable difficulty selector cards.
+ * - Utilizes HTML5 form validation (`inputmode="numeric"`, `pattern="[0-9]*"`) for mobile-friendly
+ *   number inputs.
+ * - Includes a Bootstrap Toast component (`#stealthToast`) for non-blocking notifications.
+ * - Integrates Phosphor Icons for thematic control buttons.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Requires a parent layout/router for the HTML shell.
+ * - Dynamically loads the client-side game logic: `/apps/cipher/js/cipher.js`.
+ * - Relies on `$cdnBaseUrl` (provided by the router) to load the JS file.
+ * 
+ * MAINTENANCE NOTES:
+ * - This file primarily sets up the DOM structure and IDs required by `cipher.js`.
+ * - Do not alter the IDs of forms or input elements (`#configForm`, `#cipherForm`,
+ *   `#secretCode`, `#guessInput`, `#resultBox`, etc.) without updating the corresponding
+ *   JavaScript controller.
+ * - Ensure the inline CSS block for `.card-radio` is maintained if global stylesheets do not
+ *   inherit it.
+ */
+?>
 <div class="container py-5">
     <div class="row mb-4">
         <div class="col-lg-8">

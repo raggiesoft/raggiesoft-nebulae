@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This file serves as the backend logic core for the "Stardust Cipher" mini-game.
+ * It is an API endpoint that receives JSON POST requests containing a player's guess 
+ * and the secret code, then evaluates the guess based on different difficulty tiers
+ * (Calibration, Orbital, Deep, Horizon).
+ *
+ * MAINTENANCE NOTES:
+ * - Expected Input: JSON payload containing `difficulty`, `secret_code`, and `guess`.
+ * - It returns a JSON response containing the status, a Mastermind-style result string (+ for exact, - for value match),
+ *   and a detailed explanation log.
+ * - Make sure regex patterns match the allowed digits and repetition rules for each tier.
+ */
 // includes/components/apps/cipher/logic.php
 // Stardust Cipher Logic Core v2.0
 // Supports variable difficulty tiers

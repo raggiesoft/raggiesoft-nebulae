@@ -1,4 +1,18 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Dynamic Character Profile Router
+ * PATH: pages/raggiesoft-books/character-profile.php
+ * PURPOSE: Dual-mode file. In 'Directory Mode', parses `characters.json` to
+ *          render a categorized grid of all universe characters. In 'Profile Mode',
+ *          loads and renders a specific Markdown biography via StardustParsedown.
+ * ARCHITECTURE NOTES:
+ * - Employs Web Awesome (`<wa-card>`, `<wa-avatar>`, `<wa-dialog>`) for UI.
+ * - Extracts custom YAML frontmatter and Markdown list formats to generate
+ *   interactive "Credential" buttons.
+ * - Enforces access separation between "Real" (author-only) vs "Fictional" entries.
+ * ============================================================================
+ */
 require_once ROOT_PATH . '/includes/classes/stardust-parsedown.php';
 $Parsedown = new StardustParsedown();
 
@@ -27,6 +41,7 @@ if ($is_directory):
         }
     }
 ?>
+<!-- SECTION: Profile Mode - Individual Biography Rendering -->
 <div class="container py-4">
     <div class="mb-4">
         <wa-breadcrumb>
@@ -40,6 +55,7 @@ if ($is_directory):
         <p class="lead text-body-muted">Explore the fictional characters across the RaggieSoft narrative universe.</p>
     </div>
 
+    <!-- SECTION: Directory Mode - Grouped Character Grids -->
     <?php foreach ($groupedCharacters as $story => $chars): ?>
         <h2 class="h3 mb-3 border-bottom pb-2 text-capitalize"><?php echo htmlspecialchars(str_replace('-', ' ', $story)); ?></h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">

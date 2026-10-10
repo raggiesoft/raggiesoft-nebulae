@@ -1,6 +1,25 @@
 <?php
-// pages/engine-room/artists/crimson-node/characters/northwood/courtney-evans.php
-
+/**
+ * ============================================================================
+ * Courtney Evans - Character Profile
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/characters/northwood/students/courtney-evans.php
+ *
+ * Description:
+ * Detailed biographical profile for the fictional character 'Courtney Evans' 
+ * (The Ex-Girlfriend) in the Crimson Node narrative. Documents her role, 
+ * betrayal via the 'Omni-Q' messenger, and ultimate exile from the ecosystem.
+ *
+ * Architecture & Maintenance Notes:
+ * - Utilizes standard Bootstrap 5 container layout with breadcrumbs for 
+ *   navigational context.
+ * - Implements a "header block" with image and fast-facts (badges).
+ * - Lore Notes alert block at the bottom provides 1999-era pop culture context.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode\Characters
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "Courtney Evans - Crimson Node";
 ?>
 
@@ -37,6 +56,13 @@ $pageTitle = "Courtney Evans - Crimson Node";
                 </div>
             </div>
 
+            <!--
+                ========================================================================
+                Narrative Content Sections
+                Details the timeline of the relationship, the Omni-Q betrayal incident,
+                and the resulting permanent exile orchestrated by Sarah Miller.
+                ========================================================================
+            -->
             <!-- Content Sections -->
             <div class="mb-5">
                 <h3 class="h4 fw-bold border-bottom pb-2 mb-3 text-body-emphasis">The "School Matt" Illusion</h3>

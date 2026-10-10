@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Aethel Saga Lore Overview
+ * PATH: pages/raggiesoft-books/aethel-saga/lore/overview.php
+ * PURPOSE: Main hub for the Aethel Saga lore archives. Details the cosmology
+ *          of the Twin Suns and provides links to character databases.
+ * ARCHITECTURE NOTES:
+ * - Sets `$currentSite` context variable.
+ * - Custom specific "Tome" aesthetic classes (`.tome-container`).
+ * - Hardcoded alert section explaining the Eclipse Ritual.
+ * ============================================================================
+ */
 $currentSite = 'aethel';
 $pageTitle = "Lore: The Archives of Aethel";
 ?>
@@ -18,6 +30,7 @@ $pageTitle = "Lore: The Archives of Aethel";
             <p class="lead text-muted fst-italic">History, Science, and Myth of the Old World.</p>
         </div>
 
+        <!-- SECTION: Lore Navigation Grid -->
         <div class="row g-4 mb-5">
             <div class="col-md-6">
                 <a href="/library/aethel/lore/characters" class="text-decoration-none">
@@ -37,6 +50,7 @@ $pageTitle = "Lore: The Archives of Aethel";
 
         <hr class="my-5" style="border-color: var(--aethel-rust);">
 
+        <!-- SECTION: The Cosmology of the Twin Suns -->
         <article>
             <h2 class="mb-4 text-center display-6" style="color: var(--aethel-ink);">The Cosmology of the Twin Suns</h2>
             

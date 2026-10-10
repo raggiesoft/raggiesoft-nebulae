@@ -1,9 +1,24 @@
 <?php
+/**
+ * ARCHITECTURE: Stardust Engine Header Navigation
+ * 
+ * This component provides comprehensive navigation for the Stardust Engine
+ * artist sub-site. 
+ * 
+ * COMPONENTS:
+ * 1. Primary Links: Direct links to Home, Story, Discography, Radio, and Contact.
+ * 2. Band Dropdown: Uses wa-dropdown to present an overview, history, and a list of 
+ *    individual band members (The Kin).
+ * 3. External integrations: Links to the official Shopify storefront.
+ * 4. Return Navigation: Link to exit back to the Engine Room HQ.
+ */
+
 // includes/components/headers/engine-room/artists/stardust-engine/header-stardust.php
 // Dedicated navigation for The Stardust Engine artist sub-site.
 // UPDATED: Corrected Dropdown Labels (O'Connells vs Wrights) to reflect that everyone is kin.
 // UPDATED: Added Official Storefront routing.
 ?>
+<!-- RESPONSIVE NAVIGATION CONTAINER -->
 <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
   
   
@@ -31,6 +46,8 @@
   
 
   
+  <!-- BAND ROSTER DROPDOWN -->
+  <!-- Hierarchical menu presenting band history and individual member profiles. -->
   <wa-dropdown placement="bottom-start" hoist>
     <button class="rs-btn" slot="trigger" appearance="plain">
         <i class="ph ph-users me-2"></i>The Band
@@ -61,12 +78,14 @@
   
 
   
+      <!-- EXTERNAL STOREFRONT LINK -->
       <button class="rs-btn" appearance="plain" href="https://store.raggiesoft.com/pages/the-stardust-engine" class="text-info fw-bold">
         <i slot="start" class="ph ph-bag-shopping me-2"></i>Official Store
       </button>
   
 
   
+      <!-- RETURN NAVIGATION -->
       <button class="rs-btn" appearance="plain" href="/engine-room" class="">
         <i slot="start" class="ph ph-arrow-turn-up me-2"></i>Engine Room HQ
       </button>

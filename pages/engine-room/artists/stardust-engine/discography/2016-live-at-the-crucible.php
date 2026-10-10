@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file presents the "Live at The Crucible (2016)" album page. It contains unique 
+ * structural elements, such as a live transcript and a Suno Engineering Guide, which
+ * differentiate it from standard studio album pages.
+ * 
+ * Future Maintenance Notes:
+ * - The schema defined here is a MusicAlbum with albumReleaseType 'LiveAlbum'.
+ * - The stadium lore sections are hardcoded due to their highly specific nature. If 
+ *   similar lore sections are needed on other pages, consider abstracting them into 
+ *   a reusable component.
+ */
 // pages/engine-room/artists/stardust-engine/discography/2016-live-at-the-crucible.php
 // Context: The 2016 Homecoming / 30th Anniversary of Ignition
 // Theme: Stadium Red, Epic, Triumphant
@@ -7,6 +19,7 @@ $pageTitle = "Live at The Crucible (2016) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/2016-live-at-the-crucible';
 $album_art = $album_path_web . '/album-art.jpg?v=' . time();
 
+// Inline Logic: Construct the structured data for SEO. Notice the 'LiveAlbum' type.
 $albumSchema = [
     "@context" => "https://schema.org",
     "@type" => "MusicAlbum",

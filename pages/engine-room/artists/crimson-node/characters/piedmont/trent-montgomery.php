@@ -1,4 +1,24 @@
 <?php
+/**
+ * CRIMSON NODE LORE: TRENT MONTGOMERY
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the character dossier for "Trent Montgomery" within the 
+ * "University of the Piedmont" faction of the Crimson Node story universe.
+ *
+ * KEY FEATURES:
+ * - Breadcrumb Navigation: Implements a hierarchical Bootstrap breadcrumb to 
+ *   anchor the character within the larger "Crimson Node / Piedmont" structure.
+ * - Flexbox Layout: Uses responsive Bootstrap flex utilities (`d-flex flex-column flex-md-row`)
+ *   to cleanly align the character thumbnail and metadata headers.
+ * - Thematic Coloring: Utilizes `text-danger` for links, reinforcing the "Crimson" aesthetic.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure `$cdnBaseUrl` is defined in the global context before this page is rendered.
+ * - If the character's faction or location changes in the lore, the breadcrumb 
+ *   structure must be manually updated to reflect the new hierarchy.
+ */
+
 // pages/engine-room/artists/crimson-node/characters/piedmont/trent-montgomery.php
 
 $pageTitle = "Trent Montgomery - Crimson Node";

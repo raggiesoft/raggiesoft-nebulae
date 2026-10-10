@@ -1,4 +1,35 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: celeste/errors/504.php
+ * Path: /errors/504.php
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the HTTP 504 "Gateway Timeout" error page.
+ * Acts as a dual-purpose script: it can be executed as a standalone page directly by the
+ * Nginx web server (fallback mode) OR included seamlessly by the PHP router.
+ * 
+ * LORE CONTEXT:
+ * - Theme: Knox / Industrial / Timeout
+ * - Context: "Gateway Timeout" / Connection Lost (Deep Space Network).
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Employs a skeuomorphic "Terminal" aesthetic using `.terminal-card` and `.terminal-header`.
+ * - Inherits the `ad-astra` theme, utilizing the `starfield-container` for the background.
+ * - Uses Phosphor Icons (`ph-hourglass-clock`, `ph-timer`) for error visualization.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Relies on `ROOT_PATH` definition to determine standalone vs. routed execution.
+ * - Standalone execution dynamically defines `ROOT_PATH` and includes global header/footer.
+ * 
+ * MAINTENANCE NOTES:
+ * - The logic detecting `$is_standalone` MUST remain at the top of the file. Do not
+ *   modify the path resolution `realpath(__DIR__ . '/../../')` unless the directory
+ *   structure fundamentally changes.
+ * - Maintain the `http_response_code(504)` call to ensure SEO and network layer accuracy.
+ */
+
 // public/errors/504.php
 // Theme: Knox / Industrial / Timeout
 // Context: "Gateway Timeout" / Connection Lost

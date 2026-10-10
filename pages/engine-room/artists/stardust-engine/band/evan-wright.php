@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Band Member Profile (Evan Wright)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the standalone lore page for Evan Wright.
+ *    - Generates Schema.org `Person` JSON-LD for SEO and semantic linking to the `MusicGroup`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Follows the identical structural template as the other band member profiles (`starfield-container`, `glass-container`, `sticky-top` sidebar).
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - The `_card.php` component used in the sidebar requires the `description` string to include HTML styling (e.g., `.text-white-75`) because the card component itself might not inherit dark-mode defaults.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Any structural changes to the layout (e.g., breadcrumb location, sidebar width) should ideally be synchronized across all band member profiles.
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/band/evan-wright.php
 // The "Texture" and "The Human Ramp".
 // Context: The steady hand of the rhythm section.
@@ -27,8 +46,10 @@ $personSchema = [
 <?php echo json_encode($personSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>
 
+<!-- Starfield Background Overlay -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- Main Content Container with Glassmorphism -->
 <div class="container py-5 glass-container position-relative z-1">
     <div class="row g-5">
         

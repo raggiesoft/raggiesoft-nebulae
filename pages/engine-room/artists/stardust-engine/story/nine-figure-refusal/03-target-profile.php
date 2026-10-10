@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page simulates an internal, confidential Omni-Global "Target Profile" document. 
+ * It relies on custom CSS classes (`.omni-doc`, `.watermark`) to establish the sterile, 
+ * corporate aesthetic. It outlines the antagonist's perspective before the climax.
+ * 
+ * Future Maintenance Notes:
+ * - Ensure dark mode overrides remain intact (`[data-bs-theme="dark"]`).
+ * - The "Strategic IP Focus" visually breaks down the financial modeling of the album 
+ *   Ad Astra to illustrate the corporate antagonist's mindset.
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/target-profile.php
 // The Enemy's Playbook.
 // UPDATED: Clarified the "Algorithmic Estimate" logic (How Frost "knows" the financials).
@@ -112,6 +123,7 @@ $pageTitle = "Confidential Brief: Project GOLDEN GOOSE - Omni-Global";
                 <h2 class="h5 text-uppercase border-bottom border-primary pb-2 mb-4 fw-bold">
                     <i class="ph ph-crosshairs me-2"></i>Strategic IP Focus
                 </h2>
+                <!-- Inline Logic: Use the card-bg-adaptive class to allow background color changes based on theme, overriding the white base in dark mode. -->
                 <div class="card-bg-adaptive bg-white p-4 border border-primary border-opacity-50 shadow-sm">
                     <div class="row">
                         <div class="col-md-3 text-center border-end border-secondary border-opacity-25">

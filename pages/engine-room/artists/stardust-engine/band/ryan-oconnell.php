@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Band Member Profile (Ryan O'Connell)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the standalone lore page for Ryan O'Connell.
+ *    - Generates Schema.org `Person` JSON-LD for SEO and semantic linking to the `MusicGroup`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Uses the standard `starfield-container` and `glass-container` Stardust Engine theme.
+ *    - Employs a custom `alert-dark` container with an `axiom` (Cyan) variant for specific lore callouts.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Requires `$cdnBaseUrl` for the image path mapping.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Ensure text color classes (`text-white-75`) are preserved for readability against the dark, transparent backgrounds.
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/band/ryan-oconnell.php
 // The "Engine" and the "Protector".
 // Context: The creative force and the survivor.
@@ -27,8 +47,10 @@ $personSchema = [
 <?php echo json_encode($personSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>
 
+<!-- Starfield Background Overlay -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- Main Content Container with Glassmorphism -->
 <div class="container py-5 glass-container position-relative z-1">
 
     <div class="row g-5">

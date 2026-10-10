@@ -1,4 +1,40 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/engine-room/about.php
+ * Path: /engine-room/about
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the primary "About" page for Engine Room Records. This acts as the corporate 
+ * manifesto, detailing the label's founding history ("The Friction Catastrophe"), 
+ * operational philosophy ("Protocol 92"), and structural hierarchy.
+ * 
+ * LORE CONTEXT:
+ * - The Manifesto: "The Fortress Built on a Kill Switch."
+ * - Details the origin of the label as a reaction to major-label exploitation in 1992.
+ * - Outlines the corporate structure used as legal/financial armor to protect the artists.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Features custom CSS (`.timeline-connector`, `.timeline-dot`, `.manifesto-card`) to 
+ *   create a stark, historical timeline aesthetic.
+ * - Heavily utilizes Bootstrap 5 grid, typography, and utility classes for layout.
+ * - Incorporates Phosphor Icons and FontAwesome (`fa-duotone`) for visual hierarchy.
+ * - Implements a dynamic "Board of Directors" display using responsive grid columns and 
+ *   circular avatars with glow effects.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Includes the generic Button component (`/includes/components/button.php`).
+ * - Dynamically fetches and parses a JSON data file (`/data/corporate-structure.json`) 
+ *   to render the interactive Organization Chart via (`/includes/components/corporate/org-chart.php`).
+ * - Relies on the parent router for `$cdnBaseUrl` to resolve image paths.
+ * 
+ * MAINTENANCE NOTES:
+ * - The Org Chart rendering relies on the structural integrity of the `corporate-structure.json`
+ *   file. Any changes to the corporate hierarchy should be made in the JSON, not hardcoded here.
+ * - The `$props` array for the button component must match the expected variables in `button.php`.
+ */
+
 // pages/engine-room/about.php
 // The Manifesto: "The Fortress Built on a Kill Switch."
 // Origin: The Friction Catastrophe (1992).

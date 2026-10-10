@@ -1,7 +1,27 @@
 <?php
-// pages/engine-room/artists/crimson-node/characters/northwood/overview.php
-// Northwood High School Directory
-
+/**
+ * ============================================================================
+ * Northwood High - School/Location Directory
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/characters/northwood/overview.php
+ *
+ * Description:
+ * Primary directory view for the fictional "Northwood High School" environment 
+ * within the Crimson Node narrative. It establishes the era (1999) and the 
+ * "Shadow of Columbine" security theater atmosphere, acting as the restrictive 
+ * foil to the band's safe garage ecosystem.
+ *
+ * Architecture & Maintenance Notes:
+ * - Uses Bootstrap 5 for layout (grid, cards, alerts).
+ * - Implements a unified color scheme (purple and gold) reflecting the 
+ *   fictional school's mascot/colors.
+ * - Card grid iterates through key staff and student characters associated 
+ *   with this specific setting.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode\Characters
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "Northwood High - Crimson Node";
 ?>
 
@@ -41,6 +61,13 @@ $pageTitle = "Northwood High - Crimson Node";
         </div>
     </div>
 
+    <!--
+        ========================================================================
+        Northwood Roster Grid
+        Displays the staff and students associated with the high school environment,
+        linking out to their individual profile pages.
+        ========================================================================
+    -->
     <!-- Roster Grid -->
     <div class="row g-4 justify-content-center">
         

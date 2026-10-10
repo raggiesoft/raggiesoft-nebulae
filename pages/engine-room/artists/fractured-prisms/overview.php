@@ -1,4 +1,26 @@
 <?php
+/**
+ * FRACTURED PRISMS: OVERVIEW (HOME)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file is the primary landing page (the "Home" page) for the fictional band
+ * "Fractured Prisms" within the Engine Room Records universe.
+ *
+ * KEY FEATURES:
+ * - Dynamic Discography: Fetches and decodes the `albums.json` catalog from the CDN
+ *   to automatically construct the band's discography UI (e.g., a carousel).
+ * - Data Flattening: Flattens the hierarchical "Eras -> Albums" JSON structure into 
+ *   a single `$allAlbums` array for easier iteration in the view layer.
+ * - Thematic Integration: Combines data parsing with the band's specific CSS 
+ *   theme (`border-prism`, `gothic-font`, etc.).
+ *
+ * MAINTENANCE NOTES:
+ * - Performance/Reliability: Uses `@file_get_contents` to fetch JSON over HTTP.
+ *   If the CDN is unavailable, this will fail silently. Consider a robust fallback
+ *   mechanism or local caching strategy if this page sees high traffic.
+ * - The `$root` variable must be updated if the routing structure of the site changes.
+ */
+
 // pages/engine-room/artists/fractured-prisms/overview.php
 // The Band's "Home" Page
 

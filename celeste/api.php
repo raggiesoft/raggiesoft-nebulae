@@ -1,10 +1,25 @@
 <?php
+/**
+ * ARCHITECTURE & MAINTENANCE (LEGACY)
+ *
+ * This file acts as the primary API endpoint (Headless CMS Gatekeeper) for the Celeste subsystem, serving JSON data from static files.
+ * 
+ * DESIGN INTENT:
+ * - Employs a "Ghost Protocol" to deflect direct human/browser access, redirecting them to a visual 404 page, while strictly serving JSON to API consumers.
+ * - Uses `RecursiveDirectoryIterator` to perform deep searches within the `/data/routes` directory, allowing nested routing without complex database structures.
+ * 
+ * MAINTENANCE NOTES:
+ * - Security relies on a strict allow-list (`$allowed_zones`). Any new data folders must be explicitly added here to prevent path traversal attacks.
+ * - The recursive search is O(N) based on file count. If the `data/routes` directory grows exponentially, this may become a performance bottleneck requiring caching.
+ * - Ensure file permissions on the `data/` directory are read-only for the web user.
+ */
 // celeste/api.php
 // The Headless CMS Gatekeeper (Recursive Edition v2)
 // Updated: Case-Insensitive Search & Auto-Extension Stripping
 
 // 1. GHOST PROTOCOL: Handling Direct Access
 // We check if the request is missing the required "keys" (zone/file)
+// LEGACY SECURITY GATE: Validates presence of required parameters before any further processing or disk access.
 if (empty($_GET['zone']) || empty($_GET['file'])) {
     
     // A. Is this a Human? (Browser requesting HTML)
@@ -59,6 +74,7 @@ if ($zone === 'settings') {
 } 
 elseif ($zone === 'routes') {
     // We start at /data/routes and drill down into ALL subfolders
+    // LEGACY SEARCH ALGORITHM: Instantiates a deep traversal iterator to find matching JSON slugs regardless of directory depth.
     $directory = new RecursiveDirectoryIterator(ROOT_PATH . '/data/routes');
     $iterator = new RecursiveIteratorIterator($directory);
     

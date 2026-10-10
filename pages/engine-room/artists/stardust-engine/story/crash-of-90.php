@@ -1,4 +1,22 @@
 <?php
+/**
+ * STARDUST ENGINE: LORE ARCHIVE - THE CRASH OF '90
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page documents the historical event that caused Ryan O'Connell's paralysis.
+ * It is fully adaptive for WCAG compliance.
+ * 
+ * LORE:
+ * Details the December 10, 1990 accident on I-81 and outlines "Protocol T-10",
+ * the daily survival routines (Bowel Program, Hydration, Weight Shifts, Lifts)
+ * that the band adopted to keep Ryan touring.
+ * 
+ * DESIGN:
+ * - Uses warning/danger semantics (reds, alerts) to convey the severity of the event.
+ * - Utilizes custom web components (<wa-card>) for the Protocol T-10 grid.
+ * - Includes an "historical photo" treatment using CSS filters (sepia/contrast).
+ */
+
 // pages/engine-room/artists/stardust-engine/story/crash-of-90.php
 // The Crash of '90: The Night The Engine Broke
 // Context: December 10, 1990. The origin of Ryan's paralysis.
@@ -8,6 +26,13 @@ $pageTitle = "The Crash of '90 - The Stardust Engine Lore";
 ?>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Structured as a historical incident report. 
+      The top section uses a 'Virginia State Police' simulated report card. 
+      The middle section ties the event to the 'Mile Marker 98' album.
+      The bottom section is a 2-column grid detailing the T-10 Medical Protocols using <wa-card>.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

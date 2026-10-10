@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page acts as the global root `index.php` (The Y-Junction) for the entire RaggieSoft network.
+ * It provides the highest-level split routing between "Infrastructure/Portfolio" and "Creative Works".
+ * Below the hero section, it features the horizontal "Netflix UI" scroll carousel to link to primary sub-sites.
+ *
+ * MAINTENANCE NOTES:
+ * - Includes structured JSON-LD schema (`@type: Organization`, `@type: WebSite`) for SEO. Do not break the schema.
+ * - The "Split Hero" uses complex flexbox CSS and hover transitions that respect `prefers-reduced-motion` media queries.
+ * - Ensure `$cdnBaseUrl` is defined globally before this file is executed.
+ * - When adding new "spokes" to the Global Directory, append them to the `.horizontal-scroll-wrapper` using the `components/card.php` pattern.
+ */
 // pages/home.php
 // The RaggieSoft Global Y-Junction (Root Domain)
 

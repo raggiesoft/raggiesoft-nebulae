@@ -1,6 +1,31 @@
 <?php
+/**
+ * CASE STUDY: PHYS-100 ALIEN COMMUNICATION SIMULATOR
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file acts as an interactive simulation calculating round-trip communication
+ * times to various exoplanets using data from the NASA Exoplanet Archive.
+ *
+ * KEY FEATURES:
+ * - Data Integration: Utilizes `nasa-bridge.php` to fetch and parse external data.
+ * - Dynamic Calculations: Computes the return year (`$replyYear`) and a 
+ *   visual progress bar percentage based on distance in light-years.
+ * - Live UI: Bootstrap list-groups and progress bars map data dynamically.
+ *
+ * MAINTENANCE NOTES:
+ * - Dependency: `includes/utils/nasa-bridge.php` must exist and return an array 
+ *   with keys `name`, `distance_ly`, and `round_trip_time`.
+ * - The `$percent` calculation (100 / distance) is a simplified visual representation.
+ *   Adjust the formula if a more accurate logarithmic scale is desired.
+ */
+
+// Include the bridge utility for external data access
 include('includes/utils/nasa-bridge.php');
+
+// Fetch the targeted exoplanet data array
 $alienTargets = fetch_nasa_distance();
+
+// Store the current year for dynamic time calculations
 $currentYear = date("Y");
 ?>
 

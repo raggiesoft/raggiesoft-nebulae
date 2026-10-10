@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * The climax of the "Nine-Figure Refusal" lore. This complex page utilizes multiple 
+ * custom CSS interventions to create dynamic, immersive reading experiences—including 
+ * simulated email clients, credential boxes, and dynamically rendered corporate letterheads.
+ * 
+ * Future Maintenance Notes:
+ * - The `forced-dark-zone` classes are deliberately immune to theme toggles to preserve 
+ *   the emotional atmosphere of specific narrative beats. Do not alter them.
+ * - The letterhead component (`_letterhead.php`) relies on PHP variables configured 
+ *   directly in the template.
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-autopsy.php
 // EVIDENCE ITEM #02: The Counter-Attack
 // Context: Holly commandeers the presentation hardware.
@@ -505,6 +517,8 @@ $pageTitle = "The Autopsy: Holly Takes Control - Evidence Item #02";
                         <div class="col-lg-11">
                             
                             <?php
+                            // Inline Logic: We dynamically configure the generic letterhead component
+                            // to render the eviction notice with the Pacific Rim branding.
                             // CONFIGURATION FOR LETTERHEAD
                             $brand = 'pacific-rim'; // Triggers the Landlord styling
                             $letter_date = "September 14, 2018";

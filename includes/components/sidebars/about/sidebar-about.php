@@ -1,10 +1,22 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Central navigation sidebar for the "Mission Profile" (About) section of the corporate site.
+ * Architecture: Uses `$_SERVER['REQUEST_URI']` matching with `str_contains` to dynamically apply 
+ * active styling (`active` vs `link-body-emphasis`) to the current page link. Separates navigation
+ * into core 'Network Entities' and 'Governance' clusters.
+ * Future Maintainers: When adding new entities to the network, use `str_contains` to ensure robust
+ * active-state toggling regardless of trailing slashes or sub-paths. Keep the System Status footer intact.
+ */
 // includes/components/sidebars/about/sidebar-about.php
 // The central directory for RaggieSoft "Mission Profile" pages.
+// Dynamically evaluates the current URI to highlight the active menu item.
 
 $currentUri = $_SERVER['REQUEST_URI'];
 ?>
 
+<!-- Header: Brand Identity and Section Title -->
 <div class="text-center mb-4 pt-3">
     <a href="/about" class="text-decoration-none">
         <img src="<?php echo $cdnBaseUrl; ?>/raggiesoft-corporate/images/logo/raggiesoft-logo.png" 
@@ -22,6 +34,7 @@ $currentUri = $_SERVER['REQUEST_URI'];
   <span>Network Entities</span>
 </h6>
 
+<!-- Core Network Entities Navigation: Uses str_contains for fuzzy matching sub-pages -->
 <nav class="nav flex-column nav-pills small gap-1 mb-4">
     
     <a href="/about/michael-ragsdale" class="nav-link d-flex align-items-center <?php echo (str_contains($currentUri, '/michael-ragsdale')) ? 'active' : 'link-body-emphasis'; ?>">
@@ -50,6 +63,7 @@ $currentUri = $_SERVER['REQUEST_URI'];
   <span>Governance</span>
 </h6>
 
+<!-- Legal & Governance Navigation -->
 <nav class="nav flex-column nav-pills small gap-1">
     <a href="/raggiesoft-media/licensing" class="nav-link d-flex align-items-center <?php echo (str_contains($currentUri, '/license')) ? 'active' : 'link-body-emphasis'; ?>">
         <i slot="start" class="ph ph-scale-balanced"></i> Licenses (MIT/CC)

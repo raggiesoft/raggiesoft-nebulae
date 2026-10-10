@@ -1,4 +1,17 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Unified Professional Dashboard
+ * PATH: pages/about/michael-ragsdale/overview.php
+ * PURPOSE: "Aggressive Transparency" overview page for professional context.
+ *          Serves as an executive summary replacing complex multi-page portfolios.
+ * ARCHITECTURE NOTES:
+ * - Employs a custom JSON-LD script for rich SEO/Graph indexing.
+ * - Structural grid displaying tech ecosystem, architecture POCs, and logistics.
+ * - Uses dynamic CDN base URL ($cdnBaseUrl).
+ * - Implements light/dark mode dual-image approach using CSS classes.
+ * ============================================================================
+ */
 // pages/about/michael-ragsdale/overview.php
 // The Unified Professional Dashboard
 // Accessed via: raggiesoft.com/about/michael-ragsdale
@@ -85,8 +98,10 @@ global $cdn_root;
         </div>
     </div>
 
+    <!-- STRUCTURAL ROW: Ecosystem & Logistics -->
     <div class="row g-5 mb-5">
         
+        <!-- COLUMN: Technical Stack & Proof of Concepts -->
         <div class="col-lg-7">
             <h2 class="h4 fw-bold text-uppercase text-body-emphasis mb-4 border-start border-4 border-primary ps-3">Technical Ecosystem</h2>
             
@@ -166,6 +181,7 @@ global $cdn_root;
             </div>
         </div>
 
+        <!-- COLUMN: Hiring Logistics & Parameters -->
         <div class="col-lg-5" id="hiring-logistics">
             <div class="card bg-hud-green border-0 shadow-lg h-100 position-relative overflow-hidden">
                 <div class="card-header bg-transparent border-bottom border-success border-opacity-25 p-4">
@@ -222,6 +238,7 @@ global $cdn_root;
 
     </div>
 
+    <!-- STRUCTURAL ROW: Experience & Education Timeline -->
     <div class="row g-4">
         <div class="col-12 mb-2">
             <h2 class="h4 fw-bold text-uppercase text-body-emphasis border-start border-4 border-secondary ps-3">Pragmatic Experience & Education</h2>

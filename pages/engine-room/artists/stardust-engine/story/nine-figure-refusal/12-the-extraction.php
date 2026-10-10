@@ -1,4 +1,22 @@
 <?php
+/**
+ * STARDUST ENGINE: THE NINE FIGURE REFUSAL (12 - THE EXTRACTION)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page is Evidence Item #03, depicting the climax of the Omni-Global meeting.
+ * It details the physical evacuation of Cassidy O'Connell from the boardroom.
+ * 
+ * LORE:
+ * Illustrates the family's "Code Carry" protocol for handling Cassidy's sensory meltdowns.
+ * Emphasizes the band's solidarity and Holly's tactical decision to walk the 
+ * "bullpen" to expose the corporate abuse to the rank-and-file employees.
+ * 
+ * DESIGN:
+ * - Uses standard narrative card styling but breaks up text with "Tactical Decision" 
+ *   and "Asset Note" alerts to provide meta-commentary on the family's actions.
+ * - Features the "Security Footage" image overlaid with timestamp elements for realism.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-extraction.php
 // EVIDENCE ITEM #03: The Departure
 // Context: The family executes "Code Carry" and leaves the building.
@@ -8,6 +26,14 @@ $pageTitle = "The Extraction - Evidence Item #03";
 ?>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Chronological narrative split into three distinct "Phases" (Cards):
+      1. Conference Room A (The Trigger & Lift)
+      2. The Descent (The Walk through the Bullpen)
+      3. The Real World (The Bus Stop Exit)
+      Features a central full-width image card simulating building security footage.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

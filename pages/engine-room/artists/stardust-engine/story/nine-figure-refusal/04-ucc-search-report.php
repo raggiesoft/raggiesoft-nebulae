@@ -1,4 +1,41 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/04-ucc-search-report.php
+ * Path: /engine-room/artists/stardust-engine/story/nine-figure-refusal/ucc-search-report
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders a skeuomorphic representation of a State Corporation Commission UCC Search Report,
+ * demonstrating Engine Room Records' lack of debt and highlighting the adversarial 
+ * corporate analyst notes.
+ * 
+ * LORE CONTEXT (Nine-Figure Refusal Arc):
+ * - EVIDENCE ITEM #12-C: The "Impossible" UCC Search.
+ * - Context: Proof of zero debt AND Proof of Omni-Global's incompetence (searching in the
+ *   wrong jurisdiction, Virginia vs. Delaware).
+ * - Emphasizes the disconnect between corporate expectations and the reality of the band's
+ *   financial structure.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Implements custom CSS (`.state-doc`, `.watermark-text`) to visually simulate a
+ *   government document with a watermark and typewriter aesthetic.
+ * - Uses Bootstrap 5 utility classes and grid for layout alongside the custom styles.
+ * - Includes a custom rotated "Analyst Note" sticky-note effect using inline CSS, absolute
+ *   positioning, and a handwritten font (`'Kalam', cursive`).
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Depends on a parent layout/router to provide the base page structure and Bootstrap assets.
+ * - Includes the Narrative Stepper component (`/includes/components/navigation/narrative-stepper.php`)
+ *   for sequential story navigation.
+ * 
+ * MAINTENANCE NOTES:
+ * - When modifying the inline sticky note, ensure the CSS `z-index` and `position` properties
+ *   remain intact to avoid breaking the visual overlay effect.
+ * - Do not alter the custom styling block without verifying the impact on the skeuomorphic
+ *   document rendering in both light and dark modes (relies on CSS custom properties).
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/ucc-search-report.php
 // EVIDENCE ITEM #12-C: The "Impossible" UCC Search
 // Context: Proof of zero debt AND Proof of Frost's incompetence (Wrong Jurisdiction).

@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & DESIGN: 500 Internal Server Error Page
+ * ============================================================================
+ * ROLE: Provides a thematic "500 Critical Engine Stall" fallback for unhandled 
+ *       exceptions or fatal server errors, using the Stardust Engine aesthetics.
+ * 
+ * INTEGRATION: Usable as a standalone fallback via direct server configuration
+ *              (if `ROOT_PATH` is missing) or natively rendered by the router.
+ * 
+ * MAINTENANCE: Ensure minimal dependencies are relied upon since this is a 500
+ *              error. The layout uses `.terminal-card` and `.starfield-container`
+ *              to maintain visual consistency even in failure states.
+ * ============================================================================
+ */
 // public/errors/500.php
 // Theme: Knox / Industrial / Critical Failure
 // Context: "Engine Stall" / Server Error
@@ -25,8 +40,10 @@ if ($is_standalone) {
 }
 ?>
 
+<!-- [LAYOUT] Ambient thematic starfield background -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- [LAYOUT] Main Error Wrapper: Glassmorphism container vertically centered -->
 <div class="container py-5 glass-container d-flex flex-column justify-content-center min-vh-75">
     
     <div class="row justify-content-center text-center">
@@ -43,6 +60,7 @@ if ($is_standalone) {
                 <span class="text-danger">>></span> CRITICAL ENGINE STALL
             </h2>
             
+            <!-- [UI COMPONENT] Narrative Terminal Display: Simulates a critical reactor stall -->
             <div class="card terminal-card p-4 border-danger text-start mb-5 mx-auto" style="max-width: 600px;">
                 <div class="terminal-header text-danger">
                     <i class="ph ph-triangle-exclamation me-2"></i>

@@ -1,4 +1,23 @@
 <?php
+/**
+ * CASE STUDY: THE CASCADE PROTOCOL
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file documents an incident report (2004-CS-02) detailing a "Level 5 Meltdown,"
+ * framing neurodivergent overload through the lens of a Critical System Failure.
+ *
+ * KEY FEATURES:
+ * - Danger/Alert Theming: Uses Bootstrap's danger/red color palette to simulate
+ *   a high-priority incident dashboard.
+ * - Narrative Structure: Translates psychological events into system terminology
+ *   (e.g., System Crash, Meltdown, Incident Report).
+ *
+ * MAINTENANCE NOTES:
+ * - Keep the semantic HTML structure (cards, lists, icons) consistent to preserve
+ *   the incident report aesthetic.
+ * - The `$pageTitle` variable is likely picked up by a wrapper/header template.
+ */
+
 // pages/case-studies/cascade-protocol.php
 // Case Study: The Cascade Protocol (Incident Response)
 // Context: Neurodivergent Meltdown & Recovery (System Crash)

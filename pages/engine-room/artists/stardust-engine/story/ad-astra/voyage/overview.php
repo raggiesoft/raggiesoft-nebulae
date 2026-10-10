@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This is the "Chapter Select" overview page for the Ad Astra narrative. It acts as 
+ * a central hub routing to the individual "Day" logs. It shares the dark theme and 
+ * starfield background with the chapter pages to create a cohesive experience.
+ * 
+ * Future Maintenance Notes:
+ * - The hero section uses a full-bleed background image with a dark gradient overlay 
+ *   to ensure the "Flight Log" text remains readable.
+ * - When adding new "Days" to the narrative, simply append a new `list-group-item` 
+ *   anchor tag in the menu block below.
+ */
 // pages/engine-room/artists/stardust-engine/story/ad-astra/voyage/overview.php
 // Context: The Chapter Select screen for the Ad Astra narrative.
 // UPDATED: Full Mission List (Days 1, 2, 3, 10, 21)
@@ -36,6 +48,7 @@ $pageTitle = "Flight Log: Overview - Ad Astra";
     <div class="row justify-content-center">
         <div class="col-lg-10">
             
+            <!-- Inline Logic: A terminal-styled list group serving as the chapter navigation menu. -->
             <wa-card class="card terminal-card mb-5 w-100" style="--body-padding: 0; --header-padding: 0; --wa-panel-bg: transparent;">
                 <div slot="header" class=" bg-success bg-opacity-10 text-success fw-bold font-monospace border-bottom border-success p-3">
                     <i class="ph ph-list-check me-2"></i>SELECT MISSION PHASE

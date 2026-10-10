@@ -1,8 +1,24 @@
 <?php
+/**
+ * ARCHITECTURE: Crimson Node Header Navigation
+ * 
+ * This component provides the main navigation for the Crimson Node artist
+ * sub-site within the Engine Room.
+ * 
+ * COMPONENTS:
+ * 1. Active State Resolution: PHP logic checks the request URI against predefined 
+ *    route patterns to determine which navigation link should be marked active.
+ * 2. Static Top-Level Links: Links for 'The Garage', 'Discography', and 'The Lore'.
+ * 3. Dynamic Characters Dropdown: Uses wa-dropdown to list various sub-factions 
+ *    (The Phalanx, CCC Campus, etc.).
+ * 4. Label Return Link: A final link allowing users to return to the parent Engine Room HQ.
+ */
+
 // includes/components/headers/engine-room/artists/crimson-node/header-crimson.php
 // Crimson Node Custom Header
 
-// 1. Determine Active States
+// 1. DETERMINE ACTIVE STATES
+// Analyze the current URI to toggle CSS classes on corresponding navigation items.
 $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
 $isHome = str_starts_with($request_uri, '/engine-room/artists/crimson-node/overview') || $request_uri === '/engine-room/artists/crimson-node';
@@ -15,6 +31,8 @@ $isPiedmont = str_starts_with($request_uri, '/engine-room/artists/crimson-node/c
 $isLore = str_starts_with($request_uri, '/raggiesoft-books/books/crimson-node');
 ?>
 
+<!-- RESPONSIVE NAVIGATION CONTAINER -->
+<!-- Layout container for the navigation menu; flex-column on mobile, flex-row on desktop. -->
 <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">
   
   
@@ -30,6 +48,8 @@ $isLore = str_starts_with($request_uri, '/raggiesoft-books/books/crimson-node');
   
 
   
+  <!-- CHARACTERS DROPDOWN -->
+  <!-- Dropdown grouping various Crimson Node story factions and locations. -->
   <wa-dropdown placement="bottom-start" hoist>
     <button class="rs-btn" slot="trigger" appearance="plain" class="nav-link  <?php echo ($isPhalanx || $isCcc || $isNorthwood || $isPiedmont) ? 'active' : '';?>">
         <i class="ph ph-users me-2" aria-hidden="true"></i>Characters <i class="ph ph-chevron-down ms-1" style="font-size: 0.8em;" aria-hidden="true"></i>
@@ -60,7 +80,8 @@ $isLore = str_starts_with($request_uri, '/raggiesoft-books/books/crimson-node');
     </button>
   
 
-  <!-- Link back to the parent label -->
+  <!-- ENGINE ROOM RETURN LINK -->
+  <!-- Navigates up the site hierarchy to the main label dashboard. -->
   
   
     <button class="rs-btn" appearance="plain" href="/engine-room">

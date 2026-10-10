@@ -1,8 +1,21 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Generates the specialized sidebar for the "Family" (DevOps personification) directory.
+ * Architecture: Renders atmospheric headshot images alongside dynamic active-state logic 
+ * (`$currentView`) for navigation links. Maps specific CSS variables (e.g., `--family-jenna`) 
+ * to highlight active profiles with their signature colors.
+ * Future Maintainers: The mix of `<button class="rs-btn">` and `<a>` tags should be standardized
+ * eventually. For now, ensure any new "Sister" added includes a corresponding CSS variable 
+ * in the global stylesheet for border/text highlighting.
+ */
 // includes/components/sidebars/family/sidebar-family.php
 // Updated: Replaced FontAwesome icons with Atmospheric Headshots
+// Dynamically renders the DevOps persona navigation tree
 ?>
 
+<!-- Sidebar Header: Main Identity and Directory Home Link -->
 <div class="mb-4 text-center">
     <a href="/family" class="text-decoration-none text-body">
         <img src="<?php echo $cdnBaseUrl; ?>/family/images/logos/logo-family.png" 
@@ -17,6 +30,7 @@
 <hr class="my-3">
 
 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-2 mt-4 mb-2  text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">
+  <!-- The Architect: Primary human operator routing -->
   <span>The Architect</span>
 </h6>
 <div class="d-flex flex-column gap-1">
@@ -31,6 +45,7 @@
 </div>
 
 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-2 mt-4 mb-2  text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">
+  <!-- The Sisters: DevOps Personas with dynamic active-state styling -->
   <span>The Sisters</span>
 </h6>
 <div class="d-flex flex-column gap-1">

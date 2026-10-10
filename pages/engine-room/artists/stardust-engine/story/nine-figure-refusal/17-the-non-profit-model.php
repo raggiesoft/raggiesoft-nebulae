@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE NON-PROFIT MODEL
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view outlines the transition of the record label into a "Logistics Utility."
+ * It utilizes the reusable `letterhead.php` component twice on the same page
+ * to render in-universe corporate memos.
+ *
+ * MAINTENANCE NOTES:
+ * - Variables such as `$letter_date`, `$letter_body`, and `$letter_stamp` are
+ *   defined locally, passed to `letterhead.php`, and then explicitly redefined
+ *   for the second letter. Ensure variable resets are clean if adding a third.
+ * - Heavy use of Bootstrap utility classes for grid alignment and spacing.
+ * - The final alert block ("The Irony of Success") explains the thematic core
+ *   of the entire narrative arc.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-non-profit-model.php
 // The "Service Over Sovereignty" Pivot
 // UPDATED: Added Staff Retention Letter & WCAG Compliance

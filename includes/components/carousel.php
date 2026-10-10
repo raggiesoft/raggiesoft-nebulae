@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This component renders a dynamic, horizontally scrolling "Cinema Mode" carousel 
+ * for showcasing the artist's discography. It fetches album data from a remote JSON source,
+ * parses it, and dynamically injects storefront links, album art, and narrative details.
+ *
+ * MAINTENANCE NOTES:
+ * - The carousel relies on native CSS scroll-snap (`scroll-snap-type`) for smooth mobile interactions.
+ * - It fetches data from `$jsonUrl` with a 3-second timeout stream context to prevent blocking if the CDN is down.
+ * - The JavaScript logic handling the horizontal scrolling is scoped to a self-executing anonymous function.
+ * - "Seized/Canceled" albums are specifically styled to appear grayscale and blurred using CSS filters.
+ */
 // includes/components/carousel.php
 // v3.4 - "Cinema Mode" Layout with Storefront Routing & Vault Exclusive Logic
 

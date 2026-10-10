@@ -1,4 +1,35 @@
 <?php
+/**
+ * ARCHITECTURE: RaggieSoft Media - Open Source Division Overview
+ * 
+ * DESCRIPTION:
+ * This file serves as the main landing page and portfolio hub for the "Open Source Division" 
+ * of RaggieSoft Media. It presents a grid of cards showcasing various software projects, 
+ * infrastructure components, and professional portfolios maintained by the organization.
+ *
+ * STRUCTURE:
+ * - Hero Section (`.aero-hero`): A prominent header with a glowing Open Source Initiative (OSI) 
+ *   icon, communicating the division's mission and commitment to the open web.
+ * - Live Projects Grid (`.row.g-4`): A responsive Bootstrap grid of interactive cards.
+ *   - Card 1: Stardust Engine CMS (PHP framework)
+ *   - Card 2: RaggieSoft Books Engine (Python ingestion/reading environment)
+ *   - Card 3: Architect Portfolio (JSON-driven dashboard)
+ *   - Card 4: StoreTrainer (Legacy VB6 utility)
+ * - Source Code Call-to-Action (`.card.bg-hud-blue`): A highlighted banner providing links 
+ *   to documentation and the external GitHub repository.
+ * - Licensing Transparency: A footer note clarifying the MIT license for code and CC BY-SA 
+ *   for narrative intellectual property.
+ *
+ * USAGE:
+ * - Rendered when users navigate to `/raggiesoft-media/projects`.
+ * - Relies on global CSS variables, Bootstrap 5 grid/utilities, and Phosphor/FontAwesome icons.
+ *
+ * MAINTENANCE NOTES:
+ * - The `aero-hero` class implies a specific background treatment (likely defined in `aero.css`).
+ * - Card links use `hover-lift` for interactive elevation. Ensure this class remains in the CSS.
+ * - The GitHub link points to `https://github.com/raggiesoft`.
+ */
+
 // pages/raggiesoft-media/projects/overview.php
 // The Open Source Division Hub
 // Updated: Frutiger Aero / Dark Aero Image Backgrounds + Architect Portfolio Integration
@@ -6,8 +37,10 @@
 $pageTitle = "Open Source Projects | RaggieSoft Media";
 ?>
 
+<!-- Section: Hero Banner -->
 <div class="aero-hero py-5">
     <div class="container py-5 aero-content text-center">
+        <!-- OSI Icon with Glow Effect -->
         <i class="fa-brands fa-osi fa-4x text-info mb-4" aria-hidden="true" style="filter: drop-shadow(0 0 15px rgba(0,195,255,0.4));"></i>
         
         <h1 class="display-4 fw-bold text-uppercase mb-3 brand-font text-body-emphasis" style="text-shadow: 0 2px 10px rgba(0,0,0,0.1);">
@@ -20,7 +53,9 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
     </div>
 </div>
 
+<!-- Section: Main Content Container -->
 <div class="container py-5">
+    <!-- Grid Header -->
     <div class="row mb-4">
         <div class="col-12">
             <h2 class="h4 text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-4 text-secondary">
@@ -29,8 +64,10 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
         </div>
     </div>
 
+    <!-- Section: Projects Grid -->
     <div class="row g-4 mb-5">
         
+        <!-- Card 1: Stardust Engine CMS -->
         <div class="col-lg-6">
             <a href="/raggiesoft-media/projects/stardust-engine-cms" class="card bg-hud-blue border-0 shadow-sm h-100 text-decoration-none hover-lift">
                 <div class="card-body p-4 p-md-5">
@@ -53,6 +90,7 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
             </a>
         </div>
 
+        <!-- Card 2: Books Engine -->
         <div class="col-lg-6">
             <a href="#" class="card bg-hud-orange border-0 shadow-sm h-100 text-decoration-none hover-lift">
                 <div class="card-body p-4 p-md-5">
@@ -74,6 +112,7 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
             </a>
         </div>
 
+        <!-- Card 3: Architect Portfolio -->
         <div class="col-lg-6">
             <a href="/about/michael-ragsdale" class="card bg-hud-green border-0 shadow-sm h-100 text-decoration-none hover-lift">
                 <div class="card-body p-4 p-md-5">
@@ -96,6 +135,7 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
             </a>
         </div>
 
+        <!-- Card 4: StoreTrainer -->
         <div class="col-lg-6">
             <a href="/raggiesoft-media/projects/storetrainer" class="card bg-hud-base border-0 shadow-sm h-100 text-decoration-none hover-lift">
                 <div class="card-body p-4 p-md-5 d-flex flex-column">
@@ -120,6 +160,7 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
         
     </div>
 
+    <!-- Section: Source Code Call-to-Action -->
     <div class="row mb-5">
         <div class="col-12">
             <div class="card bg-hud-blue border-0 shadow-sm">
@@ -130,9 +171,11 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
                             <p class="text-secondary mb-0">The Stardust Engine CMS and supporting infrastructure are available for review.</p>
                         </div>
                         <div class="d-flex gap-3">
+                            <!-- Internal Docs Link -->
                             <a href="/raggiesoft-media/projects/stardust-engine-cms" class="btn btn-primary rounded-pill fw-bold px-4 shadow-sm transition-all">
                                 Read the Docs <i class="ph ph-arrow-right ms-2" aria-hidden="true"></i>
                             </a>
+                            <!-- External GitHub Link -->
                             <a href="https://github.com/raggiesoft" target="_blank" rel="noopener noreferrer" class="btn btn-glass-github rounded-pill fw-bold px-4 transition-all">
                                 <i class="fa-brands fa-github me-2" aria-hidden="true"></i> GitHub
                             </a>
@@ -143,6 +186,7 @@ $pageTitle = "Open Source Projects | RaggieSoft Media";
         </div>
     </div>
     
+    <!-- Section: Licensing Footer -->
     <div class="row col-lg-10 mx-auto">
         <div class="col-12 text-center pt-4">
             <div class="p-3 rounded-4" style="background: rgba(0,0,0,0.02); border: 1px solid var(--raggie-glass-border); box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);">

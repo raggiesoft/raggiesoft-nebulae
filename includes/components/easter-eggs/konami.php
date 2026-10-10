@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: KONAMI CODE EASTER EGG COMPONENT
+ * ============================================================================
+ * 
+ * This file renders a hidden interactive modal triggered by the Konami Code 
+ * (↑ ↑ ↓ ↓ ← → ← → B A). It injects itself into the DOM globally when included, 
+ * maintaining theme awareness across different narrative sections of the app.
+ * 
+ * MAINTENANCE NOTES:
+ * - Employs a self-injecting script block to ensure the dialog `<dialog>` element 
+ *   is hoisted to `document.body` regardless of where the PHP include is placed, 
+ *   preventing z-index or stacking context issues.
+ * - Turbo Drive compatible (`data-turbo-permanent="true"`).
+ * ============================================================================
+ */
 // includes/components/easter-eggs/konami.php
 // Stardust Engine CMS
 
@@ -62,7 +78,7 @@ if (isset($theme)) {
 </dialog>
 
 <script>
-    // Self-Inject Logic
+    // Self-Inject Logic: Move modal to body root to prevent z-index issues
     (function() {
         const modal = document.getElementById('konamiModal');
         if (modal && modal.parentNode !== document.body) {

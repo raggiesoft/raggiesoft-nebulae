@@ -1,3 +1,17 @@
+<?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: A specialized sidebar for the "History of the Band" page.
+ * Architecture: Utilizes Web Awesome button components (`rs-btn`) configured as plain links 
+ * that act as anchor targets (`href="#id"`) for single-page scrolling. The bottom section 
+ * provides cross-navigation to deeper lore pages.
+ * Future Maintainers: Ensure all `href="#id"` links correspond exactly to `id=""` attributes
+ * in the main layout. When adding new timeline eras, inject them chronologically above the 
+ * "Related Lore" divider.
+ */
+?>
+<!-- Main Timeline Anchors: Jump links for single-page scrolling -->
 <h5 class="pt-3 pb-2 mb-3 border-bottom">
     <i slot="start" class="ph ph-timeline"></i> Timeline
 </h5>
@@ -39,6 +53,7 @@
   
 </div>
 
+<!-- External Lore Navigation: Routes the user away from the single-page view into deep-dives -->
 <h6 class="pt-3 pb-2 mb-3 border-bottom mt-4">Related Lore</h6>
 <div class="d-flex flex-column gap-1">
   

@@ -1,5 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: A highly restrictive, B2B-styled footer for the in-universe O'Connell Family Trust Intranet.
+ * Architecture: Features a dark, serious aesthetic (Playfair Display) representing old money/legal
+ * boundaries. Links point directly to corporate governance sub-pages and restricted intranet zones.
+ * Future Maintainers: Do not add social media or marketing links to this footer. It must strictly
+ * adhere to the 'Confidential/Legal' narrative context of the Family Office.
+ */
 // includes/components/footers/engine-room/corporate/footer.php
+// In-universe corporate directory to navigate legal, structural, and restricted data.
 // Context: The Footer for the Family Office / Trust Intranet.
 // Theme: Corporate, Legal, Serious.
 ?>
@@ -7,6 +17,7 @@
     <div class="container">
         <div class="row gy-4">
             
+            <!-- Left Column: Formal Shield Iconography and Trust Foundation Lore -->
             <div class="col-md-4 text-center text-md-start">
                 <div class="mb-3">
                     <i class="ph ph-shield-halved fa-2x text-light"></i>
@@ -22,6 +33,7 @@
                 </div>
             </div>
 
+            <!-- Center Column: Corporate Governance and Leadership Directory -->
             <div class="col-md-4 text-center">
                 <h6 class="text-uppercase fw-bold text-white-50 mb-3 small">Governance</h6>
                 <ul class="list-unstyled small mb-0">
@@ -48,6 +60,7 @@
                 </ul>
             </div>
 
+            <!-- Right Column: Subsidiary Operating Entities and Restricted Sites -->
             <div class="col-md-4 text-center text-md-end">
                 <h6 class="text-uppercase fw-bold text-white-50 mb-3 small">Operating Entities</h6>
                 <ul class="list-unstyled small mb-0">
@@ -71,6 +84,7 @@
 
         </div>
         
+        <!-- Bottom Row: Mandatory Confidentiality Warning and Public Exit Vector -->
         <div class="row mt-5 pt-3 border-top border-secondary border-opacity-10 align-items-center">
             
             

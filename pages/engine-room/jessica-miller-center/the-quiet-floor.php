@@ -1,4 +1,25 @@
 <?php
+/**
+ * JESSICA MILLER CENTER: THE QUIET FLOOR (LEVEL 40)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file details the "Quiet Floor" amenity for the Jessica Miller Center.
+ * As part of the Universal Design showcase, it acts as a public-facing guide
+ * for tenants, adhering to strict WCAG AAA compliance standards.
+ *
+ * KEY FEATURES:
+ * - WCAG AAA Compliance: Utilizes Adaptive Bootstrap 5.3 variables (e.g.,
+ *   `var(--bs-tertiary-bg)`) to ensure high contrast and readable layouts
+ *   regardless of the user's OS color scheme.
+ * - Modular Styling: Employs custom CSS (`.feature-icon`) to create semantic
+ *   amenity indicators that adapt gracefully across light and dark modes.
+ *
+ * MAINTENANCE NOTES:
+ * - All structural and styling updates must respect the WCAG AAA guidelines. 
+ *   Avoid hardcoding colors; rely on Bootstrap's semantic CSS variables.
+ * - Iconography should remain highly legible and properly labeled for screen readers.
+ */
+
 // pages/engine-room/jessica-miller-center/the-quiet-floor.php
 // The Quiet Floor - Level 40 Sanctuary
 // Context: Public amenity guide for tenants of The Jessica Miller Center.

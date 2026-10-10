@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Corporate Leadership
+ * PATH: pages/engine-room/corporate/leadership.php
+ * PURPOSE: Details the "Miller Unit" (Justin & Jessica) executive structure.
+ *          Explains the "Zero Separation" operational mandate.
+ * ARCHITECTURE NOTES:
+ * - Employs a custom "Dual-Core" design aesthetic (`.twin-card`).
+ * - Uses specific rotational transforms (`transform-rotate-minus-2`) to
+ *   stylize the portrait imagery.
+ * ============================================================================
+ */
 // pages/engine-room/corporate/leadership.php
 // The Executive Office.
 // "The Twin Protocol" - Zero Separation.
@@ -72,6 +84,7 @@ $pageTitle = "Executive Leadership - The Jessica Miller Center";
         </div>
     </div>
 
+    <!-- SECTION: Operational Mandate Details -->
     <div class="protocol-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -112,6 +125,7 @@ $pageTitle = "Executive Leadership - The Jessica Miller Center";
         </div>
     </div>
 
+    <!-- SECTION: Executive Profiles -->
     <div class="container py-5">
         <div class="row g-5">
             

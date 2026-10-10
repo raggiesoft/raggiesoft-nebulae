@@ -1,5 +1,24 @@
 <?php
-// Page data
+/**
+ * ============================================================================
+ * The Stardust Engine - Band Directory
+ * ============================================================================
+ * Path: pages/engine-room/artists/stardust-engine/band/overview.php
+ *
+ * Description:
+ * Central directory listing the five core family members of The Stardust Engine.
+ * Outlines the foundational narrative (family vs. industry) and provides 
+ * large, interactive cards linking to each specific member's biography.
+ *
+ * Architecture & Maintenance Notes:
+ * - Generates a Schema.org 'MusicGroup' object containing the roster array.
+ * - Utilizes the `ad-astra` theme (starfield backgrounds, glassmorphism cards).
+ * - Images are specifically sourced from the '1997 Hard Reset Press Kit' lore era.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\TheStardustEngine\Band
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "The Band - The Stardust Engine";
 ?>
 
@@ -78,6 +97,13 @@ $groupSchema = [
         </div>
     </div>
 
+    <!--
+        ========================================================================
+        Member Directory Grid
+        Iterates through the five band members. Uses .glass-card styling 
+        to maintain the spatial/stellar aesthetic over the starfield.
+        ========================================================================
+    -->
     <div class="row g-5 justify-content-center">
 
         <div class="col-lg-10">

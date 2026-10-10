@@ -1,4 +1,27 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Fractured Prisms - Carnaby Street (1983) Discography Page
+ * Theme: "Prism Dark" (Gothic/Synthwave Hybrid)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the discography detail page for the album "Carnaby Street".
+ *    - Integrates with the `_album-art-header.php` component for standardized header styling.
+ *    - Dynamically loads tracklist data via `_tracklist-downloader.php`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Uses a dark, gothic-inspired theme (`bg-prism-dark`, `text-glow-prism`).
+ *    - Polaroid styling for archival imagery to emphasize the 1980s setting.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Relies on global `$cdnBaseUrl` for loading images.
+ *    - `$album_path_web` dictates the data source path for the tracklist downloader.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - To change the tracklist, update the JSON file in the corresponding `$album_path_web` directory, rather than editing this PHP file.
+ * ============================================================================
+ */
 // pages/engine-room/artists/fractured-prisms/discography/1983-carnaby-street.php
 // Page data
 $pageTitle = "Carnaby Street (1983) - Fractured Prisms";
@@ -6,6 +29,7 @@ $album_path_web = '/engine-room-records/artists/fractured-prisms/1983-carnaby-st
 
 ?>
 
+<!-- Main Container for Album Details -->
 <div class="container py-5 bg-prism-dark">
     
     <div class="row align-items-center mb-5">

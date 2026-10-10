@@ -1,7 +1,26 @@
 <?php
-// pages/engine-room/artists/crimson-node/band/the-pelletier-twins.php
-// The unified profile for the Honorary Flock members.
-
+/**
+ * ============================================================================
+ * Elise & Elodie Pelletier - Unified Character Profile
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/characters/family/the-pelletier-twins.php
+ *
+ * Description:
+ * This view provides the unified lore and biographical profile for the 
+ * fictional characters 'Elise and Elodie Pelletier' within the Crimson Node 
+ * narrative universe. It outlines their physical baseline, compound roles, 
+ * and integration into the family ecosystem.
+ *
+ * Architecture & Maintenance Notes:
+ * - Employs Bootstrap 5 for a responsive, two-column layout (sidebar stats, 
+ *   main content).
+ * - Image paths point directly to the CDN ($cdnBaseUrl).
+ * - "Dark/Light Mode" compatibility relies on standard Bootstrap color variables.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode\Characters
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "Elise & Elodie Pelletier - Crimson Node";
 ?>
 
@@ -17,6 +36,13 @@ $pageTitle = "Elise & Elodie Pelletier - Crimson Node";
     </div>
 
     <div class="row">
+        <!--
+            ========================================================================
+            Quick Stats Sidebar
+            Contains the primary character portrait and distinct stat cards for 
+            each sister's compound role, along with anatomical realities.
+            ========================================================================
+        -->
         <!-- Quick Stats Sidebar Area -->
         <div class="col-lg-4 mb-4 mb-lg-0">
             <!-- Portrait Image -->
@@ -62,6 +88,13 @@ $pageTitle = "Elise & Elodie Pelletier - Crimson Node";
             </div>
         </div>
 
+        <!--
+            ========================================================================
+            Main Biography Content
+            Detailed narrative text blocks outlining the characters' backstory, 
+            integration protocols, and musical contributions.
+            ========================================================================
+        -->
         <!-- Main Biography Content -->
         <div class="col-lg-8">
             <div class="mb-5">

@@ -1,3 +1,16 @@
+<?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This template renders the complete "Full Runway" layout used on the master network homepage.
+ * It builds three horizontal scrolling lanes: Global Directory, Engine Room Roster, and Lore & Collections.
+ *
+ * MAINTENANCE NOTES:
+ * - Relies on the `.horizontal-scroll-wrapper` class which applies native CSS snap-scrolling behavior.
+ * - Components are constructed using `$props` array passing to `components/card.php`.
+ * - The `theme-invert` class is applied selectively to certain cards for high contrast (e.g., Stardust Engine).
+ * - Ensure `$cdnBaseUrl` is in scope before this template is included to prevent broken image links.
+ */
+?>
 <section id="network-spokes" class="py-5 bg-body text-body" aria-labelledby="spokes-title">
   <div class="container-fluid px-0"> <div class="mb-5">
         <div class="d-flex justify-content-between align-items-end mb-3 px-4 px-xxl-5">

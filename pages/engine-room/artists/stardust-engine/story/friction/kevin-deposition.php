@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: KEVIN MITCHELL DEPOSITION
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view renders an in-universe legal transcript ("Evidence Item #94-C").
+ * It employs extensive inline CSS and custom layout tricks to simulate a
+ * typed legal document with sticky notes.
+ *
+ * MAINTENANCE NOTES:
+ * - Local `<style>` block defines `.transcript-paper`, `.line-number-col`, and
+ *   `.gideon-note`. 
+ * - The dark mode implementation explicitly targets the transcript paper to
+ *   maintain readability against the dark site theme
+ *   (`[data-bs-theme="dark"] .transcript-paper`).
+ * - Contains the `narrative-stepper.php` component for flow control.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/friction/kevin-deposition.php
 // EVIDENCE ITEM #94-C: The Deposition of Kevin Mitchell
 // Context: The Mall Santa photographer breaks the case wide open.

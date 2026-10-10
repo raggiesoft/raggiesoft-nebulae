@@ -1,4 +1,35 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: celeste/errors/503.php
+ * Path: /errors/503.php
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the HTTP 503 "Service Unavailable" error page.
+ * Acts as a dual-purpose script: it can be executed as a standalone page directly by the
+ * Nginx web server (fallback mode) OR included seamlessly by the PHP router.
+ * 
+ * LORE CONTEXT:
+ * - Theme: Knox / Industrial / Maintenance
+ * - Context: "In The Studio" / Service Unavailable (Engineering Log).
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Employs a skeuomorphic "Terminal" aesthetic using `.terminal-card` and `.terminal-header`.
+ * - Inherits the `ad-astra` theme, utilizing the `starfield-container` for the background.
+ * - Uses Phosphor Icons (`ph-helmet-safety`, `ph-wrench`) for error visualization.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Relies on `ROOT_PATH` definition to determine standalone vs. routed execution.
+ * - Standalone execution dynamically defines `ROOT_PATH` and includes global header/footer.
+ * 
+ * MAINTENANCE NOTES:
+ * - The logic detecting `$is_standalone` MUST remain at the top of the file. Do not
+ *   modify the path resolution `realpath(__DIR__ . '/../../')` unless the directory
+ *   structure fundamentally changes.
+ * - Maintain the `http_response_code(503)` call to ensure SEO and network layer accuracy.
+ */
+
 // public/errors/503.php
 // Theme: Knox / Industrial / Maintenance
 // Context: "In The Studio" / Service Unavailable

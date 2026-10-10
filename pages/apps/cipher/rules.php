@@ -1,3 +1,36 @@
+<?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/apps/cipher/rules.php
+ * Path: /apps/cipher/rules
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the "Decryption Protocols" (Rules) page for the Cipher mini-game.
+ * Explains the game mechanics, difficulty tiers, and feedback symbols used
+ * in the Mastermind-style deduction game.
+ * 
+ * LORE CONTEXT:
+ * - Framed as "Standard Operating Procedures for Signal Analysis" within the
+ *   Stardust Engine universe.
+ * - Describes different frequency bands (Calibration, Orbital, Deep Space, Horizon)
+ *   corresponding to game difficulties.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Purely presentation HTML utilizing Bootstrap 5 cards, tables, and alert components.
+ * - Relies on Phosphor Icons (`ph ph-crosshairs`, `ph ph-gauge`, etc.) for visual hierarchy.
+ * - Uses responsive design (`.table-responsive`) to ensure readability on mobile devices.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Designed as a partial to be injected into a parent layout/router.
+ * - Links back to the main application (`/apps/cipher`).
+ * 
+ * MAINTENANCE NOTES:
+ * - If game mechanics (e.g., number of digits, repeat rules) change in the JavaScript logic,
+ *   ensure this documentation is updated to match.
+ * - This file does not contain PHP logic; it is a static HTML partial executing in a PHP environment.
+ */
+?>
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">

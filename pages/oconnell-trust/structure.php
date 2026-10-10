@@ -1,4 +1,40 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/oconnell-trust/structure.php
+ * Path: /oconnell-trust/structure
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the organizational structure of "The O'Connell Family Revocable Trust."
+ * Visually represents the "Iceberg Model," illustrating how a massively capitalized
+ * corporate trust operates secretly behind the public facade of a rock band.
+ * 
+ * LORE CONTEXT:
+ * - Details the "Architecture of Silence" and the $2B corporate hierarchy.
+ * - Highlights the 2012 "American Dream" Jackpot as the catalyst for the Trust.
+ * - Explains the duality of Public Perception vs. Legal Reality.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Employs custom CSS (`.waterline`, `.catalyst-card`) to create thematic visual
+ *   separations (above/below the waterline).
+ * - Utilizes Bootstrap 5 utility classes for grid layouts, typography, and spacing.
+ * - Relies on Phosphor Icons for thematic enhancement.
+ * - Dynamically renders the organizational chart from a JSON data source.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Requires `ROOT_PATH` and a parent router for the HTML shell.
+ * - Fetches data from `/data/corporate-structure.json`.
+ * - Includes the `/includes/components/corporate/org-chart.php` component for
+ *   rendering the hierarchical tree.
+ * 
+ * MAINTENANCE NOTES:
+ * - Changes to the corporate structure must be made in `corporate-structure.json`,
+ *   not within this file.
+ * - Ensure the `.waterline` CSS remains intact as it provides critical visual
+ *   storytelling for the "Iceberg" metaphor.
+ */
+
 // pages/oconnell-trust/structure.php
 // The Corporate Hierarchy (The "Iceberg" Model)
 // Context: Visualizing how a $2B Trust hides behind a rock band.

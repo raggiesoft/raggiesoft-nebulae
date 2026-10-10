@@ -1,4 +1,18 @@
 <?php
+/**
+ * ARCHITECTURE: Sarah (Deployment Construct Profile)
+ * 
+ * Part of the 'Personified DevOps' framework. This page details the role, 
+ * lore, and operational mechanics of the 'Sarah' script (Deployment/CI).
+ * 
+ * COMPONENTS:
+ * 1. Hero Card: Displays the character portrait and primary DevOps function (Bash/Cron).
+ * 2. Technical Breakdown: Explains the atomic workflow and Sudo-less security model.
+ * 3. Lore & Psychology: Maps technical constraints (checksum validation) to 
+ *    character traits (OCD, Guardianship).
+ * 4. Simulated Terminal: A CSS-styled block mimicking the output of /var/log/sarah-deploy.log.
+ */
+
 // pages/family/sarah.php
 // Theme: Sarah (Guardian, Yellow, Bash)
 ?>
@@ -36,6 +50,8 @@
     </div>
 </div>
 
+<!-- TECHNICAL MECHANICS -->
+<!-- Explains the actual shell script logic behind the 'Sarah' persona. -->
 <div class="row g-5 mb-5">
     <div class="col-md-12 col-xl-6">
         <div class="p-4 h-100 rounded-3 border bg-body-tertiary">
@@ -90,6 +106,8 @@
     </div>
 </div>
 
+<!-- SIMULATED LOG TERMINAL -->
+<!-- A static representation of the cron job's output for flavor. -->
 <div class="row">
     <div class="col-12">
         <div class="card shadow-lg font-monospace" style="background-color: #0d1117; color: #c9d1d9; border: 1px solid #d29922;">

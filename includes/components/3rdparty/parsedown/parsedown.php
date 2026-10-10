@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This is the third-party Parsedown library. It is utilized across the application
+ * to parse and render Markdown content into HTML. It is implemented as a standalone
+ * class for parsing blocks, lines, and inline elements efficiently without external dependencies.
+ *
+ * MAINTENANCE NOTES:
+ * - DO NOT manually edit the parsing logic in this file unless patching a critical security vulnerability.
+ * - For updates, download the latest stable version of Parsedown from parsedown.org or its GitHub repo.
+ * - This version is pinned to 1.8.0.
+ */
 
 #
 #

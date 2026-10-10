@@ -1,4 +1,35 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT MEDIA - MASTER LICENSING PORTAL
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page acts as the primary hub for licensing information across all 
+ * RaggieSoft divisions. It clearly delineates the dual-licensing model:
+ * 1. Open Source (MIT) for code, systems, and architectural patterns.
+ * 2. Creative Commons (CC BY-SA 4.0) for narratives, worldbuilding, and music.
+ * 3. A gateway for Commercial Clearances (B2B synchronization).
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs a grid layout (`row`, `col-md-6`) for side-by-side comparison of MIT 
+ *   and CC BY-SA licenses.
+ * - Utilizes custom Web Components (`<wa-card>`, `<wa-details>`) for modular 
+ *   UI elements.
+ * - Contains custom CSS scoped to the page to handle specific UI styling such 
+ *   as glassmorphism (Aero design language) and WCAG compliant focus rings.
+ * 
+ * MAINTENANCE NOTES:
+ * - Update the year in the MIT copyright dynamically via PHP `date("Y")`.
+ * - Ensure links to external license deeds remain up-to-date.
+ * - If adding a new license type, follow the existing grid pattern or expand to 
+ *   a 3-column layout (`col-md-4`).
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Licensing
+ * ============================================================================
+ */
+
 // pages/raggiesoft-media/licensing/overview.php
 // Master gateway for MIT, CC BY-SA 4.0, and Commercial clearances.
 // Updated: Frutiger Aero / Dark Aero Glass Architecture
@@ -6,6 +37,11 @@
 $pageTitle = "Master Licensing Portal | RaggieSoft Media";
 ?>
 
+<!-- 
+  ARCHITECTURE NOTE: Custom CSS Block
+  Handles Frutiger Aero / Dark Aero Glass styles locally to avoid global namespace pollution.
+  Contains WCAG accessibility enhancements (focus rings) and custom modal glass effects.
+-->
 <style>
     /* WCAG: Focus Outline for Keyboard Navigators */
     a:focus-visible, button:focus-visible {
@@ -66,6 +102,11 @@ $pageTitle = "Master Licensing Portal | RaggieSoft Media";
 
 <div class="row g-4 mb-5">
     
+    <!-- 
+      STRUCTURAL BLOCK: MIT License (Code & Architecture)
+      Presents open-source licensing details using HUD styling. 
+      Uses <wa-details> for the collapsible full license text to save vertical space.
+    -->
     <div class="col-md-6">
         <wa-card class="bg-hud-blue h-100 w-100 shadow-sm transition-base hover-lift" style="--border-color: var(--raggie-glass-border);">
             <div slot="header" class="p-4 border-bottom" style="border-color: var(--raggie-glass-border) !important;">
@@ -101,6 +142,11 @@ $pageTitle = "Master Licensing Portal | RaggieSoft Media";
         </wa-card>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: CC BY-SA 4.0 License (Narrative & Worldbuilding)
+      Presents creative commons licensing details. 
+      Provides an external link to the official CC deed.
+    -->
     <div class="col-md-6">
         <wa-card class="bg-hud-warning h-100 w-100 shadow-sm transition-base hover-lift" style="--border-color: var(--raggie-glass-border);">
             <div slot="header" class="p-4 border-bottom" style="border-color: var(--raggie-glass-border) !important;">
@@ -131,6 +177,11 @@ $pageTitle = "Master Licensing Portal | RaggieSoft Media";
 
 </div>
 
+<!-- 
+  STRUCTURAL BLOCK: Commercial Licensing Gateway
+  Acts as a call-to-action (CTA) for B2B commercial negotiations. 
+  Spans full width to separate it from the open/shared license options above.
+-->
 <wa-card class="bg-hud-base w-100 shadow-sm mb-5 p-2" style="--border-color: transparent;">
     <div class="p-4 p-lg-5 text-center text-md-start d-md-flex align-items-center justify-content-between">
         <div class="mb-4 mb-md-0 me-md-4">

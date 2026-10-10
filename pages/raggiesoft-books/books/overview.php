@@ -1,4 +1,15 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Contemporary Fiction Library
+ * PATH: pages/raggiesoft-books/books/overview.php
+ * PURPOSE: Immersive landing page for the grounded, real-world narrative catalog.
+ *          Parses `catalog.json` to dynamically generate book cards.
+ * ARCHITECTURE NOTES:
+ * - Implements "Brute Force Readability Armor" against dynamic background images.
+ * - Uses a JavaScript-driven rotating background (`hero-image.js`).
+ * ============================================================================
+ */
 // pages/raggiesoft-books/books/overview.php
 // Contemporary Fiction Library
 
@@ -94,6 +105,7 @@ $imagesJson = htmlspecialchars(json_encode($heroImages), ENT_QUOTES, 'UTF-8');
 </style>
 
 
+<!-- SECTION: Immersive Hero Background Rotator -->
 <div class="immersive-container hero-rotator-container mb-5" data-images="<?php echo $imagesJson; ?>">
     <div class="hero-bg-layer hero-bg-layer-1" style="background-image: url('<?php echo $startImage; ?>');"></div>
     <div class="hero-bg-layer hero-bg-layer-2" style="background-image: url(''); opacity: 0;"></div>
@@ -116,6 +128,7 @@ $imagesJson = htmlspecialchars(json_encode($heroImages), ENT_QUOTES, 'UTF-8');
             </div>
         </div>
 
+        <!-- SECTION: Catalog Dynamic Grid -->
         <!-- Move cards inside content-wrapper -->
         <div class="container pb-5 mt-5">
 

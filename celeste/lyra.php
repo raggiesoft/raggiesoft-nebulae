@@ -1,4 +1,25 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & DESIGN: Elara Router (Lyra Core)
+ * ============================================================================
+ * ROLE: The central nervous system for routing requests in the RaggieSoft
+ *       architecture. It maps URIs to views, handles inheritance, injects 
+ *       metadata (SEO, SEO sequence indexing), and determines sidebar/header
+ *       resolution based on JSON configurations in `data/routes/`.
+ * 
+ * CORE FEATURES:
+ * - Recursive JSON Route Discovery.
+ * - Dynamic Narrative Routing (e.g., intercepting book/chapter URLs).
+ * - Component Inheritance (cascading 'common' settings down to specific routes).
+ * - Layout Bootstrapping (wrapping views in `includes/header.php` and footer).
+ * 
+ * MAINTENANCE: Changes to the sequence logic or dynamic routing interceptors 
+ *              must be thoroughly tested, as they cascade globally. Do not alter
+ *              the output buffering (`ob_start`) sequence without verifying 
+ *              header injection mechanics.
+ * ============================================================================
+ */
 ob_start(); 
 // RaggieSoft Elara Router v5.7
 // Fix v5.7: Added Recursive Route Discovery (Subfolders) & JSON Error Logging
@@ -41,6 +62,7 @@ $defaults = array_merge($settings['defaults'], [
 ]);
 
 // --- 2. LOAD & MERGE ROUTE FILES (RECURSIVE) ---
+// [ROUTING LOGIC] Scans the 'data/routes' directory to construct the master routing table
 $masterRoutes = [];
 
 // SCAN: Recursively find ALL .json files inside /data/routes/
@@ -124,6 +146,7 @@ function slugify($string) {
 
 // --- 3. SMART ROUTER LOGIC ---
 
+// [ROUTING LOGIC] Determine the final view configuration based on explicit config or auto-discovery
 // A. Check for Explicit Configuration
 $pageConfig = $masterRoutes[$request_uri] ?? [];
 
@@ -208,6 +231,7 @@ if (isset($pageConfig['view'])) {
 }
 
 // --- 4. RENDER ---
+// [LAYOUT LOGIC] Resolve the requested theme, layout wrappers, and execute output buffering
 $config = array_merge($defaults, $pageConfig);
 
 if ($config['view'] === 'errors/500') {

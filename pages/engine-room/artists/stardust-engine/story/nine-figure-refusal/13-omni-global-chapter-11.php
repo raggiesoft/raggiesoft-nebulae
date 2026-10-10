@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This lore page functions as an in-universe financial news article ("The Zenith Report").
+ * It details the fallout of Omni-Global's bankruptcy. The page relies on a shared 
+ * style include (`zenith-theme.php`) to establish the magazine aesthetic.
+ * 
+ * Future Maintenance Notes:
+ * - When adjusting the narrative timeline, ensure the dates here remain consistent 
+ *   with the preceding "Autopsy" page (Sept 17 vs Sept 15).
+ * - The "Market Watch" component acts as a sidebar element; ensure it remains visible
+ *   above the fold on desktop.
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/zenith-report/omni-global-chapter-11.php
 // THE FALLOUT: The Public News Report
 // Context: September 17, 2018. 48 Hours after "The Autopsy".
@@ -90,6 +102,7 @@ include ROOT_PATH . '/includes/components/styles/zenith-theme.php';
             </div>
 
             <div class="col-lg-4">
+                <!-- Inline Logic: Display the bankrupt stock ticker using a danger-themed card. -->
                 <div class="card border-danger shadow-sm mb-4">
                     <div class="card-header bg-danger text-white fw-bold text-uppercase">
                         <i class="ph ph-chart-line-down me-2"></i>Market Watch

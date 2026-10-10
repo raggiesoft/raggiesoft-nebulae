@@ -1,8 +1,49 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - AETHEL SAGA ABOUT PAGE
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page provides an overview and thematic landing experience for 
+ * "The Silver Gauntlet of Aethel" IP. It establishes the "Onyx (Fantasy/Gold)" 
+ * design language, distinguishing it visually from the standard corporate or 
+ * sci-fi pages within the Nebulae ecosystem.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Uses a distinct Hero section (`min-height: 60vh`) featuring layered 
+ *   backgrounds: a scenic background image and a radial gradient overlay 
+ *   to ensure text readability.
+ * - Employs a 2-column card grid (`row`, `col-md-6`) for presenting key lore 
+ *   concepts (The Twins, The Gauntlet).
+ * - Incorporates an "Author's Intent" block showcasing the creator's philosophy.
+ * - Custom CSS is scoped at the bottom for typography (`cinzel-font`) and specific 
+ *   fantasy-themed UI effects (`drop-shadow-glow`, `hover-warning`).
+ * 
+ * MAINTENANCE NOTES:
+ * - When updating the Hero background image (`$cdnBaseUrl . '/aethel/...'`), 
+ *   ensure the image contrasts well with the radial gradient overlay.
+ * - The font family 'Cinzel' must be loaded globally or via Elara CMS for the 
+ *   typography classes to render correctly.
+ * - Verify the link to the CC BY-SA 4.0 license is correct (currently points 
+ *   to `/about/license`, which is a redirect).
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage About
+ * @theme Onyx (Fantasy/Gold)
+ * ============================================================================
+ */
+
 // pages/about/aethel.php
 // Theme: Onyx (Fantasy/Gold)
 ?>
 
+<!-- 
+  STRUCTURAL BLOCK: Hero Banner
+  Utilizes absolute positioning for background layers to create a cinematic, 
+  dark fantasy atmosphere. The radial gradient vignette focuses attention 
+  on the center typography.
+-->
 <div class="position-relative p-5 text-center bg-black border-bottom border-warning border-opacity-50 shadow-sm overflow-hidden" 
      style="min-height: 60vh;">
      
@@ -48,6 +89,11 @@
                 </p>
             </div>
 
+            <!-- 
+              STRUCTURAL BLOCK: Lore Grid
+              A 2-column layout displaying fundamental concepts of the Aethel universe.
+              Uses dark themed cards with gold/warning accents.
+            -->
             <div class="row g-4 mb-5">
                 
                 <div class="col-md-6">
@@ -80,6 +126,11 @@
 
             </div>
 
+            <!-- 
+              STRUCTURAL BLOCK: Author's Intent
+              A highlighted contextual section designed to ground the fantasy IP 
+              in reality by providing a creator's perspective.
+            -->
             <div class="card bg-body-tertiary border-0 border-start border-4 border-warning shadow-sm mb-5">
                 <div class="card-body p-4 p-lg-5">
                     <div class="row align-items-center">
@@ -119,6 +170,11 @@
     </div>
 </div>
 
+<!-- 
+  ARCHITECTURE NOTE: Custom CSS Block
+  Scopes thematic styles (Cinzel font, gold hover states, glow effects) to 
+  this page without bleeding into the main stylesheet.
+-->
 <style>
     /* Aethel Specific Typography overrides */
     .cinzel-font { font-family: 'Cinzel', serif; }

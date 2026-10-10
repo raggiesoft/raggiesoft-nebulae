@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page acts as the lore and technical profile for "Amanda & Elara", the personified
+ * representation of the system's routing engine and file directory architecture.
+ * It visualizes the Nginx setup where `elara.php` acts as the sole entry point,
+ * intercepting and translating requests before fetching static assets from `amanda/`.
+ *
+ * MAINTENANCE NOTES:
+ * - Uses specific CSS variables (`--family-amanda`) for thematic color consistency.
+ * - The `theme-terminal` card visually mocks an Nginx config block; ensure any edits to this
+ *   mock configuration remain conceptually accurate to the actual server routing.
+ */
 // pages/family/amanda-elara.php
 // Theme: RaggieSoft (Clean, Human, Green)
 ?>

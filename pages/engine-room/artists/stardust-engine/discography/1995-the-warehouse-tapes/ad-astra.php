@@ -1,4 +1,25 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - 1995 AD ASTRA (ESCAPE VELOCITY) SINGLE VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This is a highly complex narrative view for the "Ad Astra" single. It integrates
+ * interactive JavaScript elements to control an external audio player, complex styling
+ * for immersion, and deep lore cross-references.
+ *
+ * MAINTENANCE NOTES:
+ * - JavaScript tightly couples with a globally defined `window.STARDUST_PLAYLIST` and
+ *   an audio element (`#main-audio-element`). Ensure parent layouts define these.
+ * - The `$props['variant'] = 'pact'` assigns the violet border styling.
+ * - Contains interactive DOM elements utilizing `onclick="seekTo(X)"` to jump playback
+ *   to specific narrative timestamps.
+ * - Visuals heavily depend on custom CSS classes (`starfield-container`, `glass-container`,
+ *   `text-glow-primary`) from the global stylesheet.
+ *
+ * ============================================================================
+ */
 // pages/discography/1995-the-warehouse-tapes/ad-astra.php
 // The Magnum Opus. The song they went to war for.
 

@@ -1,5 +1,19 @@
 <?php
 /**
+ * ARCHITECTURE & MAINTENANCE (LEGACY)
+ *
+ * This file acts as the primary landing page for the "O'Connell Family Revocable Trust" (the parent company).
+ * 
+ * DESIGN INTENT:
+ * - Presents a corporate, "Dark Luxury" aesthetic, contrasting with the purely industrial feel of Engine Room.
+ * - Contains custom `<style>` definitions specifically tailored for Trust pages, including a dynamic gradient hero section and hover states for stat cards.
+ * - Built to be Dark Mode Ready, with explicit CSS rules handling `[data-bs-theme="dark"]`.
+ * 
+ * MAINTENANCE NOTES:
+ * - The custom styling relies heavily on Bootstrap CSS variables (e.g., `var(--bs-tertiary-bg)`). Ensure any global theme changes don't unintentionally break these localized overrides.
+ * - The portfolio grid (`#portfolio`) is currently hardcoded with three main pillars. If new entities are added, structural adjustments to the `.col-lg-4` classes will be necessary to maintain visual balance.
+ */
+/**
  * PAGE: O'Connell Trust Hub
  * ROUTE: /oconnell-trust
  * CONTEXT: The "Parent Company" landing page.
@@ -50,6 +64,7 @@
     }
 </style>
 
+<!-- LEGACY STRUCTURAL NOTE: Custom hero section utilizing the 'trust-hero' class for specific gradient backgrounds and padding. -->
 <div class="trust-hero text-center">
     <div class="container">
         <div class="row justify-content-center">
@@ -87,6 +102,7 @@
             </div>
         </div>
 
+        <!-- LEGACY LAYOUT NOTE: Portfolio grid using gapless columns (g-0) and border overrides to create a continuous, connected card look. -->
         <div class="row g-0 align-items-center border shadow-sm rounded-1 overflow-hidden">
             
             <div class="col-lg-4 p-5 border-end stat-card position-relative">

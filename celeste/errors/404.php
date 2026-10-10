@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURE & MAINTENANCE (LEGACY)
+ *
+ * This file provides the custom "Signal Lost" 404 Error page, styled within the "Knox / Industrial / Glitch" thematic context.
+ * 
+ * DESIGN INTENT:
+ * - Designed to work both as a standalone file (e.g., loaded directly by Nginx `error_page` directives) or via the internal application router.
+ * - Incorporates immersive lore elements ("Axiom censorship", "Weave") to keep users engaged even during navigation failures.
+ * 
+ * MAINTENANCE NOTES:
+ * - The `$is_standalone` check is critical. It ensures the header/footer wrappers are only loaded if they haven't been provided by an encompassing controller.
+ * - Relative paths (`__DIR__ . '/../../'`) rely on the file remaining in its specific directory structure. Moving this file will break the root path calculation.
+ */
 // public/errors/404.php
 // Theme: Knox / Industrial / Glitch
 // Context: "Signal Lost"
@@ -6,6 +19,7 @@
 // Detect if loaded directly by Nginx or via Router
 $is_standalone = !defined('ROOT_PATH');
 
+// LEGACY ROUTING CHECK: Determines execution context to prevent double-loading of layout wrappers.
 if ($is_standalone) {
     // Fix Path: Go up 2 levels from /public/errors/ to get to project root
     define('ROOT_PATH', realpath(__DIR__ . '/../../'));
@@ -47,6 +61,7 @@ if ($is_standalone) {
             </h2>
 
             <!-- The Narrative Context -->
+            <!-- LEGACY UI COMPONENT: Terminal-styled error readout container. Inline max-width ensures readability on ultra-wide displays. -->
             <div class="card terminal-card p-4 border-danger text-start mb-5 mx-auto" style="max-width: 600px;">
                 <div class="terminal-header text-danger">
                     <i class="ph ph-triangle-exclamation me-2"></i>

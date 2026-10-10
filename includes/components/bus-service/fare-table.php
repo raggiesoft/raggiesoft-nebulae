@@ -1,4 +1,19 @@
 <?php
+/**
+ * ARCHITECTURE: Regional Transit Fare Table
+ * 
+ * A highly adaptable, data-driven fare table component. It dynamically renders
+ * pricing structures based on the configuration provided by the parent scope.
+ * 
+ * COMPONENTS:
+ * 1. System Metadata: Displays the transit agency name, subtitle, and effective date.
+ * 2. Promotional Banner: An optional high-visibility callout for special perks or programs.
+ * 3. Standard Fares Matrix: Supports multiple rendering modes ('flat' list or 
+ *    'comparison' table) to handle complex, multi-tier pricing strategies.
+ * 4. Fare Products: Lists specialized passes (e.g., daily caps, monthly passes).
+ * 5. Transfer Policy: Details the rules, costs, and modes regarding route transfers.
+ */
+
 // includes/components/fare-table.php
 // A highly adaptable, data-driven fare table component for regional transit agencies.
 // Expects: $systemMeta, $fares, $fareProducts (optional), $transferPolicy
@@ -45,6 +60,8 @@
                     <span><i class="ph ph-coins me-2 text-warning"></i>Standard Fares</span>
                 </div>
                 
+                <!-- FLAT FARE RENDERER -->
+                <!-- Renders a simple list when fare structure is uniform across payment types. -->
                 <?php if (($fares['type'] ?? 'flat') === 'flat'): ?>
                     <ul class="list-group list-group-flush bg-transparent font-monospace">
                         <?php foreach($fares['rates'] as $passenger => $price): ?>
@@ -56,6 +73,8 @@
                             </li>
                         <?php endforeach; ?>
                     </ul>
+                <!-- COMPARISON FARE RENDERER -->
+                <!-- Renders a complex table comparing smart card prices vs. exact cash fares. -->
                 <?php elseif (($fares['type'] ?? '') === 'comparison'): ?>
                     <div class="table-responsive">
                         <table class="table table-striped table-hover align-middle mb-0 font-monospace">
@@ -95,6 +114,8 @@
 
     <div class="row justify-content-center g-4">
         
+        <!-- FARE PRODUCTS CARD -->
+        <!-- Displays passes, caps, or specialized ticketing options. -->
         <?php if (!empty($fareProducts)): ?>
         <div class="col-lg-5">
             <div class="card h-100 border-0 bg-body-tertiary shadow-sm">
@@ -119,6 +140,8 @@
         </div>
         <?php endif; ?>
 
+        <!-- TRANSFER POLICY CARD -->
+        <!-- Outlines specific agency rules regarding changing lines or modes. -->
         <?php if (!empty($transferPolicy)): ?>
         <div class="col-lg-5">
             <div class="card h-100 border-warning shadow-sm">

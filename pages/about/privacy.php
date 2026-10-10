@@ -1,3 +1,23 @@
+<?php
+/**
+ * RAGGIESOFT PRIVACY POLICY PAGE
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file contains the legal privacy policy and terms of service information for
+ * the RaggieSoft network.
+ *
+ * KEY INTEGRATIONS MENTIONED:
+ * - Microsoft Bookings: Used for scheduling, handles voluntary PII.
+ * - Google Analytics: Tracks general site usage (anonymized data).
+ * - Cloudflare: Manages caching and security.
+ * - Fourthwall: Manages merchandise and storefront transactions.
+ *
+ * MAINTENANCE NOTES:
+ * - This file is predominantly static HTML with minimal PHP (e.g., dynamic date generation).
+ * - Ensure legal language stays compliant with current web standards and integrations.
+ * - Any new third-party integrations must be documented here.
+ */
+?>
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">

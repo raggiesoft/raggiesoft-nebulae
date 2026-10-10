@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE JESSICA MILLER CENTER
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view illustrates the re-branding of the corporate HQ. It features a
+ * simulated legal document (the Triple Net Commercial Lease) forced into a
+ * light-mode physical paper aesthetic regardless of the site's theme.
+ *
+ * MAINTENANCE NOTES:
+ * - `.legal-document` and its descendants use `!important` tags to strictly
+ *   enforce a black-on-white appearance for skeuomorphism. Be extremely careful
+ *   when modifying these styles to avoid breaking the visual metaphor.
+ * - The lease signatures utilize the 'Mrs Saint Delafield' cursive web font.
+ * - The organizational structure utilizes Phosphor Icons and specific WCAG-compliant
+ *   color contrast combinations.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-jessica-miller-center.php
 // The Re-Branding of the Omni-Global Leasehold
 // UPDATED: WCAG Color Corrections (Organizational Structure Card)

@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page is formatted as a formal legal document (a bankruptcy court order).
+ * It uses custom styling (`.court-document`, `.line-numbers`, `.force-light-mode`)
+ * to recreate the rigid aesthetic of a filed legal pleading.
+ * 
+ * Future Maintenance Notes:
+ * - The `.force-light-mode` class forces the court document to remain white with black text 
+ *   even in dark mode, maintaining the visual metaphor of physical legal paper.
+ * - The "FILED" stamp relies on CSS transforms for rotation.
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/chapter-7-conversion-order.php
 // The Death Certificate.
 // Context: The Bankruptcy Court orders Omni-Global to cease operations immediately.
@@ -61,6 +72,7 @@ $pageTitle = "Order Converting Case to Chapter 7 - Case 18-11492";
     <div class="row justify-content-center">
         <div class="col-lg-10">
             
+            <!-- Inline Logic: The force-light-mode class ensures this card looks like a physical piece of paper regardless of user theme settings. -->
             <div class="card border-0 court-document force-light-mode p-5 mx-auto" style="max-width: 900px;">
                 
                 <div class="text-center fw-bold mb-4">

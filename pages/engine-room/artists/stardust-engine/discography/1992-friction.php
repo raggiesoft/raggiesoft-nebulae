@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: FRICTION (1992 - CANCELLED)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page is uniquely designed as a "Seized Asset" / court document rather than a standard album.
+ * Theme is intentionally left default (stark/dark) rather than a space background.
+ * 
+ * LORE:
+ * Represents the cancelled 1992 album that sparked the lawsuit against Apex Records.
+ * The master recordings are permanently sealed.
+ * 
+ * DESIGN:
+ * - Employs a court-order aesthetic: danger alerts, monospaced fonts, "Access Denied".
+ * - A blurred, greyscale album art image overlaid with a "Evidence" stamp.
+ * - The page is a minimum viewport height (min-vh-100) centered layout to emphasize the starkness.
+ */
+
 // pages/discography/1992-friction.php
 // Theme: Default (Stark/Dark) - NO Ad Astra space background
 // Context: "Unavailable For Legal Reasons" / Seized Evidence
@@ -32,6 +49,11 @@ $albumSchema = [
 </script>
 
 <div class="container py-5 min-vh-100 d-flex flex-column justify-content-center">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      A centered, single-column warning screen. 
+      Uses absolute positioning for the diagonal "EVIDENCE" stamp over the blurred album art.
+    -->
     
     <div class="row justify-content-center">
         <div class="col-lg-8">

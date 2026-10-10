@@ -1,5 +1,26 @@
 <?php
-// pages/engine-room/corporate/stardust-blacksburg/the-fortress.php
+/**
+ * ============================================================================
+ * The Fortress (Strategic Assets) View
+ * ============================================================================
+ * Path: pages/engine-room/corporate/stardust-blacksburg/the-fortress.php
+ * 
+ * Description:
+ * This page serves as a corporate informational display detailing "The Fortress",
+ * a high-security facility. It outlines operational status, security protocols,
+ * structural elements, and command structure.
+ * 
+ * Architecture & Maintenance Notes:
+ * - Uses Bootstrap 5 for responsive layout and grid structuring.
+ * - Inline CSS styles specific elements (e.g., .hero-header, .fortress-status).
+ * - Modular sections (Overview, Structural Elements, Operations & Security) 
+ *   ensure ease of updates.
+ * - Icons from Phosphor Icons or similar libraries are used for visual emphasis.
+ * 
+ * @package Raggiesoft\Nebulae\Corporate
+ * @since 1.0.0
+ * ============================================================================
+ */
 // Designation: PCC-01 (Primary Residence)
 // Context: 512 Progress St NE. The family home since 1985.
 // Status: "Grey Man" Residential Camouflage.
@@ -59,9 +80,23 @@ $pageTitle = "Property Profile: 512 Progress St NE (The Fortress)";
     }
 </style>
 
+<!--
+    ========================================================================
+    Main Container
+    Houses the primary content grids, operational status panels, and 
+    structural element details. Uses standard Bootstrap padding (py-5).
+    ========================================================================
+-->
 <div class="container py-5">
     
-    <div class="row justify-content-center mb-5">
+    <!--
+    ========================================================================
+    Core Fortress Details Row
+    Grid setup using standard Bootstrap 'row' and alignment utilities.
+    Contains sections detailing Structural Elements and Operations & Security.
+    ========================================================================
+-->
+<div class="row justify-content-center mb-5">
         <div class="col-lg-9">
             <div class="d-flex align-items-center mb-3">
                 <span class="badge bg-secondary text-white border border-white rounded-pill px-3 py-2 me-3">

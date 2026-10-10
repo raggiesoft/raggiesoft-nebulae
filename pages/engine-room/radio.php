@@ -1,4 +1,27 @@
 <?php
+/**
+ * ENGINE ROOM RADIO: MULTI-ARTIST BROADCAST CONSOLE
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the primary media player ("The Console") for the Engine Room
+ * Records universe. It dynamically builds its artist roster and tracklist from a
+ * central master JSON catalog.
+ *
+ * KEY FEATURES:
+ * - Dynamic Data Ingestion: Uses `file_get_contents` to fetch `master-catalog.json`
+ *   from the `$cdnBaseUrl`.
+ * - Roster Generation: Parses the catalog to extract unique `artistSlug` values,
+ *   building the `$station_roster` array automatically.
+ * - Schema Integration: Implements Schema.org metadata for SEO and track length data.
+ *
+ * MAINTENANCE NOTES:
+ * - Network Dependency: Relies on an external HTTP request to fetch JSON from 
+ *   `$cdnBaseUrl`. If the CDN is down or slow, the page rendering will block or fail.
+ *   Consider implementing a local cache fallback or cURL with a timeout instead
+ *   of `@file_get_contents`.
+ * - `$cdn_root` must remain synchronized with the CDN's directory structure.
+ */
+
 // pages/radio.php
 // "Engine Room Radio" - Multi-Artist Broadcast Console
 // v10.0 - Schema.org & Track Length Integration

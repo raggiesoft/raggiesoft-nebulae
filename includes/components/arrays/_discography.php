@@ -1,7 +1,21 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This file serves as the definitive data store for "The Stardust Engine" discography.
+ * It organizes albums into chronological "eras" (Apex, Freedom, Re-Ignition, Modern)
+ * and provides metadata like headings, descriptions, cover image paths, and internal URLs.
+ *
+ * MAINTENANCE NOTES:
+ * - Uses `$cdnBaseUrl` which must be defined in the global scope before this file is included.
+ * - The 'folder' key allows overriding the default folder structure if a single or release 
+ *   doesn't follow the standard naming convention.
+ * - 'extra' allows appending HTML (like 'CANCELED' badges) to the release title in UI loops.
+ * - Commented out (NOT READY) items can be uncommented as those sections of the site are built.
+ */
 // includes/components/arrays/_discography.php
 // v2.0 - Enhanced Metadata Structure (Era Descriptions & Timelines)
 
+// The main library array organizing releases into structured eras
 $discographyLibrary = [
     'apex' => [
         'label' => 'Apex "Cold War" Era', // Sidebar / Radio Label

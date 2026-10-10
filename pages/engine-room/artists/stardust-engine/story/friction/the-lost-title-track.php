@@ -1,4 +1,22 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE LOST TITLE TRACK
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view implements a client-side content gate ("Content Warning") before
+ * revealing the narrative regarding the redacted lyrics of "Friction."
+ *
+ * MAINTENANCE NOTES:
+ * - Employs JSON-LD Article schema for metadata.
+ * - Uses inline JavaScript (`unlockContent()`) to toggle visibility of the
+ *   `#content-gate` and `#restricted-content` divs. Do not remove these IDs.
+ * - Visual redactions are achieved using standard HTML and CSS (`.redaction-bar`).
+ * - Employs dark mode overrides in the local `<style>` block.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/friction/the-lost-title-track.php
 // The Redacted File
 // Context: The depraved lyrics sheet produced by Julian Vance.

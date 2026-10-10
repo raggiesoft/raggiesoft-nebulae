@@ -1,7 +1,29 @@
 <?php
-// pages/engine-room/dsp-verification.php
-// Internal Administrative Portal for DSP Identity & Copyright Verification
-// Context: Independent Artist Verification. Clean, authoritative, audit-ready layout.
+/**
+ * ============================================================================
+ * DSP Identity & Copyright Verification Portal
+ * ============================================================================
+ * Path: pages/engine-room/dsp-verification.php
+ *
+ * Description:
+ * Internal administrative and public-facing affidavit interface. It handles 
+ * routing for three distinct states: Root/Directory view, Artist Tracking view, 
+ * and specific Track Affidavit view. The page dynamically loads metadata 
+ * from the central JSON catalog and renders Markdown documentation via 
+ * StardustParsedown.
+ *
+ * Architecture & Maintenance Notes:
+ * - Includes 'json-reader.php' for fetching the master catalog.
+ * - Extracts state parameters ($_GET['artist'], $_GET['album'], $_GET['track']).
+ * - Includes extensive inline styles with !important overrides to force a strict, 
+ *   corporate, high-contrast visual identity suitable for legal/audit purposes, 
+ *   intentionally overriding the site's default 'Elara' dark theme.
+ * - Print media queries ensure clean PDF generation for affidavits.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom
+ * @since 1.0.0
+ * ============================================================================
+ */
 
 // 1. Fetch the Master Catalog using the CMS utility
 require_once ROOT_PATH . '/includes/utils/json-reader.php';
@@ -136,7 +158,12 @@ $not_found = ($is_artist_view && empty($artist_tracks)) || ($is_track_view && em
 
 <div class="container py-5 dsp-portal shadow-lg my-4 rounded border border-secondary">
     
-    <!-- Unified Section Header -->
+    <!--
+        ========================================================================
+        Unified Portal Header
+        Displays the timestamp and official audit log status across all sub-views.
+        ========================================================================
+    -->
     <div class="dsp-header d-flex justify-content-between align-items-end flex-wrap gap-3">
         <div>
             <h1 class="h3 fw-bold text-uppercase mb-1" style="letter-spacing: -0.5px;">Independent Artist Verification</h1>
@@ -188,7 +215,13 @@ $not_found = ($is_artist_view && empty($artist_tracks)) || ($is_track_view && em
         </div>
 
     <?php else: ?>
-        <!-- CORE INFORMATION METRICS BAR -->
+        <!--
+        ========================================================================
+        Core Information Metrics Bar
+        Static legal disclosure regarding ownership, AI production workflow 
+        (Gemini/Suno), and lack of deepfakes. Displayed on directory & artist views.
+        ========================================================================
+    -->
         <div class="row mb-5">
             <div class="col-md-6">
                 <h3 class="h6 fw-bold text-uppercase border-bottom border-dark pb-2 mb-3">1. Primary Creator & Ownership</h3>

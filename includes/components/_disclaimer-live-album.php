@@ -1,3 +1,18 @@
+<!--
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: LIVE ALBUM DISCLAIMER COMPONENT
+ * ============================================================================
+ * 
+ * This file is a reusable UI component that provides a meta-contextual warning 
+ * or explanation about the "Live" AI-generated albums. It breaks the fourth 
+ * wall to clarify the distinction between in-universe narrative lore and 
+ * real-world AI production techniques.
+ * 
+ * MAINTENANCE NOTES:
+ * - Included statically across specific album pages.
+ * - No dynamic PHP logic; relies entirely on Bootstrap for responsive layout.
+ * ============================================================================
+-->
 <!-- /includes/components/_disclaimer-live-album.php -->
 <!-- A reusable disclaimer for all "Live" album pages -->
 

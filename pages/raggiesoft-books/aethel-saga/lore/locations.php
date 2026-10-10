@@ -1,4 +1,23 @@
 <?php
+/**
+ * AETHEL SAGA LORE: LOCATIONS
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file renders the fantasy locations for "The Silver Gauntlet of Aethel" lore.
+ * It is part of the raggiesoft-books/aethel-saga subdirectory and leverages
+ * a custom fantasy/tome aesthetic (`aethel-theme`).
+ *
+ * KEY FEATURES:
+ * - Thematic Styling: Uses the `aethel-theme` and `tome-container` classes
+ *   to provide a parchment/fantasy look.
+ * - Typography: Utilizes the `cinzel-font` class for stylized, cinematic headers.
+ * - Responsive Layout: Employs Bootstrap grids (e.g., `col-md-12`) to structure
+ *   the lore entries.
+ *
+ * MAINTENANCE NOTES:
+ * - Make sure that breadcrumb links accurately reflect the directory structure.
+ * - If new locations are added, replicate the existing card structures for consistency.
+ */
 $pageTitle = "Lore: The Realms of Aethel";
 ?>
 

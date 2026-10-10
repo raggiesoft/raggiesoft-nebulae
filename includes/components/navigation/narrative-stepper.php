@@ -1,5 +1,15 @@
 <?php
 /**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Standardizes the "Back / Up / Next" footer navigation for story chapters.
+ * Architecture: Evaluates an injected `$nav` array to generate responsive bootstrap buttons. 
+ * Handles edge cases like the first or last chapter by displaying disabled placeholder buttons 
+ * to maintain consistent grid alignment.
+ * Future Maintainers: When modifying the grid layout, ensure all three columns remain evenly 
+ * spaced (`col-4`) so the buttons do not jump around as users click through chapters.
+ */
+/**
  * COMPONENT: Narrative Stepper (History Navigation)
  * PURPOSE: Standardizes the "Back / Up / Next" footer navigation for story chapters.
  * * USAGE:
@@ -11,6 +21,7 @@
  * include ROOT_PATH . '/includes/components/navigation/narrative-stepper.php';
  */
 
+// Safely evaluate the navigation array and assign fallback values if omitted
 // Defaults
 $prev = $nav['prev'] ?? null;
 $next = $nav['next'] ?? null;
@@ -19,6 +30,7 @@ $overview = $nav['overview'] ?? ['url' => '/engine-room/history', 'label' => 'Hi
 
 <div class="row mt-5 pt-4 border-top border-secondary border-opacity-25 align-items-center">
     
+    <!-- Left Column: Previous Chapter Button or Invisible Placeholder for layout stability -->
     <div class="col-4">
         <?php if ($prev): ?>
             <a href="<?php echo $prev['url']; ?>" class="btn btn-outline-secondary rounded-pill">
@@ -33,6 +45,7 @@ $overview = $nav['overview'] ?? ['url' => '/engine-room/history', 'label' => 'Hi
         <?php endif; ?>
     </div>
 
+    <!-- Center Column: Global Hub/Overview Return Button -->
     <div class="col-4 text-center">
         <a href="<?php echo $overview['url']; ?>" class="btn btn-outline-primary rounded-pill">
             <i class="ph ph-list-tree me-2"></i>
@@ -41,6 +54,7 @@ $overview = $nav['overview'] ?? ['url' => '/engine-room/history', 'label' => 'Hi
         </a>
     </div>
 
+    <!-- Right Column: Next Chapter Button or Disabled End State -->
     <div class="col-4 text-end">
         <?php if ($next): ?>
             <a href="<?php echo $next['url']; ?>" class="btn btn-primary rounded-pill shadow-sm">

@@ -1,4 +1,17 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Sensory Distress Protocols (SOP-88)
+ * PATH: pages/engine-room/corporate/security/sensory-scale.php
+ * PURPOSE: A lore document detailing the Ironhead Security protocols for
+ *          managing neurodivergent sensory overload. Outlines Levels 1-5.
+ * ARCHITECTURE NOTES:
+ * - Uses Bootstrap context colors extensively (success, info, warning, danger)
+ *   to visually represent the escalating scale.
+ * - The Level 5 card specifically enforces `data-bs-theme="dark"` to create
+ *   a high-contrast, severe visual warning.
+ * ============================================================================
+ */
 // pages/story/lore/sensory-scale.php
 // LORE REFERENCE: The O'Connell Sensory Distress Scale (Levels 1-5)
 // Context: Standard Operating Procedures for Engine Room Staff & Security.
@@ -24,6 +37,7 @@ $pageTitle = "Lore: Sensory Distress Protocols - Ironhead Security";
         </div>
     </div>
 
+    <!-- SECTION: Level 1-4 Escalation Cards -->
     <div class="row justify-content-center mb-4">
         <div class="col-lg-10">
             <div class="card h-100 border-success-subtle shadow-sm">
@@ -152,6 +166,7 @@ $pageTitle = "Lore: Sensory Distress Protocols - Ironhead Security";
         </div>
     </div>
 
+    <!-- SECTION: Level 5 (Critical Purge) -->
     <div class="row justify-content-center mb-5">
         <div class="col-lg-10">
             <div class="card border-danger border-3 shadow-lg overflow-hidden" data-bs-theme="dark">

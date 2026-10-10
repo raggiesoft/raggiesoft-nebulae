@@ -1,4 +1,15 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Welcome Letter (The Ironwood Collective)
+ * PATH: pages/engine-room/corporate/stardust-blacksburg/documents/welcome-letter.php
+ * PURPOSE: A formal orientation document for new residents. Sets the strict,
+ *          academic-focused tone of the property (Dry Property, Clean Air).
+ * ARCHITECTURE NOTES:
+ * - Contains an embedded `<style>` block for rendering a stylized, cursive
+ *   "ink" signature that adapts correctly when printed via `@media print`.
+ * ============================================================================
+ */
 // pages/engine-room/corporate/stardust-blacksburg/documents/welcome-letter.php
 // Context: The official "Day 1" communication for new residents.
 // Theme: Professional, Academic, and Firm.
@@ -57,6 +68,7 @@ $pageTitle = "Welcome to The Ironwood Collective";
                 </p>
             </div>
 
+            <!-- SECTION: Academic Advantage Amenities -->
             <div class="card bg-light border-0 mb-5 shadow-sm">
                 <div class="card-body p-4">
                     <h5 class="text-primary fw-bold text-uppercase mb-3">
@@ -79,6 +91,7 @@ $pageTitle = "Welcome to The Ironwood Collective";
                 </div>
             </div>
 
+            <!-- SECTION: The Ironwood Covenant (Rules) -->
             <div class="mb-5">
                 <h5 class="text-danger fw-bold text-uppercase mb-3 border-bottom border-danger pb-2">
                     <i class="ph ph-file-signature me-2"></i>The Ironwood Covenant

@@ -1,4 +1,36 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - AETHEL SAGA SCENE VIEWER
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This is the core reading interface for the Aethel Saga novels. It dynamically 
+ * fetches raw Markdown content from the CDN based on the current URL route and 
+ * parses it into styled HTML. It also handles chapter/scene pagination.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Uses `$pageConfig['currentContext']` provided by `index.php` to determine 
+ *   the exact book, chapter, part, and scene IDs.
+ * - Implements a lightweight, custom `parseMarkdown()` function rather than 
+ *   relying on heavy external libraries, keeping the reader extremely fast.
+ * - Injects a script to trigger the mobile Table of Contents drawer (`<wa-drawer>`).
+ * - Supports dynamic theming (e.g., `.chapter-gloom` vs `.aethel-theme`) based 
+ *   on the scene's emotional context or setting.
+ * 
+ * MAINTENANCE NOTES:
+ * - The `$mdUrl` structure is strictly `/content/{book}/{chapter}/{part}/{scene}.md`.
+ *   If the underlying CDN folder structure changes, this must be updated.
+ * - The regex in `cleanSlug()` is hardcoded to remove `chapter-\d+-` prefixes. 
+ *   If naming conventions change, this parser will break.
+ * - Do NOT remove the `e.stopPropagation()` in the JS block, or the Web Components 
+ *   drawer will fail to open on mobile devices.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Aethel_Saga
+ * ============================================================================
+ */
+
 // 1. Determine Context from Router Config
 // $pageConfig['currentContext'] is passed from index.php
 $bookId = $pageConfig['currentContext'][0] ?? '';
@@ -17,6 +49,12 @@ if ($rawMarkdown === false) {
 }
 
 // 3. Simple Markdown Parser
+/* 
+ * ARCHITECTURE NOTE: Custom Markdown Parser
+ * Strips top-level headers (handled by the PHP header block) and converts 
+ * Markdown styling (bold, italic) into HTML tags. Explodes on double-newlines 
+ * to create traditional `<p>` paragraphs.
+ */
 function parseMarkdown($text) {
     // Remove H1 headers (we handle title in PHP)
     $text = preg_replace('/^# (.*)$/m', '', $text); 
@@ -50,6 +88,11 @@ function cleanSlug($slug, $prefixToRemove) {
 }
 ?>
 
+<!-- 
+  STRUCTURAL BLOCK: Reader Container
+  Applies the dynamic theme based on the scene context. Uses Bootstrap utilities 
+  to ensure the reading pane spans the full viewport height (`min-vh-100`).
+-->
 <div class="<?php echo ($currentPageTheme === 'gloom') ? 'chapter-gloom' : 'aethel-theme'; ?> py-5 min-vh-100">
     <div class="container tome-container">
         
@@ -70,6 +113,11 @@ function cleanSlug($slug, $prefixToRemove) {
             <?php echo $contentHtml; ?>
         </div>
 
+        <!-- 
+          STRUCTURAL BLOCK: Pagination Navigation
+          Retrieves the adjacent scenes from `nav-logic.php` and renders 
+          Prev/Up/Next buttons to guide the reader through the linear narrative.
+        -->
         <div class="d-flex justify-content-between mt-5 pt-4 border-top border-secondary">
              <?php 
                 require_once ROOT_PATH . '/includes/utils/nav-logic.php';
@@ -90,7 +138,14 @@ function cleanSlug($slug, $prefixToRemove) {
         </div>
 
     </div>
-</div><script>
+</div>
+
+<!-- 
+  ARCHITECTURE NOTE: Mobile UX Script
+  Hooks into the persistent mobile TOC button (likely in the sticky header) 
+  to trigger the Web Awesome drawer.
+-->
+<script>
 (function() {
     // Open Mobile TOC Drawer
     const tocBtns = document.querySelectorAll('#mobile-toc-toggle-btn');

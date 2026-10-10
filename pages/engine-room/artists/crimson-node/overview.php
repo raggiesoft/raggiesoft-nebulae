@@ -1,7 +1,26 @@
 <?php
-// pages/engine-room/artists/crimson-node/overview.php
-// The Band's "Home" Page
-
+/**
+ * ============================================================================
+ * Crimson Node - Artist Home Profile
+ * ============================================================================
+ * Path: pages/engine-room/artists/crimson-node/overview.php
+ *
+ * Description:
+ * Master landing page for the artist 'Crimson Node'. Dynamically fetches 
+ * the band's discography from JSON, presents an interactive carousel of 
+ * releases, outlines the band's architecture/characters, and displays 
+ * transparent AI disclosure notices.
+ *
+ * Architecture & Maintenance Notes:
+ * - Fetches `albums.json` via file_get_contents, flattening era structures 
+ *   to feed the Bootstrap carousel.
+ * - Integrates `store-button.php` component for dynamic DSP links.
+ * - Carousel dropdown fix ensures z-index overflow visibility for DSP menus.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\CrimsonNode
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "Crimson Node - Engine Room Records";
 $root = '/engine-room/artists/crimson-node';
 
@@ -60,6 +79,13 @@ if ($eras) {
     </div>
 </div>
 
+<!--
+    ========================================================================
+    Featured Release & Vanguard Architecture
+    Highlight sections for current active releases and character profiles.
+    Z-index adjustments ensure dropdown menus overlay subsequent sections.
+    ========================================================================
+-->
 <div class="container py-5 border-bottom border-secondary border-opacity-25 position-relative" style="z-index: 1050;">
     <div class="bg-body-tertiary rounded shadow-sm border border-secondary border-opacity-50">
         <div class="row g-0 align-items-center">

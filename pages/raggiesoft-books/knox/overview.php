@@ -1,4 +1,17 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Project: KNOX Landing Page
+ * PATH: pages/raggiesoft-books/knox/overview.php
+ * PURPOSE: Serves as the introductory microsite for the K.N.O.X. universe.
+ *          Contrasts the Axiom Corporation's military assumptions against the
+ *          grounded reality of the Rostova twins.
+ * ARCHITECTURE NOTES:
+ * - Implements a Javascript toggle (`toggleProfile()`) to switch between the 
+ *   Axiom "Threat" profile and the Reality profile, dynamically updating UI colors.
+ * - Uses a dark, industrial theme (`flicker-container`, `blink-text`).
+ * ============================================================================
+ */
 // pages/raggiesoft-books/knox/overview.php
 // Landing Page for K.N.O.X. Microsite
 // Context: A welcoming gateway into the truth of the Telsan Gap.
@@ -30,6 +43,7 @@ $heroImage = $cdnBaseUrl . "/knox/images/aerie-hold-atmospheric.jpg";
     </div>
 </section>
 
+<!-- SECTION: The Axiom vs Reality Dossier -->
 <div class="container my-5" id="dossier">
     <div class="row align-items-center g-5">
         
@@ -97,6 +111,7 @@ $heroImage = $cdnBaseUrl . "/knox/images/aerie-hold-atmospheric.jpg";
     </div>
 </div>
 
+<!-- SECTION: Environmental Context (The Telsan Gap) -->
 <div class="bg-body-tertiary py-5 border-top border-bottom">
     <div class="container">
         <div class="row text-center mb-5">
@@ -137,6 +152,7 @@ $heroImage = $cdnBaseUrl . "/knox/images/aerie-hold-atmospheric.jpg";
     </div>
 </div>
 
+<!-- SECTION: Operative Profiles Grid -->
 <div class="container my-5">
     <div class="row g-4">
         

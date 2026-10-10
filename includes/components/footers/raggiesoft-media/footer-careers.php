@@ -1,5 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: A stripped-down, specialized footer for the Careers/Fraud-Alert pages.
+ * Architecture: Omits standard marketing links, audio players, and promotional content
+ * to maintain a severe, administrative tone ("Danger Glass"). Uses custom CSS overrides
+ * to enforce a red-tinted, alert-style visual hierarchy.
+ * Future Maintainers: Do not add promotional links to this file. This footer is intended
+ * strictly for security and anti-fraud communications.
+ */
 // includes/components/footers/raggiesoft-media/footer-careers.php
+// Ensure no marketing bloat is injected here; this is for security alerts only.
 // The Silent Footer - Strips out audio players and promotional links.
 // Updated: Frutiger Aero Danger Glass
 ?>
@@ -8,6 +19,7 @@
     <div class="container relative-z1">
         <div class="row gy-4 align-items-center">
             
+            <!-- Left Column: Branding and explicitly clear non-hiring status -->
             <div class="col-md-6 text-center text-md-start">
                 <div class="text-uppercase fw-bold fs-4 mb-2 brand-font text-danger" style="letter-spacing: 1px; text-shadow: 0 0 10px rgba(220,53,69,0.3);">
                     RaggieSoft Media
@@ -20,6 +32,7 @@
                 </div>
             </div>
 
+            <!-- Right Column: Legitimate contact vectors for verification purposes -->
             <div class="col-md-6 text-center text-md-end">
                 <h6 class="text-uppercase fw-bold border-bottom border-danger border- pb-2 mb-3 d-inline-block text-danger">Official Verification</h6>
                 <ul class="list-unstyled small mb-0">
@@ -41,6 +54,7 @@
 </footer>
 
 <style>
+    /* Override standard Frutiger Aero glass to a severe red (Danger) aesthetic */
     /* Specific Danger Glass Override for this footer */
     .aero-danger-footer {
         border-top: 1px solid rgba(220, 53, 69, 0.4) !important;

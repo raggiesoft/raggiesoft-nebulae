@@ -1,5 +1,25 @@
 <?php
-// pages/engine-room/artists/mirage.php
+/**
+ * ENGINE ROOM RECORDS: MIRAGE (ARTIST HUB)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file acts as the primary profile page for the band "Mirage" (The First Signing).
+ * It aggregates their lore, discography, and thematic presentation.
+ *
+ * KEY FEATURES:
+ * - Artist-Specific Theming: Inherits the global "industrial" aesthetic but customizes
+ *   it (e.g., solid black borders instead of primary color borders) to fit the band's
+ *   specific identity.
+ * - Responsive Dark Mode: Supports dynamic color switching via `[data-bs-theme="dark"]`.
+ *
+ * MAINTENANCE NOTES:
+ * - The internal file path comment says `mirage.php`, but it's physically located
+ *   at `mirage/overview.php`. This discrepancy should be noted if moving files.
+ * - Maintain the `text-stenciled` font stack (`Impact`, `Arial Black`) for brand
+ *   consistency across the Mirage sub-pages.
+ */
+
+// pages/engine-room/artists/mirage/overview.php
 // Artist Profile: Mirage (The First Signing)
 // "We're going to build an engine, too."
 

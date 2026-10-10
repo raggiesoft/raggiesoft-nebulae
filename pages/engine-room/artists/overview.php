@@ -1,4 +1,24 @@
 <?php
+/**
+ * ENGINE ROOM RECORDS: ARTIST ROSTER (OVERVIEW)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the master directory for all artists signed to the fictional
+ * "Engine Room Records" label. It provides navigation to individual artist hubs.
+ *
+ * KEY FEATURES:
+ * - Industrial Theming: Implements embedded CSS (`.industrial-header`, `.text-stenciled`)
+ *   to establish the overarching record label aesthetic (gritty, industrial, bold).
+ * - Adaptive Dark Mode: Utilizes `[data-bs-theme="dark"]` attribute selectors to
+ *   ensure gradients and borders shift seamlessly to a "deep dark" theme when requested.
+ *
+ * MAINTENANCE NOTES:
+ * - Keep `.industrial-header` and `.text-stenciled` synchronized with other core
+ *   Engine Room pages to maintain a cohesive brand identity.
+ * - Future implementations should consider fetching the roster dynamically from
+ *   `master-catalog.json` instead of hardcoding artist links.
+ */
+
 // pages/engine-room/artists/overview.php
 // The Complete Roster.
 // Access: /engine-room/artists

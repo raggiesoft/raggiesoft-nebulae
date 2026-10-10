@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page acts as the concluding evidence file ("Lot 200") for the Nine-Figure Refusal
+ * storyline. It is highly stylized, simulating a physical invoice using CSS 
+ * (`physical-invoice` class) and maintaining strict WCAG contrast requirements even 
+ * in dark mode.
+ * 
+ * Future Maintenance Notes:
+ * - Do NOT remove the `!important` tags within the `<style>` block, as they are necessary 
+ *   to override Bootstrap's native dark mode inversions and preserve the "paper invoice" look.
+ * - The `chain of title` section visually traces the legal ownership using Bootstrap borders.
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/sun-ray-catalog-transfer.php
 // EVIDENCE ITEM #200-FINAL: The Repatriation
 // Context: The journey from "Toxic Asset" to "Artist Owned."
@@ -113,6 +125,7 @@ $pageTitle = "Lot 200: The Sun-Ray Repatriation";
 
     <div class="row justify-content-center">
         <div class="col-lg-8">
+            <!-- Inline Logic: The .physical-invoice class enforces a high-contrast white background, even in dark mode. -->
             <div class="card border-0 shadow-lg physical-invoice" style="font-family: 'Courier New', monospace;">
                 <div class="card-body p-5 position-relative">
                     

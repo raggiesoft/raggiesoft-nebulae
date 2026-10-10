@@ -1,4 +1,19 @@
 <?php
+/**
+ * ARCHITECTURE: Personified DevOps (Family Overview)
+ * 
+ * The directory page for the 'RaggieSoft Family' concept, where infrastructure 
+ * and bash scripts are anthropomorphized to aid in neurodivergent regulation.
+ * 
+ * COMPONENTS:
+ * 1. Hero Banner: A full-width introductory graphic.
+ * 2. Psychological Context ('A Note on Reality'): Explains the underlying purpose 
+ *    of the personification for the autistic creator.
+ * 3. The Creator Card: Links to the biological author's profile.
+ * 4. The Constructs Grid: A mapped directory of all system personas (Paige, 
+ *    Jessica, Sarah, Jenna, Harper, Amanda & Elara), linking to their specific pages.
+ */
+
 // pages/family/overview.php
 // The Roster: A directory of all system constructs.
 ?>
@@ -23,6 +38,8 @@
 
 <div class="container-fluid py-5">
     
+    <!-- PSYCHOLOGICAL CONTEXT -->
+    <!-- Provides necessary grounding for visitors regarding the nature of the constructs. -->
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">
             <div class="p-4 rounded-3 bg-body-tertiary border border-primary border-opacity-25 shadow-sm">
@@ -57,6 +74,8 @@
         </div>
     </div>
 
+    <!-- CONSTRUCT DIRECTORY GRID -->
+    <!-- Individual profile cards linking to the specific script/persona documentation. -->
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <h3 class="border-bottom pb-2 mb-4 text-secondary"><i class="ph ph-network-wired me-2"></i>The Constructs</h3>

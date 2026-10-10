@@ -1,8 +1,30 @@
 <?php
-// pages/engine-room/artists/crimson-node/characters/northwood/arthur-vance.php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node Character Profile - Arthur Vance
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the standalone character biography page for Arthur Vance within the Northwood High staff lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Features a full breadcrumb navigation bar, unlike some nested profiles.
+ *    - Uses success (`text-success`, `border-success`) classes to denote his protective, medical-guardian role.
+ *    - Horizontal header layout with a rounded thumbnail and badges for roles.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Requires `$cdnBaseUrl` for the thumbnail image.
+ *    - Self-contained page structure requiring `$pageTitle`.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - If converting this to a nested template (like Mrs. DeMarco), remove the breadcrumb and standardize the header block.
+ * ============================================================================
+ */
+// pages/engine-room/artists/crimson-node/characters/northwood/staff/arthur-vance.php
 
 $pageTitle = "Arthur Vance - Crimson Node";
 ?>
+<!-- Main Standalone Profile Container -->
 
 <div class="container py-4">
     <!-- Breadcrumb -->

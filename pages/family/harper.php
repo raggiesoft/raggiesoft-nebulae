@@ -1,4 +1,18 @@
 <?php
+/**
+ * ARCHITECTURE: Harper (Studio Engineer Construct Profile)
+ * 
+ * Part of the 'Personified DevOps' framework. This page details the role, 
+ * lore, and operational mechanics of the 'Harper' script (Audio Processing).
+ * 
+ * COMPONENTS:
+ * 1. Hero Card: Displays the character portrait, primary technologies (FFmpeg), and statistics.
+ * 2. Audio Pipeline Breakdown: Explains the parallelized transcoding and metadata generation process.
+ * 3. Lore & Accessibility: Intertwines the character's physical constraints (wheelchair user) 
+ *    with the script's focus on extreme efficiency and automated 'heavy lifting'.
+ * 4. Simulated Terminal: A CSS-styled block mimicking the output of harper.sh during a vault rebuild.
+ */
+
 // pages/family/harper.php
 // Theme: Harper (High Energy, Purple, Studio)
 ?>
@@ -60,6 +74,8 @@
     </div>
 </div>
 
+<!-- TECHNICAL MECHANICS -->
+<!-- Details the FFmpeg and multi-threading pipeline. -->
 <div class="row g-5 mb-5">
     <div class="col-md-12 col-xl-6">
         <div class="p-4 h-100 rounded-3 border bg-body-tertiary">
@@ -91,6 +107,8 @@
     </div>
 </div>
 
+<!-- SIMULATED TERMINAL -->
+<!-- A static representation of the build process for flavor. -->
 <div class="row">
     <div class="col-12">
         <div class="card shadow-lg font-monospace" style="background-color: #0d1117; color: #c9d1d9; border: 1px solid var(--family-harper);">

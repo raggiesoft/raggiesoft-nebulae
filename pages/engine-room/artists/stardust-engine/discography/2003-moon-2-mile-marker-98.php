@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file serves as the presentation view for the "Mile Marker 98 [Moon 2]" album.
+ * It integrates shared components such as the album art header and tracklist downloader,
+ * and it includes context-specific HTML (like the 'wa-card' Web Component) to surface
+ * deep lore related to the "Crash of '90".
+ * 
+ * Future Maintenance Notes:
+ * - The web components (`<wa-card>`, `<wa-badge>`, `<wa-button>`) must be present in the 
+ *   global document head for rendering.
+ * - This album is conceptually linked to "Sanctuary (Zero-G)" as a counterweight. If you
+ *   add navigation, ensure these two albums link back to each other logically.
+ */
 // pages/engine-room/artists/stardust-engine/discography/2003-moon-2-mile-marker-98.php
 $pageTitle = "Mile Marker 98 [Moon 2] - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/2003-mile-marker-98';
@@ -9,7 +22,10 @@ $album_path_web = '/engine-room-records/artists/the-stardust-engine/2003-mile-ma
     
     <div class="row align-items-center mb-5">
         
-        <?php $props = [
+        <?php 
+        // Inline Logic: Setting up props for the album art header component.
+        // 'variant' => 'danger' maps to Bootstrap red styling to reflect the album's aggression.
+        $props = [
             'path' => $album_path_web, 
             'alt' => 'Mile Marker 98 Album Art',
             'variant' => 'danger' // Danger border for Moon 2

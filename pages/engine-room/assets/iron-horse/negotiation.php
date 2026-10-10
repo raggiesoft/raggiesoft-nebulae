@@ -1,4 +1,19 @@
 <?php
+/**
+ * ARCHITECTURE & MAINTENANCE (LEGACY)
+ *
+ * This file serves as the lore narrative page for "The Sainte-Claire Protocol" (The Iron Horse commissioning).
+ * 
+ * DESIGN INTENT:
+ * - Provides historical context within the Engine Room universe.
+ * - Utilizes standard Bootstrap 5 container/row structure for a centered, reading-focused layout.
+ * - Employs typographic utility classes (e.g., `text-body-emphasis`, `font-monospace`) to match the dark/archival aesthetic.
+ * 
+ * MAINTENANCE NOTES:
+ * - Content is largely static HTML. Updates to the lore should be made directly in the markup.
+ * - Ensure any new structural elements respect the established responsive grid (col-lg-8/9).
+ * - The "Flash Forward" section uses specific theme colors (bg-black, text-white, border-info) to distinguish temporal shifts in the narrative.
+ */
 // pages/engine-room/assets/iron-horse/negotiation.php
 // The Origin Story: Commissioning "The Iron Horse"
 // Location: Sainte-Claire Coachworks // Québec, Canada
@@ -7,6 +22,7 @@
 $pageTitle = "Lore: The Sainte-Claire Protocol (2002)";
 ?>
 
+<!-- LEGACY STRUCTURAL NOTE: Main content wrapper with vertical padding. If adding new lore sections, append them within the main `.row` or as new `.row` blocks. -->
 <div class="container py-5">
     
     <div class="row justify-content-center mb-5">
@@ -22,6 +38,7 @@ $pageTitle = "Lore: The Sainte-Claire Protocol (2002)";
     <div class="row justify-content-center">
         <div class="col-lg-9">
             
+            <!-- LEGACY UI COMPONENT: Lore context card. Uses tertiary background for subtle contrast against the main page body. -->
             <div class="card mb-4 border-0 shadow-sm bg-body-tertiary">
                 <div class="card-body p-4">
                     <p class="mb-3 font-monospace text-body-secondary small">

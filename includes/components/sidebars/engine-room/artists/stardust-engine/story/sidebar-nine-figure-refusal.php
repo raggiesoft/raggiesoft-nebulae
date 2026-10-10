@@ -1,4 +1,20 @@
 <?php
+/**
+ * ARCHITECTURE: Nine-Figure Refusal Sidebar
+ * 
+ * This sidebar handles the complex navigation for the 'Nine-Figure Refusal' story.
+ * It dynamically renders a two-level hierarchy of chapters and acts based on a 
+ * structured array.
+ * 
+ * COMPONENTS:
+ * 1. isChapterActive(): Helper function to determine if a chapter or any of its acts 
+ *    match the globally defined $currentSection.
+ * 2. $chapters array: A data structure defining the story outline.
+ * 3. Navigation Loop: Loops through the $chapters array, rendering 
+ *    wa-details components. Expands to show acts if the chapter is active.
+ * 4. Status Update Widget: Displays external lore links relevant to the story content.
+ */
+
 // includes/sidebars/artists/stardust-engine/story/sidebar-nine-figure-refusal.php
 // Dedicated navigation for the "Accidental Empire" Saga
 // UPDATED: Added "The Approach" to Chapter 1
@@ -84,11 +100,15 @@ $chapters = [
 
 
 <div class="mt-2 d-flex flex-column gap-1">
+    <!-- DYNAMIC NAVIGATION LOOP -->
+    <!-- Iterates over the defined chapter hierarchy and renders top-level links -->
     <?php foreach ($chapters as $id => $data): 
         $isActive = isChapterActive($data['pages'], $currentUri);
     ?>
     <wa-details summary="<?php echo $data['title']; ?>" <?php echo $isActive ? 'open' : ''; ?> class="border-0 bg-transparent">
         <div class="d-flex flex-column gap-1 ps-2 pb-2">
+            <!-- NESTED ACT LOOP -->
+            <!-- If the current chapter is active and has acts, render the sub-menu -->
             <?php foreach ($data['pages'] as $url => $linkData): 
                 $isLinkActive = ($currentUri === $url);
             ?>
@@ -102,6 +122,8 @@ $chapters = [
 </div>
 
 
+<!-- STATUS UPDATE WIDGET -->
+<!-- Displays external lore links relevant to the story content -->
 <div class="mt-4 p-3 bg-body-tertiary border border-secondary-subtle rounded">
     <h6 class="text-body-emphasis text-uppercase small fw-bold mb-2">Status Update</h6>
     <div class="d-flex align-items-center mb-2">

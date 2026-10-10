@@ -1,4 +1,24 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - 1999 HARD RESET TOUR DISCOGRAPHY VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view partial renders the narrative and discography details for "The Hard Reset Tour".
+ * It relies on the parent routing architecture to load the site layout and inject the
+ * necessary variables.
+ *
+ * MAINTENANCE NOTES:
+ * - $pageTitle defines the HTML <title>.
+ * - $album_path_web defines the base URL path used for related assets.
+ * - The lore narrative details the band's struggle with standard tour infrastructure
+ *   and introduces the concept of their independent LLC network.
+ * - Theme uses bootstrap utility classes (e.g., text-danger, text-primary, text-success)
+ *   to structure the visual narrative arcs.
+ *
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "The Hard Reset Tour (1997-1998) - Engine Room Records";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1999-hard-reset-tour';

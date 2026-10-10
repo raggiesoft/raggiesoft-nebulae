@@ -1,9 +1,34 @@
 <?php
+/**
+ * ARCHITECTURE: Jessica Miller Center Sidebar Component
+ * 
+ * DESCRIPTION:
+ * This component provides contextual navigation and real-time status information for the Jessica Miller Center 
+ * portal within the Engine Room section. It is designed to meet WCAG AAA compliance standards.
+ *
+ * STRUCTURE:
+ * - Center Directory Section: A list-group containing primary navigation links (Campus Map, Quiet Floor, etc.).
+ * - Administration Section: A list-group for staff and administrative contacts.
+ * - System Status Card: A status card indicating environmental metrics (Air Quality, Noise Floor, Lighting).
+ *
+ * USAGE:
+ * - Included dynamically in the sidebar area of Jessica Miller Center pages.
+ * - Utilizes Bootstrap 5 utility classes (`list-group`, `list-group-flush`, `card`) and adheres to 
+ *   adaptive theming conventions.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure any new links added to the directory maintain the same spacing and accessibility attributes.
+ * - The System Status Card is currently hardcoded but is designed to be easily integrated with a 
+ *   real-time API or backend system in the future.
+ * - Icons use Phosphor Icons (`ph-*`).
+ */
+
 // includes/components/sidebars/engine-room/jessica-miller-center/sidebar-miller-center.php
 // Sidebar for The Jessica Miller Center
 // WCAG STATUS: AAA Compliant (Adaptive Bootstrap 5.3)
 ?>
 
+<!-- Section: Center Directory Navigation -->
 <div class="mb-4">
     <h6 class="text-uppercase text-body-secondary fw-bold letter-spacing-1 mb-3" style="font-size: 0.75rem;">
         Center Directory
@@ -24,6 +49,7 @@
     </div>
 </div>
 
+<!-- Section: Administration Contacts -->
 <div class="mb-4">
     <h6 class="text-uppercase text-body-secondary fw-bold letter-spacing-1 mb-3" style="font-size: 0.75rem;">
         Administration
@@ -41,6 +67,7 @@
     </div>
 </div>
 
+<!-- Section: Active System Status Widget -->
 <div class="card bg-body-tertiary border-success shadow-sm mt-4">
     <div class="card-body p-3">
         <div class="d-flex align-items-center mb-2">

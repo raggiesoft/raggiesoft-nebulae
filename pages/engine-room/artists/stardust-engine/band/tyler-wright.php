@@ -1,4 +1,26 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Band Member Profile (Tyler Wright)
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the standalone lore page for Tyler Wright.
+ *    - Generates Schema.org `Person` JSON-LD for SEO and semantic linking to the `MusicGroup`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Utilizes the `starfield-container` global background for the Stardust Engine theme.
+ *    - `glass-container` and `position-relative z-1` ensure content floats correctly over the starfield.
+ *    - Sidebar uses a sticky layout (`sticky-top`) with a standardized component card (`_card.php`).
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Schema JSON-LD must be placed early in the DOM, right after the PHP block.
+ *    - Requires `$cdnBaseUrl` for the image path mapping.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - If adding more sections, maintain the text color utility classes (`text-white-75`) for contrast against the dark background.
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/band/tyler-wright.php
 // The "Power" and "The Human Metronome".
 // Context: The engine room's heartbeat.
@@ -27,8 +49,10 @@ $personSchema = [
 <?php echo json_encode($personSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
 </script>
 
+<!-- Starfield Background Overlay -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- Main Content Container with Glassmorphism -->
 <div class="container py-5 glass-container position-relative z-1">
 
     <div class="row g-5">

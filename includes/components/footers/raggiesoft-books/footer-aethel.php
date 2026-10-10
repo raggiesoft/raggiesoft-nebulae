@@ -1,5 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Generates the specialized "Back Cover" footer for The Aethel Saga narrative properties.
+ * Architecture: Utilizes a distinct Onyx/Gold/Cinzel color palette and typography scheme to maintain
+ * immersive fantasy branding. It includes an embedded Easter Egg triggered by the universal Konami listener.
+ * Future Maintainers: Ensure any newly added links within the 'The Tome' section match the 'Cinzel' 
+ * and 'Georgia' typography parameters to prevent breaking immersion.
+ */
 // includes/components/footers/raggiesoft-books/footer-aethel.php
+// Maintains the fantasy "in-universe" styling separate from standard corporate footers
 // THE SAGA FOOTER: Immersive "Back Cover" Design
 // Theme: Onyx, Gold, and Cinzel
 ?>
@@ -7,6 +17,7 @@
     <div class="container">
         <div class="row gy-5">
             
+            <!-- Left Column: Primary Saga Branding, Cover Blurb, and Thematic Tags -->
             <div class="col-lg-5 col-md-12">
                 <a href="/raggiesoft-books/aethel-saga" class="d-flex align-items-center mb-3 text-decoration-none group-hover">
                     <img src="<?php echo $cdnBaseUrl; ?>/aethel/images/logos/silver-gauntlet-of-aethel-logo.png" 
@@ -27,6 +38,7 @@
                 </div>
             </div>
 
+            <!-- Center Column: Direct Navigation for Book Modules (The Tome) -->
             <div class="col-lg-3 col-md-6">
                 <h5 class="cinzel-font text-warning mb-4 border-bottom border-secondary d-inline-block pb-1">The Tome</h5>
                 <ul class="nav flex-column">
@@ -53,6 +65,7 @@
                 </ul>
             </div>
 
+            <!-- Right Column: Production Credits and Backlink to RaggieSoft Corporate -->
             <div class="col-lg-4 col-md-6 text-lg-end">
                 <h5 class="cinzel-font text-warning mb-4 border-bottom border-secondary d-inline-block pb-1">Production</h5>
                 
@@ -78,6 +91,7 @@
 </footer>
 
 <?php
+// Register payload array for the universal Konami keystroke listener to unlock debug/lore content
 // EASTER EGG: The Architect's Cheat Code
 $konami_config = [
     'title'      => 'The Architect\'s Vault',

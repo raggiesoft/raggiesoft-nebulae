@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This component acts as the global, master footer for the entire RaggieSoft network SPA.
+ * It contains two main sections:
+ * 1. The visual footer, which dynamically routes to sub-site specific footers based on URL mapping.
+ * 2. The universal legal band containing copyright, trademark, licensing, and standardized B2B links.
+ * 
+ * MAINTENANCE NOTES:
+ * - DYNAMIC LOCATION LOGIC: Reaches out to a JSON endpoint to determine the current 'HQ' location for display.
+ * - STORE PREFERENCES: Includes a Javascript block (initializeStorePreferences) that handles user-selected DSP logic (Spotify vs Apple Music) and syncs the UI globally.
+ * - GLOBAL MODALS: Embeds `sticky-player.php` and `encyclopedia-modal.php` directly in the DOM tree right before `</body>`.
+ * - SPA LIFECYCLE: Note the `elara:loaded` event listener. Because this is a Single Page Application, Javascript logic must be rebound here when DOM elements are swapped in by the router.
+ */
 // includes/footer.php
 // v8.5 - Integrated Global Trademark Claims
 // Updated: Dynamic Location Logic

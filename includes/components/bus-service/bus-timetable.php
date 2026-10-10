@@ -1,4 +1,21 @@
 <?php
+/**
+ * ARCHITECTURE: Transit Timetable Renderer
+ * 
+ * A reusable UI component designed to render comprehensive bus transit schedules.
+ * It accepts structured metadata and multidimensional arrays for scheduling.
+ * 
+ * COMPONENTS:
+ * 1. formatTransitTime(): A helper function that parses raw time strings, 
+ *    differentiating AM/PM and returning stylized HTML badges.
+ * 2. Header & Alerts: Renders route details and dynamically adjusts UI severity
+ *    based on active service alerts.
+ * 3. Transfer Points: Lists intersecting routes organized by geographic location.
+ * 4. Schedule Tabs: A tabbed interface separating schedules by operational day
+ *    (e.g., Weekdays vs. Weekends).
+ * 5. Directional Tables: Displays inbound and outbound timetables side-by-side or stacked.
+ */
+
 // includes/components/bus-timetable.php
 // Reusable component for rendering transit schedules.
 // Expects: $routeMeta, $schedules
@@ -41,7 +58,9 @@ if (!function_exists('formatTransitTime')) {
     
     <div class="row g-4 mb-5">
         <?php if (!empty($routeMeta['alerts'])): 
-            // 1. Severity Scanner: Determine main card styling based on highest alert level
+            // SEVERITY SCANNER
+            // 1. Determine main card styling based on highest alert level to quickly
+            // communicate operational status to the user.
             $severityLevel = 1; // 1 = info, 2 = warning, 3 = stop
             $formattedAlerts = [];
             
@@ -137,6 +156,8 @@ if (!function_exists('formatTransitTime')) {
         </ul>
     <?php endif; ?>
 
+    <!-- SCHEDULE TAB PANES -->
+    <!-- Generates the detailed timetables for each day configuration -->
     <div class="tab-content" id="scheduleTabsContent">
         <?php 
         $paneIndex = 0;

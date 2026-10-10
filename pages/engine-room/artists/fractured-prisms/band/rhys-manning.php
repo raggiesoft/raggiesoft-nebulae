@@ -1,10 +1,35 @@
 <?php
-// pages/engine-room/artists/fractured-prisms/band/rhys-manning.php
-// Lore Profile: Rhys Manning (Synthesizers / Programming / The Architect)
+/**
+ * ============================================================================
+ * Rhys Manning - Band Resident Profile
+ * ============================================================================
+ * Path: pages/engine-room/artists/fractured-prisms/band/rhys-manning.php
+ *
+ * Description:
+ * Detailed lore and biographical profile for the fictional character 
+ * 'Rhys Manning' of the band Fractured Prisms. Focuses on his role as the 
+ * mechanical/synthesizer architect and his psychological backstory.
+ *
+ * Architecture & Maintenance Notes:
+ * - Uses Bootstrap 5 grid layout with custom 'prism' specific CSS classes 
+ *   (.bg-prism-dark, .text-glow-prism, .gothic-font).
+ * - Includes a custom Polaroid polaroid-prism component for thematic imagery.
+ * - Artifact/lore text blocks use .artifact-paper for a document-style aesthetic.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\FracturedPrisms
+ * @since 1.0.0
+ * ============================================================================
+ */
 
 $pageTitle = "Rhys Manning - The Residents | Fractured Prisms";
 ?>
 
+<!--
+    ========================================================================
+    Primary Content Wrapper
+    Applies the specific 'prism-dark' theme and full viewport minimum height.
+    ========================================================================
+-->
 <div class="bg-prism-dark min-vh-100 py-5">
     <div class="container">
         

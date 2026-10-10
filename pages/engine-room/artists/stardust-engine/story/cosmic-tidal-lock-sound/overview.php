@@ -1,4 +1,40 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/engine-room/artists/stardust-engine/story/cosmic-tidal-lock-sound/overview.php
+ * Path: /engine-room/artists/stardust-engine/story/cosmic-tidal-lock-sound/overview
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the lore overview page for "The Cosmic Tidal Lock Sound&trade;" and "80s Cosmic Pop."
+ * This page acts as both in-universe narrative documentation and practical meta-instructions 
+ * (Suno AI Engineering Guide) for synthesizing the band's specific audio profile.
+ * 
+ * LORE CONTEXT:
+ * - Details the distinction between the genre (80s Cosmic Pop) and the proprietary 
+ *   trademarked engineering technique developed by Cassidy O'Connell.
+ * - Outlines the legal strategy used by Engine Room Records to protect the sound.
+ * - Includes the lyrics and narrative breakdown of the catalyst track "Moon 1 (Tidal Lock)."
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Utilizes a custom starfield background (`.starfield-container`, `.starfield-twinkling`) 
+ *   for cosmic immersion.
+ * - Implements a "glassmorphism" design aesthetic using custom classes (`.glass-container`, 
+ *   `.glass-card`) combined with Bootstrap 5 utilities.
+ * - Uses structured JSON-LD (`@type: Article`) for SEO and rich snippets.
+ * - Relies heavily on Phosphor Icons for thematic visual cues.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Requires a parent routing layer to provide the document shell and base Bootstrap assets.
+ * - Assumes the existence of global CSS for the `starfield-*` and `glass-*` classes.
+ * 
+ * MAINTENANCE NOTES:
+ * - The `Suno Engineering Guide` section contains exact prompt engineering strings. Do not
+ *   alter these prompts without testing the output generation profile.
+ * - The `$articleSchema` array must be kept in sync with the page content to ensure
+ *   accurate structured data.
+ */
+
 // pages/engine-room/artists/stardust-engine/cosmic-tidal-lock-sound/overview.php
 // Lore Page: The Cosmic Tidal Lock Sound & 80s Cosmic Pop
 // Updated: Includes Article Schema and Suno Engineering Meta-Data

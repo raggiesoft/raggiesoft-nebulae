@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: AD ASTRA - STORY OVERVIEW HUB
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page serves as the central landing hub for the "Ad Astra" narrative arc,
+ * which details the band's ambitious sci-fi concept album and unproduced short film.
+ * 
+ * LORE:
+ * Outlines the lore of the "Escape Velocity" voyage, casting the band as the crew 
+ * of the U.S.S. Aethelgard traveling to the Veil Nebula.
+ * 
+ * DESIGN:
+ * - Employs a forced dark theme wrapper (.wa-theme-dark) to match the space aesthetic.
+ * - Uses the .starfield-container background effect for deep-space immersion.
+ * - Features custom <wa-card> web components for the "Mission Manifest" and navigation links.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/ad-astra/overview.php
 // The Hub for the Ad Astra Narrative Arc
 // Context: The "Magnum Opus" mission.
@@ -32,6 +49,14 @@ $cardBackground = $cdnBaseUrl . '/stardust-engine/images/story/ad-astra/ad-astra
 </div>
 
 <div class="container py-5 glass-container" style="margin-top: -50px; position: relative; z-index: 2;">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      A highly thematic sci-fi dashboard layout.
+      1. Top: A full-width hero image with gradient overlay.
+      2. Middle: A "Mission Manifest" data-grid built using <wa-card> and flexbox rows.
+      3. Bottom: A 2-column grid of navigational <wa-card> elements linking to the 
+         flight log and the actual music track, featuring hover-scale effects.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-10">

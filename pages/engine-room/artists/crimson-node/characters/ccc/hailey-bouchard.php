@@ -1,4 +1,26 @@
 <?php
+/**
+ * CRIMSON NODE LORE: HAILEY BOUCHARD
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file is the primary lore profile for "Hailey Bouchard" within the CCC faction.
+ * It functions as a complete page view, contrasting with the partials used in the
+ * "family" directory.
+ *
+ * KEY FEATURES:
+ * - Standalone Page Structure: Includes its own `container py-5` wrapper and header,
+ *   indicating it is rendered directly rather than injected into a parent wrapper.
+ * - Brand Typography: Uses `.brand-font` for the main header, aligning with global
+ *   thematic typography rules.
+ * - Side-by-Side Layout: Implements a classic Bootstrap sidebar pattern (`col-lg-4` for
+ *   stats/image, `col-lg-8` for narrative body).
+ *
+ * MAINTENANCE NOTES:
+ * - The internal file comment specifies `pages/engine-room/artists/crimson-node/ccc/...`
+ *   but the file is actually located in `.../characters/ccc/...`. Update routing if necessary.
+ * - `$cdnBaseUrl` must be available in the global scope for the portrait links to function.
+ */
+
 // pages/engine-room/artists/crimson-node/ccc/hailey-bouchard.php
 // The Profile for Hailey Bouchard
 

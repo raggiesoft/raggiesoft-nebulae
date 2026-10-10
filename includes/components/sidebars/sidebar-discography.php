@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: DISCOGRAPHY SIDEBAR NAVIGATOR
+ * ============================================================================
+ * 
+ * This component parses the centralized `_discography.php` array and builds 
+ * a dynamic Bootstrap Accordion menu. It automatically detects the current 
+ * active era and album, keeping the relevant accordion panel open.
+ * 
+ * MAINTENANCE NOTES:
+ * - Relies on `_discography.php` data structure (Era -> Albums).
+ * - Utilizes `str_contains()` against `$_SERVER['REQUEST_URI']` to calculate 
+ *   open/closed state (`isOpen`) for accordion panels.
+ * ============================================================================
+ */
 // includes/components/sidebars/sidebar-discography.php
 // v2.1 - Fixed Variable Name Mismatch & Data Structure Access
 

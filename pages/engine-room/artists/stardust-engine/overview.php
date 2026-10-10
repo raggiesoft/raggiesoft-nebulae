@@ -1,7 +1,27 @@
 <?php
-// pages/engine-room/artists/stardust-engine/overview.php
-// The Band's "Home" Page
-
+/**
+ * ============================================================================
+ * The Stardust Engine - Artist Home Profile
+ * ============================================================================
+ * Path: pages/engine-room/artists/stardust-engine/overview.php
+ *
+ * Description:
+ * Master landing page for the fictional band 'The Stardust Engine'. 
+ * Highlights the band's identity, provides AI workflow transparency notices,
+ * links to external DSP streaming platforms (via store-button.php), and points
+ * to the official merchandise storefront and future releases.
+ *
+ * Architecture & Maintenance Notes:
+ * - Employs extensive use of Bootstrap 5 utilities (border, opacity, grids).
+ * - Implements custom `starfield-container` and `glass-card` styling for the 
+ *   narrative "ad-astra" visual theme.
+ * - Parses `albums.json` locally, preparing for future interactive discography 
+ *   elements if needed (though currently the page focuses on direct highlights).
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\TheStardustEngine
+ * @since 1.0.0
+ * ============================================================================
+ */
 $root = '/engine-room/artists/stardust-engine';
 
 // Fetch and decode the Albums JSON
@@ -60,6 +80,13 @@ if ($eras) {
     </div>
 </div>
 
+<!--
+    ========================================================================
+    Featured Hero Section & External Links
+    Highlights the primary call to action (Streaming) and links out to 
+    DSP networks using the `store-button` component.
+    ========================================================================
+-->
 <div class="container py-5 border-bottom border-secondary border-opacity-25 position-relative" style="z-index: 1050;">
     <div class="bg-body-tertiary rounded shadow-sm border border-secondary border-opacity-50">
         <div class="row g-0 align-items-center">

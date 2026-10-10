@@ -1,4 +1,15 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Series Table of Contents
+ * PATH: pages/raggiesoft-books/books/series.php
+ * PURPOSE: Dynamically builds a hierarchical Table of Contents (Books > Chapters > Parts)
+ *          by parsing the routing manifest (`katie.json`) for a given series.
+ * ARCHITECTURE NOTES:
+ * - Extracts `seriesSlug` from `$request_uri` and retrieves the correct manifest.
+ * - Generates clean canonical URLs avoiding the physical `.md` extensions.
+ * ============================================================================
+ */
 // pages/raggiesoft-books/books/series.php
 // Series Overview (Table of Contents)
 
@@ -33,6 +44,7 @@ $seriesTitle = $katie['series_title'] ?? 'Series Overview';
         </div>
     </div>
 
+    <!-- SECTION: Series Table of Contents Loop -->
     <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
             <?php if (!empty($books) && is_array($books)): ?>

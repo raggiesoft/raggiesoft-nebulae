@@ -1,6 +1,28 @@
 <?php
-// pages/engine-room/artists/crimson-node/characters/northwood/mrs-demarco.php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node Character Profile - Mrs. DeMarco
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the character biography and stat card for Mrs. DeMarco within the Northwood High staff lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Two-column Bootstrap responsive layout.
+ *    - Employs danger (`text-danger`, `border-danger`) classes to denote her strict, authoritative role as the "Culinary Warden".
+ *    - Utilizes Phosphor Icons (`ph-*`) in the stat card for visual representation.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Relies on `$cdnBaseUrl` for the character portrait.
+ *    - Content blocks are styled with `fs-5` and `line-height: 1.8` for readability of the dense lore text.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Maintain the red/danger theme for her profile components to visually group her with Northwood staff authority figures.
+ * ============================================================================
+ */
+// pages/engine-room/artists/crimson-node/characters/northwood/staff/mrs-demarco.php
 ?>
+<!-- Main Staff Profile Container -->
 <div class="container py-5">
     <div class="row mb-5">
         <div class="col-12 text-center">

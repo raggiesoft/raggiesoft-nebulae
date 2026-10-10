@@ -1,4 +1,22 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: LIQUIDATION AUCTION
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view represents an in-universe asset liquidation catalog. It renders
+ * individual lots with custom styling for "Auction Tags" and "Sold Stamps".
+ *
+ * MAINTENANCE NOTES:
+ * - Implements accessibility considerations via `@media (prefers-reduced-motion)`
+ *   to disable hover animations for users who request it.
+ * - Custom CSS overrides (`[data-bs-theme="dark"]`) ensure the auction tags and
+ *   sold stamps maintain contrast and visibility in dark mode.
+ * - Includes the `narrative-stepper.php` component.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/liquidation-auction.php
 // The Yard Sale.
 // Context: Selling off the "Ego" to pay the "Unsecured Creditors."

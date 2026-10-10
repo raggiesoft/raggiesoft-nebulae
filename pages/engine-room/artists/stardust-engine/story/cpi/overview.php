@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file acts as the primary "lore hub" for Commonwealth Polytechnic Institute (CPI)
+ * within the Stardust Engine narrative universe. It combines text-heavy storytelling 
+ * with thematic Bootstrap classes to weave the origin story of the "Ironheads".
+ * 
+ * Future Maintenance Notes:
+ * - Ensure any changes to the CPI lore remain consistent with the 'Ignition' 
+ *   track details on the 2016 Crucible live album page.
+ * - This page relies on global CSS utility classes (e.g., text-glow-primary, border-glow).
+ */
 // Page data
 $pageTitle = "About CPI & The Forgers - The Stardust Engine";
 ?>
@@ -15,6 +26,7 @@ $pageTitle = "About CPI & The Forgers - The Stardust Engine";
         </p>
     </div>
 
+    <!-- Inline Logic: The hero image references the 2016 live album art as the visual anchor. -->
     <!-- Hero Image: The Crucible -->
     <div class="text-center mb-5">
         <figure class="figure">

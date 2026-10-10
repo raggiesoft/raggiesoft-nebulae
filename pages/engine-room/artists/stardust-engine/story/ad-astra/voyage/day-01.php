@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This page represents "Day 01" of the Ad Astra voyage narrative. It employs a dark, 
+ * immersive UI with animated CSS starfields to simulate space travel. It heavily utilizes 
+ * `<wa-card>` web components to structure logs and sensor data.
+ * 
+ * Future Maintenance Notes:
+ * - The entire page is wrapped in `<div class="wa-theme-dark">` to force dark mode, 
+ *   ensuring the starfield effect is always visible.
+ * - The AUDIO LOG component currently uses static UI elements. If you connect this to 
+ *   a real audio player, you'll need to add JavaScript bindings to the play button and 
+ *   progress bar.
+ */
 // pages/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-01.php
 // Log Entry: Day 01
 // Context: The physical reality of leaving Earth.
@@ -47,6 +60,7 @@ $pageTitle = "Day 01: Ignition - Ad Astra Log";
                 </p>
             </div>
 
+            <!-- Inline Logic: The terminal-card class provides a monospaced, green-tinted computer interface look. -->
             <wa-card class="card terminal-card mb-5 w-100" style="--body-padding: 0; --header-padding: 0; --wa-panel-bg: transparent;">
                 <div slot="header" class=" border-bottom border-success text-success fw-bold font-monospace p-3">
                     <i class="ph ph-waveform-lines me-2"></i>AUDIO LOG: "IGNITION" (LIVE)

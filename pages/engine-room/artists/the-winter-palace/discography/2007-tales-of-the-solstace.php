@@ -1,4 +1,25 @@
 <?php
+/**
+ * ============================================================================
+ * Album Archive: Tales of the Solstice
+ * ============================================================================
+ * Path: pages/engine-room/artists/the-winter-palace/discography/2007-tales-of-the-solstace.php
+ *
+ * Description:
+ * Detailed archive view for the legacy album "Tales of the Solstice".
+ * Features the specific track "Upon This Winter's Night", heavily contextualized 
+ * with narrative lore regarding the character Julian Croft.
+ *
+ * Architecture & Maintenance Notes:
+ * - Uses the `ad-astra` theme with dynamic starfield background.
+ * - Integrates a custom inline audio player UI and `playExternalTrack()` JS function 
+ *   that hooks into the global `stardust-player.js` if available.
+ * - Audio sources and artwork are mapped directly to CDN paths.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\TheWinterPalace
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "Tales of the Solstice - The Winter Palace";
 $pageTheme = "ad-astra"; 
 
@@ -9,6 +30,12 @@ $original_art = $cdnBaseUrl . '/engine-room-records/music/the-winter-palace/tale
 $audio_src = $cdnBaseUrl . '/engine-room-records/music/the-winter-palace/upon-this-winters-night.ogg';
 ?>
 
+<!--
+    ========================================================================
+    Starfield Background & Hero Container
+    Establishes the visual theme and houses the album cover and track player.
+    ========================================================================
+-->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
 <div class="container py-5 glass-container">

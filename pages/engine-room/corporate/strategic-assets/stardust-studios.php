@@ -1,4 +1,33 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - STRATEGIC ASSETS: STARDUST STUDIOS
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page provides the narrative blueprint for "Stardust Studios" (The Warehouse), 
+ * acting as the global headquarters for the O'Connell Family Trust and their 
+ * private music production.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Uses a structural hierarchy based on physical floors (`Level 1`, `Level 2`).
+ * - Employs a 2-column card grid (`.sector-card`) to delineate Level 1 operations 
+ *   (Admin vs Production).
+ * - Utilizes a horizontal split-card for Level 2 ("The Loft") to emphasize the 
+ *   privacy and restricted nature of the residential space.
+ * 
+ * MAINTENANCE NOTES:
+ * - Ensure CSS animations respect `prefers-reduced-motion` for accessibility.
+ * - The `.floor-badge` class uses monospace typography to reinforce the industrial 
+ *   aesthetic. 
+ * - If new rooms/sectors are added to the narrative, append them to the appropriate 
+ *   Level block.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Corporate
+ * ============================================================================
+ */
+
 // pages/engine-room/corporate/strategic-assets/stardust-studios.php
 // Designation: Stardust Studios (The Warehouse)
 // Location: Blacksburg Industrial Park (South Main Corridor).
@@ -7,6 +36,11 @@
 $pageTitle = "Stardust Studios - Global HQ & Production";
 ?>
 
+<!-- 
+  ARCHITECTURE NOTE: Custom CSS Block
+  Implements `.sector-card` hover transitions (translate + shadow), 
+  strictly wrapping them in `prefers-reduced-motion` for accessibility compliance.
+-->
 <style>
     /* Motion Control: Only animate if user hasn't requested reduced motion */
     @media (prefers-reduced-motion: no-preference) {
@@ -34,6 +68,11 @@ $pageTitle = "Stardust Studios - Global HQ & Production";
 
 <div class="container py-5">
     
+    <!-- 
+      STRUCTURAL BLOCK: Header & Warning
+      Establishes the corporate identity and immediately clarifies that this is 
+      a private narrative asset, not a public commercial studio.
+    -->
     <div class="row justify-content-center mb-5">
         <div class="col-lg-10">
             <div class="d-flex align-items-center mb-3">
@@ -67,6 +106,11 @@ $pageTitle = "Stardust Studios - Global HQ & Production";
         </div>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Level 1 (Operations)
+      A 2-column grid separating the business (The Bridge) from the creative 
+      (Production Floor).
+    -->
     <div class="d-flex align-items-center mb-4 pb-2 border-bottom border-secondary-subtle">
         <span class="floor-badge text-primary me-3">Level 1</span>
         <h3 class="h5 text-uppercase text-body-emphasis mb-0">Operations & Production</h3>
@@ -117,6 +161,11 @@ $pageTitle = "Stardust Studios - Global HQ & Production";
         </div>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Level 2 (The Loft)
+      A full-width, horizontally split card highlighting the restricted family 
+      living space. Red accents (`border-danger`) signify the restriction.
+    -->
     <div class="d-flex align-items-center mb-4 pb-2 border-bottom border-danger-subtle">
         <span class="floor-badge text-danger me-3">Level 2</span>
         <h3 class="h5 text-uppercase text-body-emphasis mb-0">The Loft (Restricted)</h3>

@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: A standardized card component utilizing Web Awesome (`<wa-card>`) syntax.
+ * Architecture: Extracts `$props` passed from the parent script to populate image, title,
+ * description, and a conditional footer button. Includes fallback placeholder logic if an
+ * image fails to load.
+ * Future Maintainers: Ensure any new slots align with Web Awesome documentation. Keep
+ * the default fallback image generator (`placehold.co`) intact to prevent visual breakages.
+ */
+// Extract and sanitize variables passed from the parent template via $props array
 // --- Component: card.php ---
 // Updated: Web Awesome Components
 
@@ -10,6 +21,7 @@ $description = $props['description'] ?? 'Card description goes here.';
 $buttonProps = $props['buttonProps'] ?? null;
 $variant = $buttonProps['variant'] ?? 'secondary';
 
+// Define placeholder background colors derived from brand variants for image fallbacks
 $bgColor = '6c757d'; 
 if ($variant === 'pact') $bgColor = '005A5A'; 
 if ($variant === 'axiom') $bgColor = 'A8491A';
@@ -17,6 +29,7 @@ $textColor = 'FFFFFF';
 $placeholderUrl = "https://placehold.co/600x400/{$bgColor}/{$textColor}?text=" . urlencode($fallbackText);
 ?>
 
+<!-- Render the Web Awesome card element, structured to take up full available height -->
 <wa-card style="height: 100%; display: flex; flex-direction: column;">
   <?php if ($imgSrc): ?>
     <div slot="media" style="position: relative; width: 100%; padding-top: 150%;">
@@ -42,6 +55,7 @@ $placeholderUrl = "https://placehold.co/600x400/{$bgColor}/{$textColor}?text=" .
     <?php echo $description; ?>
   </div>
 
+  <!-- Conditionally include the button sub-component if button properties were provided -->
   <?php if ($buttonProps): ?>
     <div slot="footer">
       <?php

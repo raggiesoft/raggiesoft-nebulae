@@ -1,4 +1,25 @@
 <?php
+/**
+ * ============================================================================
+ * The Winter Palace - Artist Overview
+ * ============================================================================
+ * Path: pages/engine-room/artists/the-winter-palace/overview.php
+ *
+ * Description:
+ * Landing profile for the symphonic rock band 'The Winter Palace'. 
+ * Provides genre metadata, origin details, narrative lore regarding their 
+ * catalog rescue by Engine Room Records, and highlights their legacy release.
+ *
+ * Architecture & Maintenance Notes:
+ * - Employs the `ad-astra` theme for a specific visual identity.
+ * - Uses Bootstrap 5 breadcrumbs, grid, and cards for responsive layout.
+ * - The 'Featured Legacy Release' block points directly to the 
+ *   'Tales of the Solstice' archive view.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom\TheWinterPalace
+ * @since 1.0.0
+ * ============================================================================
+ */
 $pageTitle = "The Winter Palace - Engine Room Records";
 $pageTheme = "ad-astra"; 
 ?>
@@ -30,7 +51,13 @@ $pageTheme = "ad-astra";
         </div>
     </div>
 
-    <div class="row g-5">
+    <!--
+    ========================================================================
+    Profile Details Grid
+    Houses the core artist metadata and the featured album highlight.
+    ========================================================================
+-->
+<div class="row g-5">
         
         <div class="col-lg-4">
             <div class="card border-0 shadow-sm bg-dark bg-opacity-50 mb-4">

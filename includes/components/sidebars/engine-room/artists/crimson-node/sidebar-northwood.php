@@ -1,7 +1,18 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Sub-navigation sidebar for the 'Northwood High' directory, utilizing Bootstrap accordions.
+ * Architecture: Evaluates the `$request_uri` to determine if the user is viewing a 'Student' or 'Staff' 
+ * profile. It then injects `show` and `collapsed` classes into the accordion components to automatically 
+ * keep the relevant category expanded on page load.
+ * Future Maintainers: If adding a new category (e.g. 'Alumni'), replicate the `strpos` boolean check 
+ * at the top of the file and apply it to a new accordion item.
+ */
 // sidebar-northwood.php
 $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
+// Evaluate current URI to intelligently expand the accordion folder the user is currently browsing
 // Determine which accordion should be open
 $isStudentActive = strpos($request_uri, '/students/') !== false;
 $isStaffActive = strpos($request_uri, '/staff/') !== false;
@@ -14,8 +25,10 @@ $isStaffActive = strpos($request_uri, '/staff/') !== false;
         </a>
     </div>
 
+    <!-- Bootstrap Accordion: Groups characters by narrative classification -->
     <div class="accordion accordion-flush" id="northwoodAccordion">
         
+        <!-- Students Section: Auto-expands if $isStudentActive evaluates to true -->
         <!-- Students Section -->
         <div class="accordion-item border-0 border-bottom">
             <h2 class="accordion-header" id="headingStudents">
@@ -57,6 +70,7 @@ $isStaffActive = strpos($request_uri, '/staff/') !== false;
     </div>
 </div>
 
+<!-- Cross-Navigation: Immediate escape hatch back to the core narrative group (The Phalanx) -->
 <div class="card border-0 shadow-sm">
     <div class="card-header bg-danger text-white fw-bold text-uppercase" style="letter-spacing: 1px;">
         The Phalanx

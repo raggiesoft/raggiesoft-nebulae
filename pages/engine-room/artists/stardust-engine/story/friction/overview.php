@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: FRICTION OVERVIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view serves as the main hub for "The Friction Catastrophe" story arc.
+ * It integrates structured data (JSON-LD Article Schema) for SEO and deeply
+ * interlinks with sub-story components like the Deposition and Lost Track.
+ *
+ * MAINTENANCE NOTES:
+ * - $articleSchema relies on global paths like $cdnBaseUrl. Ensure this matches
+ *   the live environment to prevent schema validation errors.
+ * - Theme uses Web Components (`<wa-card>`, `<wa-alert>`) and custom CSS classes.
+ * - The narrative details the band's departure from Apex Records, setting the
+ *   stage for their independent era.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/friction/overview.php
 // The Friction Catastrophe Archive
 // Context: 1992. The "Cold War" turns hot.

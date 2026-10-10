@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: OCEAN VIEW ARCHIVES HEADER
+ * ============================================================================
+ * 
+ * This file provides the global navigation for the "Ocean View Archives" 
+ * imprint within RaggieSoft Books. It offers top-level routing to major 
+ * literary collections (Contemporary, KNOX, Aethel).
+ * 
+ * MAINTENANCE NOTES:
+ * - Employs Web Awesome `rs-btn` custom components.
+ * - Parses `$_SERVER['REQUEST_URI']` to set bold/colored active states depending 
+ *   on the current active collection.
+ * ============================================================================
+ */
 // includes/components/headers/raggiesoft-books/header-books.php
 // Global navigation for the Ocean View Archives imprint.
 // Updated: Web Awesome Components

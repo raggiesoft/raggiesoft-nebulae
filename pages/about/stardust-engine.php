@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Mission Profile (Project Overview)
+ * PATH: pages/about/stardust-engine.php
+ * PURPOSE: High-level overview of the "Stardust Engine" project. Acts as a
+ *          hub linking the in-universe lore to the meta "AI Collaboration" reality.
+ * ARCHITECTURE NOTES:
+ * - Implements a split-context view ("Layer 1: Universe" vs "Layer 2: Project").
+ * - Specifies the custom 'ad-astra' theme and merges specific assets (Starfield).
+ * - Utilizes glass-morphism UI ('glass-container', 'glass-card') extensively.
+ * ============================================================================
+ */
 // pages/about/stardust-engine.php
 // "Mission Profile" - The Project Overview
 // Location: Global About Hub
@@ -28,8 +40,10 @@ $customPageAssets = [
         </a>
     </div>
 
+    <!-- STRUCTURAL ROW: Layer Contexts -->
     <div class="row g-5 mb-5">
         
+        <!-- LAYER 1: In-Universe Lore -->
         <div class="col-lg-6">
             <div class="card glass-card h-100 border-secondary">
                 <div class="card-header bg-transparent border-secondary text-warning fw-bold text-uppercase py-3">
@@ -50,6 +64,7 @@ $customPageAssets = [
             </div>
         </div>
 
+        <!-- LAYER 2: Meta Reality -->
         <div class="col-lg-6">
             <div class="card glass-card h-100 border-info shadow-glow">
                 <div class="card-header bg-transparent border-info text-info fw-bold text-uppercase py-3">
@@ -72,6 +87,7 @@ $customPageAssets = [
 
     </div>
 
+    <!-- SECTION: Crew Manifest (Tools & Roles) -->
     <div class="mb-5">
         <h2 class="display-6 fw-bold text-uppercase text-light border-bottom border-secondary pb-3 mb-4">
             <i class="ph ph-users-viewfinder me-3 text-secondary"></i>Crew Manifest

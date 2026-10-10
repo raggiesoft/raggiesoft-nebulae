@@ -1,4 +1,22 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - 1989 NEON HEARTS ALBUM VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view partial renders the narrative for the 1989 "Neon Hearts" album, detailing
+ * the label-mandated "Studio Overcorrection".
+ *
+ * MAINTENANCE NOTES:
+ * - The visual theme utilizes `$props['variant'] = 'pact'` (pink) to represent the
+ *   restrictive "Apex era" of the band's history.
+ * - Uses shared components `_album-art-header.php` and `_tracklist-downloader.php`.
+ * - "The Canceled Track" section is a lore box providing context for the `Lost Sounds`
+ *   compilation.
+ *
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "Neon Hearts (1989) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1989-neon-hearts';

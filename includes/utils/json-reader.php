@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: DATA LAYER CONNECTOR (ELARA FRAMEWORK)
+ * ============================================================================
+ * 
+ * This file provides utility functions for fetching and decoding remote JSON 
+ * data from the RaggieSoft Assets CDN. It is designed to safely retrieve data 
+ * across network boundaries with strict timeouts to prevent hanging the main 
+ * web process.
+ * 
+ * MAINTENANCE NOTES:
+ * - Built-in caching bypass (using `time()`) is enabled. Keep this in mind if
+ *   API rate limits or bandwidth become a concern in production.
+ * - Suppresses errors explicitly to fallback gracefully.
+ * ============================================================================
+ */
 // includes/utils/json-reader.php
 // v1.0 - Data Layer Connector
 // Part of the RaggieSoft "Elara" Framework

@@ -1,4 +1,26 @@
 <?php
+/**
+ * ENCYCLOPEDIA: SENSORY SCALE (META-CONTEXT)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file defines the "Autism Meltdown Severity Index," a meta-contextual reference
+ * document used to calibrate AI behavior and authorial consistency across the
+ * RaggieSoft Books universe.
+ *
+ * KEY FEATURES:
+ * - AI Directive Alerts: Uses custom web components (`wa-alert`) and HTML comments
+ *   to explicitly instruct AI agents NOT to use numerical scales in prose.
+ * - Thematic Web Components: Leverages `<wa-card>`, `<wa-icon>`, and custom CSS 
+ *   (`rs-badge`) for structured, readable presentation.
+ * - Progression Styling: Likely uses color coding (e.g., `text-success` for Level 1)
+ *   to visually represent escalation.
+ *
+ * MAINTENANCE NOTES:
+ * - The "ABSOLUTE DIRECTIVE" blocks must remain intact to prevent LLM hallucinations
+ *   in generated story text.
+ * - Web Component (`wa-*`) structures should not be replaced with standard HTML 
+ *   unless the entire design system is being migrated.
+ */
 $pageTitle = "Sensory Scale - Encyclopedia";
 ?>
 

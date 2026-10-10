@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This is the presentation layer for the "Midnight Drivers (2001)" concept album.
+ * It features a standard integration of global components alongside custom lore
+ * alert boxes that detail the narrative of the 1987 archival anchor track.
+ * 
+ * Future Maintenance Notes:
+ * - This file contains cross-references to the 1987 Electric Color album. Ensure
+ *   these relative URL paths remain valid if the site architecture changes.
+ * - The 'info' variant prop applies a blue/neon aesthetic fitting the Synthwave era.
+ */
 // pages/engine-room/artists/stardust-engine/2001-midnight-drivers.php
 // Page data
 $pageTitle = "Midnight Drivers (2001) - The Stardust Engine";
@@ -10,7 +21,10 @@ $album_path_web = '/engine-room-records/artists/the-stardust-engine/2001-midnigh
     
     <div class="row align-items-center mb-5">
         
-        <?php $props = [
+        <?php 
+        // Inline Logic: We use the 'info' variant here to trigger the synthwave/neon-blue 
+        // styling within the _album-art-header.php component.
+        $props = [
             'path' => $album_path_web, 
             'alt' => 'Midnight Drivers Album Art',
             'variant' => 'info' // Blue/Neon border for Synthwave/Darkwave era

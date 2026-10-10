@@ -1,4 +1,16 @@
 <?php
+/**
+ * @fileoverview Sidebar navigation for the Stardust Engine CMS documentation.
+ *
+ * This file provides the side navigation used throughout the documentation section 
+ * for the Stardust Engine CMS project. It includes specific styling for Frutiger Aero
+ * inspired navigation items and provides links to internal docs and external repositories.
+ *
+ * Maintenance Note:
+ * - When adding new documentation pages, add a new `<button>` or `<a>` tag matching the existing structure.
+ * - Ensure `data-bs-theme` overrides are maintained if styling is changed, to support light/dark modes.
+ * - Note that `<button>` tags with `href` attributes are tied to the UI framework or custom JS routing (like Elara).
+ */
 // includes/components/sidebars/raggiesoft-media/projects/stardust-engine-cms/sidebar-docs.php
 // Documentation navigation for the Stardust Engine CMS.
 // Updated: Frutiger Aero Glass Navigation
@@ -15,6 +27,7 @@
         font-weight: 500;
     }
 
+    /* Primary hover state for standard navigation items */
     .aero-nav-link.nav-primary:hover, .aero-nav-link.nav-primary.active {
         background: rgba(0, 130, 230, 0.1);
         border: 1px solid rgba(0, 130, 230, 0.3);
@@ -23,6 +36,7 @@
         transform: translateX(4px);
     }
     
+    /* Dark mode overrides for primary hover state to ensure contrast and neon feel */
     [data-bs-theme="dark"] .aero-nav-link.nav-primary:hover,
     [data-bs-theme="dark"] .aero-nav-link.nav-primary.active {
         background: rgba(0, 229, 255, 0.15);
@@ -31,7 +45,7 @@
         text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
     }
 
-    /* Cyan Highlight specifically for Elara */
+    /* Cyan Highlight specifically for Elara documentation links */
     .aero-nav-link.nav-info:hover, .aero-nav-link.nav-info.active {
         background: rgba(0, 195, 255, 0.1);
         border: 1px solid rgba(0, 195, 255, 0.3);
@@ -40,7 +54,7 @@
         transform: translateX(4px);
     }
 
-    /* Outer Glass Blocks for External Links */
+    /* Outer Glass Blocks styling for External Links (GitHub, etc.) */
     .aero-external-link {
         display: block;
         padding: 0.6rem 1rem;
@@ -61,6 +75,7 @@
     }
 </style>
 
+<!-- Internal Documentation Navigation Section -->
 <div class="card bg-hud-base border-0 shadow-sm mb-4">
     <div class="card-body p-3 p-xl-4">
         <h5 class="pb-2 mb-3 border-bottom border-secondary-subtle text-uppercase h6 fw-bold ">
@@ -91,6 +106,7 @@
     </div>
 </div>
 
+<!-- External Repository Links Section -->
 <div class="card border-0 bg-transparent">
     <div class="card-body p-0 p-xl-2">
         <h6 class="text-uppercase fw-bold text-body-secondary mb-3 small border-bottom border-secondary-subtle pb-2">

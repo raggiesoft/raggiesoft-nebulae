@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Contact & Out-of-Character Routing
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Acts as a "breaking the fourth wall" contact page, connecting the fictional lore directly to the creator's real-world LinkedIn.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Heavily stylized as a "Subspace Relay" using `glass-card`, `text-glow-primary`, and `Audiowide` fonts.
+ *    - Mimics a terminal interface with monospace system status text in the footer.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Employs a custom `$customPageAssets` array to inject the transparent starfield pattern directly into the layout without conflicting with global themes.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Ensure the external LinkedIn URL remains current. 
+ * ============================================================================
+ */
 // pages/contact.php
 // "Subspace Relay" - The connection to the Real World.
 
@@ -14,8 +33,10 @@ $customPageAssets = [
 
 ?>
 
+<!-- Starfield Background Overlay (Specific to Contact Theme) -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- Main Terminal Container -->
 <div class="container py-5" style="min-height: 80vh; display: flex; align-items: center;">
     <div class="row justify-content-center w-100">
         

@@ -1,10 +1,21 @@
 <?php
 /**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Generates a stylized, printable corporate letterhead for in-universe documents.
+ * Architecture: Uses an $brand variable to swap configuration details (Pacific Rim vs. Engine Room).
+ * It dynamically injects these properties into a forced-light-mode container designed
+ * for physical document simulation, bypassing system dark mode.
+ * Future Maintainers: Add new brands to the switch/if block. Ensure accessibility 
+ * overrides remain intact to guarantee AAA contrast ratios.
+ */
+/**
  * COMPONENT: Corporate Letterhead Generator
  * PATH: /includes/components/corporate/letterhead.php
  * Updated: WCAG Compliance (Forced Light Mode) & URL Updates & Reduced Motion Support
  */
 
+// Fallback variables if the parent template does not provide them
 // Default Settings
 $current_brand = $brand ?? 'engine-room';
 $stamp_text = $letter_stamp ?? null;
@@ -12,6 +23,7 @@ $stamp_class = $stamp_color ?? 'success';
 $rotation = $letter_rotation ?? 0;
 
 // Brand Logic
+// Evaluate requested brand identity to inject appropriate lore details
 if ($current_brand === 'pacific-rim') {
     // PACIFIC RIM PROPERTIES CONFIGURATION
     $brand_name = "Pacific Rim Properties, LLC";
@@ -48,11 +60,13 @@ if ($current_brand === 'pacific-rim') {
     $sig_creds = "Bar Admissions: VA, NY, CA, DE &bull; CFA &bull; Cr.FA &bull; CIRA";
 }
 
+// Apply subtle rotation to simulate a scanned document effect, respecting reduced-motion preferences
 // Generate the rotation style string, but we will let CSS override it if needed
 $rotation_style = $rotation ? "transform: rotate({$rotation}deg);" : "";
 ?>
 
 <style>
+    /* Critical Accessibility: Override system dark mode to maintain high-contrast black-on-white text for documents */
     /* FORCED LIGHT MODE FOR PHYSICAL DOCUMENTS */
     /* Ensures AAA Contrast (Black on White) regardless of system theme */
     .physical-document {

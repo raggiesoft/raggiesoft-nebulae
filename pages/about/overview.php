@@ -1,4 +1,25 @@
 <?php
+/**
+ * MISSION PROFILE HUB (OVERVIEW)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the central "Mission Profile" overview for the RaggieSoft network.
+ * It blends the system architecture with creative narrative elements.
+ *
+ * KEY FEATURES:
+ * - Dynamic Hero Rotator: Integrates with `json-reader.php` to fetch and cycle through
+ *   images defined in `hero-images.json`.
+ * - Glassmorphism UI: Heavily utilizes translucent, frosted-glass CSS effects
+ *   for the narrative directories and directory structures.
+ *
+ * MAINTENANCE NOTES:
+ * - The hero background cycles are driven by JavaScript reading the JSON
+ *   data embedded in the `data-images` attribute of the container.
+ * - Do not alter the JSON format structure without updating both the JS handler
+ *   and this PHP JSON preparation logic.
+ * - Keep the structure semantic for accessibility.
+ */
+
 // pages/about/overview.php
 // "Mission Profile" - The Central Hub & Narrative Overview
 // Merged: User's Hero Rotator + Directory Structure

@@ -1,4 +1,42 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/09-the-counter-offer.php
+ * Path: /engine-room/artists/stardust-engine/story/nine-figure-refusal/the-counter-offer
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the narrative partial for "The Counter-Offer" (The "Poison Pill" Letter),
+ * integrating a dynamic letterhead component to display Holly's strategic rejection
+ * of the Omni-Global acquisition.
+ * 
+ * LORE CONTEXT (Nine-Figure Refusal Arc):
+ * - CHAPTER 2: THE TRAP (Part 3).
+ * - Focuses on the "Kill Switch" letter where Holly O'Connell rejects the $150M offer
+ *   and triggers the financial collapse of Omni-Global.
+ * - Highlights the "Army of One" bluff regarding legal and financial teams.
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Utilizes Bootstrap 5 cards, grid system, and utility classes for layout and
+ *   narrative pacing.
+ * - Integrates Phosphor Icons (`ph ph-envelope-open-text`, `ph ph-circle-info`) for
+ *   visual embellishment.
+ * - Extensively relies on the modular `letterhead.php` component to simulate a 
+ *   physical corporate document.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Includes the Corporate Letterhead component (`/includes/components/corporate/letterhead.php`)
+ *   which expects variables like `$letter_date`, `$letter_to`, `$brand`, and `$letter_body`.
+ * - Includes the Narrative Stepper component (`/includes/components/navigation/narrative-stepper.php`)
+ *   for story progression.
+ * - Depends on the parent router for the HTML shell.
+ * 
+ * MAINTENANCE NOTES:
+ * - The letter content string (`$letter_body`) contains inline HTML. Maintain valid HTML
+ *   within this variable to prevent rendering issues in the letterhead component.
+ * - Updates to WCAG compliance and component implementation have been applied.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-counter-offer.php
 // CHAPTER 2: THE TRAP (Part 3)
 // The "Poison Pill" Letter. Holly rejects the $150M and triggers the collapse.

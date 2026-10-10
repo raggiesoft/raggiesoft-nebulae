@@ -1,4 +1,26 @@
 <?php
+/**
+ * FRACTURED PRISMS BAND: CLAIRE MANNING (LORE PROFILE)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file presents the in-universe character profile ("Resident Profile") for 
+ * Claire Manning, a member of the band Fractured Prisms.
+ *
+ * KEY FEATURES:
+ * - Gothic Theming: Implements the overarching `bg-prism-dark` and `text-glow-prism`
+ *   styles to maintain the band's specific sub-brand within the label site.
+ * - Semantic UI: Utilizes Bootstrap grids, pills/badges, and Phosphor icons
+ *   (`ph-microphone-stand`) to organize character data clearly.
+ * - Typography: Blends `gothic-font` for headers with `font-monospace` for subtitles,
+ *   creating an "archival/dossier" aesthetic.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure custom CSS classes (`text-glow-prism`, `gothic-font`) remain defined in
+ *   the global or band-specific stylesheets.
+ * - Profile updates should maintain the established HTML structure to preserve the
+ *   dossier aesthetic.
+ */
+
 // pages/engine-room/artists/fractured-prisms/band/claire-manning.php
 // Lore Profile: Claire Manning (Vocals / Flute / The Anchor)
 

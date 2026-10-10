@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - 1997 HARD RESET ALBUM VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view component renders the narrative and tracklist details for the 1997
+ * "Hard Reset" double album. It utilizes shared components like `_album-art-header.php`
+ * and `_tracklist-downloader.php`.
+ *
+ * MAINTENANCE NOTES:
+ * - $pageTitle and $album_path_web are crucial for routing and asset paths.
+ * - The component configuration uses $props['variant'] = 'axiom' (orange) to represent
+ *   the "Freedom era". Do not alter this color mapping without consulting the brand guide.
+ * - Lore integration highlights Holly's "$13.99 Retail War" and connects to the
+ *   internal court case story page. Keep URLs in sync with the story routing.
+ *
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "Hard Reset (1997) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1997-hard-reset';

@@ -1,3 +1,25 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node Character Profile - Chloe Brooks
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the character biography and stat card for Chloe Brooks within the Crimson Node lore.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Standard Bootstrap responsive grid layout.
+ *    - The stat card uses a specific `border-top` hex color (`#6c757d` / secondary) to differentiate character identity.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Expects `$cdnBaseUrl` to be defined by the parent layout.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - Ensure structural consistency with other character profiles if new sections are added.
+ * ============================================================================
+ */
+?>
+<!-- Character Profile Row -->
 <div class="row">
     <div class="col-12 mb-4">
         <h1 class="display-4 fw-bold" style="font-family: 'Impact', sans-serif; letter-spacing: 2px;">

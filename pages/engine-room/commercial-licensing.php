@@ -1,6 +1,29 @@
 <?php
-// pages/engine-room/commercial-licensing.php
-// The B2B / Legal wing of Engine Room Records.
+/**
+ * ============================================================================
+ * Commercial Licensing Portal
+ * ============================================================================
+ * Path: pages/engine-room/commercial-licensing.php
+ *
+ * Description:
+ * This view serves as the B2B (Business-to-Business) and legal wing for
+ * Engine Room Records. It outlines non-exclusive sync clearance categories,
+ * an AI workflow transparency notice, and instructions for initiating clearance
+ * requests via the intake protocol.
+ *
+ * Architecture & Maintenance Notes:
+ * - Uses Bootstrap 5 for grid, cards, badges, and responsive utilities.
+ * - Minimal inline CSS is used for hover effects (.licensing-card) and theme-aware 
+ *   elements (.intake-protocol).
+ * - "Dark/Light Mode" compatibility is maintained through Bootstrap's data-bs-theme 
+ *   selector.
+ * - Contact points (mailto links) are hardcoded and should be updated here if 
+ *   business operations change.
+ *
+ * @package Raggiesoft\Nebulae\EngineRoom
+ * @since 1.0.0
+ * ============================================================================
+ */
 
 $pageTitle = "Commercial Licensing | Engine Room Records";
 ?>
@@ -24,7 +47,13 @@ $pageTitle = "Commercial Licensing | Engine Room Records";
     }
 </style>
 
-<!-- THE HERO -->
+<!--
+    ========================================================================
+    Hero Section
+    Presents the portal title, icon, and B2B badge.
+    Uses .engine-hero with specific bottom-border styling for brand cohesion.
+    ========================================================================
+-->
 <div class="engine-hero py-5 mb-5 shadow-lg" style="border-bottom-color: var(--bs-warning);">
     <div class="container text-center py-5">
         <i class="ph ph-file-signature fa-4x text-warning mb-4 opacity-75" aria-hidden="true"></i>
@@ -72,7 +101,13 @@ $pageTitle = "Commercial Licensing | Engine Room Records";
         </div>
     </div>
 
-    <!-- CLEARANCE TIERS (3 COLUMNS) -->
+    <!--
+    ========================================================================
+    Clearance Tiers Grid
+    Displays available non-exclusive licensing categories (Film, Interactive,
+    Broadcast). Layout spans 3 columns on medium/large displays.
+    ========================================================================
+-->
     <div class="row g-4 mb-5 col-lg-10 mx-auto">
         
         <!-- Film & Television -->

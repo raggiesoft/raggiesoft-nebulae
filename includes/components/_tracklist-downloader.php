@@ -1,5 +1,24 @@
 <?php
 /**
+ * ARCHITECTURE: Tracklist Downloader Component
+ * 
+ * This robust component orchestrates the dynamic rendering of artist discographies,
+ * lyrics retrieval, DSP stream mapping, and storefront integration based on
+ * external JSON data files stored on the CDN.
+ * 
+ * COMPONENTS:
+ * 1. Data Ingestion: Fetches tracks.json, album.json, and albums.json from the CDN.
+ * 2. Schema Translation: Maps internal metadata attributes to Schema.org standards
+ *    and human-readable formats (e.g., Narrative Era vs. DSP Release Date).
+ * 3. DSP Integration: Evaluates DSP IDs to dynamically build or disable Spotify,
+ *    Apple Music, Amazon, and YouTube links.
+ * 4. UI Rendering: Generates tracklist UI, incorporating lore badges (Legacy Tiers),
+ *    durations, and interactive play/lyrics/download buttons.
+ * 5. JavaScript Interop: Dispatches a custom 'stardust:playlist-update' event to
+ *    sync the client-side audio player with the rendered tracks.
+ */
+
+/**
  * COMPONENT: _tracklist-downloader.php
  * VERSION: 10.4 (Fourthwall Integration & Free Web Archive Routing)
  *
@@ -44,6 +63,8 @@ if (!function_exists('get_archive_name')) {
 }
 
 // --- TIMELINE LOGIC (SCHEMA.ORG INTEGRATION) ---
+// Extracts and transforms dates to support both the fictional universe timeline
+// and the real-world copyright release parameters.
 $narrative_date = !empty($album_data['temporalCoverage']) ? $album_data['temporalCoverage'] : '1900-01-01';
 $real_release_date = !empty($album_data['datePublished']) ? $album_data['datePublished'] : 'TBA';
 
@@ -60,6 +81,7 @@ $display_artist = !empty($album_data['byArtist']['name']) ? $album_data['byArtis
 $free_archive_zip = $base_web_path . '/web-mp3/' . $archive_base_name . '-free-archive.zip';
 
 // --- METADATA TRANSLATION (SCHEMA.ORG INTEGRATION) ---
+// Maps raw JSON schema tags into friendly UI strings for release and production types.
 $raw_release_type = isset($album_data['albumReleaseType']) ? basename($album_data['albumReleaseType']) : 'AlbumRelease';
 $raw_production_type = isset($album_data['albumProductionType']) ? basename($album_data['albumProductionType']) : 'StudioAlbum';
 $album_upc = !empty($album_data['gtin12']) ? $album_data['gtin12'] : (!empty($album_data['identifier']) ? $album_data['identifier'] : null);
@@ -93,7 +115,9 @@ $store_audiophile_url = '';
 $dsp_exempt = false;
 $dsp_notice = '';
 
+// --- ALBUM AGGREGATION & COMMERCE RESOLUTION ---
 // Step up one directory from the album path to target the artist's root folder
+// to cross-reference global configurations like DSP IDs and store URLs.
 $artist_path_web = dirname($album_path_web);
 $albums_master_url = $cdnBaseUrl . $artist_path_web . '/albums.json?v=' . time();
 $albums_master_content = @file_get_contents($albums_master_url);
@@ -269,6 +293,8 @@ $js_playlist = [];
 
         // ==========================================
         // DISC HEADER LOGIC
+        // Detects when the disc number increments to close the previous list
+        // and render a new sub-header for multi-disc releases.
         // ==========================================
         if ($disc !== $current_disc) {
             if ($is_list_open) {
@@ -289,6 +315,7 @@ $js_playlist = [];
 
         // ==========================================
         // SUITE HEADER LOGIC
+        // Groups related tracks visually (e.g., a continuous movement or medley).
         // ==========================================
         if (!empty($suite_name) && $suite_name !== $current_suite) {
             $current_suite = $suite_name;

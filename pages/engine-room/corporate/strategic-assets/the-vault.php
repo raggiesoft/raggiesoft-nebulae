@@ -1,4 +1,37 @@
 <?php
+/**
+ * ============================================================================
+ * RAGGIESOFT NEBULAE - STRATEGIC ASSETS: THE VAULT
+ * ============================================================================
+ * 
+ * ARCHITECTURE & PURPOSE:
+ * This page functions as the narrative dossier for "The Vault," a highly secure 
+ * subterranean archival facility. It blends corporate/technical detailing 
+ * with the emotional narrative of protecting "The Sun-Ray Catalog" from predatory 
+ * lenders.
+ * 
+ * STRUCTURAL PATTERNS:
+ * - Employs a custom `.vault-hero` section with a "Cold Storage" cyan gradient 
+ *   to establish the physical environment (climate-controlled server room).
+ * - Uses a stacked card layout for "The Collections," emphasizing the difference 
+ *   between internal family assets and external repatriation assets.
+ * - Uses a 3-column feature grid (`.spec-card`) to highlight the technical 
+ *   infrastructure (Cold Storage, Fire Suppression, Faraday Shielding).
+ * - Concludes with a dark-themed, high-contrast security protocol block.
+ * 
+ * MAINTENANCE NOTES:
+ * - Ensure CSS overrides within `<style>` do not clash with the global Elara 
+ *   theme. 
+ * - The `.sun-ray-badge` uses monospace to denote active corporate/legal status.
+ * - If the narrative expands to include new assets stored in The Vault, 
+ *   add a "Collection C" card to the Collections stack.
+ * 
+ * @package RaggieSoft_Nebulae
+ * @subpackage Corporate
+ * @theme Cold Storage (Cyan/Dark Blue)
+ * ============================================================================
+ */
+
 // pages/engine-room/corporate/strategic-assets/the-vault.php
 // Designation: The Engine Room Archives ("The Vault").
 // Location: Subterranean Level, Sector C (Beneath the Studio).
@@ -8,6 +41,11 @@
 $pageTitle = "The Vault - Master Archives";
 ?>
 
+<!-- 
+  ARCHITECTURE NOTE: Custom CSS Block
+  Scopes the "Cold Storage" visual theme. Implements subtle hover transitions 
+  for the spec cards, wrapping them in `prefers-reduced-motion` for accessibility.
+-->
 <style>
     /* THEME: "Cold Storage" */
     .vault-hero {
@@ -44,6 +82,11 @@ $pageTitle = "The Vault - Master Archives";
     }
 </style>
 
+<!-- 
+  STRUCTURAL BLOCK: Vault Hero Banner
+  Uses inline background styles to create a dark, icy aesthetic representing 
+  the climate-controlled environment of the physical vault.
+-->
 <div class="vault-hero text-center mb-5">
     <div class="container">
         <div class="mb-3">
@@ -69,6 +112,11 @@ $pageTitle = "The Vault - Master Archives";
 
 <div class="container pb-5">
 
+    <!-- 
+      STRUCTURAL BLOCK: The Collections
+      A stacked list of narrative assets stored in the vault. 
+      Collection B acts as a critical plot point regarding the Omni-Global buyout.
+    -->
     <div class="row justify-content-center mb-5">
         <div class="col-lg-10">
             <h3 class="h4 text-uppercase text-body-emphasis fw-bold border-bottom pb-2 mb-4">
@@ -115,6 +163,11 @@ $pageTitle = "The Vault - Master Archives";
         </div>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Preservation Infrastructure Grid
+      A 3-column layout highlighting the technical specs of the room.
+      Uses custom `.spec-card` for hover interactions.
+    -->
     <div class="row g-4 mb-5">
         <div class="col-lg-12">
             <h3 class="h4 text-uppercase text-body-emphasis fw-bold border-bottom pb-2 mb-4">
@@ -166,6 +219,11 @@ $pageTitle = "The Vault - Master Archives";
         </div>
     </div>
 
+    <!-- 
+      STRUCTURAL BLOCK: Security Protocol
+      A prominent, dark-themed footer highlighting the narrative constraint 
+      that prevents unauthorized commercialization of the music.
+    -->
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card bg-dark text-white border-secondary shadow-lg">

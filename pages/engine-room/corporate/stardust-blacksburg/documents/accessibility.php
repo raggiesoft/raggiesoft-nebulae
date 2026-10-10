@@ -1,4 +1,15 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Accessibility & Accommodations Policy
+ * PATH: pages/engine-room/corporate/stardust-blacksburg/documents/accessibility.php
+ * PURPOSE: Details the property management's stance on ADA compliance, live-in
+ *          aides, and structural modifications. Emphasizes "Barrier-Free Living".
+ * ARCHITECTURE NOTES:
+ * - Clean, policy-oriented layout using Bootstrap cards and lists.
+ * - Emphasizes the "Crucible" theme implicitly via content tone.
+ * ============================================================================
+ */
 // pages/engine-room/corporate/stardust-blacksburg/documents/accessibility.php
 // Context: ADA Policy, Reasonable Accommodations, and Live-In Aides.
 // Theme: "Crucible" (Maroon & Orange).
@@ -30,6 +41,7 @@ $pageTitle = "Accessibility & Accommodations - Stardust Blacksburg";
         </div>
     </div>
 
+    <!-- SECTION: Reasonable Accommodations Details -->
     <div class="row g-5">
         
         <div class="col-lg-12">
@@ -85,6 +97,7 @@ $pageTitle = "Accessibility & Accommodations - Stardust Blacksburg";
             </div>
         </div>
 
+        <!-- SECTION: Structural Modifications Grid -->
         <div class="col-lg-12">
             <h3 class="h5 fw-bold text-uppercase border-bottom border-primary pb-2 mb-4">
                 <i class="ph ph-tools me-2 text-primary"></i>Structural Modifications

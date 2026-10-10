@@ -1,4 +1,25 @@
 <?php
+/**
+ * KNOX LORE: THE WEAVE DATABASE (OVERVIEW)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file is the central lore hub for the "Knox" universe, acting as the gateway
+ * to World, Tech, and Factions data. It is styled as an "Archive" written by the
+ * story's native inhabitants.
+ *
+ * KEY FEATURES:
+ * - Hero Image Integration: Dynamically loads the background from `$cdnBaseUrl`.
+ * - Thematic Overlay: Uses a black opacity-75 overlay to ensure text legibility
+ *   against the atmospheric background.
+ * - Grid Layout: Implements Bootstrap grid (`row g-4`) for the subsequent database
+ *   navigation cards (rendered below the fold).
+ *
+ * MAINTENANCE NOTES:
+ * - The `$cdnBaseUrl` must be available in the global scope before inclusion.
+ * - The visual hierarchy relies on the contrast between `display-3` headers and
+ *   `font-monospace` subtitles. Preserve these classes when updating content.
+ */
+
 // pages/raggiesoft-books/knox/lore/overview.php
 // The Lore Hub: Central gateway to World, Tech, and Factions.
 // Theme: "Archive" - Clean, organized, but clearly written by the natives.

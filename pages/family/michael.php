@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as the personal profile and central hub for "Michael," representing
+ * the biological creator and system architect. It blends professional portfolio links
+ * with deeply personal neurodivergent lore (AuDHD, Cerebral Palsy) to establish the
+ * "why" behind the RaggieSoft infrastructure.
+ *
+ * MAINTENANCE NOTES:
+ * - Links out to the `/portfolio` route; verify this path remains accurate if the portfolio moves.
+ * - Employs a consistent blue/primary theme.
+ * - Includes a cross-link block to `paige.php` demonstrating their narrative bond.
+ */
 // pages/family/michael.php
 // Theme: Michael (The Core, Blue, Reality)
 ?>

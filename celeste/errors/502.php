@@ -1,4 +1,20 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & DESIGN: 502 Bad Gateway Error Page
+ * ============================================================================
+ * ROLE: Displays a stylized "502 Bad Gateway" error, themed for the Stardust
+ *       Engine ecosystem ("ad-astra" theme). Includes thematic elements like
+ *       a terminal layout, starfield background, and narrative-driven copy.
+ * 
+ * INTEGRATION: Can be served dynamically via the application router or statically
+ *              by Nginx/Apache. Checks `ROOT_PATH` definition to determine
+ *              standalone execution and bootstraps headers/footers accordingly.
+ * 
+ * MAINTENANCE: Keep structural HTML intact. Any changes to the `.starfield-container`
+ *              or `.terminal-card` should align with the core Stardust design specs.
+ * ============================================================================
+ */
 // public/errors/502.php
 // Theme: Knox / Industrial / Glitch
 // Context: "Bad Gateway" / Upstream Error
@@ -25,8 +41,10 @@ if ($is_standalone) {
 }
 ?>
 
+<!-- [LAYOUT] Ambient thematic starfield background -->
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
+<!-- [LAYOUT] Main Error Wrapper: Glassmorphism container vertically centered -->
 <div class="container py-5 glass-container d-flex flex-column justify-content-center min-vh-75">
     
     <div class="row justify-content-center text-center">
@@ -43,6 +61,7 @@ if ($is_standalone) {
                 <span class="text-warning">>></span> BAD GATEWAY
             </h2>
             
+            <!-- [UI COMPONENT] Narrative Terminal Display: Simulates a network uplink failure -->
             <div class="card terminal-card p-4 border-warning text-start mb-5 mx-auto" style="max-width: 600px;">
                 <div class="terminal-header text-warning">
                     <i class="ph ph-triangle-exclamation me-2"></i>

@@ -1,10 +1,32 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: The Stardust Engine - Re-Ignition (2015) Discography Page
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the detail page for the reunion album "Re-Ignition".
+ *    - Incorporates standard tracklist downloads and extensive lore notes.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Standard Bootstrap grid architecture.
+ *    - The `_album-art-header.php` uses the `axiom` variant (Orange/Cyan) to match the Fire/Engine thematic rebirth.
+ *    - Uses a `list-group-flush` with transparent backgrounds for clean track-by-track liner notes.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Relies on `$album_path_web` to instruct `_tracklist-downloader.php` where to find the JSON metadata.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - When updating or adding liner notes, use the standard `list-group-item` structure provided below.
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "Re-Ignition (2015) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/2015-re-ignition';
 
 ?>
 
+<!-- Main Discography Container -->
 <div class="container py-5">
     
     <div class="row align-items-center mb-5">

@@ -1,4 +1,22 @@
 <?php
+/**
+ * STARDUST ENGINE: FORGER NATION WAR CHEST (1997)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page documents the definitive compilation album of the band's "escape velocity".
+ * 
+ * LORE:
+ * A crucial piece of Stardust lore detailing their transition from the "Gilded Cage" 
+ * of Apex Records to their independent "Freedom Era". The 'Omission' section at the 
+ * bottom is critical canon regarding Cassidy's autism and the trauma surrounding 
+ * the track "If You Walked Away".
+ * 
+ * DESIGN:
+ * - 'pact' variant on the album art header.
+ * - Bold, primary/secondary colors representing the war-chest theme.
+ * - A heavy, bordered card at the bottom to highlight "The Authorized Statement".
+ */
+
 // Page data
 $pageTitle = "Forger Nation War Chest - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1997-forger-nation-war-chest';
@@ -6,6 +24,13 @@ $album_path_web = '/engine-room-records/artists/the-stardust-engine/1997-forger-
 ?>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Structured into three main sections:
+      1. Header/Intro with album art
+      2. Era breakdown (Act I - Act IV) using color-coded list groups
+      3. The Omission Statement card (bg-black, border-danger) for emphasis
+    -->
     
     <div class="row align-items-center mb-5">
         

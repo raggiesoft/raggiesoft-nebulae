@@ -1,3 +1,16 @@
+<?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: The "Evidence File" footer for the Nine Figure Refusal story arc.
+ * Architecture: Introduces scoped CSS (`<!-- Embedded Style Block: Custom overrides to simulate physical legal documents -->
+<style>`) to override standard layouts, generating a 
+ * simulated legal document (off-white background, red "sealed" borders, and CSS-based redactions).
+ * Future Maintainers: Ensure the `.redacted-text` class retains its black-on-black styling and 
+ * `user-select: none` to prevent easy highlighting/copying. Any new 'Exhibits' added to the unordered 
+ * list must maintain the `ph-file-contract` or equivalent icon vocabulary.
+ */
+?>
 <style>
     /* Scoped Styles for the Redacted Footer */
     .footer-evidence {
@@ -33,6 +46,7 @@
     }
 </style>
 
+<!-- Footer Container: Applies the off-white paper background and red border -->
 <footer class="mt-auto footer-evidence py-5">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); 
                 font-size: 6rem; color: rgba(0,0,0,0.05); font-weight: bold; white-space: nowrap; pointer-events: none;">
@@ -43,6 +57,7 @@
         <div class="row align-items-center gy-4">
             
             <div class="col-md-4 text-center text-md-start">
+                <!-- Simulated Rubber Stamp using CSS rotation and border properties -->
                 <div class="evidence-stamp mb-3">CONFIDENTIAL</div>
                 <div class="small">
                     <strong>CASE ID:</strong> TSE-1995-CIV-001<br>
@@ -52,6 +67,7 @@
                 </div>
             </div>
 
+            <!-- Center Column: Direct navigation to related lore modules disguised as legal exhibits -->
             <div class="col-md-4 text-center">
                 <h6 class="fw-bold text-uppercase border-bottom border-dark d-inline-block pb-1 mb-3">
                     Related Exhibits

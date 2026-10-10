@@ -1,4 +1,18 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This file presents "Evidence #94-B", an immersive lore page reconstructing a 
+ * 1992 demo lyric sheet. It uses heavily customized CSS to simulate a physical,
+ * typewriter-styled document, complete with highlight marks and handwritten red-pen 
+ * annotations (via 'Kalam' font).
+ * 
+ * Future Maintenance Notes:
+ * - The `<style>` block contains dark-mode overrides `[data-bs-theme="dark"]` to 
+ *   ensure the "physical paper" illusion doesn't blind the user while still maintaining
+ *   the contrast needed to look like an artifact.
+ * - Do not alter the semantic tagging (e.g., `.vance-highlight`, `.holly-note`) as 
+ *   they are critical to the storytelling mechanism.
+ */
 // pages/engine-room/artists/stardust-engine/story/friction/atmosphere.php
 // EVIDENCE ITEM #94-B: The "Atmosphere" Demo
 // Context: The scientific lyrics that Julian Vance misinterpreted as sexual innuendo.
@@ -205,6 +219,7 @@ $cover_art = $cdnBaseUrl . '/engine-room-records/artists/the-stardust-engine/199
         </div>
     </div>
 
+    <!-- Inline Logic: The narrative stepper component guides the user linearly through the Friction storyline. -->
     <!-- NARRATIVE STEPPER -->
     <div class="row mt-5 pt-4 border-top border-secondary opacity-75">
         <div class="col-12 text-center">

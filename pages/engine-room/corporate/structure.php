@@ -1,5 +1,26 @@
 <?php
-// pages/engine-room/corporate/structure.php
+/**
+ * ============================================================================
+ * Corporate Structure Overview
+ * ============================================================================
+ * Path: pages/engine-room/corporate/structure.php
+ * 
+ * Description:
+ * This view provides an overarching organizational map of the corporate entity,
+ * delineating the hierarchy and core divisions (e.g., Engineering, R&D, Operations).
+ * It presents a structured visualization of departments, leads, and operational 
+ * domains.
+ * 
+ * Architecture & Maintenance Notes:
+ * - Employs a stylized header with background styling (.structure-header).
+ * - Utilizes Bootstrap's grid system to lay out organizational cards.
+ * - Includes visual organizational charts or hierarchical card layouts.
+ * - Content is predominantly static HTML structure.
+ * 
+ * @package Raggiesoft\Nebulae\Corporate
+ * @since 1.0.0
+ * ============================================================================
+ */
 // The Corporate Hierarchy (The "Iceberg" Model)
 // Context: Visualizing how a $2.4B Trust hides behind a rock band.
 // Theme: Corporate / Clean (No Starfield)
@@ -33,6 +54,13 @@ $pageTitle = "Organizational Structure - The O'Connell Family Revocable Trust";
     }
 </style>
 
+<!--
+    ========================================================================
+    Main Structural Overview Container
+    Wraps the hierarchical elements, ensuring proper responsive behavior
+    and consistent vertical padding (py-5).
+    ========================================================================
+-->
 <div class="container py-5">
 
     <div class="row justify-content-center mb-5">
@@ -77,7 +105,14 @@ $pageTitle = "Organizational Structure - The O'Connell Family Revocable Trust";
         </div>
     </div>
 
-    <div class="row justify-content-center mt-5">
+    <!--
+    ========================================================================
+    Departmental/Divisional Row
+    Centers content items horizontally (justify-content-center) to create
+    a balanced, top-down visual flow of the organizational structure.
+    ========================================================================
+-->
+<div class="row justify-content-center mt-5">
         <div class="col-lg-10">
             
             <div class="card catalyst-card mb-5 shadow-lg">

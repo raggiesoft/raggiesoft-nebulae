@@ -1,4 +1,26 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURE & ENGINEERING BLOCK
+ * Component: Crimson Node - Self-Titled Debut (2002) Discography Page
+ * 
+ * 1. COMPONENT PURPOSE:
+ *    - Renders the detail page for the debut album "Crimson Node".
+ *    - Integrates with the `_album-art-header.php` component for standardized presentation.
+ *    - Dynamically loads tracklist data via `_tracklist-downloader.php`.
+ * 
+ * 2. DESIGN & STYLING:
+ *    - Utilizes standard Bootstrap container/row structures.
+ *    - Studio Archives section features "HUD" specific utility classes (`bg-hud-red`, `bg-hud-blue`, `border-glow`, `shadow-glow`) from `extras.css`.
+ * 
+ * 3. TECHNICAL & INTEGRATION NOTES:
+ *    - Data relies on the `$album_path_web` variable for the tracklist downloader logic.
+ * 
+ * 4. FUTURE MAINTENANCE:
+ *    - When updating track info, modify the associated JSON file in the album's CDN path, rather than editing the structure here.
+ *    - Maintain the custom utility classes in the archives section for the industrial tech aesthetic.
+ * ============================================================================
+ */
 // pages/engine-room/artists/crimson-node/discography/2002-crimson-node.php
 // Page data
 $pageTitle = "Crimson Node (2002) - Crimson Node";
@@ -6,6 +28,7 @@ $album_path_web = '/engine-room-records/artists/crimson-node/2002-crimson-node';
 
 ?>
 
+<!-- Main Album Container -->
 <div class="container py-5">
     
     <div class="row align-items-center mb-5">

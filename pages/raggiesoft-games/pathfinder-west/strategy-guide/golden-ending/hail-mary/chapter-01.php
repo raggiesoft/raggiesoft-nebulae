@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page contains the narrative prose and strategic guide notes for Chapter 1 of the 
+ * "Pasco Hail Mary" strategy guide for Pathfinder West. It outlines the initial decoy mechanics,
+ * dialogue choices, and inventory interactions.
+ *
+ * MAINTENANCE NOTES:
+ * - The prose is wrapped in standard HTML5 `<article>` tags for semantic structure.
+ * - The `Guide Notes` section uses Bootstrap cards and should strictly contain non-fiction gameplay mechanics to separate it from the prose.
+ * - Ensure `$cdnBaseUrl` is defined globally before this file executes, as it relies on it for image assets.
+ * - Uses `narrative-stepper.php` for chapter navigation.
+ */
 // /pages/raggiesoft-games/pathfinder-west/strategy-guide/golden-ending/hail-mary-pasco/chapter-1.php
 
 $pageTitle = "Chapter 1: The False Start | Pathfinder West";

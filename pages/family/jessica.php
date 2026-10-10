@@ -1,4 +1,14 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page serves as the lore and technical profile for "Jessica", the personified
+ * representation of the primary Production Infrastructure (Ubuntu Server/Droplet).
+ *
+ * MAINTENANCE NOTES:
+ * - Uses the `success` (green) Bootstrap color utility classes for a stable, "all systems nominal" aesthetic.
+ * - The terminal block visually mocks a Linux SSH session `uptime` and `systemctl` status check.
+ * - Make sure any edits to the mocked terminal output reflect an accurate standard Ubuntu environment for authenticity.
+ */
 // pages/family/jessica.php
 // Theme: Jessica (Stability, Green, Production)
 ?>

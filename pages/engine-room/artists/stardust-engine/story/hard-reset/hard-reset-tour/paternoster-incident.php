@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This lore page details the accessibility nightmare the band faced during the 1998 
+ * European tour, specifically the "Paternoster Incident". It heavily relies on danger/warning 
+ * alerts and high-contrast components to emphasize the hazards and stress of the tour.
+ * 
+ * Future Maintenance Notes:
+ * - The page includes specific details about "Clause 12 (Accommodation)" which ties into
+ *   the band's logistical lore. Maintain these continuity threads.
+ * - Ensure WCAG compliance claims in the header remain valid when modifying structure.
+ */
 // pages/engine-room/artists/stardust-engine/story/hard-reset-tour/paternoster-incident.php
 // Lore Entry: The reality of the 1998 European Tour.
 // Context: Prague, Ministry of Culture. The "Elevator of Death."
@@ -26,6 +37,7 @@ $pageTitle = "The Paternoster Incident - The Stardust Engine Lore";
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8">
             
+            <!-- Inline Logic: Use a card with a HAZARD badge to draw attention to the Paternoster machine description. -->
             <div class="card bg-body-tertiary border-secondary shadow-lg mb-5">
                 <div class="card-header bg-body-secondary border-bottom border-secondary text-body-emphasis fw-bold text-uppercase d-flex justify-content-between align-items-center">
                     <span><i class="ph ph-gears me-2 text-warning"></i>The Machine That Never Stops</span>

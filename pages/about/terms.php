@@ -1,3 +1,18 @@
+<?php
+/**
+ * ============================================================================
+ * MODULE: Terms of Service
+ * PATH: pages/about/terms.php
+ * PURPOSE: Standard Legal Terms page. Displays static informational content
+ *          regarding licensing (MIT for code, CC for content), e-commerce MoR
+ *          (Fourthwall), and standard disclaimers.
+ * ARCHITECTURE NOTES:
+ * - Simple static layout, structured in a Bootstrap container.
+ * - Dynamic date is pulled for "Last Updated".
+ * - Uses hardcoded links to Fourthwall store policies.
+ * ============================================================================
+ */
+?>
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -10,9 +25,11 @@
             <div class="card shadow-sm border-0 mb-4">
                 <div class="card-body p-4 p-lg-5">
                     
+                    <!-- SECTION: Acceptance of Terms -->
                     <h4 class="fw-bold mb-3">1. Acceptance of Terms</h4>
                     <p>By accessing <strong>RaggieSoft.com</strong>, you agree to these Terms of Service. If you do not agree, please disconnect from the network.</p>
 
+                    <!-- SECTION: Licensing Details (MIT & CC) -->
                     <h4 class="fw-bold mt-5 mb-3">2. Intellectual Property & Licensing</h4>
                     
                     <div class="d-flex gap-3 mb-4 p-3 rounded bg-body-tertiary border">
@@ -35,6 +52,7 @@
                         </div>
                     </div>
 
+                    <!-- SECTION: MoR / Storefront Disclaimer -->
                     <h4 class="fw-bold mt-5 mb-3">3. E-Commerce & Merchandise</h4>
                     <div class="d-flex gap-3 mb-4 p-4 rounded bg-body-tertiary border border-start border-5 border-primary">
                         <div class="fs-2 text-primary"><i class="ph ph-cart-shopping"></i></div>

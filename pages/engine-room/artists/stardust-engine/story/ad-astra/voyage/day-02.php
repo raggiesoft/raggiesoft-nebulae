@@ -1,4 +1,21 @@
 <?php
+/**
+ * STARDUST ENGINE: AD ASTRA - VOYAGE LOG (DAY 02)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page represents the second day of the "Escape Velocity" fictional space voyage.
+ * It details the crew's physical recovery after the intense "launch" sequence.
+ * 
+ * LORE:
+ * Focuses on Ryan's physical toll from the G-forces, reinforcing his reliance on the crew
+ * and the realities of his spinal cord injury even within a sci-fi narrative framework.
+ * 
+ * DESIGN:
+ * - Employs a forced dark theme wrapper (.wa-theme-dark) and starfield background.
+ * - Uses a two-column grid (Main Log vs. Sidebar) with custom <wa-card> elements.
+ * - The "VISUAL LOG" card highlights a specific narrative moment (seeing Earth).
+ */
+
 // pages/engine-room/artists/stardust-engine/story/ad-astra/voyage/day-02.php
 // Log Entry: Day 02
 // Context: Post-Launch Recovery. First view of Earth.
@@ -10,6 +27,15 @@ $pageTitle = "Day 02: Stabilization - Ad Astra Log";
 <div class="starfield-container"><div class="starfield-twinkling"></div></div>
 
 <div class="container py-5 glass-container">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      A sci-fi mission log layout.
+      1. A header row detailing day, status, and telemetry.
+      2. A 2-column layout (8/4 split).
+         - Left column: The main narrative text and the "Visual Log" card.
+         - Right column: Thematic sidebar cards ("Medical Status", "Galley Note").
+      The page concludes with the narrative-stepper for sequential log navigation.
+    -->
     
     <div class="d-flex justify-content-between align-items-center mb-5 border-bottom border-success pb-3">
         <div>

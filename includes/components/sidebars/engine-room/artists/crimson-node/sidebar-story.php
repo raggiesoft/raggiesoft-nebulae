@@ -1,7 +1,36 @@
 <?php
+/**
+ * ARCHITECTURE: Crimson Node - Story Archive Sidebar Component
+ * 
+ * DESCRIPTION:
+ * This component provides contextual navigation for the Crimson Node "Story" section 
+ * (the Archives Index) within the Engine Room. It includes links to chapters and dynamically 
+ * displays chapter sub-parts (anchors) based on the current `$request_uri`.
+ *
+ * STRUCTURE:
+ * - Quick Access / Recent Section: The top list-group containing the main "Archives Index" link 
+ *   and quick access to recent or featured chapters (e.g., Chapter 5).
+ * - Book Index Section: A comprehensive list of chapters grouped under book headings (e.g., "Book 1: The Illusion").
+ * - Dynamic Sub-navigation: PHP `if` blocks that check `$request_uri` to selectively render 
+ *   sub-parts for the active chapter.
+ *
+ * USAGE:
+ * - Included dynamically in the sidebar area of Crimson Node story pages.
+ * - Extracts `$request_uri` from `$_SERVER` (defaulting to `/`) to determine active states.
+ * - Utilizes Bootstrap 5 utility classes (`list-group`, `active`, `ps-4`).
+ *
+ * MAINTENANCE NOTES:
+ * - The logic relies on exact string matches for `$request_uri`. If URL structures change 
+ *   (e.g., removing trailing slashes or moving paths), these checks must be updated.
+ * - Sub-part links use hash anchors (`#part-1`), implying scroll-based navigation on the target page.
+ * - Note: There appears to be duplicate entries for "Chapter 5" in the Book Index Section that 
+ *   may need pruning in future updates.
+ */
+
 // includes/components/sidebars/engine-room/artists/crimson-node/sidebar-story.php
 $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 ?>
+<!-- Section: Quick Access / Featured Links -->
 <div class="list-group list-group-flush border-bottom mb-4">
     <a href="/engine-room/artists/crimson-node/story" class="list-group-item list-group-item-action <?= ($request_uri == '/engine-room/artists/crimson-node/story') ? 'active' : '' ?>">
         <i slot="start" class="ph ph-book-atlas"></i> Archives Index
@@ -30,9 +59,11 @@ $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
     <?php endif; ?>
 </div>
 
+<!-- Section: Book Index Header -->
 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1  text-uppercase">
     <span>Book 1: The Illusion</span>
 </h6>
+<!-- Section: Book Chapters Navigation -->
 <div class="list-group list-group-flush">
     <!-- Chapter 1 -->
     <a href="/engine-room/artists/crimson-node/story/book-1/chapter-01" class="list-group-item list-group-item-action fw-bold <?= ($request_uri == '/engine-room/artists/crimson-node/story/book-1/chapter-01') ? 'active' : '' ?>">

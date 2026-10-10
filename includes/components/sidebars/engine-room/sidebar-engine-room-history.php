@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: ENGINE ROOM HISTORY SIDEBAR
+ * ============================================================================
+ * 
+ * This component provides navigation for the "Historical Archives" section 
+ * of the Engine Room. It links to the full lore timeline and highlights 
+ * specific "Declassified Case Files."
+ * 
+ * MAINTENANCE NOTES:
+ * - Uses `wa-card` Web Components for layout.
+ * - Utilizes inline styles and a `.w-20px` utility class to ensure Phosphor 
+ *   Icons remain vertically aligned across list items.
+ * ============================================================================
+ */
 // includes/components/sidebars/engine-room/history/sidebar-history.php
 // The Navigation Panel for the Historical Archives
 ?>

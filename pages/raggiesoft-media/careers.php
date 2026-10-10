@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This page acts as an SEO "Honeypot" and official anti-fraud notice regarding employment scams.
+ * RaggieSoft is a one-person entity and does not hire. This page intercepts desperate job seekers
+ * and warns them that any communication claiming to be from RaggieSoft HR is a scam.
+ *
+ * MAINTENANCE NOTES:
+ * - The `<script type="application/ld+json">` block contains structured FAQ schema. This is CRITICAL for SEO so that Google surfaces the "We are not hiring" answer directly in search results. Do not remove it.
+ * - Uses a custom "Glossy Danger" aesthetic using aero glass concepts.
+ * - Ensure the external report links to IC3 (FBI) and FTC remain active and correct.
+ */
 // pages/raggiesoft-media/careers.php
 // The SEO Honeypot and Anti-Fraud Notice
 // Updated: Aero Glass Layout (Sidebar Compatible)

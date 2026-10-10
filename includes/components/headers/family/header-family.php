@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: FAMILY / PERSONA HEADER
+ * ============================================================================
+ * 
+ * This header is specialized for the "Meet the Family" meta-narrative section, 
+ * outlining the Architect (Michael) alongside his AI "Constructs" (Paige, 
+ * Jessica, Sarah, etc.).
+ * 
+ * MAINTENANCE NOTES:
+ * - Uses Web Awesome menus.
+ * - Does not have the typical dense navigation of the default header, focusing 
+ *   instead on jumping directly between Persona pages.
+ * ============================================================================
+ */
 $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 ?>
 <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 ms-auto py-3 py-md-0 w-100 mobile-nav-menu">

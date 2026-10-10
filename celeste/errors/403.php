@@ -1,4 +1,35 @@
 <?php
+/**
+ * ARCHITECTURAL DOCBLOCK
+ * 
+ * File: celeste/errors/403.php
+ * Path: /errors/403.php
+ * 
+ * CORE RESPONSIBILITY:
+ * Renders the HTTP 403 "Forbidden" error page.
+ * Acts as a dual-purpose script: it can be executed as a standalone page directly by the
+ * Nginx web server (fallback mode) OR included seamlessly by the PHP router.
+ * 
+ * LORE CONTEXT:
+ * - Theme: Knox / Industrial / Axiom
+ * - Context: "Access Denied" / Security Breach (Port Telsus Grid).
+ * 
+ * UI/UX & STYLING ARCHITECTURE:
+ * - Employs a skeuomorphic "Terminal" aesthetic using `.terminal-card` and `.terminal-header`.
+ * - Inherits the `ad-astra` theme, utilizing the `starfield-container` for the background.
+ * - Uses Phosphor Icons (`ph-shield-xmark`, `ph-fingerprint`) for error visualization.
+ * 
+ * DEPENDENCIES & INCLUSIONS:
+ * - Relies on `ROOT_PATH` definition to determine standalone vs. routed execution.
+ * - Standalone execution dynamically defines `ROOT_PATH` and includes global header/footer.
+ * 
+ * MAINTENANCE NOTES:
+ * - The logic detecting `$is_standalone` MUST remain at the top of the file. Do not
+ *   modify the path resolution `realpath(__DIR__ . '/../../')` unless the directory
+ *   structure fundamentally changes.
+ * - Maintain the `http_response_code(403)` call to ensure SEO and network layer accuracy.
+ */
+
 // public/errors/403.php
 // Theme: Knox / Industrial / Axiom
 // Context: "Access Denied" / Security Breach

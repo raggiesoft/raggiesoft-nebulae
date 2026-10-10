@@ -1,3 +1,24 @@
+<?php
+/**
+ * CASE STUDY: THE SHENANDOAH VALLEY GAUNTLET
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file presents a case study (2024-SV-01) comparing real-world travel routing 
+ * challenges to software architecture principles like Graceful Degradation and 
+ * Standby Redundancy Protocol.
+ *
+ * KEY FEATURES:
+ * - Thematic UI: Uses Bootstrap 5 cards and Phosphor icons to build a technical
+ *   incident-report aesthetic.
+ * - Narrative Structure: Translates human psychology and trauma responses into
+ *   system architecture analogies.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure Phosphor icon classes (e.g., `ph ph-route-interstate`) remain valid
+ *   if the icon library is updated.
+ * - Content updates should maintain the technical/architectural analogy tone.
+ */
+?>
 <div class="container py-5">
     <div class="border-bottom pb-2 mb-4 d-flex align-items-center">
         <i class="ph ph-route-interstate fa-3x text-primary me-3" aria-hidden="true"></i>

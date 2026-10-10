@@ -1,4 +1,29 @@
 <?php
+/**
+ * ARCHITECTURE: RaggieSoft Media Licensing Sidebar Component
+ * 
+ * DESCRIPTION:
+ * This component provides contextual navigation and contact information for the Master Licensing portal 
+ * within the RaggieSoft Media section. It includes navigation links to various IP portfolio categories 
+ * (Overview, Commercial Sync, Creative Commons, MIT Architecture) and direct email links to relevant desks.
+ *
+ * STRUCTURE:
+ * - Internal <style> block: Contains 'Frutiger Aero Glass' styling for the navigation links, including
+ *   pill-shaped buttons, hover transitions, and monospace email blocks.
+ * - IP Portfolio Section: A card containing a list of buttons (`rs-btn`) for internal portal navigation.
+ * - Direct Desks Section: A transparent card containing a list of direct email links styled as monospace blocks.
+ *
+ * USAGE:
+ * - Included dynamically in the sidebar area of licensing-related pages within the RaggieSoft Media section.
+ * - Utilizes Bootstrap 5 utility classes (e.g., `card`, `d-flex`, `text-uppercase`) and custom 
+ *   CSS variables for theming.
+ *
+ * MAINTENANCE NOTES:
+ * - When updating styles, ensure compatibility with both light and dark themes (see `[data-bs-theme="dark"]` selector).
+ * - The navigation buttons use a custom element `<button class="rs-btn">` which handles its own routing (via `href`).
+ * - Icons are sourced from Phosphor Icons (`ph-*`) and FontAwesome (`fa-*`).
+ */
+
 // includes/components/sidebars/raggiesoft-media/licensing/sidebar-licensing.php
 // Contextual navigation for the Master Licensing portal.
 // Updated: Frutiger Aero Glass Navigation
@@ -65,9 +90,12 @@
 
 <div class="card bg-hud-base border-0 shadow-sm mb-4">
     <div class="card-body p-3 p-xl-4">
+        <!-- Section Header: IP Portfolio -->
         <h5 class="pb-2 mb-3 border-bottom border-secondary-subtle text-uppercase h6 fw-bold ">
             <i slot="start" class="ph ph-folder-tree"></i> IP Portfolio
         </h5>
+        
+        <!-- Navigation Links Container -->
         <div class="d-flex flex-column gap-1">
             
                 <button class="rs-btn" appearance="plain" href="/raggiesoft-media/licensing" class="text-body w-100 text-start justify-content-start" style="text-align: left;">
@@ -95,6 +123,7 @@
 
 <div class="card border-0 bg-transparent">
     <div class="card-body p-0 p-xl-2">
+        <!-- Section Header: Direct Desks Contacts -->
         <h6 class="text-uppercase fw-bold text-body-secondary mb-3 small border-bottom border-secondary-subtle pb-2">
             <i slot="start" class="ph ph-envelope"></i> Direct Desks
         </h6>

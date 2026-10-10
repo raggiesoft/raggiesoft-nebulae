@@ -1,4 +1,25 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE NOISE FLOOR
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view renders Chapter 1 of Book 1 ("Analog Heart") in the Stardust Engine
+ * narrative universe. It contains inline CSS for custom thematic elements
+ * specific to Ryan's sensory processing narrative.
+ *
+ * MAINTENANCE NOTES:
+ * - Local `<style>` block defines `.sensory-hz`, `.sensory-safe`, and `.timestamp`
+ *   classes. Consider moving these to a global story stylesheet if used in other
+ *   chapters.
+ * - Theme utilizes dark mode overrides within the local style block
+ *   (`[data-bs-theme="dark"] .narrative-card`).
+ * - The `$nav` array structure is passed to `narrative-stepper.php` to generate
+ *   previous/next chapter navigation. Ensure URLs remain accurate if routing changes.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/analog-heart/the-noise-floor.php
 // Book 1: Analog Heart | Chapter 1: The Noise Floor
 // Context: 1978. Ryan's sensory processing and the formation of the "System".

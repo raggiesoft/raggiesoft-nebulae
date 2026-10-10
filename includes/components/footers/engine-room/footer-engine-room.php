@@ -1,8 +1,30 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: footer-engine-room.php
+ * ============================================================================
+ * Purpose: The primary consumer-facing footer for the Engine Room Records 
+ *          sub-brand under RaggieSoft. It contains branding, catalog links, 
+ *          business contacts, and legal notices.
+ * 
+ * Future Maintenance Notes:
+ * - This file relies on the `$cdnBaseUrl` global variable to resolve image assets.
+ *   Ensure this is defined in the parent environment before including this file.
+ * - The `$hq_location` variable is dynamically rendered if provided, defaulting 
+ *   to 'Location Classified' as a thematic fallback.
+ * - Utility styles are appended at the bottom; if a global stylesheet is adopted 
+ *   for Engine Room, move these `.hover-text-*` classes there.
+ * ============================================================================
+ */
+?>
+<!-- Main Footer Section: Uses Bootstrap grid for a 4-column layout -->
 <footer class="mt-auto border-top border-secondary py-5">
     <div class="container">
         <div class="row gy-4">
             
+            <!-- Column 1: Branding and Logo -->
             <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <!-- Ensure $cdnBaseUrl is available in the inclusion scope -->
                 <img src="<?php echo $cdnBaseUrl; ?>/engine-room-records/images/logos/engine-room-records-logo.png" 
                      alt="Engine Room Records" 
                      width="120" 
@@ -16,6 +38,7 @@
                 </p>
             </div>
 
+            <!-- Column 2: Business & Licensing Links -->
             <div class="col-lg-3 col-md-6">
                 <h6 class="text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-3">Business & Licensing</h6>
                 <ul class="list-unstyled small mb-0">
@@ -42,6 +65,7 @@
                 </ul>
             </div>
 
+            <!-- Column 3: Catalog Links -->
             <div class="col-lg-3 col-md-6">
                 <h6 class="text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-3">The Catalog</h6>
                 <ul class="list-unstyled small mb-0">
@@ -63,10 +87,11 @@
                 </ul>
             </div>
 
+            <!-- Column 4: Contact Information and Policies -->
             <div class="col-lg-3 col-md-6 text-center text-md-start">
                 <h6 class="text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-3">Location & Contact</h6>
                 
-                <!-- Dynamic Location Rendered Here -->
+                <!-- Dynamic Location Rendered Here: Relies on $hq_location being set in the environment -->
                 <p class="small text-body-secondary mb-2" style="font-family: var(--bs-font-monospace);">
                     <i class="ph ph-location-dot me-2"></i>HQ: <?php echo htmlspecialchars($hq_location ?? 'Location Classified'); ?>
                 </p>
@@ -75,6 +100,7 @@
                     <i class="ph ph-envelope me-2"></i><a href="mailto:inquiries@engineroom-records.com" class="text-decoration-none text-body-secondary hover-text-primary">inquiries@engineroom-records.com</a>
                 </p>
                 
+                <!-- Explicit warning regarding unsolicited materials -->
                 <div class="alert alert-danger p-2 small border-danger shadow-sm text-start mb-0" role="alert">
                     <strong class="d-block mb-1"><i class="ph ph-shield-xmark me-1"></i> No Submissions</strong>
                     Unsolicited material is deleted automatically by our servers.
@@ -85,6 +111,7 @@
     </div>
 </footer>
 
+<!-- Inline Styles: Consider moving to external CSS for better caching and CSP compliance -->
 <style>
     /* Utility classes for smooth hover states in the footer */
     .hover-text-primary:hover { color: var(--bs-primary) !important; }

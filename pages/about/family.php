@@ -1,4 +1,23 @@
 <?php
+/**
+ * RAGGIESOFT FAMILY LORE PAGE
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This page documents the origin story and personification of the DevOps environment
+ * known as "The Sisters." It presents the creative narrative of the system.
+ *
+ * KEY FEATURES:
+ * - Image Integration: Pulls contextual images (e.g., simulation scenes) from the CDN.
+ * - Thematic Styling: Uses clean, human-centric, blue-themed UI components to 
+ *   contrast with the more technical aspects of the site.
+ * - Responsive Layout: Employs Bootstrap grids for presenting the narrative text
+ *   and supporting visuals.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure image paths using `$cdnBaseUrl` remain valid if CDN structure changes.
+ * - Narrative text changes should preserve the HTML structure to maintain styling.
+ */
+
 // pages/about/family.php
 // Theme: RaggieSoft (Clean, Human, Blue)
 // Context: The origin story of the "Sisters" system.

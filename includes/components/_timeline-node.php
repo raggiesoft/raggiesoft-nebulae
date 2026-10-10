@@ -1,16 +1,30 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Dynamically renders an individual milestone node in vertical timeline layouts.
+ * Architecture: Extracts `$props` to build a responsive Bootstrap card. Implements strict
+ * WCAG AA contrast compliance logic to automatically adjust button classes (`btn-outline-*` vs `btn-*`) 
+ * based on the requested theme color, preventing inaccessible contrast ratios in light/dark mode.
+ * Future Maintainers: If adding new narrative contexts, do not manually hardcode CSS colors.
+ * Always rely on Bootstrap's contextual classes (e.g. `primary`, `warning`) so the contrast logic 
+ * functions correctly across the entire application.
+ */
 // includes/components/_timeline-node.php
+// Reusable node component for chronological lore layouts, enforcing strict WCAG contrast thresholds.
 // Dynamically builds timeline cards while ensuring strict WCAG AA contrast compliance.
 
 $color = $props['color'] ?? 'secondary';
 $reverseClass = !empty($props['reverse']) ? 'flex-lg-row-reverse' : '';
 
 // 1. Define Card Background
+// Extract background classes dynamically to ensure theme toggling (Light/Dark mode) doesn't break visibility.
 // We rely on native Bootstrap contextual classes to handle light/dark mode rather than brute-forcing colors.
 $cardBgClass = 'bg-body-tertiary';
 $contentClass = 'text-body-secondary';
 
 // 2. WCAG Button Contrast Logic
+// Programmatically shift button borders to solid fills if the selected contextual color fails AA checks.
 // Automatically shifts button styles to pass AA contrast ratios (4.5:1) based on the card background.
 $btnClass = 'btn-outline-' . $color;
 
@@ -22,6 +36,7 @@ if ($color === 'warning' || $color === 'info') {
 ?>
 
 <div class="timeline-node mb-5 position-relative">
+    <!-- The Timeline Dot: Absolute positioning aligns it to the central vertical axis of the parent layout -->
     <!-- The Timeline Dot -->
     <div class="node-marker position-absolute bg-<?php echo $color; ?> rounded-circle border border-dark border-3" style="width: 20px; height: 20px; left: -36px; top: 0;" aria-hidden="true"></div>
     

@@ -1,5 +1,24 @@
 <?php
-// pages/engine-room/corporate/aethelgard.php
+/**
+ * ============================================================================
+ * Aethelgard Division View
+ * ============================================================================
+ * Path: pages/engine-room/corporate/aethelgard.php
+ * 
+ * Description:
+ * Detailed informational page for the "Aethelgard" division/asset. It outlines
+ * the historical context, current operational directives, primary personnel,
+ * and strategic importance within the broader corporate ecosystem.
+ * 
+ * Architecture & Maintenance Notes:
+ * - Standardized layout using Bootstrap 5 container, row, and column structures.
+ * - Custom styling applied via .aethel-header for immediate visual identity.
+ * - Data is segmented into distinct cards or panels to maintain readability.
+ * 
+ * @package Raggiesoft\Nebulae\Corporate
+ * @since 1.0.0
+ * ============================================================================
+ */
 // Entity Profile: Aethelgard Holdings
 // Function: The "Catch and Release" Liquidation Firm.
 // Context: "We strip the furniture to liberate the art."
@@ -58,6 +77,13 @@ $pageTitle = "Aethelgard Holdings - Strategic Liquidation";
     }
 </style>
 
+<!--
+    ========================================================================
+    Aethelgard Identity Header
+    Establishes the visual identity of the division, featuring primary
+    titles and potentially thematic background elements. Centered text.
+    ========================================================================
+-->
 <div class="aethel-header text-center">
     <div class="container">
         <div class="mb-3">
@@ -91,7 +117,14 @@ $pageTitle = "Aethelgard Holdings - Strategic Liquidation";
         </div>
     </div>
 
-    <div class="row g-4 mb-5">
+    <!--
+    ========================================================================
+    Primary Information Layout Row
+    Organizes the core details of Aethelgard (History, Mandate, Assets)
+    into a responsive grid with consistent spacing.
+    ========================================================================
+-->
+<div class="row g-4 mb-5">
         
         <div class="col-md-6">
             <div class="card h-100 bg-dark border-secondary shadow-lg">

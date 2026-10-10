@@ -1,7 +1,24 @@
 <?php
 /**
- * RaggieSoft Books - Markdown Viewer
- * Renders the dynamically mapped Markdown files from the RaggieSoft Assets CDN.
+ * RAGGIESOFT BOOKS: MARKDOWN VIEWER
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file serves as the dynamic rendering engine for Markdown-based book content.
+ * It maps incoming route requests to physical Markdown files stored on the CDN,
+ * fetching and rendering them dynamically.
+ *
+ * KEY FEATURES:
+ * - Dynamic Routing: Uses Stardust Route JSON definitions (`/data/routes/...`) to
+ *   map slugs to physical files.
+ * - CDN Integration: Fetches the raw `.md` file content directly from `$cdnBaseUrl`.
+ * - Fallback Logic: Implements a 404 handler (`include 'pages/error/404.php'`) if 
+ *   the route mapping or CDN file doesn't exist.
+ *
+ * MAINTENANCE NOTES:
+ * - The `$prefix` string must accurately reflect the base URL path to function.
+ * - Ensure the `parsedown` or equivalent markdown renderer library is included
+ *   in the global context before rendering the fetched content.
+ * - Caching may be required if CDN latency becomes an issue.
  */
 
 // 1. Determine the path to the Markdown file on the CDN

@@ -1,7 +1,20 @@
 <?php
+/**
+ * ARCHITECTURE BLOCK COMMENT
+ * 
+ * Purpose: Narrative Table of Contents (TOC) sidebar specifically built for "Crimson Node: Book 1".
+ * Architecture: Employs strict URI matching to expand chapter parts only when the user is actively 
+ * reading that specific chapter. Unfocused chapters collapse to maintain a clean reading interface.
+ * Uses standard Bootstrap `.list-group` formatting.
+ * Future Maintainers: Ensure that internal page anchors (e.g. `#part-1`) match the actual IDs in 
+ * the markdown/content files. If moving to dynamic CMS generation, this file serves as the strict 
+ * HTML structure template.
+ */
 // includes/components/sidebars/engine-room/artists/crimson-node/sidebar-story.php
+// Capture current URI to determine which chapter to expand and highlight
 $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 ?>
+<!-- Archive Index Link: Always visible return path to the Crimson Node root -->
 <div class="list-group list-group-flush border-bottom mb-4">
     <a href="/raggiesoft-books/books/crimson-node" class="list-group-item list-group-item-action <?= ($request_uri == '/raggiesoft-books/books/crimson-node') ? 'active' : '' ?>">
         <i slot="start" class="ph ph-book-atlas"></i> Archives Index
@@ -12,10 +25,12 @@ $request_uri = $_SERVER['REQUEST_URI'] ?? '/';
     <span>Book 1: The Illusion</span>
 </h6>
 <div class="list-group list-group-flush">
+    <!-- Chapter 1: Standard Chapter Block -> Highlights if active, expands parts if active -->
     <!-- Chapter 1 -->
     <a href="/raggiesoft-books/books/crimson-node/book-01/chapter-01" class="list-group-item list-group-item-action fw-bold <?= ($request_uri == '/raggiesoft-books/books/crimson-node/book-01/chapter-01') ? 'active' : '' ?>">
         Chapter 1: The Approach
     </a>
+    <!-- Only render the nested sub-parts if the user is currently reading this chapter -->
     <?php if ($request_uri == '/raggiesoft-books/books/crimson-node/book-01/chapter-01'): ?>
         <a href="#part-1" class="list-group-item list-group-item-action ps-4 py-2 border-0 " style="font-size: 0.9em; background-color: rgba(0,0,0,0.02);">
             <i slot="start" class="ph ph-angle-right"></i> Part 1: Anomalies

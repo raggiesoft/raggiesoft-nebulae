@@ -1,4 +1,37 @@
 <?php
+/**
+ * ARCHITECTURE: StoreTrainer Legacy Project Overview
+ * 
+ * DESCRIPTION:
+ * This page serves as the historical archive and technical breakdown for "StoreTrainer," 
+ * a legacy Windows utility built in Visual Basic 6.0. It documents the architecture, 
+ * bare-metal Win32 API interactions, and complex deployment strategies used to maintain 
+ * compatibility from Windows 95 through Windows 11.
+ *
+ * STRUCTURE:
+ * - Internal <style> block: Defines custom CSS for the legacy hero section (`.legacy-hero`) 
+ *   using an amber/warning color palette to evoke an older, terminal-like aesthetic. Includes 
+ *   code block styling for VB6 snippets.
+ * - Legacy Hero Banner: A highly stylized, animated background (`aero-pan`) communicating 
+ *   the legacy nature of the software.
+ * - Main Content Grid (`.row.g-5`):
+ *   - Main Column (`.col-lg-8`): Details the architecture, showcasing a specific VB6 code 
+ *     snippet for WOW64 dynamic API detection, and explains the NSIS installer dependencies 
+ *     via a responsive data table.
+ *   - Sidebar Column (`.col-lg-4`): A "Tech Specs" summary card and the primary download CTA 
+ *     linking to the external distribution site.
+ *
+ * USAGE:
+ * - Rendered when navigating to `/raggiesoft-media/projects/storetrainer`.
+ * - Relies on global Bootstrap 5 grid utilities and custom variables (`--raggie-glass-border`).
+ *
+ * MAINTENANCE NOTES:
+ * - The hero background image uses `$cdnBaseUrl`. Ensure this variable is defined and accessible 
+ *   in the global scope before this template is rendered.
+ * - The amber warning theme (`text-warning`, `border-warning`) is intentional to distinguish 
+ *   this legacy project from modern infrastructure (which usually uses blue/info palettes).
+ */
+
 // pages/raggiesoft-media/projects/storetrainer.php
 // The StoreTrainer Legacy Archive
 // Theme: Amber/Warning (Legacy Open Source)
@@ -55,9 +88,11 @@ $pageTitle = "StoreTrainer Archive | RaggieSoft Media";
     }
 </style>
 
+<!-- Section: Legacy Hero Banner -->
 <div class="legacy-hero py-5 mb-5 text-light">
     <div class="container py-4">
         <div class="row align-items-center">
+            <!-- Hero Content -->
             <div class="col-md-8">
                 <span class="badge border border-warning rounded-pill font-monospace text-uppercase shadow-sm py-2 px-3 text-warning fw-bold mb-3" style="background: rgba(255, 179, 0, 0.1);">
                     <i class="ph ph-box-archive me-1" aria-hidden="true"></i> Verified Legacy Software
@@ -69,6 +104,7 @@ $pageTitle = "StoreTrainer Archive | RaggieSoft Media";
                     A definitive archive of bare-metal Windows API engineering. Designed to store the locations of PC games and trainers in a unified, highly resilient interface.
                 </p>
             </div>
+            <!-- Hero Decorative Icon (Desktop only) -->
             <div class="col-md-4 text-end d-none d-md-block">
                 <i class="ph ph-floppy-disk fa-6x text-warning opacity-50" aria-hidden="true" style="filter: drop-shadow(0 0 15px rgba(255,179,0,0.5));"></i>
             </div>
@@ -76,10 +112,12 @@ $pageTitle = "StoreTrainer Archive | RaggieSoft Media";
     </div>
 </div>
 
+<!-- Section: Main Content -->
 <div class="container pb-5">
 
     <div class="row g-5">
         
+        <!-- Main Column: Technical Documentation -->
         <div class="col-lg-8">
             <h2 class="h4 fw-bold text-uppercase text-warning mb-4 border-bottom border-warning pb-2">The Architecture</h2>
             
@@ -87,6 +125,7 @@ $pageTitle = "StoreTrainer Archive | RaggieSoft Media";
                 Maintained natively within a dedicated Windows 2000 Professional SP4 (Update Rollup 1) virtual machine, StoreTrainer is compiled in Visual Basic 6.0 Professional. The project is an exercise in extreme backward and forward compatibility, bridging the gap between the Windows 9x kernel architecture and the modern 64-bit Windows ecosystem.
             </p>
 
+            <!-- Code Snippet Card: Bare-Metal Win32 API -->
             <div class="legacy-card p-4 mb-5">
                 <h3 class="h5 fw-bold text-body-emphasis mb-3"><i class="ph ph-microchip text-warning me-2" aria-hidden="true"></i>Bare-Metal Defense</h3>
                 <p class="small text-body-secondary mb-3">
@@ -101,6 +140,7 @@ If handle <> 0 Then
 End If</code></pre>
             </div>
 
+            <!-- Deployment Overview & Dependencies Table -->
             <h2 class="h4 fw-bold text-uppercase text-warning mb-4 border-bottom border-warning pb-2">Deployment & Preservation</h2>
             
             <p class="mb-3">
@@ -146,8 +186,10 @@ End If</code></pre>
 
         </div>
 
+        <!-- Sidebar Column: Specs & Download -->
         <div class="col-lg-4">
             
+            <!-- Tech Specs Summary Card -->
             <div class="card bg-body-tertiary border-secondary-subtle shadow-sm mb-4">
                 <div class="card-body p-4">
                     <h3 class="h6 fw-bold text-uppercase mb-3 text-secondary">Tech Specs</h3>
@@ -173,6 +215,7 @@ End If</code></pre>
                 </div>
             </div>
 
+            <!-- Action Area: External Download -->
             <div class="d-grid gap-3">
                 <a href="https://raggiesoft.com/products/storetrainer/" target="_blank" rel="noopener noreferrer" class="btn btn-warning py-3 fw-bold text-uppercase shadow-sm text-dark">
                     <i class="ph ph-download me-2" aria-hidden="true"></i> Download Archive

@@ -1,4 +1,16 @@
 <?php
+/**
+ * ARCHITECTURE & PURPOSE:
+ * This component provides a sterile, administrative navigation header designed 
+ * specifically for DSP (Digital Service Provider) verifiers.
+ * It purposely omits standard lore, discography, or fan-facing links to maintain 
+ * a professional, strictly-business B2B context.
+ *
+ * MAINTENANCE NOTES:
+ * - The header currently hardcodes "active" styling (fw-bold text-info) for the Master Directory.
+ * - The contact link directs straight to the DSP operations email alias.
+ * - Ensure the DSP verification route (/engine-room/dsp-verification) matches the application's router.
+ */
 // includes/components/headers/engine-room/header-dsp.php
 // Sterile, administrative header for DSP verifiers. No lore links.
 ?>

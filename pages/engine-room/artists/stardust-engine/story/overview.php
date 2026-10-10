@@ -1,4 +1,15 @@
 <?php
+/**
+ * ARCHITECTURAL OVERVIEW:
+ * This is the root Lore/Story hub for The Stardust Engine. It aggregates all narrative 
+ * branches (Ad Astra, Crash of '90, Friction, The Refusal, CPI, and Knox) into a 
+ * responsive grid layout using Web Awesome cards (`<wa-card>`).
+ * 
+ * Future Maintenance Notes:
+ * - The grid uses a custom inline style override (`wa-card.hover-card::part(base)`) at 
+ *   the bottom of the file to force equal heights across cards.
+ * - Ad Astra is treated as the 'Featured' component, spanning full width.
+ */
 // Page data
 $pageTitle = "The Lore - The Stardust Engine";
 ?>
@@ -52,6 +63,7 @@ $pageTitle = "The Lore - The Stardust Engine";
         </div>
     </div>
 
+    <!-- Inline Logic: This grid dynamically resizes (1 col on mobile, 2 on tablet, 3 on desktop). -->
     <!-- THE ARCHIVE GRID -->
     <div class="row g-4">
         

@@ -1,4 +1,23 @@
 <?php
+/**
+ * STARDUST ENGINE: THE NINE FIGURE REFUSAL (06 - FORENSIC AUDIT)
+ * ---------------------------------------------------------
+ * ARCHITECTURAL CONTEXT:
+ * This page acts as Evidence Item #00-B in the "Nine Figure Refusal" arc.
+ * It details Holly's discovery of Omni-Global's fraudulent accounting.
+ * 
+ * LORE:
+ * Reveals how Omni-Global hid $400M in debt using shell companies. It showcases
+ * Holly's strategic brilliance in filing the "Triple Tap" of federal complaints
+ * (SEC, IRS, USPIS) to trigger the collapse of the hostile acquirer.
+ * 
+ * DESIGN:
+ * - Uses a custom .sticky-note class for Holly's informal memo to Ryan.
+ * - Employs a stylized HTML table to contrast the "Claimed" vs. "Truth" financials.
+ * - Reuses the skeuomorphic .federal-form CSS patterns from the Epilogue to maintain 
+ *   visual continuity of the official government documents.
+ */
+
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/forensic-audit.php
 // EVIDENCE ITEM #00-B: Holly's "Homework" & The Federal "Triple Tap"
 // Context: The moment Holly realized she could drop a nuclear bomb on Omni-Global.
@@ -41,6 +60,14 @@ $pageTitle = "Forensic Audit: Omni-Global Media - Engine Room History";
 </style>
 
 <div class="container py-5">
+    <!-- 
+      LAYOUT ARCHITECTURE:
+      Structured as a financial dossier. 
+      1. A top-right positioned CSS sticky note containing Holly's executive summary.
+      2. The "Consolidated Balance Sheet" presented as a comparative data table.
+      3. The "Triple Tap" grid containing the three skeuomorphic federal forms.
+      The page concludes with the narrative-stepper for pacing.
+    -->
     
     <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center">

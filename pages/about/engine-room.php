@@ -1,4 +1,16 @@
 <?php
+/**
+ * ============================================================================
+ * MODULE: Engine Room Records - About
+ * PATH: pages/about/engine-room.php
+ * PURPOSE: Publisher overview. Demonstrates a dark/industrial theme using
+ *          custom CSS inversion and Bootstrap utilities. Includes a reality check
+ *          disclaimer.
+ * ARCHITECTURE NOTES:
+ * - Uses inline CSS for logo inversion (`.logo-invert`).
+ * - Employs monospace typography and high-contrast (red/black) layout.
+ * ============================================================================
+ */
 // pages/about/engine-room.php
 // Theme: Industrial (Dark, Gritty, Red Accents)
 // Layout: Sidebar-Compatible (Contained Header)
@@ -37,7 +49,7 @@ $pageTitle = "About Engine Room Records";
 <div class="row justify-content-center">
     <div class="col-lg-11">
         
-        <!-- Corporate History Narrative -->
+        <!-- SECTION: Corporate History Narrative -->
         <div class="mb-5">
             <h2 class="h3 fw-bold text-danger mb-4 border-bottom border-secondary pb-2 font-monospace">
                 <i class="ph ph-industry me-2" aria-hidden="true"></i>Corporate History
@@ -50,7 +62,7 @@ $pageTitle = "About Engine Room Records";
             </p>
         </div>
 
-        <!-- Philosophy and Roster Cards -->
+        <!-- SECTION: Philosophy and Roster Cards -->
         <div class="row g-4 mb-5">
             <div class="col-md-6">
                 <div class="card h-100 bg-dark text-white border-danger shadow-sm">

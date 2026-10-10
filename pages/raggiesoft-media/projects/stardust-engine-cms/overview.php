@@ -1,4 +1,17 @@
 <?php
+/**
+ * ARCHITECTURE: Stardust Engine CMS Overview
+ * 
+ * The promotional and documentation hub for the open-source Stardust Engine CMS.
+ * It explains the architecture (PHP, Elara SPA, Bash DevOps) and value propositions.
+ * 
+ * COMPONENTS:
+ * 1. Inline CSS Tuning: Contains specific overrides for hover effects and Aero glass styling.
+ * 2. Hero Section: Highlights the MIT License and links to the GitHub repository.
+ * 3. Architecture Breakdown Grid: Details the PHP Engine, Elara SPA router, and DevOps scripts.
+ * 4. Value Proposition Grid: Explains edge-cache synergy, WCAG focus, and anti-scraper tech.
+ */
+
 // pages/raggiesoft-media/projects/stardust-engine-cms/overview.php
 // The Promotional / Documentation Hub for the open-source CMS
 // Updated: Frutiger Aero / Dark Aero Glass Architecture (Sidebar Compatible)
@@ -6,6 +19,8 @@
 $pageTitle = "The Stardust Engine CMS | Open Source";
 ?>
 
+<!-- INLINE COMPONENT STYLING -->
+<!-- Scoped CSS for tactile hover effects and glassmorphism. -->
 <style>
     /* WCAG Focus */
     a:focus-visible, button:focus-visible {
@@ -65,6 +80,8 @@ $pageTitle = "The Stardust Engine CMS | Open Source";
 
 <div class="container-fluid pb-5 pt-2">
 
+    <!-- HERO SECTION -->
+    <!-- Promotional header with repository links and license badges. -->
     <div class="row mb-5">
         <div class="col-12">
             <div class="card bg-hud-blue border-0 shadow-sm p-4 p-md-5 overflow-hidden position-relative">
@@ -90,6 +107,8 @@ $pageTitle = "The Stardust Engine CMS | Open Source";
         </div>
     </div>
 
+    <!-- ARCHITECTURE BREAKDOWN -->
+    <!-- Explains the triad of PHP backend, JS frontend, and Bash deployment. -->
     <h2 class="h5 text-uppercase fw-bold border-bottom border-secondary-subtle pb-2 mb-4 text-secondary">Architecture Breakdown</h2>
 
     <div class="row g-4 mb-5">
@@ -126,6 +145,8 @@ $pageTitle = "The Stardust Engine CMS | Open Source";
 
     </div>
 
+    <!-- VALUE PROPOSITION GRID -->
+    <!-- Highlights key features like Edge Caching, WCAG compliance, and persistent audio. -->
     <div class="card bg-hud-base border-0 shadow-sm mb-5 p-4 p-md-5" style="border-left: 4px solid var(--bs-primary) !important;">
         <h2 class="h4 fw-bold text-primary mb-4 text-uppercase border-bottom border-secondary-subtle pb-3">
             <i class="ph ph-microchip me-2" aria-hidden="true"></i>Why Build The Stardust Engine?

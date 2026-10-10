@@ -1,4 +1,23 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - LORE STORY: THE BUS MEMO
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This view renders an in-universe email memo ("Evidence Item #44-B"). It relies
+ * heavily on custom inline CSS to simulate hand-drawn annotations (circles,
+ * underlines, and arrows) and a skeuomorphic sticky note.
+ *
+ * MAINTENANCE NOTES:
+ * - Complex CSS pseudo-elements (`::after`) are used for the red pen effects.
+ * - Explicit dark mode overrides exist in the `<style>` block to ensure the red
+ *   annotations (`#ff6b6b`) remain visible and accessible.
+ * - The `annotation-arrow` uses inline SVG and requires `overflow: visible`.
+ * - Contains the `narrative-stepper.php` component for flow control.
+ *
+ * ============================================================================
+ */
 // pages/engine-room/artists/stardust-engine/story/nine-figure-refusal/the-bus-memo.php
 // EVIDENCE ITEM #44-B: The Document That Killed a Corporation
 // UPDATED: Dark Mode "Red Pen" visibility improvements.

@@ -1,4 +1,25 @@
 <?php
+/**
+ * JESSICA MILLER CENTER: OVERVIEW (HOME)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This is the homepage for "The Jessica Miller Center," functioning as a showcase 
+ * for Universal Design and Workplace Equity. It is explicitly designed to meet 
+ * strict accessibility standards (WCAG AAA).
+ *
+ * KEY FEATURES:
+ * - Strict Accessibility: Employs Adaptive Bootstrap 5.3 to ensure high contrast,
+ *   keyboard navigability, and screen reader compatibility.
+ * - Thematic Branding: Uses functional CSS overrides (`.icon-box`, `.signature-text`)
+ *   to establish the Center's distinct identity without compromising WCAG limits.
+ *
+ * MAINTENANCE NOTES:
+ * - DO NOT introduce low-contrast colors or non-semantic HTML structures here.
+ *   Any modifications must strictly adhere to WCAG AAA guidelines.
+ * - The `Mrs Saint Delafield` signature font must load reliably; ensure a suitable
+ *   cursive fallback is present for accessibility purposes.
+ */
+
 // pages/engine-room/jessica-miller-center/overview.php
 // The Homepage for The Jessica Miller Center
 // Context: Universal Design Showcase.

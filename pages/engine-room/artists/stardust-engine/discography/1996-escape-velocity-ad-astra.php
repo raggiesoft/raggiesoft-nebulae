@@ -1,4 +1,26 @@
 <?php
+/**
+ * ============================================================================
+ * ENGINE ROOM RECORDS - 1996 AD ASTRA EP DISCOGRAPHY VIEW
+ * ============================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This file renders the 1996 "Escape Velocity (Ad Astra)" single page. It explicitly
+ * includes external components (`_album-art-header.php` and `_tracklist-downloader.php`)
+ * to assemble the final view.
+ *
+ * MAINTENANCE NOTES:
+ * - Includes require ROOT_PATH to be defined by the parent router. Do not remove this
+ *   dependency unless the routing structure changes.
+ * - The $props array is heavily utilized before including `_album-art-header.php` to configure
+ *   the component (variant => 'success').
+ * - Note the use of custom Web Components like `<wa-card>` and custom HTML elements like
+ *   `<rs-badge>` and `<button class="rs-btn">`. Ensure the `raggiesoft-assets` library
+ *   continues to define these elements.
+ * - Lore integration is central here: it links to the "Maiden Voyage" story hub.
+ *
+ * ============================================================================
+ */
 // Page data
 $pageTitle = "Escape Velocity (Ad Astra) EP (1996) - The Stardust Engine";
 $album_path_web = '/engine-room-records/artists/the-stardust-engine/1996-ad-astra-single';

@@ -1,4 +1,24 @@
 <?php
+/**
+ * RAGGIESOFT BOOKS: SARAH (OVERVIEW)
+ * 
+ * ARCHITECTURAL CONTEXT:
+ * This file functions as the primary landing page and Table of Contents for the
+ * "Sarah" story arc (Fall 2007 timeline) within the RaggieSoft Books universe.
+ *
+ * KEY FEATURES:
+ * - Thematic Typography: Utilizes 'Impact' sans-serif and `font-monospace` to create
+ *   a distinct, bold visual identity for this specific story arc.
+ * - Centralized Structure: Employs a centered Bootstrap grid (`col-lg-8 text-center`)
+ *   to focus the user's attention on the primary narrative hook.
+ * - Badging: Uses custom `ph` (Phosphor) icons and pill badges for story metadata.
+ *
+ * MAINTENANCE NOTES:
+ * - Ensure Phosphor icon classes (e.g., `ph-book-open-cover`) are globally available.
+ * - If the book expands into multiple sub-arcs, consider breaking the table of
+ *   contents into a partial or fetching it dynamically from a JSON route map.
+ */
+
 // pages/raggiesoft-books/sarah/overview.php
 // The Index Page for the "Sarah" Book/Arc.
 // Acts as the landing page/table of contents for the Fall 2007 timeline.

@@ -1,4 +1,19 @@
 <?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: MAIN ROOT DOMAIN HEADER
+ * ============================================================================
+ * 
+ * This file serves as the primary, global navigation header for the root 
+ * RaggieSoft domain. It aggregates all major subsections (The Architect, 
+ * Creative Works, RaggieSoft Media) into top-level dropdown menus.
+ * 
+ * MAINTENANCE NOTES:
+ * - Calculates active states across 5 major routing zones.
+ * - Relies heavily on Web Awesome components (`wa-dropdown`) to maintain 
+ *   consistency without requiring complex Bootstrap JS initialization.
+ * ============================================================================
+ */
 // includes/components/headers/header-default.php
 // UPDATED: Main RaggieSoft Network Header (Web Awesome Edition)
 // Serves as the global navigation for the root domain

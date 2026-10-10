@@ -1,3 +1,20 @@
+<?php
+/**
+ * ============================================================================
+ * ARCHITECTURAL OVERVIEW: STARDUST ENGINE - BAND SIDEBAR
+ * ============================================================================
+ * 
+ * This file serves as the main directory sidebar for the fictional band 
+ * "The Stardust Engine." It provides quick links to individual character 
+ * biographies and a timeline of major narrative events.
+ * 
+ * MAINTENANCE NOTES:
+ * - Uses custom `rs-btn` components (simulating Web Components styling) for 
+ *   navigation rather than standard anchor tags.
+ * - Ensure icon alignment (using Phosphor icons) when adding new band members.
+ * ============================================================================
+ */
+?>
 <h5 class="pt-3 pb-2 mb-3 border-bottom">
     <i slot="start" class="ph ph-users"></i> The Band
 </h5>
