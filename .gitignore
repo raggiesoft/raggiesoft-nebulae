@@ -102,3 +102,12 @@ _workspace/books/*/images/people/real-person/
 
 # Ignore the brother's secrets
 orion.php
+# --- Google Analytics 4 API Credentials ---
+ga4-credentials.json
+*_credentials*.json
+*service-account*.json
+
+# --- Python Virtual Environment ---
+.venv/
+__pycache__/
+
