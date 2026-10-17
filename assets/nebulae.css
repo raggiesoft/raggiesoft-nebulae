@@ -1,0 +1,244 @@
+/**
+ * @license MIT
+ * ============================================================================
+ * assets/nebulae.css — The RaggieSoft Nebulae (nebulae.raggiesoft.com)
+ * ============================================================================
+ * Implements the "Star-Chart Parchment (Light Mode) vs. Deep-Space Nebulae
+ * Observatory (Dark Mode)" design system with strict WCAG 2.1 AA contrast and
+ * prefers-reduced-motion compliance.
+ * ============================================================================
+ */
+:root {
+  color-scheme: light dark;
+  --neb-bg: #f4f6fb;
+  --neb-surface: rgba(255, 255, 255, 0.94);
+  --neb-elevated: #e6ecf8;
+  --neb-text: #0b132b;
+  --neb-muted: #334155;
+  --neb-border: #94a3b8;
+  --neb-accent: #1d4ed8;
+  --neb-gold: #9a5b00;
+  --neb-badge-bg: #dbeafe;
+  --neb-badge-text: #1e3a8a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neb-bg: #050814;
+    --neb-surface: rgba(15, 23, 42, 0.92);
+    --neb-elevated: #111c38;
+    --neb-text: #f8fafc;
+    --neb-muted: #cbd5e1;
+    --neb-border: #334155;
+    --neb-accent: #38bdf8;
+    --neb-gold: #fbbf24;
+    --neb-badge-bg: #1e293b;
+    --neb-badge-text: #7dd3fc;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--neb-bg);
+  color: var(--neb-text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+.nebulae-sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(56, 189, 248, 0.12), transparent 42%),
+    radial-gradient(circle at 82% 28%, rgba(168, 85, 247, 0.12), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(251, 191, 36, 0.08), transparent 50%);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.6rem 1.1rem;
+  background: var(--neb-accent);
+  color: var(--neb-bg);
+  font-weight: 800;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--neb-accent);
+  outline-offset: 2px;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--neb-surface);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--neb-border);
+  padding: 0.85rem 0;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--neb-text);
+  text-decoration: none;
+}
+
+.control-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neb-border);
+  background-color: var(--neb-elevated);
+  color: var(--neb-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn[aria-pressed="true"],
+.btn-active {
+  background-color: var(--neb-accent);
+  color: var(--neb-bg);
+  border-color: transparent;
+}
+
+.hero-panel {
+  background-color: var(--neb-surface);
+  border: 1px solid var(--neb-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  border-radius: 0.65rem;
+  border: 2px solid var(--neb-border);
+  background-color: var(--neb-bg);
+  color: var(--neb-text);
+  margin-bottom: 1rem;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.constellation-card {
+  background-color: var(--neb-surface);
+  border: 1px solid var(--neb-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.route-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem 0.95rem;
+  border-radius: 0.65rem;
+  background-color: var(--neb-elevated);
+  border: 1px solid var(--neb-border);
+}
+
+.route-item a {
+  color: var(--neb-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.route-item a:hover {
+  text-decoration: underline;
+}
+
+.route-path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.76rem;
+  color: var(--neb-muted);
+  word-break: break-all;
+}
+
+.badge {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.35rem;
+  background-color: var(--neb-badge-bg);
+  color: var(--neb-badge-text);
+}
+
+.site-footer {
+  background-color: var(--neb-surface);
+  border-top: 1px solid var(--neb-border);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  font-size: 0.84rem;
+  color: var(--neb-muted);
+}
+
+.disclaimer-box {
+  background-color: var(--neb-elevated);
+  border: 1px solid var(--neb-border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
