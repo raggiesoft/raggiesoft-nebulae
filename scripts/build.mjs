@@ -804,7 +804,7 @@ function buildNebulaeIndexHtml(constellations) {
     <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-grid.css" />
     <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-logo.css" />
     <link rel="stylesheet" href="https://assets.raggiesoft.com/nebulae/css/nebulae.css" />
-    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css?v=20261017f" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css?v=20261017g" />
   </head>
   <body>
     <div class="nebulae-sky" aria-hidden="true"></div>
@@ -903,7 +903,7 @@ function buildNebulaeIndexHtml(constellations) {
     </footer>
 
     <script src="https://assets.raggiesoft.com/nebulae/js/nebulae-client.js" defer></script>
-    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js?v=20261017f" defer></script>
+    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js?v=20261017g" defer></script>
   </body>
 </html>`;
 }
