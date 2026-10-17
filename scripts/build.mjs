@@ -903,6 +903,7 @@ function buildNebulaeIndexHtml(constellations) {
     </footer>
 
     <script src="https://assets.raggiesoft.com/nebulae/js/nebulae-client.js" defer></script>
+    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js" defer></script>
   </body>
 </html>`;
 }
