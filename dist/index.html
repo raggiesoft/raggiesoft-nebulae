@@ -6,8 +6,12 @@
     <meta name="color-scheme" content="light dark" />
     <script>
       try {
-        document.querySelector('meta[name="color-scheme"]').content =
-          localStorage.getItem('color-scheme') ?? 'light dark';
+        var storedScheme = localStorage.getItem('color-scheme');
+        document.querySelector('meta[name="color-scheme"]').content = storedScheme ?? 'light dark';
+        var resolvedTheme = (storedScheme === 'light' || storedScheme === 'dark')
+          ? storedScheme
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', resolvedTheme);
       } catch (e) {}
     </script>
     <title>The RaggieSoft Nebulae | Master Network Sitemap &amp; Observatory</title>
@@ -24,7 +28,9 @@
     <meta name="twitter:description" content="Complete interactive sitemap indexing all 9 RaggieSoft domains and 213+ routes across music, books, lore, and software." />
     <meta name="twitter:image" content="https://assets.raggiesoft.com/stardust-engine/images/stardust-engine-hero.jpg" />
     <link rel="icon" type="image/png" href="https://assets.raggiesoft.com/raggiesoft-corporate/images/logos/raggiesoft-logo.png" />
-    <link rel="stylesheet" href="/assets/nebulae.css" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-grid.css" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-logo.css" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/nebulae/css/nebulae.css" />
   </head>
   <body>
     <div class="nebulae-sky" aria-hidden="true"></div>
@@ -32,9 +38,23 @@
 
     <header class="site-header" role="banner">
       <div class="container header-inner">
-        <a href="/" class="brand-title">🌌 The RaggieSoft Nebulae • Master Network Observatory</a>
-        <div class="control-bar">
-          <a href="/sitemap.xml" class="btn">🗺️ XML Sitemap (213 URLs)</a>
+        <a href="/" class="brand-title">🌌 The RaggieSoft Nebulae • Observatory</a>
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <div id="primary-navigation" class="control-bar">
+          <a href="/sitemap.xml" class="btn">🗺️ XML Sitemap (213)</a>
           <a href="https://raggiesoft.com" class="btn">🌐 RaggieSoft Hub</a>
           <button
             type="button"
@@ -85,7 +105,7 @@
       
       <section class="constellation-card" data-constellation-id="hub" aria-labelledby="heading-hub">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">PHP 8.5 + Stardust Engine CMS (Elara) + Web Awesome Pro</span>
             <h2 id="heading-hub" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -156,7 +176,7 @@
 
       <section class="constellation-card" data-constellation-id="music" aria-labelledby="heading-music">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">SvelteKit 2 + Svelte 5 Runes + Web Audio API</span>
             <h2 id="heading-music" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://music.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -597,7 +617,7 @@
 
       <section class="constellation-card" data-constellation-id="stardust" aria-labelledby="heading-stardust">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">Nuxt 4 + Vue 3 Static SSG (Exoplanet Light / Deep Space Dark)</span>
             <h2 id="heading-stardust" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://stardust.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -1288,7 +1308,7 @@
 
       <section class="constellation-card" data-constellation-id="engineroom" aria-labelledby="heading-engineroom">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">Astro 6 Static SSG</span>
             <h2 id="heading-engineroom" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://engineroom.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -2079,7 +2099,7 @@
 
       <section class="constellation-card" data-constellation-id="books" aria-labelledby="heading-books">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">PHP 8.5 + Stardust Engine Library SPA + EPUB 3.3 Pipeline</span>
             <h2 id="heading-books" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://books.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -2170,7 +2190,7 @@
 
       <section class="constellation-card" data-constellation-id="lore" aria-labelledby="heading-lore">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">Next.js 16 + React 19 + Tailwind CSS v4 + Accessible Canvas</span>
             <h2 id="heading-lore" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://lore.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -2231,7 +2251,7 @@
 
       <section class="constellation-card" data-constellation-id="corporate" aria-labelledby="heading-corporate">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">Bootstrap 5.3.8 Static SSG (Frutiger Aero / Dark Aero Glass)</span>
             <h2 id="heading-corporate" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://corporate.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -2322,7 +2342,7 @@
 
       <section class="constellation-card" data-constellation-id="storetrainer" aria-labelledby="heading-storetrainer">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">Vanilla TypeScript + Classic Win32 / Netscape Communicator 4.78 CSS</span>
             <h2 id="heading-storetrainer" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://storetrainer.raggiesoft.com" style="color: var(--neb-text); text-decoration: none;">
@@ -2373,7 +2393,7 @@
 
       <section class="constellation-card" data-constellation-id="portfolio" aria-labelledby="heading-portfolio">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">Angular 19 Zoneless Signals</span>
             <h2 id="heading-portfolio" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="https://michaelpragsdale.com" style="color: var(--neb-text); text-decoration: none;">
@@ -2417,6 +2437,6 @@
       </div>
     </footer>
 
-    <script src="/assets/nebulae-client.js" defer></script>
+    <script src="https://assets.raggiesoft.com/nebulae/js/nebulae-client.js" defer></script>
   </body>
 </html>

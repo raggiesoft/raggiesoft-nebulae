@@ -24,8 +24,9 @@
   }
 
   function updateThemeLabel() {
-    if (!themeLabel) return;
     var current = getRenderedScheme();
+    document.documentElement.setAttribute('data-theme', current);
+    if (!themeLabel) return;
     var stored = null;
     try { stored = localStorage.getItem('color-scheme'); } catch (e) {}
     if (stored === 'light' || stored === 'dark') {
@@ -53,6 +54,15 @@
         meta.content = target;
       }
       updateThemeLabel();
+    });
+  }
+
+  var menuBtn = document.getElementById('mobile-menu-toggle');
+  var primaryNav = document.getElementById('primary-navigation');
+  if (menuBtn && primaryNav) {
+    menuBtn.addEventListener('click', function () {
+      var isOpen = primaryNav.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
 

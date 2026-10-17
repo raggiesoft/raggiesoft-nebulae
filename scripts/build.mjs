@@ -292,7 +292,8 @@ function renderNebulaeCss() {
  * prefers-reduced-motion compliance.
  * ============================================================================
  */
-:root {
+:root,
+[data-theme="light"] {
   color-scheme: light dark;
   --neb-bg: #f4f6fb;
   --neb-surface: rgba(255, 255, 255, 0.94);
@@ -307,7 +308,7 @@ function renderNebulaeCss() {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --neb-bg: #050814;
     --neb-surface: rgba(15, 23, 42, 0.92);
     --neb-elevated: #111c38;
@@ -319,6 +320,19 @@ function renderNebulaeCss() {
     --neb-badge-bg: #1e293b;
     --neb-badge-text: #7dd3fc;
   }
+}
+
+[data-theme="dark"] {
+  --neb-bg: #050814;
+  --neb-surface: rgba(15, 23, 42, 0.92);
+  --neb-elevated: #111c38;
+  --neb-text: #f8fafc;
+  --neb-muted: #cbd5e1;
+  --neb-border: #334155;
+  --neb-accent: #38bdf8;
+  --neb-gold: #fbbf24;
+  --neb-badge-bg: #1e293b;
+  --neb-badge-text: #7dd3fc;
 }
 
 *, *::before, *::after {
@@ -334,6 +348,7 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .nebulae-sky {
@@ -377,53 +392,92 @@ body {
   padding: 0 1.25rem;
 }
 
+/* Compact Sticky Observatory Header (michaelpragsdale.com pattern) */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
   background-color: var(--neb-surface);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--neb-border);
-  padding: 0.85rem 0;
 }
 
 .header-inner {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
 }
 
 .brand-title {
-  font-size: 1.2rem;
+  font-size: 0.96rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--neb-text);
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neb-border);
+  background-color: var(--neb-elevated);
+  color: var(--neb-text);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .control-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  flex-wrap: nowrap;
+  gap: 0.45rem;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+  .control-bar {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--neb-border);
+  }
+  .control-bar.is-open {
+    display: flex;
+  }
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  border-radius: 0.5rem;
+  gap: 0.35rem;
+  padding: 0.38rem 0.75rem;
+  border-radius: 0.45rem;
   border: 1px solid var(--neb-border);
   background-color: var(--neb-elevated);
   color: var(--neb-text);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn[aria-pressed="true"],
@@ -439,6 +493,9 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   margin: 2rem 0 1.5rem;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .search-input {
@@ -464,13 +521,22 @@ body {
   border-radius: 1rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .route-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 0.75rem;
   margin-top: 1rem;
+}
+
+.route-grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .route-item {
@@ -481,6 +547,10 @@ body {
   border-radius: 0.65rem;
   background-color: var(--neb-elevated);
   border: 1px solid var(--neb-border);
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .route-item a {
@@ -508,6 +578,10 @@ body {
   border-radius: 0.35rem;
   background-color: var(--neb-badge-bg);
   color: var(--neb-badge-text);
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .site-footer {
@@ -556,8 +630,9 @@ function renderNebulaeClientJs() {
   }
 
   function updateThemeLabel() {
-    if (!themeLabel) return;
     var current = getRenderedScheme();
+    document.documentElement.setAttribute('data-theme', current);
+    if (!themeLabel) return;
     var stored = null;
     try { stored = localStorage.getItem('color-scheme'); } catch (e) {}
     if (stored === 'light' || stored === 'dark') {
@@ -585,6 +660,15 @@ function renderNebulaeClientJs() {
         meta.content = target;
       }
       updateThemeLabel();
+    });
+  }
+
+  var menuBtn = document.getElementById('mobile-menu-toggle');
+  var primaryNav = document.getElementById('primary-navigation');
+  if (menuBtn && primaryNav) {
+    menuBtn.addEventListener('click', function () {
+      var isOpen = primaryNav.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
 
@@ -651,7 +735,7 @@ function buildNebulaeIndexHtml(constellations) {
       (c) => `
       <section class="constellation-card" data-constellation-id="${escapeHtml(c.id)}" aria-labelledby="heading-${escapeHtml(c.id)}">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--neb-border); padding-bottom: 0.85rem;">
-          <div>
+          <div style="min-width: 0; max-width: 100%;">
             <span class="badge">${escapeHtml(c.techStack)}</span>
             <h2 id="heading-${escapeHtml(c.id)}" style="margin: 0.4rem 0 0.25rem; font-size: 1.4rem;">
               <a href="${escapeHtml(c.baseUrl)}" style="color: var(--neb-text); text-decoration: none;">
@@ -695,8 +779,12 @@ function buildNebulaeIndexHtml(constellations) {
     <meta name="color-scheme" content="light dark" />
     <script>
       try {
-        document.querySelector('meta[name="color-scheme"]').content =
-          localStorage.getItem('color-scheme') ?? 'light dark';
+        var storedScheme = localStorage.getItem('color-scheme');
+        document.querySelector('meta[name="color-scheme"]').content = storedScheme ?? 'light dark';
+        var resolvedTheme = (storedScheme === 'light' || storedScheme === 'dark')
+          ? storedScheme
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', resolvedTheme);
       } catch (e) {}
     </script>
     <title>The RaggieSoft Nebulae | Master Network Sitemap &amp; Observatory</title>
@@ -713,7 +801,9 @@ function buildNebulaeIndexHtml(constellations) {
     <meta name="twitter:description" content="Complete interactive sitemap indexing all 9 RaggieSoft domains and ${totalRoutes}+ routes across music, books, lore, and software." />
     <meta name="twitter:image" content="https://assets.raggiesoft.com/stardust-engine/images/stardust-engine-hero.jpg" />
     <link rel="icon" type="image/png" href="https://assets.raggiesoft.com/raggiesoft-corporate/images/logos/raggiesoft-logo.png" />
-    <link rel="stylesheet" href="/assets/nebulae.css" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-grid.css" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-logo.css" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/nebulae/css/nebulae.css" />
   </head>
   <body>
     <div class="nebulae-sky" aria-hidden="true"></div>
@@ -721,9 +811,23 @@ function buildNebulaeIndexHtml(constellations) {
 
     <header class="site-header" role="banner">
       <div class="container header-inner">
-        <a href="/" class="brand-title">🌌 The RaggieSoft Nebulae • Master Network Observatory</a>
-        <div class="control-bar">
-          <a href="/sitemap.xml" class="btn">🗺️ XML Sitemap (${totalRoutes} URLs)</a>
+        <a href="/" class="brand-title">🌌 The RaggieSoft Nebulae • Observatory</a>
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <div id="primary-navigation" class="control-bar">
+          <a href="/sitemap.xml" class="btn">🗺️ XML Sitemap (${totalRoutes})</a>
           <a href="https://raggiesoft.com" class="btn">🌐 RaggieSoft Hub</a>
           <button
             type="button"
@@ -779,7 +883,7 @@ function buildNebulaeIndexHtml(constellations) {
       </div>
     </footer>
 
-    <script src="/assets/nebulae-client.js" defer></script>
+    <script src="https://assets.raggiesoft.com/nebulae/js/nebulae-client.js" defer></script>
   </body>
 </html>`;
 }
@@ -817,6 +921,13 @@ function buildNebulaeSite() {
     fs.writeFileSync(path.join(base, 'robots.txt'), robotsTxt, 'utf-8');
   }
 
+  const sharedCdnCssDir = path.join(workspaceRoot, 'raggiesoft-assets', 'nebulae', 'css');
+  const sharedCdnJsDir = path.join(workspaceRoot, 'raggiesoft-assets', 'nebulae', 'js');
+  fs.mkdirSync(sharedCdnCssDir, { recursive: true });
+  fs.mkdirSync(sharedCdnJsDir, { recursive: true });
+  fs.writeFileSync(path.join(sharedCdnCssDir, 'nebulae.css'), cssContent, 'utf-8');
+  fs.writeFileSync(path.join(sharedCdnJsDir, 'nebulae-client.js'), jsContent, 'utf-8');
+
   console.log(
     `✅ Built nebulae.raggiesoft.com Master Cosmic Observatory (${constellations.length} constellations, ${totalRoutes} routes indexed).`
   );
@@ -848,3 +959,4 @@ if (process.argv.includes('--serve')) {
     console.log(`🚀 Nebulae Observatory preview server running at http://localhost:${port}`);
   });
 }
+
