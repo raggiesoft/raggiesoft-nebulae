@@ -804,7 +804,7 @@ function buildNebulaeIndexHtml(constellations) {
     <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-grid.css" />
     <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-logo.css" />
     <link rel="stylesheet" href="https://assets.raggiesoft.com/nebulae/css/nebulae.css" />
-    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css?v=20261017h" />
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css?v=20261017j" />
   </head>
   <body>
     <div class="nebulae-sky" aria-hidden="true"></div>
@@ -820,7 +820,6 @@ function buildNebulaeIndexHtml(constellations) {
           <li><a href="https://books.raggiesoft.com">📚 Books</a></li>
           <li><a href="https://stardust.raggiesoft.com">🚀 Stardust</a></li>
           <li><a href="https://engineroom.raggiesoft.com">⚙️ Engine Room</a></li>
-          <li><a href="https://lore.raggiesoft.com">🏛️ Lore</a></li>
           <li><a href="https://corporate.raggiesoft.com">🏢 Corporate</a></li>
           <li><a href="https://storetrainer.raggiesoft.com">💾 StoreTrainer</a></li>
           <li><a href="https://michaelpragsdale.com">👔 Michael P. Ragsdale</a></li>
@@ -903,7 +902,7 @@ function buildNebulaeIndexHtml(constellations) {
     </footer>
 
     <script src="https://assets.raggiesoft.com/nebulae/js/nebulae-client.js" defer></script>
-    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js?v=20261017h" defer></script>
+    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js?v=20261017j" defer></script>
   </body>
 </html>`;
 }
