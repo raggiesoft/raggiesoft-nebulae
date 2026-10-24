@@ -70,6 +70,10 @@ function collectConstellations() {
     path.join(subdomainsDir, 'corporate/src/data/ported-pages.json'),
     []
   );
+  const backstageSnapshot = loadJsonSafe(
+    path.join(subdomainsDir, 'backstage/src/data/backstage-snapshot.json'),
+    []
+  );
 
   // 1. raggiesoft.com
   const hubRoutes = [
@@ -187,6 +191,16 @@ function collectConstellations() {
     { path: '/', title: 'Michael P. Ragsdale — Executive Systems Architect & Section 508 Engineer Dossier', category: 'Executive Portfolio' }
   ];
 
+  // 10. backstage.raggiesoft.com
+  const backstageRoutes = [
+    { path: '/', title: 'RaggieSoft Backstage — Bonus Features, Behind the Scenes & Correspondence Vault', category: 'Backstage Hub' },
+    ...backstageSnapshot.map((b) => ({
+      path: `/${b.slug}`,
+      title: `${b.title}${b.subtitle ? ` — ${b.subtitle}` : ''}`,
+      category: b.category || 'Backstage'
+    }))
+  ];
+
   return [
     {
       id: 'hub',
@@ -267,6 +281,16 @@ function collectConstellations() {
       vanityRedirects: 'raggiesoft.com/products/storetrainer -> storetrainer.raggiesoft.com',
       description: 'Official download portal and 18-file VB6/.NET/NSIS source code inspector for the hand-written 2018–2020 Win32 game & trainer manager.',
       routes: storetrainerRoutes
+    },
+    {
+      id: 'backstage',
+      domain: 'backstage.raggiesoft.com',
+      baseUrl: 'https://backstage.raggiesoft.com',
+      name: 'RaggieSoft Backstage (Bonus Features & Correspondence Vault)',
+      techStack: 'Web Awesome Pro + Font Awesome Pro+ Static SSG & PWA',
+      vanityRedirects: 'books.raggiesoft.com <dialog> cross-origin API consumer (/api/v1/*.json)',
+      description: '100% in-universe Behind-the-Scenes, Bonus Features, and Extracted Correspondence PWA powering the interactive <dialog> modal in RaggieSoft Book Reader.',
+      routes: backstageRoutes
     },
     {
       id: 'portfolio',
