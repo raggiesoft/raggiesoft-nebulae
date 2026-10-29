@@ -78,6 +78,7 @@ function collectConstellations() {
   // 1. raggiesoft.com
   const hubRoutes = [
     { path: '/', title: 'RaggieSoft Hub — Network Gateway & CMS Showcase', category: 'Entrypoint' },
+    { path: '/in-memoriam', title: 'In Memoriam: Sir Patrick Stewart (1940–2026) — Second Star to the Right (Creator\'s Cosmic Tribute)', category: 'Dedication' },
     { path: '/about', title: 'About the RaggieSoft Ecosystem & Architecture', category: 'About' },
     { path: '/about/accessibility', title: 'WCAG 2.1 AA & Section 508 Accessibility Statement', category: 'Compliance' },
     { path: '/about/privacy', title: 'Zero-Database Privacy Policy', category: 'Legal' },
@@ -917,6 +918,21 @@ function buildNebulaeIndexHtml(constellations) {
       </section>
 
       ${constellationsHtml}
+
+      <section class="constellation-card" aria-labelledby="cosmic-dedication-observatory-heading" style="border-color: var(--neb-gold);">
+        <span class="badge" style="margin-bottom: 0.45rem;">Creator&rsquo;s Cosmic Dedication • Second Star to the Right (1940–2026)</span>
+        <h2 id="cosmic-dedication-observatory-heading" style="margin: 0.25rem 0 0.5rem; font-size: 1.35rem;">
+          In Memoriam: Sir Patrick Stewart (July 13, 1940 – October 28, 2026)
+        </h2>
+        <p style="margin: 0 0 0.85rem; font-size: 0.92rem; color: var(--neb-muted);">
+          Why is the RaggieSoft ecosystem mapped like a cosmic observatory of nebulae, star-charts, and orbital sanctuaries? Growing up, weekday evening television with my family always followed a five-part schedule: <em>Local News</em>, <em>National News</em>, <em>Wheel of Fortune</em>, <em>Jeopardy!</em>, and <strong><em>Star Trek: The Next Generation</em></strong>. Watching the Captain of the <em>NCC-1701-D</em> taught a kid to look up at the cosmos and wonder what is out there—directly inspiring <a href="https://stardust.raggiesoft.com" style="color: var(--neb-accent); font-weight: 700;">The Stardust Engine</a>, <a href="https://music.raggiesoft.com/the-stardust-engine/1995-the-warehouse-tapes?track=1-06-escape-velocity-ad-astra" style="color: var(--neb-accent); font-weight: 700;">&ldquo;Escape Velocity (Ad Astra)&rdquo;</a>, <a href="https://music.raggiesoft.com/the-stardust-engine/2003-sanctuary-zero-g?track=1-01-moon-1-tidal-lock" style="color: var(--neb-accent); font-weight: 700;"><em>The Twin Moons</em></a>, and this observatory.
+        </p>
+        <div class="filter-pills">
+          <a href="https://raggiesoft.com/in-memoriam" class="btn">✦ Read the Creator&rsquo;s Tribute on raggiesoft.com →</a>
+          <a href="https://stardust.raggiesoft.com" class="btn">🚀 Visit The Stardust Engine ↗</a>
+          <a href="https://music.raggiesoft.com/the-stardust-engine/1995-the-warehouse-tapes?track=1-06-escape-velocity-ad-astra" class="btn">🎧 Stream &ldquo;Escape Velocity (Ad Astra)&rdquo; ↗</a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
