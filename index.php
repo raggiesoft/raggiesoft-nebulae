@@ -57,7 +57,7 @@ $analyticsEnabled = (bool) ($settings['analytics']['enabled'] ?? true);
 $analyticsTrackingId = (string) ($settings['analytics']['trackingId'] ?? 'G-P9RG9JVYB6');
 
 // Asset URLs resolved dynamically through $cdnBaseUrl + '/nebulae/...'
-$assetVersion = '20261029d';
+$assetVersion = '20261029f';
 $nebulaeCssUrl = $cdnBaseUrl . '/nebulae/css/nebulae.css?v=' . $assetVersion;
 $nebulaeJsUrl  = $cdnBaseUrl . '/nebulae/js/nebulae.js?v=' . $assetVersion;
 $loreJsonUrl   = $cdnBaseUrl . '/nebulae/json/ad-astra-lore.json';
