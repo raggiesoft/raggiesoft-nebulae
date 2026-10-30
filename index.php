@@ -121,28 +121,95 @@ $storyboardActs = $loreData['storyboardActs'] ?? [];
 
 $schemaData = [
     '@context' => 'https://schema.org',
-    '@type' => 'CreativeWork',
-    'name' => $meta['title'] ?? $pageTitle,
-    'headline' => $ogTitle,
-    'description' => $ogDesc,
-    'url' => $canonicalUrl,
-    'image' => $heroImageUrl,
-    'license' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-    'author' => [
-        '@type' => 'Person',
-        'name' => 'Michael P. Ragsdale',
-        'url' => 'https://michaelpragsdale.com',
-    ],
-    'about' => [
-        '@type' => 'MusicRecording',
-        'name' => 'Escape Velocity (Ad Astra)',
-        'isrcCode' => $meta['fullSuiteIsrc'] ?? 'QZTB62697616',
-        'duration' => 'PT15M33S',
-        'url' => $links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra',
-        'byArtist' => [
-            '@type' => 'MusicGroup',
-            'name' => 'The Stardust Engine',
-            'url' => 'https://stardust.raggiesoft.com',
+    '@graph' => [
+        [
+            '@type' => 'Organization',
+            '@id' => 'https://raggiesoft.com/#organization',
+            'name' => 'RaggieSoft',
+            'url' => 'https://raggiesoft.com',
+            'founder' => [
+                '@type' => 'Person',
+                '@id' => 'https://michaelpragsdale.com/#michael-ragsdale',
+                'name' => 'Michael P. Ragsdale',
+                'url' => 'https://michaelpragsdale.com',
+            ],
+        ],
+        [
+            '@type' => 'WebSite',
+            '@id' => 'https://nebulae.raggiesoft.com/#website',
+            'url' => 'https://nebulae.raggiesoft.com',
+            'name' => 'RaggieSoft Nebulae — Caelum-IV Planetary Survey',
+            'description' => $ogDesc,
+            'inLanguage' => 'en-US',
+            'publisher' => [
+                '@id' => 'https://raggiesoft.com/#organization',
+            ],
+        ],
+        [
+            '@type' => 'WebPage',
+            '@id' => 'https://nebulae.raggiesoft.com/#webpage',
+            'url' => $canonicalUrl,
+            'name' => $pageTitle,
+            'description' => $ogDesc,
+            'inLanguage' => 'en-US',
+            'isPartOf' => [
+                '@id' => 'https://nebulae.raggiesoft.com/#website',
+            ],
+            'primaryImageOfPage' => [
+                '@type' => 'ImageObject',
+                'url' => $ogImageUrl,
+                'width' => 1200,
+                'height' => 675,
+            ],
+            'mainEntity' => [
+                '@id' => 'https://nebulae.raggiesoft.com/#short-film-experience',
+            ],
+        ],
+        [
+            '@type' => 'CreativeWork',
+            '@id' => 'https://nebulae.raggiesoft.com/#short-film-experience',
+            'name' => $meta['title'] ?? $pageTitle,
+            'headline' => $ogTitle,
+            'description' => $ogDesc,
+            'url' => $canonicalUrl,
+            'image' => [$heroImageUrl, $ogImageUrl],
+            'license' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+            'inLanguage' => 'en-US',
+            'author' => [
+                '@type' => 'Person',
+                '@id' => 'https://michaelpragsdale.com/#michael-ragsdale',
+                'name' => 'Michael P. Ragsdale',
+                'url' => 'https://michaelpragsdale.com',
+            ],
+            'publisher' => [
+                '@id' => 'https://raggiesoft.com/#organization',
+            ],
+            'about' => [
+                '@type' => 'MusicRecording',
+                'name' => 'Escape Velocity (Ad Astra)',
+                'isrcCode' => $meta['fullSuiteIsrc'] ?? 'QZTB62697616',
+                'duration' => 'PT15M33S',
+                'url' => $links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra',
+                'byArtist' => [
+                    '@type' => 'MusicGroup',
+                    '@id' => 'https://stardust.raggiesoft.com/#musicgroup',
+                    'name' => 'The Stardust Engine',
+                    'url' => 'https://stardust.raggiesoft.com',
+                ],
+            ],
+            'mentions' => [
+                [
+                    '@type' => 'BookSeries',
+                    'name' => 'Escape Velocity: Ad Astra (Stardate 49601 Chronicles)',
+                    'url' => 'https://books.raggiesoft.com/ad-astra',
+                ],
+                [
+                    '@type' => 'Article',
+                    '@id' => 'https://raggiesoft.com/in-memoriam#article',
+                    'headline' => 'In Memoriam: Sir Patrick Stewart (1940–2026) — Second Star to the Right',
+                    'url' => 'https://raggiesoft.com/in-memoriam',
+                ],
+            ],
         ],
     ],
 ];
