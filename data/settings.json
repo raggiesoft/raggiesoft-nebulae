@@ -1,0 +1,16 @@
+{
+  "siteName": "RaggieSoft Nebulae — Escape Velocity (Ad Astra)",
+  "projectSlug": "raggiesoft-nebulae",
+  "cdnBaseUrl": "https://assets.raggiesoft.com",
+  "defaultTheme": "dark",
+  "brandFont": [
+    "Audiowide",
+    "Titillium Web",
+    "sans-serif"
+  ],
+  "analytics": {
+    "provider": "google",
+    "trackingId": "G-P9RG9JVYB6",
+    "enabled": true
+  }
+}

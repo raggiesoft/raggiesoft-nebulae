@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "title": "Escape Velocity (Ad Astra) — Interactive Short Film & Caelum-IV Planetary Survey",
+    "subtitle": "The 1996 Cosmic Visual Storybook & Planetary Telemetry Archive of the U.S.S. Aethelgard",
+    "artist": "The Stardust Engine",
+    "imprint": "Engine Room Records",
+    "literaryImprint": "Ocean View Archives",
+    "suiteDuration": "15:33",
+    "radioEditDuration": "5:09",
+    "fullSuiteIsrc": "QZTB62697616",
+    "radioEditIsrc": "QZTB62697617",
+    "bpm": 120,
+    "keySignature": "F# Minor to A Major (Pure 5th & Octave Resonance)",
+    "heroImage": "/nebulae/images/ad-astra-landing.jpg",
+    "heroImageWidth": 2752,
+    "heroImageHeight": 1536,
+    "heroImageAlt": "Widescreen view from inside the open cargo hatch of the star-cruiser U.S.S. Aethelgard looking out onto the purple-sand beach and violet ocean of Caelum-IV. On the left, pilot twin Tyler/Evan Wright stands beside lead guitarist Ryan O'Connell in his custom manual wheelchair at the top of the landing ramp. Beside Ryan, lead vocalist Cassidy O'Connell holds a handheld frequency scanner and points out toward the bay in curiosity. On the right, manager Holly O'Connell stands by the starboard telemetry console with a datapad, keeping clear line-of-sight with her siblings. Outside, lavender bio-silica fronds and giant bioluminescent mushroom canopies frame a sky dominated by the ringed gas giant Vespera, its shepherd moons Lumen and Umbra, and the golden twilight of the orange dwarf star Solis-V.",
+    "links": {
+      "listeningRoomFullSuite": "https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra",
+      "listeningRoomWarehouseTapes": "https://music.raggiesoft.com/the-stardust-engine/1995-the-warehouse-tapes?track=1-06-escape-velocity-ad-astra",
+      "listeningRoomRadioEdit": "https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-02-escape-velocity-ad-astra-radio-edit",
+      "listeningRoomTwinMoons": "https://music.raggiesoft.com/the-stardust-engine/2003-sanctuary-zero-g?track=1-01-moon-1-tidal-lock",
+      "bookReaderStardust": "https://books.raggiesoft.com/read/the-stardust-engine",
+      "stardustPortal": "https://stardust.raggiesoft.com",
+      "inMemoriamTribute": "https://raggiesoft.com/in-memoriam"
+    }
+  },
+  "telemetryBar": [
+    {
+      "label": "VESSEL REGISTRY",
+      "value": "U.S.S. Aethelgard (Deep-Space Acoustic Survey Cruiser)"
+    },
+    {
+      "label": "PRIMARY BODY",
+      "value": "Vespera (Kepler-442c) — Ringed Super-Jovian"
+    },
+    {
+      "label": "LANDING ZONE",
+      "value": "Caelum-IV (\"Aethelgard's Shore\" / \"Sanctuary\")"
+    },
+    {
+      "label": "ORBITAL LOCK",
+      "value": "1:1 Synchronous Tidal Lock (Lumen & Umbra Harmonic Tide)"
+    },
+    {
+      "label": "BIOSPHERE PULSE",
+      "value": "120.0 BPM • Sympathetic Fifths & Octaves"
+    },
+    {
+      "label": "SHORELINE CRUST",
+      "value": "High-Traction Compacted Basalt (Wheelchair Caster Rated)"
+    }
+  ],
+  "sensorHotspots": [
+    {
+      "id": "sensor-crew",
+      "code": "SCAN-01",
+      "shortLabel": "01 // The Crew (Port to Starboard)",
+      "title": "The Crew of the U.S.S. Aethelgard (Left to Right)",
+      "category": "Personnel & Accessibility Telemetry",
+      "coordinates": {
+        "x": 31,
+        "y": 58
+      },
+      "summary": "No weapons, no corporate handlers, and no flags of conquest—just a fiercely protective family stepping onto a low-sensory world with open sensors and curious minds.",
+      "details": [
+        {
+          "heading": "Tyler & Evan Wright (Port Bulkhead — Pilot & Co-Pilot)",
+          "body": "Identical twin maternal cousins and the rhythmic engine of The Stardust Engine (drums and bass). Onboard the U.S.S. Aethelgard, Tyler and Evan serve as rotating Pilot and Co-Pilot. In the hatchway on the far left, the off-helm twin braces by the jump-seat harness, keeping a steady hand near Ryan's shoulder as the cargo ramp locks into the shoreline."
+        },
+        {
+          "heading": "Ryan O'Connell (Center-Left Ramp Crest — Lead Guitarist & Safe Person)",
+          "body": "Oldest brother, lead guitarist, and a T-10 paraplegic following the 1990 crash. Seated in his custom all-terrain manual wheelchair at the crest of the deployment ramp, Ryan is Cassidy's emotional anchor and autistic Safe Person. His calm, grounded presence at the top of the ramp makes the alien horizon safe to approach."
+        },
+        {
+          "heading": "Cassidy O'Connell (Center — Lead Vocalist, Synth Architect & Science Officer)",
+          "body": "Holding her handheld planetary frequency scanner and pointing out toward the violet bay in pure wonder. After years of being hounded by flashbulbs and courtroom microphones back in \"The Cage,\" Cassidy doesn't plant a flag—she opens hailing frequencies, realizing Caelum-IV's biosphere is pulsing at 120 BPM in harmony with their music."
+        },
+        {
+          "heading": "Holly O'Connell (Starboard Console — Band Manager & Flight Operations)",
+          "body": "Youngest sister and founder of Engine Room Records. Standing by the starboard bridge console with her ruggedized datapad, Holly logs real-time atmospheric and mycelial telemetry while maintaining an unbroken, protective line-of-sight with both Ryan and Cassidy."
+        }
+      ]
+    },
+    {
+      "id": "sensor-celestial",
+      "code": "SCAN-02",
+      "shortLabel": "02 // Celestial: Vespera & Shepherd Moons",
+      "title": "Celestial Survey: Vespera (Kepler-442c) & The Shepherd Moons (Lumen & Umbra)",
+      "category": "Astrophysics & Orbital Mechanics",
+      "coordinates": {
+        "x": 69,
+        "y": 25
+      },
+      "summary": "Caelum-IV is not an isolated planet—it is the largest outer rocky moon of the ringed super-Jovian gas giant Vespera, held in a permanent 1:1 tidal lock under a warm golden-violet twilight.",
+      "details": [
+        {
+          "heading": "The Ringed Super-Jovian: Vespera (Kepler-442c)",
+          "body": "Cataloged as Kepler-442c in the Aethelgard navigation logs, Vespera shares a golden-banded silicate and ammonia cloud structure reminiscent of Saturn, but at super-Jovian mass. Its expansive ice-and-dust ring system scatters the light of the system's K-type orange dwarf star (Solis-V) into an eternal, low-glare golden-violet twilight."
+        },
+        {
+          "heading": "The World Beneath Their Feet: Caelum-IV (\"Sanctuary\")",
+          "body": "Colloquially named \"Aethelgard's Shore\" or \"Sanctuary\" by Cassidy, Caelum-IV orbits just outside Vespera's radiation belt in a stable 1:1 synchronous tidal lock. Because it is tidally locked, Vespera never sets—it hangs stationary in the sky over the bay like a silent, permanent guardian."
+        },
+        {
+          "heading": "The Companion Shepherd Moons: Lumen & Umbra",
+          "body": "Framed directly against Vespera's rings are the two inner shepherd moons, Lumen and Umbra. Their synchronized orbital resonance gently kneads Caelum-IV's magnetosphere and drives a slow, predictable \"harmonic tide\" across the violet bay."
+        }
+      ]
+    },
+    {
+      "id": "sensor-hydrology",
+      "code": "SCAN-03",
+      "shortLabel": "03 // Hydrology: Bacteriorhodopsin Sea",
+      "title": "Hydrology & Substrate: The Bacteriorhodopsin Violet Sea & Basaltic Ramp",
+      "category": "Astrobiology & Mobility Engineering",
+      "coordinates": {
+        "x": 55,
+        "y": 65
+      },
+      "summary": "Modeled on astrobiology's Purple Earth Hypothesis, Caelum-IV's violet ocean owes its color to retinal-based halobacteria—and its dense mineral brine compacts the purple sand into a high-traction surface built for Ryan's wheelchair.",
+      "details": [
+        {
+          "heading": "The Purple Earth Hypothesis in Living Color",
+          "body": "On Earth, astrobiologists hypothesize that early primordial oceans before the evolution of chlorophyll were violet. On Caelum-IV, the water isn't dyed: it is teeming with microscopic, suspension-floating halobacteria and retinal-based phytoplankton."
+        },
+        {
+          "heading": "Bacteriorhodopsin Light Absorption",
+          "body": "Instead of using chlorophyll (which absorbs red and blue wavelengths and reflects green), Caelum-IV's marine microbes use bacteriorhodopsin to absorb the abundant green-yellow wavelengths radiating off Vespera's rings and Solis-V, reflecting deep violet, indigo, and magenta light across the water."
+        },
+        {
+          "heading": "Tactile & Sensory Bonus for Ryan's Wheelchair",
+          "body": "Because of the high mineral and brine density supporting these halobacteria, the dark purple sand along the tide line compacts into a firm, high-traction basaltic crust. Ryan's manual wheelchair—fitted with wide-tread pneumatic off-road casters—can roll straight down the Aethelgard's ramp onto the beach without sinking into loose Earth-style quartz sand."
+        }
+      ]
+    },
+    {
+      "id": "sensor-xenobotany",
+      "code": "SCAN-04",
+      "shortLabel": "04 // Xenobotany: Acoustic Forest",
+      "title": "Xenobotany: Crystalline Resonance Fronds & Bioluminescent Myco-Towers",
+      "category": "Bio-Acoustics & Subterranean Neural Flora",
+      "coordinates": {
+        "x": 27,
+        "y": 35
+      },
+      "summary": "Free from violent windstorms on the tidally locked hemisphere, Caelum-IV's flora evolved to communicate and pollinate via acoustic sympathetic resonance and gentle bio-electric light.",
+      "details": [
+        {
+          "heading": "Crystalline Resonance Fronds (Left Shore)",
+          "body": "The towering, lavender fern-like structures lining the left side of the bay are composed of flexible bio-silica. When the gentle tidal breeze passes through them, they don't rustle like dry leaves—they hum in pure, mathematical fifths and octaves, acting as a living biological analog synthesizer pad. When Cassidy sings \"And the stars are singing / A song I understand,\" she is hearing the shoreline harmonize with the Aethelgard's engines."
+        },
+        {
+          "heading": "Canopy Mycelium & Myco-Towers (Right Shore)",
+          "body": "The giant violet mushroom-like canopies on the right shore are towering fruiting bodies linked by a glowing crimson-and-cyan subterranean neural network visible in the soil at Holly's feet. When someone steps—or rolls—onto the soil, the red and cyan root veins pulse gently with light to acknowledge their weight, sending a harmless bio-electric \"hello\" across the coastline."
+        }
+      ]
+    },
+    {
+      "id": "sensor-sentience",
+      "code": "SCAN-05",
+      "shortLabel": "05 // Sentience: The Singers (120 BPM)",
+      "title": "Xenobiology & Indigenous Sentience: \"The Singers\" & The 120 BPM Hailing Frequency",
+      "category": "Planetary Intelligence & First Contact",
+      "coordinates": {
+        "x": 78,
+        "y": 76
+      },
+      "summary": "There are no apex predators, territorial empires, or screeching beasts on Caelum-IV. The planet itself is a quiet, living recording studio pulsing at 120 BPM.",
+      "details": [
+        {
+          "heading": "The Weave & The Vesperan Chorus-Rays",
+          "body": "Nobody lives on Caelum-IV in cities of steel or stone. The indigenous sentience is The Weave—a collective, planetary intelligence housed within the bioluminescent mycelial network and its symbiotic Vesperan Chorus-Rays, graceful manta-like amphibious gliders that breach the purple waves at dusk and emit low-frequency, whale-like harmonic chords."
+        },
+        {
+          "heading": "Why Cassidy Opens Hailing Frequencies",
+          "body": "When Cassidy looks down at her handheld scanner and points toward the bay, she realizes the planetary biosphere is pulsing at 120.0 BPM—matching the exact tempo of \"Escape Velocity (Ad Astra).\" Caelum-IV isn't empty; it is one giant, living recording studio waiting for someone to play a note so it can play one back."
+        }
+      ]
+    }
+  ],
+  "surveyPillars": [
+    {
+      "number": "01",
+      "title": "The Celestial Mechanics: What is in the Sky?",
+      "eyebrow": "ASTROPHYSICS // VESPERA, SOLIS-V & CAELUM-IV",
+      "intro": "To make this exoplanet fit seamlessly into The Stardust Engine canon alongside the U.S.S. Aethelgard, the Twin Moons project, and the lyrics of \"Escape Velocity (Ad Astra),\" the sky above the landing bay is governed by orbital equilibrium and low-sensory peace.",
+      "items": [
+        {
+          "term": "The Ringed Super-Jovian: Vespera (Kepler-442c)",
+          "description": "Cataloged as Kepler-442c in the Aethelgard navigation logs. It isn't Saturn, though it shares a golden-banded silicate and ammonia cloud structure. Vespera is a massive gas giant with an expansive ice-and-dust ring system that scatters the light of the system's K-type orange dwarf star (Solis-V) into a permanent, warm golden-violet twilight."
+        },
+        {
+          "term": "The World Beneath Their Feet: Caelum-IV (\"Aethelgard's Shore\" / \"Sanctuary\")",
+          "description": "Rather than an independent planet, the world the family has landed on is the largest outer rocky moon of Vespera, orbiting just outside the gas giant's radiation belt in a stable 1:1 tidal lock. Because it is tidally locked, Vespera never sets—it hangs stationary in the sky over the coastline like a permanent guardian."
+        },
+        {
+          "term": "The Companion Moons: Lumen & Umbra",
+          "description": "The two smaller spheres visible against Vespera's rings are the inner shepherd moons, Lumen and Umbra. Their gravitational pull creates a slow, rhythmic \"harmonic tide\" in Caelum-IV's oceans."
+        }
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Why is the Water Purple?",
+      "eyebrow": "ASTROBIOLOGY // THE PURPLE EARTH HYPOTHESIS",
+      "intro": "On Earth, early primordial oceans before chlorophyll evolved were hypothesized to be purple (the Purple Earth Hypothesis). On Caelum-IV, the water isn't dyed; it is teeming with microscopic, suspension-floating halobacteria and retinal-based phytoplankton.",
+      "items": [
+        {
+          "term": "Bacteriorhodopsin Phototrophy",
+          "description": "Instead of using chlorophyll (which absorbs red/blue light and reflects green), Caelum-IV's marine microbes use bacteriorhodopsin to absorb the green-yellow wavelengths radiating off Vespera's rings, reflecting deep violet, indigo, and magenta light."
+        },
+        {
+          "term": "Tactile & Sensory Bonus for Ryan's Chair",
+          "description": "Because of the high mineral and brine density supporting these microbes, the dark purple sand along the shoreline compacts into a firm, high-traction basaltic crust—meaning Ryan's manual wheelchair (fitted with wide-tread pneumatic off-road casters) can roll right down the ramp onto the beach without sinking into loose Earth-style quartz sand."
+        }
+      ]
+    },
+    {
+      "number": "03",
+      "title": "The Flora: The Acoustic Forest",
+      "eyebrow": "XENOBOTANY // SYMPATHETIC BIO-SILICA RESONANCE",
+      "intro": "Because there are no violent windstorms on this tidally locked hemisphere, the plant life evolved to communicate and pollinate via acoustic sympathetic resonance rather than wind-borne pollen dispersion.",
+      "items": [
+        {
+          "term": "Crystalline Resonance Fronds (Left Shore)",
+          "description": "The towering, lavender fern-like structures on the left side of the bay are composed of flexible bio-silica. When the gentle tidal breeze passes through them, they don't rustle like dry leaves—they hum in pure, mathematical fifths and octaves (a literal biological analog synthesizer pad). When Cassidy sings \"And the stars are singing / A song I understand,\" she is hearing the shoreline harmonize with the Aethelgard's engines."
+        },
+        {
+          "term": "Canopy Mycelium & Myco-Towers (Right Shore)",
+          "description": "The giant violet mushroom-like canopies on the right are towering fruiting bodies connected by a glowing crimson-and-cyan subterranean neural network (visible in the soil at Holly's feet). When someone steps—or rolls—onto the soil, the red root veins pulse gently with light to acknowledge their weight, sending a harmless bio-electric \"hello\" across the coastline."
+        }
+      ]
+    },
+    {
+      "number": "04",
+      "title": "The Fauna & \"Who Lives Here?\"",
+      "eyebrow": "XENOBIOLOGY // THE WEAVE & THE 120 BPM STUDIO",
+      "intro": "There are no apex predators, territorial empires, or loud, screeching beasts here—the exact polar opposite of the noisy, litigious \"Cage\" the family escaped back on Earth.",
+      "items": [
+        {
+          "term": "The \"Singers\" (The Indigenous Sentience)",
+          "description": "Nobody lives here in cities of steel or stone. The sentient life of Caelum-IV is The Weave—a collective, planetary intelligence housed within the bioluminescent mycelial network and the symbiotic Vesperan Chorus-Rays (graceful, manta-like amphibious gliders that breach the purple waves at dusk and emit low-frequency, whale-like harmonic chords)."
+        },
+        {
+          "term": "Why Cassidy Opens Hailing Frequencies",
+          "description": "When Cassidy looks at her handheld scanner and points toward the bay, she realizes the planetary biosphere is pulsing in 120 BPM—matching the exact tempo of their own music. The planet isn't empty; it is one giant, living recording studio waiting for someone to play a note so it can play one back."
+        }
+      ]
+    }
+  ],
+  "storyboardActs": [
+    {
+      "id": "act-1",
+      "actNumber": "ACT I",
+      "movementTitle": "Part I: The Cage",
+      "timecode": "0:00 – 3:45",
+      "tempoAndKey": "64 BPM (Half-Time Pulse) • F# Minor • Dark Shimmering Analog Synth Pad",
+      "setting": "The 1992 'Friction' Courtroom Corridor & The Subterranean Blacksburg Warehouse Bunker",
+      "visualTreatment": "Shot in stark, high-contrast cold tungsten and buzzing 60Hz fluorescent green. Camera flashbulbs erupt like strobe artillery in a claustrophobic federal courthouse corridor as tabloid reporters crowd around a 21-year-old Cassidy O'Connell and Ryan's wheelchair. Match-cut from a blinding camera flash to a single bare bulb swinging in the underground Blacksburg warehouse. The walls feel inches away. At 3:40, Holly O'Connell steps up to the heavy industrial breaker panel on the concrete wall, grips the main copper knife-switch, and throws it upward.",
+      "directorNotes": "Visualizes the sensory overload and tabloid objectification that turned Cassidy into a reluctant 'victim-saint' after the 1992 Apex Records breach-of-contract trial. Every sound in Act I is claustrophobic—fluorescent ballast hum, gavel strikes, and whispered vocals—until Holly physically severing the grid launches Act II.",
+      "audioProductionCue": "Whispered close-mic vocals over a dark, detuned 1984 analog polysynth pad with a subtle 60Hz room hum that vanishes the instant the sequencer ignites.",
+      "lyricsExcerpt": [
+        "The walls are cold, the air is thin",
+        "The noise outside is closing in",
+        "A single light, a buzzing sound",
+        "Another day in the underground",
+        "",
+        "I'm running from the face I see",
+        "The \"victim-saint\" they made of me",
+        "The \"wholesome girl,\" so sad and worn",
+        "A \"David\" for their Goliath's scorn",
+        "",
+        "This rage is just a heavy stone",
+        "A gravity I've outgrown",
+        "Shedding skin, shedding weight",
+        "Escaping from this world of hate"
+      ]
+    },
+    {
+      "id": "act-2",
+      "actNumber": "ACT II",
+      "movementTitle": "Part II: Ignition (Ad Astra)",
+      "timecode": "3:45 – 7:50",
+      "tempoAndKey": "120 BPM • F# Minor to D Major • Driving 16th-Note Analog Arpeggiator & Gated Snare",
+      "setting": "The Blacksburg Warehouse Dissolving into the Flight Deck of the U.S.S. Aethelgard",
+      "visualTreatment": "As Holly's breaker switch slams home, the corrugated steel walls of the Blacksburg warehouse peel outward into the starfield, revealing the warm amber-and-violet tactical consoles of the U.S.S. Aethelgard. A rapid 120 BPM 16th-note analog sequencer locks in with Tyler's booming gated-reverb acoustic drums and Evan's driving bassline. Crimson thruster light floods the flight deck as the ship climbs through Earth's cloud deck into orbital night. At 7:48—at the peak of the second chorus—Ryan reaches down to his tube amplifier and physically yanks the 1/4-inch instrument cable out of the jack to trigger Main Engine Cutoff (MECO).",
+      "directorNotes": "In the real-world 3:00 AM Blacksburg recording session, the mechanical pop and sudden vacuum silence at 7:50 was not a mixing-desk mute—Ryan O'Connell physically pulled the plug on his amplifier mid-take to simulate the violent, breathless transition from rocket thrust to zero-gravity coasting.",
+      "audioProductionCue": "Full 1980s progressive arena-rock arrangement: dual arpeggiated analog polysynths, soaring lead vocals, and an authentic mechanical amplifier plug-pull cutoff at 7:50.",
+      "lyricsExcerpt": [
+        "I see a signal in the endless black",
+        "A single light, no turning back",
+        "The pull of the old world fades away",
+        "A new horizon, a new day",
+        "",
+        "The countdown's running in my head",
+        "Ignoring all the things they said",
+        "The \"Engine\" roars, a crimson light",
+        "A pillar of fire in the night",
+        "",
+        "I'm climbing! Climbing!",
+        "Past the point of no return",
+        "I'm flying! Flying!",
+        "With a fire I let burn",
+        "Just a signal, a distant light",
+        "Burning through the endless night",
+        "Ad astra... (To the stars!)"
+      ]
+    },
+    {
+      "id": "act-3",
+      "actNumber": "ACT III",
+      "movementTitle": "Part III: The Cosmos",
+      "timecode": "7:50 – 12:15",
+      "tempoAndKey": "60 BPM (Weightless Half-Time) • A Major • Sweeping Nebular Pads & Dual Guitar/Synth Solo",
+      "setting": "Zero-Gravity Deep Space Transit Past the Crimson & Violet Nebulae of Sector Solis-V",
+      "visualTreatment": "Total silence for two heartbeats after MECO. Loose cassette tapes, guitar picks, and dust motes lift gently into zero-gravity suspension inside the cabin. Outside the panoramic forward viewport, streams of crimson, sapphire, and bioluminescent violet nebular gas drift past the hull. Ryan and Cassidy trade an uninterrupted four-minute melodic conversation—Ryan's sustain-soaked cherry-sunburst solid-body electric guitar weaving around Cassidy's warm analog synth leads—neither overpowering the other, flying in parallel.",
+      "directorNotes": "Act III is the emotional heart of the short film. For Ryan, weightlessness represents freedom from the physical gravity of Earth; for Cassidy, the silence of the void replaces the sensory violence of the press pool with pure mathematical harmony.",
+      "audioProductionCue": "Expansive stereo lexicon hall reverb, multi-tracked ethereal vocal harmonies ('I'm loved by the sun / I'm held by the void'), and the landmark 4-minute guitar-and-synthesizer duet.",
+      "lyricsExcerpt": [
+        "I'm floating now, the engine's off",
+        "The silence is a holy sound",
+        "The rage is gone, the fear is lost",
+        "In this new universe I've found",
+        "",
+        "I'm loved by the sun",
+        "I'm held by the void",
+        "An orbit just begun",
+        "A life not destroyed",
+        "",
+        "And the stars are singing",
+        "A song I understand",
+        "I'm finally, finally",
+        "Reaching for your hand"
+      ]
+    },
+    {
+      "id": "act-4",
+      "actNumber": "ACT IV",
+      "movementTitle": "Part IV: Re-entry (The New World)",
+      "timecode": "12:15 – 15:33",
+      "tempoAndKey": "120 BPM (Harmonic Tide Lock) • A Major9 Sustained Chord • Bio-Silica & Mycelial Resonance",
+      "setting": "Touchdown on Caelum-IV (\"Aethelgard's Shore\" / \"Sanctuary\") under the Rings of Vespera",
+      "visualTreatment": "The U.S.S. Aethelgard settles gently onto the compacted dark-purple basaltic shoreline of Caelum-IV. The aft cargo hatch depressurizes and lowers onto the firm purple sand (`ad-astra-landing.jpg`). Tyler/Evan steadies the port bulkhead; Ryan rolls his manual wheelchair to the top of the ramp without his casters sinking a millimeter; Holly monitors the starboard console; and Cassidy steps beside Ryan with her frequency scanner raised, pointing out toward the bacteriorhodopsin violet waves and the ringed giant Vespera. As the final sustained A-Major-9 synthesizer chord rings out, the lavender bio-silica fronds on the left shore hum back in a pure fifth, and the crimson-and-cyan mycelial veins at Holly's feet pulse in a warm 120 BPM greeting.",
+      "directorNotes": "The culmination of the 15-minute suite and the visual thesis of the entire RaggieSoft cosmic network: exploration rooted in empathy, accessibility, and wonder rather than conquest.",
+      "audioProductionCue": "Shimmering analog synth pads harmonizing with Caelum-IV's bio-silica fifths, fading out on a peaceful, infinite sustained chord.",
+      "lyricsExcerpt": [
+        "The walls are gone",
+        "The air is clear",
+        "There is no noise",
+        "There is no fear",
+        "",
+        "The \"Stardust\" is a forgotten ghost",
+        "The \"Engine\" has delivered me to the coast",
+        "Of a new world, a new shore",
+        "A place I've never been before",
+        "",
+        "I'm loved by the sun...",
+        "I'm held by the void...",
+        "My orbit has begun...",
+        "My life is not destroyed...",
+        "Ad astra... (To the stars...)"
+      ]
+    }
+  ]
+}
