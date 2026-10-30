@@ -57,11 +57,12 @@ $analyticsEnabled = (bool) ($settings['analytics']['enabled'] ?? true);
 $analyticsTrackingId = (string) ($settings['analytics']['trackingId'] ?? 'G-P9RG9JVYB6');
 
 // Asset URLs resolved dynamically through $cdnBaseUrl + '/nebulae/...'
-$assetVersion = '20261029c';
+$assetVersion = '20261029d';
 $nebulaeCssUrl = $cdnBaseUrl . '/nebulae/css/nebulae.css?v=' . $assetVersion;
 $nebulaeJsUrl  = $cdnBaseUrl . '/nebulae/js/nebulae.js?v=' . $assetVersion;
 $loreJsonUrl   = $cdnBaseUrl . '/nebulae/json/ad-astra-lore.json';
 $heroImageUrl  = $cdnBaseUrl . '/nebulae/images/ad-astra-landing.jpg';
+$ogImageUrl    = $cdnBaseUrl . '/nebulae/images/og-ad-astra-landing.jpg';
 $networkCssUrl = $cdnBaseUrl . '/common/css/raggiesoft-network.css?v=' . $assetVersion;
 $networkJsUrl  = $cdnBaseUrl . '/common/js/raggiesoft-network.js?v=' . $assetVersion;
 
@@ -169,18 +170,25 @@ $schemaData = [
   <meta name="description" content="<?php echo e($ogDesc); ?>">
   <link rel="canonical" href="<?php echo e($canonicalUrl); ?>">
 
-  <!-- OpenGraph & Twitter Card Metadata (Mandatory Network Standard) -->
+  <!-- OpenGraph & Twitter Card Metadata (Mandatory Network Standard — 1200x675 sips OG Image) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RaggieSoft Nebulae">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="<?php echo e($ogTitle); ?>">
   <meta property="og:description" content="<?php echo e($ogDesc); ?>">
-  <meta property="og:image" content="<?php echo e($heroImageUrl); ?>">
   <meta property="og:url" content="<?php echo e($canonicalUrl); ?>">
+  <meta property="og:image" content="<?php echo e($ogImageUrl); ?>">
+  <meta property="og:image:secure_url" content="<?php echo e($ogImageUrl); ?>">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="<?php echo e($meta['heroImageAlt'] ?? 'The crew of the U.S.S. Aethelgard looking out from the open cargo hatch onto the purple-sand beach and ringed gas giant Vespera on Caelum-IV.'); ?>">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?php echo e($ogTitle); ?>">
   <meta name="twitter:description" content="<?php echo e($ogDesc); ?>">
-  <meta name="twitter:image" content="<?php echo e($heroImageUrl); ?>">
+  <meta name="twitter:image" content="<?php echo e($ogImageUrl); ?>">
+  <meta name="twitter:image:alt" content="<?php echo e($meta['heroImageAlt'] ?? 'The crew of the U.S.S. Aethelgard looking out from the open cargo hatch onto the purple-sand beach and ringed gas giant Vespera on Caelum-IV.'); ?>">
 
   <meta name="theme-color" content="#0b0914" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f8f5f0" media="(prefers-color-scheme: light)">
@@ -310,10 +318,15 @@ $schemaData = [
             <span aria-hidden="true">📻</span>
             <span>Listen to the 5:09 Radio Edit</span>
           </a>
-          <a href="<?php echo e($links['bookReaderStardust'] ?? 'https://books.raggiesoft.com/read/the-stardust-engine'); ?>"
+          <a href="<?php echo e($links['bookReaderAdAstra'] ?? 'https://books.raggiesoft.com/ad-astra'); ?>"
              class="btn-cosmic btn-cosmic-secondary">
             <span aria-hidden="true">📚</span>
-            <span>Read the Chronicles in Book Reader</span>
+            <span>Read Escape Velocity: Ad Astra in Book Reader</span>
+          </a>
+          <a href="<?php echo e($links['bookReaderStardust'] ?? 'https://books.raggiesoft.com/stardust-engine'); ?>"
+             class="btn-cosmic btn-cosmic-secondary">
+            <span aria-hidden="true">📖</span>
+            <span>The Stardust Engine Chronicles</span>
           </a>
         </div>
       </div>
@@ -623,3 +636,4 @@ $schemaData = [
   </footer>
 </body>
 </html>
+

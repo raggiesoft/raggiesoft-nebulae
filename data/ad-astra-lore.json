@@ -12,6 +12,9 @@
     "bpm": 120,
     "keySignature": "F# Minor to A Major (Pure 5th & Octave Resonance)",
     "heroImage": "/nebulae/images/ad-astra-landing.jpg",
+    "ogImage": "/nebulae/images/og-ad-astra-landing.jpg",
+    "ogImageWidth": 1200,
+    "ogImageHeight": 675,
     "heroImageWidth": 2752,
     "heroImageHeight": 1536,
     "heroImageAlt": "Widescreen view from inside the open cargo hatch of the star-cruiser U.S.S. Aethelgard looking out onto the purple-sand beach and violet ocean of Caelum-IV. On the left, pilot twin Tyler/Evan Wright stands beside lead guitarist Ryan O'Connell in his custom manual wheelchair at the top of the landing ramp. Beside Ryan, lead vocalist Cassidy O'Connell holds a handheld frequency scanner and points out toward the bay in curiosity. On the right, manager Holly O'Connell stands by the starboard telemetry console with a datapad, keeping clear line-of-sight with her siblings. Outside, lavender bio-silica fronds and giant bioluminescent mushroom canopies frame a sky dominated by the ringed gas giant Vespera, its shepherd moons Lumen and Umbra, and the golden twilight of the orange dwarf star Solis-V.",
@@ -20,7 +23,8 @@
       "listeningRoomWarehouseTapes": "https://music.raggiesoft.com/the-stardust-engine/1995-the-warehouse-tapes?track=1-06-escape-velocity-ad-astra",
       "listeningRoomRadioEdit": "https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-02-escape-velocity-ad-astra-radio-edit",
       "listeningRoomTwinMoons": "https://music.raggiesoft.com/the-stardust-engine/2003-sanctuary-zero-g?track=1-01-moon-1-tidal-lock",
-      "bookReaderStardust": "https://books.raggiesoft.com/read/the-stardust-engine",
+      "bookReaderAdAstra": "https://books.raggiesoft.com/ad-astra",
+      "bookReaderStardust": "https://books.raggiesoft.com/stardust-engine",
       "stardustPortal": "https://stardust.raggiesoft.com",
       "inMemoriamTribute": "https://raggiesoft.com/in-memoriam"
     }
@@ -364,3 +368,4 @@
     }
   ]
 }
+
