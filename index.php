@@ -189,7 +189,7 @@ $schemaData = [
                 'name' => 'Escape Velocity (Ad Astra)',
                 'isrcCode' => $meta['fullSuiteIsrc'] ?? 'QZTB62697616',
                 'duration' => 'PT15M33S',
-                'url' => $links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra',
+                'url' => $links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra',
                 'byArtist' => [
                     '@type' => 'MusicGroup',
                     '@id' => 'https://stardust.raggiesoft.com/#musicgroup',
@@ -375,12 +375,12 @@ $schemaData = [
         </p>
 
         <div class="hero-cta-row">
-          <a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra'); ?>"
+          <a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra'); ?>"
              class="btn-cosmic btn-cosmic-primary">
             <span aria-hidden="true">🎧</span>
             <span>Stream the 15:33 Full Suite in The Listening Room</span>
           </a>
-          <a href="<?php echo e($links['listeningRoomRadioEdit'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-02-escape-velocity-ad-astra-radio-edit'); ?>"
+          <a href="<?php echo e($links['listeningRoomRadioEdit'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra-radio-edit'); ?>"
              class="btn-cosmic btn-cosmic-secondary">
             <span aria-hidden="true">📻</span>
             <span>Listen to the 5:09 Radio Edit</span>
@@ -530,9 +530,9 @@ $schemaData = [
         </h2>
         <p class="section-subtitle">
           Conceived in 1996 as an ambitious, 15-minute theatrical short film in space structured around the four movements of
-          <a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra'); ?>"><strong>&ldquo;Escape Velocity (Ad Astra)&rdquo;</strong></a>
+          <a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra'); ?>"><strong>&ldquo;Escape Velocity (Ad Astra)&rdquo;</strong></a>
           (and originally unveiled as the B-Side closer of 1995’s
-          <a href="<?php echo e($links['listeningRoomWarehouseTapes'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1995-the-warehouse-tapes?track=1-06-escape-velocity-ad-astra'); ?>"><em>The Warehouse Tapes</em></a>).
+          <a href="<?php echo e($links['listeningRoomWarehouseTapes'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1995-the-warehouse-tapes/escape-velocity-ad-astra'); ?>"><em>The Warehouse Tapes</em></a>).
           Filter by movement below to inspect the cinematography, studio production lore, and lyrics.
         </p>
       </div>
@@ -585,7 +585,7 @@ $schemaData = [
               <figcaption>
                 Canonical Movement Lyrics — <cite>Escape Velocity (Ad Astra)</cite>
               </figcaption>
-              <blockquote cite="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra'); ?>">
+              <blockquote cite="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra'); ?>">
                 <p>
                   <?php
                   $lines = $act['lyricsExcerpt'] ?? [];
@@ -615,8 +615,8 @@ $schemaData = [
         <p class="section-subtitle">
           To make this exoplanet fit seamlessly into <a href="<?php echo e($links['stardustPortal'] ?? 'https://stardust.raggiesoft.com'); ?>"><em>The Stardust Engine</em></a>
           canon alongside the <em>U.S.S. Aethelgard</em>, the
-          <a href="<?php echo e($links['listeningRoomTwinMoons'] ?? 'https://music.raggiesoft.com/the-stardust-engine/2003-sanctuary-zero-g?track=1-01-moon-1-tidal-lock'); ?>"><em>Twin Moons</em></a>
-          project, and the lyrics of <a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra'); ?>">&ldquo;Escape Velocity (Ad Astra),&rdquo;</a>
+          <a href="<?php echo e($links['listeningRoomTwinMoons'] ?? 'https://music.raggiesoft.com/the-stardust-engine/2003-sanctuary-zero-g/moon-1-tidal-lock'); ?>"><em>Twin Moons</em></a>
+          project, and the lyrics of <a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra'); ?>">&ldquo;Escape Velocity (Ad Astra),&rdquo;</a>
           the science and lore of Caelum-IV reflect <strong>sound, resonance, and low-sensory peace</strong>—the exact polar opposite
           of the noisy, litigious &ldquo;Cage&rdquo; the family escaped back on Earth.
         </p>
@@ -674,7 +674,7 @@ $schemaData = [
     <div class="nebulae-footer-inner">
       <ul class="footer-links">
         <li><a href="https://raggiesoft.com">RaggieSoft Hub</a></li>
-        <li><a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single?track=1-01-escape-velocity-ad-astra'); ?>">Stream &ldquo;Escape Velocity (Ad Astra)&rdquo;</a></li>
+        <li><a href="<?php echo e($links['listeningRoomFullSuite'] ?? 'https://music.raggiesoft.com/the-stardust-engine/1996-ad-astra-single/escape-velocity-ad-astra'); ?>">Stream &ldquo;Escape Velocity (Ad Astra)&rdquo;</a></li>
         <li><a href="https://books.raggiesoft.com">RaggieSoft Book Reader</a></li>
         <li><a href="https://stardust.raggiesoft.com">The Stardust Engine Portal</a></li>
         <li><a href="https://engineroom.raggiesoft.com">Engine Room Records</a></li>
