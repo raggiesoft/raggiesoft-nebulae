@@ -107,7 +107,15 @@ function e(mixed $value): string
 // ----------------------------------------------------------------------------
 // 3. SEO, OPENGRAPH & SCHEMA.ORG METADATA (<= 60 CHAR TITLE, <= 155 CHAR DESC)
 // ----------------------------------------------------------------------------
-$pageTitle = 'Escape Velocity (Ad Astra) | RaggieSoft Nebulae';
+$reqPath = (string) (parse_url((string) ($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH) ?: '/');
+$isNotFound = ($reqPath !== '/' && $reqPath !== '/index.php');
+if ($isNotFound) {
+    http_response_code(404);
+}
+
+$pageTitle = $isNotFound
+    ? 'Page Not Found | RaggieSoft Nebulae'
+    : 'Escape Velocity (Ad Astra) | RaggieSoft Nebulae';
 $ogTitle   = 'Escape Velocity (Ad Astra) — Short Film & Survey';
 $ogDesc    = 'Explore the 1996 Escape Velocity (Ad Astra) short film storyboard and Caelum-IV planetary survey aboard the U.S.S. Aethelgard.';
 $canonicalUrl = 'https://nebulae.raggiesoft.com/';
@@ -235,7 +243,11 @@ $schemaData = [
 
   <title><?php echo e($pageTitle); ?></title>
   <meta name="description" content="<?php echo e($ogDesc); ?>">
+  <?php if ($isNotFound): ?>
+  <meta name="robots" content="noindex, follow">
+  <?php else: ?>
   <link rel="canonical" href="<?php echo e($canonicalUrl); ?>">
+  <?php endif; ?>
 
   <!-- OpenGraph & Twitter Card Metadata (Mandatory Network Standard — 1200x675 sips OG Image) -->
   <meta property="og:type" content="website">
@@ -353,6 +365,24 @@ $schemaData = [
   </header>
 
   <main id="main-content" class="nebulae-main" tabindex="-1">
+    <?php if ($isNotFound): ?>
+    <section class="section-block" aria-labelledby="nebulae-404-heading" style="margin-top: 2rem;">
+      <div class="hero-intro">
+        <div class="eyebrow-tag">
+          <span>RAGGIESOFT NEBULAE • COORDINATES NOT FOUND</span>
+        </div>
+        <h1 id="nebulae-404-heading" class="hero-title">We Could Not Find That Page</h1>
+        <p class="hero-lead">
+          The planetary survey link or storyboard address you followed could not be found. Return to the Caelum-IV planetary survey below, or explore the companion music and novels across the RaggieSoft network.
+        </p>
+        <div class="hero-cta-row">
+          <a href="/" class="btn-cosmic btn-cosmic-primary">🌌 Open Caelum-IV Planetary Survey</a>
+          <a href="https://music.raggiesoft.com" class="btn-cosmic btn-cosmic-secondary">🎧 The Listening Room</a>
+          <a href="https://books.raggiesoft.com" class="btn-cosmic btn-cosmic-secondary">📚 RaggieSoft Book Reader</a>
+        </div>
+      </div>
+    </section>
+    <?php else: ?>
     <!-- ======================================================================
          SECTION A: HERO & INTERACTIVE "LANDING ON CAELUM-IV" SENSOR HOTSPOTS
          ====================================================================== -->
@@ -667,6 +697,7 @@ $schemaData = [
         </p>
       </div>
     </section>
+    <?php endif; ?>
   </main>
 
   <!-- Global Footer & Mandatory Fictitious Persons/Entities Disclaimer -->
