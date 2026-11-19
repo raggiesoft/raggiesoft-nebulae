@@ -57,7 +57,7 @@ $analyticsEnabled = (bool) ($settings['analytics']['enabled'] ?? true);
 $analyticsTrackingId = (string) ($settings['analytics']['trackingId'] ?? 'G-P9RG9JVYB6');
 
 // Asset URLs resolved dynamically through $cdnBaseUrl + '/nebulae/...'
-$assetVersion = '20261115h';
+$assetVersion = '20261118a';
 $nebulaeCssUrl = $cdnBaseUrl . '/nebulae/css/nebulae.css?v=' . $assetVersion;
 $nebulaeJsUrl  = $cdnBaseUrl . '/nebulae/js/nebulae.js?v=' . $assetVersion;
 $loreJsonUrl   = $cdnBaseUrl . '/nebulae/json/ad-astra-lore.json';
@@ -331,7 +331,7 @@ $schemaData = [
         <li><a href="https://engineroom.raggiesoft.com">⚙️ Engine Room</a></li>
         <li><a href="https://corporate.raggiesoft.com">🏢 Corporate</a></li>
         <li><a href="https://storetrainer.raggiesoft.com">💾 StoreTrainer</a></li>
-        <li><a href="https://michaelpragsdale.com">👔 Michael P. Ragsdale</a></li>
+        <li><a href="https://michaelpragsdale.com">👔 Portfolio &amp; Resume</a></li>
       </ul>
     </div>
   </nav>
