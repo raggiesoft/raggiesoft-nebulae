@@ -101,7 +101,7 @@ $analyticsTrackingId = (string) ($settings['analytics']['trackingId'] ?? 'G-P9RG
 // Build full CDN URLs for stylesheets, scripts, JSON lore, and images.
 // Adding `?v=20261118a` is called "cache busting": browsers cache CSS/JS files aggressively,
 // so bumping this version string forces every visitor's browser to fetch fresh files after an update.
-$assetVersion = '20261121d';
+$assetVersion = '20261121e';
 $nebulaeCssUrl = $cdnBaseUrl . '/nebulae/css/nebulae.css?v=' . $assetVersion;
 $nebulaeJsUrl  = $cdnBaseUrl . '/nebulae/js/nebulae.js?v=' . $assetVersion;
 $loreJsonUrl   = $cdnBaseUrl . '/nebulae/json/ad-astra-lore.json';
@@ -432,21 +432,44 @@ $schemaData = [
         </span>
       </a>
 
-      <nav class="section-nav" aria-label="On-page sections">
-        <ul>
-          <li><a href="#landing-survey">01. Hatch Sensor Scan</a></li>
-          <li><a href="#short-film-storyboard">02. 4-Act Short Film</a></li>
-          <li><a href="#planetary-survey">03. Caelum-IV Lore</a></li>
-          <li><a href="#cosmic-dedication">04. Ad Astra Tribute</a></li>
-          <li>
-            <!-- `type="button"` prevents accidental form submission; `aria-pressed` communicates toggle state to assistive tech -->
-            <button type="button" id="nebulae-theme-toggle" class="theme-toggle-btn" aria-pressed="false">
-              <span aria-hidden="true">◐</span>
-              <span id="nebulae-theme-label">Theme: Cosmic Void (Dark)</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <button
+        type="button"
+        class="rs-mobile-header-toggle"
+        data-rs-mobile-toggle
+        data-open-label="Open menu"
+        data-close-label="Close menu"
+        aria-expanded="false"
+        aria-controls="header-navigation-panel"
+        aria-label="Open menu"
+      >
+        <svg class="rs-icon-bars" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="rs-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div id="header-navigation-panel" data-rs-collapsible="true" class="nebulae-nav-panel">
+        <nav class="section-nav" aria-label="On-page sections">
+          <ul>
+            <li><a href="#landing-survey">01. Hatch Sensor Scan</a></li>
+            <li><a href="#short-film-storyboard">02. 4-Act Short Film</a></li>
+            <li><a href="#planetary-survey">03. Caelum-IV Lore</a></li>
+            <li><a href="#cosmic-dedication">04. Ad Astra Tribute</a></li>
+            <li>
+              <!-- `type="button"` prevents accidental form submission; `aria-pressed` communicates toggle state to assistive tech -->
+              <button type="button" id="nebulae-theme-toggle" class="theme-toggle-btn" aria-pressed="false">
+                <span aria-hidden="true">◐</span>
+                <span id="nebulae-theme-label">Theme: Cosmic Void (Dark)</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
