@@ -101,7 +101,7 @@ $analyticsTrackingId = (string) ($settings['analytics']['trackingId'] ?? 'G-P9RG
 // Build full CDN URLs for stylesheets, scripts, JSON lore, and images.
 // Adding `?v=20261118a` is called "cache busting": browsers cache CSS/JS files aggressively,
 // so bumping this version string forces every visitor's browser to fetch fresh files after an update.
-$assetVersion = '20261121e';
+$assetVersion = '20261121f';
 $nebulaeCssUrl = $cdnBaseUrl . '/nebulae/css/nebulae.css?v=' . $assetVersion;
 $nebulaeJsUrl  = $cdnBaseUrl . '/nebulae/js/nebulae.js?v=' . $assetVersion;
 $loreJsonUrl   = $cdnBaseUrl . '/nebulae/json/ad-astra-lore.json';
@@ -427,7 +427,7 @@ $schemaData = [
       <a href="/" class="brand-lockup">
         <span class="brand-badge">U.S.S. AETHELGARD</span>
         <span class="brand-titles">
-          <span class="brand-title-main">Escape Velocity (Ad Astra)</span>
+          <span class="brand-title-main"><span class="brand-title-desktop">Escape Velocity (Ad Astra)</span><span class="brand-title-mobile">Ad Astra</span></span>
           <span class="brand-title-sub">1996 Short Film &amp; Caelum-IV Planetary Survey</span>
         </span>
       </a>
