@@ -101,7 +101,7 @@ $analyticsTrackingId = (string) ($settings['analytics']['trackingId'] ?? 'G-P9RG
 // Build full CDN URLs for stylesheets, scripts, JSON lore, and images.
 // Adding `?v=20261118a` is called "cache busting": browsers cache CSS/JS files aggressively,
 // so bumping this version string forces every visitor's browser to fetch fresh files after an update.
-$assetVersion = '20261120b';
+$assetVersion = '20261121d';
 $nebulaeCssUrl = $cdnBaseUrl . '/nebulae/css/nebulae.css?v=' . $assetVersion;
 $nebulaeJsUrl  = $cdnBaseUrl . '/nebulae/js/nebulae.js?v=' . $assetVersion;
 $loreJsonUrl   = $cdnBaseUrl . '/nebulae/json/ad-astra-lore.json';
