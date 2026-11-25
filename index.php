@@ -832,6 +832,9 @@ $schemaData = [
         <li><a href="https://stardust.raggiesoft.com">The Stardust Engine Portal</a></li>
         <li><a href="https://engineroom.raggiesoft.com">Engine Room Records</a></li>
         <li><a href="https://corporate.raggiesoft.com/licensing">Licenses (MIT Code / CC BY-SA 4.0 Content)</a></li>
+        <li><a href="https://raggiesoft.com/about/privacy">Privacy Policy</a></li>
+        <li><a href="https://raggiesoft.com/about/terms">Terms of Service</a></li>
+        <li><a href="https://raggiesoft.com/about/ai-disclaimer">AI &amp; Creative Process | RaggieSoft Governance</a></li>
         <li><a href="https://raggiesoft.com/in-memoriam">In Memoriam: Sir Patrick Stewart</a></li>
       </ul>
 
